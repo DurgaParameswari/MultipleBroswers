@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+  <suite started-at="2022-11-24T17:49:09 IST" name="Command line suite" finished-at="2022-11-24T17:50:36 IST" duration-ms="86625">
+    <groups>
+    </groups>
+    <test started-at="2022-11-24T17:49:09 IST" name="Command line test" finished-at="2022-11-24T17:50:36 IST" duration-ms="86625">
+      <class name="com.mavenpackage.Driver_Script">
+        <test-method signature="mydriverscript()[pri:0, instance:com.mavenpackage.Driver_Script@5d7148e2]" started-at="2022-11-24T17:49:09 IST" name="mydriverscript" finished-at="2022-11-24T17:50:35 IST" duration-ms="86547" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mydriverscript -->
+        <test-method is-config="true" signature="Close()[pri:0, instance:com.mavenpackage.Driver_Script@5d7148e2]" started-at="2022-11-24T17:50:36 IST" name="Close" finished-at="2022-11-24T17:50:36 IST" duration-ms="2" status="PASS">
+=======
+<<<<<<< HEAD
+  <suite started-at="2022-11-22T22:04:07 IST" name="Command line suite" finished-at="2022-11-22T22:04:08 IST" duration-ms="1255">
+    <groups>
+    </groups>
+    <test started-at="2022-11-22T22:04:07 IST" name="Command line test" finished-at="2022-11-22T22:04:08 IST" duration-ms="1255">
+      <class name="com.mavenpackage.Driver_Script">
+        <test-method signature="mydriverscript()[pri:0, instance:com.mavenpackage.Driver_Script@383bfa16]" started-at="2022-11-22T22:04:07 IST" name="mydriverscript" finished-at="2022-11-22T22:04:08 IST" duration-ms="1218" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at com.meda.automation.Utils.ActionClass.mita_Web_write_when_Locator_isnotvalid(ActionClass.java:271)
+at com.meda.automation.Utils.ActionClass.mita_EnterTextField(ActionClass.java:695)
+at com.mavenpackage.Driver_Script.ReadExcell(Driver_Script.java:305)
+at com.mavenpackage.Driver_Script.mydriverscript(Driver_Script.java:532)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at com.mavenpackage.Runner.main(Runner.java:69)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mydriverscript -->
+=======
+<<<<<<< HEAD
+  <suite started-at="2022-11-22T22:04:07 IST" name="Command line suite" finished-at="2022-11-22T22:04:08 IST" duration-ms="1255">
+    <groups>
+    </groups>
+    <test started-at="2022-11-22T22:04:07 IST" name="Command line test" finished-at="2022-11-22T22:04:08 IST" duration-ms="1255">
+      <class name="com.mavenpackage.Driver_Script">
+        <test-method signature="mydriverscript()[pri:0, instance:com.mavenpackage.Driver_Script@383bfa16]" started-at="2022-11-22T22:04:07 IST" name="mydriverscript" finished-at="2022-11-22T22:04:08 IST" duration-ms="1218" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at com.meda.automation.Utils.ActionClass.mita_Web_write_when_Locator_isnotvalid(ActionClass.java:271)
+at com.meda.automation.Utils.ActionClass.mita_EnterTextField(ActionClass.java:695)
+at com.mavenpackage.Driver_Script.ReadExcell(Driver_Script.java:305)
+at com.mavenpackage.Driver_Script.mydriverscript(Driver_Script.java:532)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at com.mavenpackage.Runner.main(Runner.java:69)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mydriverscript -->
+>>>>>>> Stashed changes
+        <test-method is-config="true" signature="Close()[pri:0, instance:com.mavenpackage.Driver_Script@383bfa16]" started-at="2022-11-22T22:04:08 IST" name="Close" finished-at="2022-11-22T22:04:08 IST" duration-ms="1" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at com.meda.automation.base.BaseClass.Close(BaseClass.java:228)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:344)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at com.mavenpackage.Runner.main(Runner.java:69)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+=======
+  <suite started-at="2022-11-24T17:49:09 IST" name="Command line suite" finished-at="2022-11-24T17:50:36 IST" duration-ms="86625">
+    <groups>
+    </groups>
+    <test started-at="2022-11-24T17:49:09 IST" name="Command line test" finished-at="2022-11-24T17:50:36 IST" duration-ms="86625">
+      <class name="com.mavenpackage.Driver_Script">
+        <test-method signature="mydriverscript()[pri:0, instance:com.mavenpackage.Driver_Script@5d7148e2]" started-at="2022-11-24T17:49:09 IST" name="mydriverscript" finished-at="2022-11-24T17:50:35 IST" duration-ms="86547" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mydriverscript -->
+        <test-method is-config="true" signature="Close()[pri:0, instance:com.mavenpackage.Driver_Script@5d7148e2]" started-at="2022-11-24T17:50:36 IST" name="Close" finished-at="2022-11-24T17:50:36 IST" duration-ms="2" status="PASS">
+>>>>>>> 43f0569a4cf6aa878cc398c4c9491e56ec29972a
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Close -->
+      </class> <!-- com.mavenpackage.Driver_Script -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>

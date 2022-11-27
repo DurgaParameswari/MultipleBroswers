@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite1]">
+  <listeners>
+    <listener class-name="com.meda.automation.managers.TestListener"/>
+  </listeners>
+  <test name="DriverScript(failed)">
+    <classes>
+      <class name="com.mavenpackage.Driver_Script">
+        <methods>
+          <include name="mydriverscript"/>
+          <include name="Close"/>
+        </methods>
+      </class> <!-- com.mavenpackage.Driver_Script -->
+    </classes>
+  </test> <!-- DriverScript(failed) -->
+</suite> <!-- Failed suite [Suite1] -->

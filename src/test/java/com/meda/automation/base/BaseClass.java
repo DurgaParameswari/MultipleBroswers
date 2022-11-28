@@ -69,7 +69,8 @@ public class BaseClass extends ExcelData
 			logger.info("Executing - " + Driver_Script.Actionvalue + ": Launching google chrome browser..");
 			ChromeOptions options = new ChromeOptions();
 			WebDriverManager.chromedriver().driverVersion("107.0.5304.107").setup();
-			String executionType = Runner.executionType;
+//			String executionType = Runner.executionType;
+			String executionType = "Head";
 
 			if (executionType.equalsIgnoreCase("Headless")) {
 				System.out.println("Headless");
@@ -119,8 +120,8 @@ public class BaseClass extends ExcelData
 
 			FirefoxOptions firefoxOptions = new FirefoxOptions();
 			WebDriverManager.firefoxdriver().driverVersion("107.0").setup();
-			String executionType = Runner.executionType;
-
+//			String executionType = Runner.executionType;
+			String executionType = "Head";
 			if (executionType.equalsIgnoreCase("Headless")) {
 				System.out.println("Headless Execution");
 				firefoxOptions.setHeadless(true);
@@ -144,11 +145,13 @@ public class BaseClass extends ExcelData
 
 	public static void initEdge(String appURL) throws Exception {
 		try {
-			logger.info(Driver_Script.Actionvalue + ": Launching Internet Explorer browser..");
+			logger.info(Driver_Script.Actionvalue + ": Launching Edge browser..");
 
 			EdgeOptions edgeOptions = new EdgeOptions();
 			WebDriverManager.edgedriver().driverVersion("107.0.1418.56").setup();
-			String executionType = Runner.executionType;
+//			String executionType = Runner.executionType;
+			
+			String executionType = "Head";
 
 			if (executionType.equalsIgnoreCase("Headless")) {
 				System.out.println("Headless Execution");

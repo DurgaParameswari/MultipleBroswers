@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Command_line_suite" class="navigator-link">
-              <span class="suite-name border-failed">Command line suite</span>
+              <span class="suite-name border-passed">Command line suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,21 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Command_line_suite" class="hide-methods failed suite-Command_line_suite"> (hide)</a> <!-- hide-methods failed suite-Command_line_suite -->
-                      <a href="#" panel-name="suite-Command_line_suite" class="show-methods failed suite-Command_line_suite"> (show)</a> <!-- show-methods failed suite-Command_line_suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Command_line_suite" class="hide-methods passed suite-Command_line_suite"> (hide)</a> <!-- hide-methods passed suite-Command_line_suite -->
+                      <a href="#" panel-name="suite-Command_line_suite" class="show-methods passed suite-Command_line_suite"> (show)</a> <!-- show-methods passed suite-Command_line_suite -->
                     </span>
-                    <div class="method-list-content failed suite-Command_line_suite">
+                    <div class="method-list-content passed suite-Command_line_suite">
                       <span>
-                        <img src="failed.png" width="3%"/>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Command_line_suite" title="com.mavenpackage.Driver_Script" class="method navigator-link" hash-for-method="mydriverscript">mydriverscript</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Command_line_suite -->
+                    </div> <!-- method-list-content passed suite-Command_line_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -119,9 +119,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Command_line_suite" class="panel Command_line_suite">
-          <div class="suite-Command_line_suite-class-failed">
+          <div class="suite-Command_line_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">com.mavenpackage.Driver_Script</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -130,19 +130,10 @@
                   <a name="mydriverscript">
                   </a> <!-- mydriverscript -->
                   <span class="method-name">mydriverscript</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at com.meda.automation.Utils.ActionClass.mita_Web_write_when_Locator_isnotvalid(ActionClass.java:271)
-	at com.meda.automation.Utils.ActionClass.mita_EnterTextField(ActionClass.java:695)
-	at com.mavenpackage.Driver_Script.ReadExcell(Driver_Script.java:305)
-	at com.mavenpackage.Driver_Script.mydriverscript(Driver_Script.java:532)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at com.mavenpackage.Runner.main(Runner.java:69)
-... Removed 24 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Command_line_suite-class-failed -->
+          </div> <!-- suite-Command_line_suite-class-passed -->
         </div> <!-- panel Command_line_suite -->
         <div panel-name="test-xml-Command_line_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -198,40 +189,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'mydriverscript')
 data.setCell(0, 2, 'com.mavenpackage.Driver_Script')
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-data.setCell(0, 3, 86547);
-=======
-=======
->>>>>>> Stashed changes
-<<<<<<< HEAD
-data.setCell(0, 3, 1218);
-=======
-data.setCell(0, 3, 86547);
->>>>>>> 43f0569a4cf6aa878cc398c4c9491e56ec29972a
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+data.setCell(0, 3, 68540);
 window.suiteTableData['Command_line_suite']= { tableData: data, tableDiv: 'times-div-Command_line_suite'}
 return data;
 }
               </script>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
               <span class="suite-total-time">Total running time: 1 minutes</span>
-=======
-=======
->>>>>>> Stashed changes
-<<<<<<< HEAD
-              <span class="suite-total-time">Total running time: 1 seconds</span>
-=======
-              <span class="suite-total-time">Total running time: 1 minutes</span>
->>>>>>> 43f0569a4cf6aa878cc398c4c9491e56ec29972a
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
               <div id="times-div-Command_line_suite">
               </div> <!-- times-div-Command_line_suite -->
             </div> <!-- times-div -->
@@ -259,30 +222,12 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.mavenpackage.Driver_Script</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">mydriverscript</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-suite after">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">Close</span>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-                <span class="method-start">87391 ms</span>
-=======
-=======
->>>>>>> Stashed changes
-<<<<<<< HEAD
-                <span class="method-start">1619 ms</span>
-=======
-                <span class="method-start">87391 ms</span>
->>>>>>> 43f0569a4cf6aa878cc398c4c9491e56ec29972a
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+                <span class="method-start">70031 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -1,9 +1,10 @@
 package com.mavenpackage;
 
-import org.apache.log4j.PropertyConfigurator;
 import org.testng.TestNG;
+import org.testng.annotations.Listeners;
 
 import com.meda.automation.managers.TestListener;
+
 
 public class Runner {
 	static TestNG testNg;
@@ -21,48 +22,56 @@ public class Runner {
 	public static String apkPackageName;
 	public static String mobileScreenshotPath;
 
-	public static void logFile() {
-		PropertyConfigurator.configure(Runner.logPath);
-	}
+	@Listeners (
+			
+			)
+	
+	
+	public static class runner {
+		static TestNG testNg;
 
-	public static void main(String[] args) {
-//		Runner runner = new Runner();
+		public static void main(String[] args) {
+			
 
-		// Common Arguments
-		filePath = args[0];
-		System.out.println("TestCases Path: " + filePath);
-		sheetNames = args[1];
-		System.out.println("Sheet Names are :" + sheetNames);
-		logPath = args[2];
-		System.out.println("Log file path is : " + logPath);
-		logFile();
+//				Runner runner = new Runner();
 
-		// Web Arguments
-		browserType = args[3];
-		System.out.println("Browser Type : " + browserType);
-		executionType = args[4];
-		System.out.println("Execution Type : " + executionType);
-		driverurl = args[5];
-		System.out.println("URL is: " + driverurl);
-		webScreenshotPath = args[6];
-		System.out.println("Web ScreenShots Path: " + webScreenshotPath);
+			// Common Arguments
+			filePath = args[0];
+			System.out.println("TestCases Path: " + filePath);
+			sheetNames = args[1];
+			System.out.println("Sheet Names are :" + sheetNames);
+			logPath = args[2];
+			System.out.println("Log file path is : " + logPath);
+//			logFile();
 
-		// Mobile Arguments
-		apkPath = args[7];
-		System.out.println("ApkPath is: " + apkPath);
-		deviceType = args[8];
-		System.out.println("Mobile DeviceType: " + deviceType);
-		deviceName = args[9];
-		System.out.println("Mobile DeviceName: " + deviceName);
-		apkPackageName = args[10];
-		System.out.println("ApkPackage Name: " + apkPackageName);
-		mobileScreenshotPath = args[11];
-		System.out.println("Mobile ScreenShots Path: " + mobileScreenshotPath);
+			// Web Arguments
+//			browserType = args[3];
+//			System.out.println("Browser Type : " + browserType);
+			executionType = args[3];
+			System.out.println("Execution Type : " + executionType);
+			driverurl = args[4];
+			System.out.println("URL is: " + driverurl);
+			webScreenshotPath = args[5];
+			System.out.println("Web ScreenShots Path: " + webScreenshotPath);
 
-		TestListener listener = new TestListener();
-		testNg = new TestNG();
-		testNg.setTestClasses(new Class[] { Driver_Script.class });
-		testNg.addListener(listener);
-		testNg.run();
+			// Mobile Arguments
+			apkPath = args[6];
+			System.out.println("ApkPath is: " + apkPath);
+			deviceType = args[7];
+			System.out.println("Mobile DeviceType: " + deviceType);
+			deviceName = args[8];
+			System.out.println("Mobile DeviceName: " + deviceName);
+			apkPackageName = args[9];
+			System.out.println("ApkPackage Name: " + apkPackageName);
+			mobileScreenshotPath = args[10];
+			System.out.println("Mobile ScreenShots Path: " + mobileScreenshotPath);
+			
+			
+			TestListener listener = new TestListener();
+			testNg = new TestNG();
+			testNg.setTestClasses(new Class[] { Driver_Script.class });
+			testNg.addListener(listener);
+			testNg.run();
+		}
 	}
 }

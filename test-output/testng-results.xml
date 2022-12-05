@@ -1,18 +1,276 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[Broswer type is chrome<br/>]]>
+    </line>
+    <line>
+      <![CDATA[WEB Execution Starting<br/>]]>
+    </line>
+    <line>
+      <![CDATA[Select the chrome browser<br/>]]>
+    </line>
+    <line>
+      <![CDATA[Take URL: Launching google chrome browser..<br/>]]>
+    </line>
+    <line>
+      <![CDATA[Execution Type is Head<br/>]]>
+    </line>
+    <line>
+      <![CDATA[Maximize Window<br/>]]>
+    </line>
+    <line>
+      <![CDATA[Navigates to URL is https://magnifywebtest.azurewebsites.net/home<br/>]]>
+    </line>
+    <line>
+      <![CDATA[wait<br/>]]>
+    </line>
+    <line>
+      <![CDATA[Click on login button<br/>]]>
+    </line>
+    <line>
+      <![CDATA[Enter Email ID<br/>]]>
+    </line>
+    <line>
+      <![CDATA[Enter Password<br/>]]>
+    </line>
+    <line>
+      <![CDATA[Click on Sign in<br/>]]>
+    </line>
+    <line>
+      <![CDATA[Validate Error Message <br/>]]>
+    </line>
+    <line>
+      <![CDATA[Refresh Page<br/>]]>
+    </line>
+    <line>
+      <![CDATA[Broswer type is firefox<br/>]]>
+    </line>
+    <line>
+      <![CDATA[WEB Execution Starting<br/>]]>
+    </line>
+    <line>
+      <![CDATA[Select the firefox browser<br/>]]>
+    </line>
+    <line>
+      <![CDATA[Take URL: Launching Firefox browser..<br/>]]>
+    </line>
+    <line>
+      <![CDATA[Execution Type is Head<br/>]]>
+    </line>
+    <line>
+      <![CDATA[Maximize Window<br/>]]>
+    </line>
+    <line>
+      <![CDATA[Navigates to URL is https://magnifywebtest.azurewebsites.net/home<br/>]]>
+    </line>
+    <line>
+      <![CDATA[wait<br/>]]>
+    </line>
+    <line>
+      <![CDATA[Click on login button<br/>]]>
+    </line>
+    <line>
+      <![CDATA[Enter Email ID<br/>]]>
+    </line>
+    <line>
+      <![CDATA[Enter Password<br/>]]>
+    </line>
+    <line>
+      <![CDATA[Click on Sign in<br/>]]>
+    </line>
+    <line>
+      <![CDATA[Validate Error Message <br/>]]>
+    </line>
+    <line>
+      <![CDATA[Refresh Page<br/>]]>
+    </line>
+    <line>
+      <![CDATA[Broswer type is edge<br/>]]>
+    </line>
+    <line>
+      <![CDATA[WEB Execution Starting<br/>]]>
+    </line>
+    <line>
+      <![CDATA[Select the edge browser<br/>]]>
+    </line>
+    <line>
+      <![CDATA[Take URL: Launching Edge browser..<br/>]]>
+    </line>
+    <line>
+      <![CDATA[Execution Type is Head<br/>]]>
+    </line>
+    <line>
+      <![CDATA[Maximize Window<br/>]]>
+    </line>
+    <line>
+      <![CDATA[Navigates to URL is https://magnifywebtest.azurewebsites.net/home<br/>]]>
+    </line>
+    <line>
+      <![CDATA[wait<br/>]]>
+    </line>
+    <line>
+      <![CDATA[Click on login button<br/>]]>
+    </line>
+    <line>
+      <![CDATA[Enter Email ID<br/>]]>
+    </line>
+    <line>
+      <![CDATA[Enter Password<br/>]]>
+    </line>
+    <line>
+      <![CDATA[Click on Sign in<br/>]]>
+    </line>
+    <line>
+      <![CDATA[Validate Error Message <br/>]]>
+    </line>
+    <line>
+      <![CDATA[Refresh Page<br/>]]>
+    </line>
+    <line>
+      <![CDATA[End<br/>]]>
+    </line>
   </reporter-output>
-  <suite started-at="2022-11-28T18:14:37 IST" name="Command line suite" finished-at="2022-11-28T18:15:45 IST" duration-ms="68616">
+  <suite started-at="2022-12-05T17:22:27 IST" name="Command line suite" finished-at="2022-12-05T17:26:49 IST" duration-ms="261259">
     <groups>
     </groups>
-    <test started-at="2022-11-28T18:14:37 IST" name="Command line test" finished-at="2022-11-28T18:15:45 IST" duration-ms="68616">
+    <test started-at="2022-12-05T17:22:27 IST" name="Command line test" finished-at="2022-12-05T17:26:49 IST" duration-ms="261259">
       <class name="com.mavenpackage.Driver_Script">
-        <test-method signature="mydriverscript()[pri:0, instance:com.mavenpackage.Driver_Script@1a18644]" started-at="2022-11-28T18:14:37 IST" name="mydriverscript" finished-at="2022-11-28T18:15:45 IST" duration-ms="68540" status="PASS">
+        <test-method signature="mydriverscript()[pri:0, instance:com.mavenpackage.Driver_Script@7d3e8655]" started-at="2022-12-05T17:22:27 IST" name="mydriverscript" finished-at="2022-12-05T17:26:48 IST" duration-ms="260384" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[Broswer type is chrome<br/>]]>
+            </line>
+            <line>
+              <![CDATA[WEB Execution Starting<br/>]]>
+            </line>
+            <line>
+              <![CDATA[Select the chrome browser<br/>]]>
+            </line>
+            <line>
+              <![CDATA[Take URL: Launching google chrome browser..<br/>]]>
+            </line>
+            <line>
+              <![CDATA[Execution Type is Head<br/>]]>
+            </line>
+            <line>
+              <![CDATA[Maximize Window<br/>]]>
+            </line>
+            <line>
+              <![CDATA[Navigates to URL is https://magnifywebtest.azurewebsites.net/home<br/>]]>
+            </line>
+            <line>
+              <![CDATA[wait<br/>]]>
+            </line>
+            <line>
+              <![CDATA[Click on login button<br/>]]>
+            </line>
+            <line>
+              <![CDATA[Enter Email ID<br/>]]>
+            </line>
+            <line>
+              <![CDATA[Enter Password<br/>]]>
+            </line>
+            <line>
+              <![CDATA[Click on Sign in<br/>]]>
+            </line>
+            <line>
+              <![CDATA[Validate Error Message <br/>]]>
+            </line>
+            <line>
+              <![CDATA[Refresh Page<br/>]]>
+            </line>
+            <line>
+              <![CDATA[Broswer type is firefox<br/>]]>
+            </line>
+            <line>
+              <![CDATA[WEB Execution Starting<br/>]]>
+            </line>
+            <line>
+              <![CDATA[Select the firefox browser<br/>]]>
+            </line>
+            <line>
+              <![CDATA[Take URL: Launching Firefox browser..<br/>]]>
+            </line>
+            <line>
+              <![CDATA[Execution Type is Head<br/>]]>
+            </line>
+            <line>
+              <![CDATA[Maximize Window<br/>]]>
+            </line>
+            <line>
+              <![CDATA[Navigates to URL is https://magnifywebtest.azurewebsites.net/home<br/>]]>
+            </line>
+            <line>
+              <![CDATA[wait<br/>]]>
+            </line>
+            <line>
+              <![CDATA[Click on login button<br/>]]>
+            </line>
+            <line>
+              <![CDATA[Enter Email ID<br/>]]>
+            </line>
+            <line>
+              <![CDATA[Enter Password<br/>]]>
+            </line>
+            <line>
+              <![CDATA[Click on Sign in<br/>]]>
+            </line>
+            <line>
+              <![CDATA[Validate Error Message <br/>]]>
+            </line>
+            <line>
+              <![CDATA[Refresh Page<br/>]]>
+            </line>
+            <line>
+              <![CDATA[Broswer type is edge<br/>]]>
+            </line>
+            <line>
+              <![CDATA[WEB Execution Starting<br/>]]>
+            </line>
+            <line>
+              <![CDATA[Select the edge browser<br/>]]>
+            </line>
+            <line>
+              <![CDATA[Take URL: Launching Edge browser..<br/>]]>
+            </line>
+            <line>
+              <![CDATA[Execution Type is Head<br/>]]>
+            </line>
+            <line>
+              <![CDATA[Maximize Window<br/>]]>
+            </line>
+            <line>
+              <![CDATA[Navigates to URL is https://magnifywebtest.azurewebsites.net/home<br/>]]>
+            </line>
+            <line>
+              <![CDATA[wait<br/>]]>
+            </line>
+            <line>
+              <![CDATA[Click on login button<br/>]]>
+            </line>
+            <line>
+              <![CDATA[Enter Email ID<br/>]]>
+            </line>
+            <line>
+              <![CDATA[Enter Password<br/>]]>
+            </line>
+            <line>
+              <![CDATA[Click on Sign in<br/>]]>
+            </line>
+            <line>
+              <![CDATA[Validate Error Message <br/>]]>
+            </line>
+            <line>
+              <![CDATA[Refresh Page<br/>]]>
+            </line>
           </reporter-output>
         </test-method> <!-- mydriverscript -->
-        <test-method is-config="true" signature="Close()[pri:0, instance:com.mavenpackage.Driver_Script@1a18644]" started-at="2022-11-28T18:15:47 IST" name="Close" finished-at="2022-11-28T18:15:54 IST" duration-ms="7639" status="PASS">
+        <test-method is-config="true" signature="Close()[pri:0, instance:com.mavenpackage.Driver_Script@7d3e8655]" started-at="2022-12-05T17:26:49 IST" name="Close" finished-at="2022-12-05T17:26:49 IST" duration-ms="2" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[End<br/>]]>
+            </line>
           </reporter-output>
         </test-method> <!-- Close -->
       </class> <!-- com.mavenpackage.Driver_Script -->

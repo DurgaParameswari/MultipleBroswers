@@ -105,7 +105,6 @@ public class ActionClass extends BaseClass {
 	public static String actual;
 	public static int i = 1, k = 1, lastRow, j;
 
-
 	public static By by1, locator1;
 	public static Select select1;
 	public static Boolean flag;
@@ -122,9 +121,9 @@ public class ActionClass extends BaseClass {
 	public static String value1, value2, value3;
 	public static String leadID;
 	public static String randomString;
-	
+
 	public static String timestamp1;
-	
+
 	static Logger logger = Logger.getLogger(ActionClass.class);
 
 	@SuppressWarnings("deprecation")
@@ -161,7 +160,8 @@ public class ActionClass extends BaseClass {
 					outFile.close();
 				}
 			} catch (Exception e) {
-				System.out.println("test1");
+				logger.warn(e.getMessage());
+				reporterLog(e.getMessage());
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Firefox")) {
@@ -175,7 +175,8 @@ public class ActionClass extends BaseClass {
 					outFile.close();
 				}
 			} catch (Exception e) {
-				System.out.println("test2");
+				logger.warn(e.getMessage());
+				reporterLog(e.getMessage());
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Edge")) {
@@ -189,13 +190,16 @@ public class ActionClass extends BaseClass {
 					outFile.close();
 				}
 			} catch (Exception e) {
-				System.err.println("test3");
+				logger.warn(e.getMessage());
+				reporterLog(e.getMessage());
 			}
 		} catch (FileNotFoundException e) {
 			logger.warn(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
+			reporterLog(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
 			e.printStackTrace();
 		} catch (IOException e) {
 			logger.warn(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
+			reporterLog(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
 			e.printStackTrace();
 		}
 	}
@@ -203,6 +207,7 @@ public class ActionClass extends BaseClass {
 	public static void mita_Web_writePass() throws IOException {
 		try {
 			logger.info(Driver_Script.Actionvalue + ": Updating the result in excel");
+			reporterLog(Driver_Script.Actionvalue + ": Updating the result in excel");
 			inputFile = new FileInputStream(new File(Runner.filePath));
 			XSSFWorkbook workbook = new XSSFWorkbook(inputFile);
 			sheet = workbook.getSheet(sheetNames[j]);
@@ -235,7 +240,8 @@ public class ActionClass extends BaseClass {
 				}
 
 			} catch (Exception e) {
-				System.out.println("test1");
+				logger.warn(e.getMessage());
+				reporterLog(e.getMessage());
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Firefox")) {
@@ -254,7 +260,8 @@ public class ActionClass extends BaseClass {
 					outFile.close();
 				}
 			} catch (Exception e) {
-				System.out.println("test2");
+				logger.warn(e.getMessage());
+				reporterLog(e.getMessage());
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Edge")) {
@@ -272,20 +279,24 @@ public class ActionClass extends BaseClass {
 					outFile.close();
 				}
 			} catch (Exception e) {
-				System.err.println("test3");
+				logger.warn(e.getMessage());
+				reporterLog(e.getMessage());
 			}
 		} catch (FileNotFoundException e) {
 			logger.warn(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
+			reporterLog(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 			logger.warn(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
+			reporterLog(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
 		}
 	}
 
 	public static void mita_Web_writeFail() throws IOException {
 		try {
 			logger.info(Driver_Script.Actionvalue + ": Updating the result in excel");
+//			reporterLog(Driver_Script.Actionvalue + ": Updating the result in excel");
 			inputFile = new FileInputStream(new File(Runner.filePath));
 			XSSFWorkbook workbook = new XSSFWorkbook(inputFile);
 			sheet = workbook.getSheet(sheetNames[j]);
@@ -318,7 +329,8 @@ public class ActionClass extends BaseClass {
 				}
 
 			} catch (Exception e) {
-				System.out.println("test1");
+				logger.warn(e.getMessage());
+				reporterLog(e.getMessage());
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Firefox")) {
@@ -337,7 +349,8 @@ public class ActionClass extends BaseClass {
 					outFile.close();
 				}
 			} catch (Exception e) {
-				System.out.println("test2");
+				logger.warn(e.getMessage());
+				reporterLog(e.getMessage());
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Edge")) {
@@ -355,15 +368,18 @@ public class ActionClass extends BaseClass {
 					outFile.close();
 				}
 			} catch (Exception e) {
-				System.err.println("test3");
+				logger.warn(e.getMessage());
+				reporterLog(e.getMessage());
 			}
 
 		} catch (FileNotFoundException e) {
 			logger.warn(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
+			reporterLog(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 			logger.warn(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
+			reporterLog(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
 		}
 	}
 
@@ -400,7 +416,8 @@ public class ActionClass extends BaseClass {
 				}
 
 			} catch (Exception e) {
-				System.out.println("test1");
+				logger.warn(e.getMessage());
+				reporterLog(e.getMessage());
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Firefox")) {
@@ -419,7 +436,8 @@ public class ActionClass extends BaseClass {
 					driver.quit();
 				}
 			} catch (Exception e) {
-				System.out.println("test2");
+				logger.warn(e.getMessage());
+				reporterLog(e.getMessage());
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Edge")) {
@@ -437,7 +455,8 @@ public class ActionClass extends BaseClass {
 					driver.quit();
 				}
 			} catch (Exception e) {
-				System.err.println("test3");
+				logger.warn(e.getMessage());
+				reporterLog(e.getMessage());
 			}
 
 //			outFile = new FileOutputStream(new File(Runner.filePath));
@@ -452,9 +471,11 @@ public class ActionClass extends BaseClass {
 
 		catch (FileNotFoundException e) {
 			logger.warn(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
+			reporterLog(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
 			e.printStackTrace();
 		} catch (IOException e) {
 			logger.warn(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
+			reporterLog(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
 			e.printStackTrace();
 		}
 	}
@@ -472,9 +493,8 @@ public class ActionClass extends BaseClass {
 			style.setFillPattern(CellStyle.SOLID_FOREGROUND);
 
 //			Cell searchText2 = sheet.getRow(k).createCell(4);
-//			searchText2.setCellValue("Please do spell check");
-//			searchText2.setCellStyle(style);
-//			
+//			searchText2.setCellValue("Please do spell check");	
+//			searchText2.setCellStyle(style);			
 
 			try {
 				if (bt[l].equalsIgnoreCase("Chrome")) {
@@ -493,7 +513,8 @@ public class ActionClass extends BaseClass {
 				}
 
 			} catch (Exception e) {
-				System.out.println("test1");
+				logger.warn(e.getMessage());
+				reporterLog(e.getMessage());
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Firefox")) {
@@ -511,7 +532,8 @@ public class ActionClass extends BaseClass {
 					driver.quit();
 				}
 			} catch (Exception e) {
-				System.out.println("test2");
+				logger.warn(e.getMessage());
+				reporterLog(e.getMessage());
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Edge")) {
@@ -529,7 +551,8 @@ public class ActionClass extends BaseClass {
 					driver.quit();
 				}
 			} catch (Exception e) {
-				System.err.println("test3");
+				logger.warn(e.getMessage());
+				reporterLog(e.getMessage());
 			}
 
 //			outFile = new FileOutputStream(new File(Runner.filePath));
@@ -542,9 +565,11 @@ public class ActionClass extends BaseClass {
 //			driver.quit();
 		} catch (FileNotFoundException e) {
 			logger.warn(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
+			reporterLog(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
 			e.printStackTrace();
 		} catch (IOException e) {
 			logger.warn(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
+			reporterLog(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
 			e.printStackTrace();
 		}
 	}
@@ -573,7 +598,8 @@ public class ActionClass extends BaseClass {
 					outFile.close();
 				}
 			} catch (Exception e) {
-				System.out.println("test1");
+				logger.warn(e.getMessage());
+				reporterLog(e.getMessage());
 			}
 			try {
 				if (Runner.browserType.equalsIgnoreCase("Firefox")) {
@@ -588,7 +614,8 @@ public class ActionClass extends BaseClass {
 					outFile.close();
 				}
 			} catch (Exception e) {
-				System.out.println("test1");
+				logger.warn(e.getMessage());
+				reporterLog(e.getMessage());
 			}
 			try {
 				if (Runner.browserType.equalsIgnoreCase("Edge")) {
@@ -603,14 +630,17 @@ public class ActionClass extends BaseClass {
 					outFile.close();
 				}
 			} catch (Exception e) {
-				System.out.println("test3");
+				logger.warn(e.getMessage());
+				reporterLog(e.getMessage());
 			}
 
 		} catch (FileNotFoundException e) {
 			logger.warn(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
+			reporterLog(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
 			e.printStackTrace();
 		} catch (IOException e) {
 			logger.warn(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
+			reporterLog(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
 			e.printStackTrace();
 		}
 	}
@@ -649,7 +679,8 @@ public class ActionClass extends BaseClass {
 					outFile.close();
 				}
 			} catch (Exception e) {
-				System.out.println("test1");
+				logger.warn(e.getMessage());
+				reporterLog(e.getMessage());
 			}
 			try {
 				if (Runner.browserType.equalsIgnoreCase("Firefox")) {
@@ -667,7 +698,8 @@ public class ActionClass extends BaseClass {
 					outFile.close();
 				}
 			} catch (Exception e) {
-				System.out.println("test1");
+				logger.warn(e.getMessage());
+				reporterLog(e.getMessage());
 			}
 			try {
 				if (Runner.browserType.equalsIgnoreCase("Edge")) {
@@ -685,7 +717,8 @@ public class ActionClass extends BaseClass {
 					outFile.close();
 				}
 			} catch (Exception e) {
-				System.out.println("test3");
+				logger.warn(e.getMessage());
+				reporterLog(e.getMessage());
 			}
 
 //			outFile = new FileOutputStream(new File(Runner.filePath));
@@ -695,9 +728,11 @@ public class ActionClass extends BaseClass {
 //			outFile.close();
 		} catch (FileNotFoundException e) {
 			logger.warn(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
+			reporterLog(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
 			e.printStackTrace();
 		} catch (IOException e) {
 			logger.warn(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
+			reporterLog(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
 			e.printStackTrace();
 
 		}
@@ -737,7 +772,8 @@ public class ActionClass extends BaseClass {
 				}
 
 			} catch (Exception e) {
-				System.out.println("test1");
+				logger.warn(e.getMessage());
+				reporterLog(e.getMessage());
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Firefox")) {
@@ -754,7 +790,8 @@ public class ActionClass extends BaseClass {
 					outFile.close();
 				}
 			} catch (Exception e) {
-				System.out.println("test2");
+				logger.warn(e.getMessage());
+				reporterLog(e.getMessage());
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Edge")) {
@@ -771,7 +808,8 @@ public class ActionClass extends BaseClass {
 					outFile.close();
 				}
 			} catch (Exception e) {
-				System.err.println("test3");
+				logger.warn(e.getMessage());
+				reporterLog(e.getMessage());
 			}
 
 //			outFile = new FileOutputStream(new File(Runner.filePath));
@@ -783,9 +821,11 @@ public class ActionClass extends BaseClass {
 //			outFile.close();
 		} catch (FileNotFoundException e) {
 			logger.warn(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
+			reporterLog(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
 			e.printStackTrace();
 		} catch (IOException e) {
 			logger.warn(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
+			reporterLog(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
 			e.printStackTrace();
 		}
 	}
@@ -824,7 +864,8 @@ public class ActionClass extends BaseClass {
 				}
 
 			} catch (Exception e) {
-				System.out.println("test1");
+				logger.warn(e.getMessage());
+				reporterLog(e.getMessage());
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Firefox")) {
@@ -843,7 +884,8 @@ public class ActionClass extends BaseClass {
 					mobiledriver.quit();
 				}
 			} catch (Exception e) {
-				System.out.println("test2");
+				logger.warn(e.getMessage());
+				reporterLog(e.getMessage());
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Edge")) {
@@ -862,7 +904,8 @@ public class ActionClass extends BaseClass {
 					mobiledriver.quit();
 				}
 			} catch (Exception e) {
-				System.err.println("test3");
+				logger.warn(e.getMessage());
+				reporterLog(e.getMessage());
 			}
 
 //			outFile = new FileOutputStream(new File(Runner.filePath));
@@ -877,9 +920,11 @@ public class ActionClass extends BaseClass {
 
 		catch (FileNotFoundException e) {
 			logger.warn(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
+			reporterLog(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
 			e.printStackTrace();
 		} catch (IOException e) {
 			logger.warn(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
+			reporterLog(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
 			e.printStackTrace();
 		}
 	}
@@ -919,7 +964,8 @@ public class ActionClass extends BaseClass {
 				}
 
 			} catch (Exception e) {
-				System.out.println("test1");
+				logger.warn(e.getMessage());
+				reporterLog(e.getMessage());
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Firefox")) {
@@ -938,7 +984,8 @@ public class ActionClass extends BaseClass {
 					mobiledriver.quit();
 				}
 			} catch (Exception e) {
-				System.out.println("test2");
+				logger.warn(e.getMessage());
+				reporterLog(e.getMessage());
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Edge")) {
@@ -957,7 +1004,8 @@ public class ActionClass extends BaseClass {
 					mobiledriver.quit();
 				}
 			} catch (Exception e) {
-				System.err.println("test3");
+				logger.warn(e.getMessage());
+				reporterLog(e.getMessage());
 			}
 
 //			outFile = new FileOutputStream(new File(Runner.filePath));
@@ -972,9 +1020,11 @@ public class ActionClass extends BaseClass {
 
 		catch (FileNotFoundException e) {
 			logger.warn(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
+			reporterLog(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
 			e.printStackTrace();
 		} catch (IOException e) {
 			logger.warn(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
+			reporterLog(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
 			e.printStackTrace();
 		}
 	}
@@ -1024,6 +1074,7 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - EnterTextKey method");
+			reporterLog(Driver_Script.Actionvalue);
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mita_JSHighlight(element);
@@ -1035,9 +1086,10 @@ public class ActionClass extends BaseClass {
 			Thread.sleep(3000);
 			mita_Web_write();
 		} catch (Exception e) {
-			System.err.format("No Element Found to perform entering the values \t" + e);
+//			System.err.format("No Element Found to perform entering the values \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to execute the EnterTextKey method \t" + e.getMessage());
+			reporterLog("No Element Found to perform entering the values \t" + e);
 
 		}
 	}
@@ -1046,6 +1098,7 @@ public class ActionClass extends BaseClass {
 			String WaitType) throws Throwable {
 		try {
 			logger.info("Executing - Mobile number OTP method");
+			reporterLog(Driver_Script.Actionvalue);
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			// Machint_JSHighlight(element);
@@ -1073,6 +1126,7 @@ public class ActionClass extends BaseClass {
 			mita_Web_write_when_Locator_isnotvalid();
 			System.err.format("No Element Found to handling the OTP \t" + e);
 			logger.warn("Unable to execute handling otp method \t" + e.getMessage());
+			reporterLog("No Element Found to handling the OTP \t" + e.getMessage());
 		}
 
 	}
@@ -1111,6 +1165,7 @@ public class ActionClass extends BaseClass {
 			String WaitType) throws Exception {
 		try {
 			logger.info("Executing - Mobile generateRandomNumber method");
+			reporterLog(Driver_Script.Actionvalue);
 			int number = Integer.parseInt(value);
 			String randomNumber = generateAadharNumber(number);
 			locator = mita_locator(LocatorType, LocatorValue);
@@ -1133,6 +1188,7 @@ public class ActionClass extends BaseClass {
 			String WaitType) throws Exception {
 		try {
 			logger.info("Executing - AutoSuggestion_Dropdown method");
+			reporterLog(Driver_Script.Actionvalue);
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mita_JSHighlight(element);
@@ -1146,9 +1202,10 @@ public class ActionClass extends BaseClass {
 			act.sendKeys(Keys.ENTER).perform();
 			mita_Web_write();
 		} catch (Exception e) {
-			System.err.format("No Element Found to perform AutoSuggestion_Dropdown \t" + e);
+//			System.err.format("No Element Found to perform AutoSuggestion_Dropdown \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
-			logger.warn("Unable to execute the AutoSuggestiondropdown method \t" + e.getMessage());
+			logger.warn("Unable to execute the Auto Suggestion dropdown method \t" + e.getMessage());
+			reporterLog("Unable to execute the Auto Suggestion dropdown method \t" + e);
 		}
 
 	}
@@ -1157,6 +1214,7 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - EnterTextField method");
+			reporterLog(Driver_Script.Actionvalue);
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mita_JSHighlight(element);
@@ -1169,9 +1227,10 @@ public class ActionClass extends BaseClass {
 
 		catch (Exception e) {
 
-			System.err.format("No Element Found to perform ngvt_Click \t" + e);
+//			System.err.format("No Element Found to perform ngvt_Click \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to execute the EnterTextField method \t" + e.getMessage());
+			reporterLog("Unable to execute the EnterTextField method \t" + e.getMessage());
 
 		}
 
@@ -1180,22 +1239,19 @@ public class ActionClass extends BaseClass {
 	public static void mita_Click(String LocatorType, String LocatorValue, String WaitType) throws Exception {
 		try {
 			logger.info("Executing - Click method");
+			reporterLog(Driver_Script.Actionvalue);
 			locator = mita_locator(LocatorType, LocatorValue);
-			// JavascriptExecutor js = (JavascriptExecutor)driver;
 			element = driver.findElement(locator);
 			mita_JSHighlight(element);
 			mita_Wait(WaitType);
-
-			// js.executeScript("arguments[0].click();", element);
 			element.click();
 			// Thread.sleep(500);
 			mita_Web_write();
 		} catch (Exception e) {
-
-			System.err.format("No Element Found to perform ngvt_Click \t" + e);
+//			System.err.format("No Element Found to perform ngvt_Click \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to execute the click method \t" + e.getMessage());
-
+			reporterLog("Unable to execute the click method \t" + e.getMessage());
 		}
 
 	}
@@ -1204,6 +1260,7 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - selectValue method");
+			reporterLog(Driver_Script.Actionvalue);
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mita_JSHighlight(element);
@@ -1214,9 +1271,10 @@ public class ActionClass extends BaseClass {
 			mita_Web_write();
 		} catch (Exception e) {
 
-			System.err.format("No Element Found to perform ngvt_Click \t" + e);
+//			System.err.format("No Element Found to perform ngvt_Click \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to execute the selectvalue method \t" + e.getMessage());
+			reporterLog("Unable to execute the selectvalue method \t" + e.getMessage());
 		}
 
 	}
@@ -1225,6 +1283,7 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - selectIndex method");
+			reporterLog(Driver_Script.Actionvalue);
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mita_JSHighlight(element);
@@ -1235,9 +1294,10 @@ public class ActionClass extends BaseClass {
 			// Thread.sleep(500);
 		} catch (Exception e) {
 
-			System.err.format("No Element Found to perform ngvt_Click \t" + e);
+//			System.err.format("No Element Found to perform ngvt_Click \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to execute the selectIndex method \t" + e.getMessage());
+			reporterLog("Unable to execute the selectIndex method \t" + e.getMessage());
 
 		}
 	}
@@ -1246,6 +1306,7 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - selectVisibletext method");
+			reporterLog(Driver_Script.Actionvalue);
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mita_JSHighlight(element);
@@ -1267,6 +1328,7 @@ public class ActionClass extends BaseClass {
 		boolean boolFound = false;
 		try {
 			logger.info("Executing - acceptAlert method");
+			reporterLog(Driver_Script.Actionvalue);
 			wait = new WebDriverWait(driver, 1000);
 			wait.until(ExpectedConditions.alertIsPresent());
 			Alert alert = driver.switchTo().alert();
@@ -1279,6 +1341,7 @@ public class ActionClass extends BaseClass {
 			boolFound = false;
 			e.printStackTrace();
 			logger.warn("Unable to execute the acceptAlert method \t" + e.getMessage());
+			reporterLog("Unable to execute the acceptAlert method \t" + e.getMessage());
 		}
 		return boolFound;
 	}
@@ -1287,6 +1350,7 @@ public class ActionClass extends BaseClass {
 		boolean boolFound = false;
 		try {
 			logger.info("Executing - dismissAlert method");
+			reporterLog(Driver_Script.Actionvalue);
 			wait = new WebDriverWait(driver, 1000);
 			wait.until(ExpectedConditions.alertIsPresent());
 			Alert alert = driver.switchTo().alert();
@@ -1307,6 +1371,7 @@ public class ActionClass extends BaseClass {
 		boolean boolFound = false;
 		try {
 			logger.info("Executing - getAlertText method");
+			reporterLog(Driver_Script.Actionvalue);
 			wait = new WebDriverWait(driver, 1000);
 			wait.until(ExpectedConditions.alertIsPresent());
 			Alert alert = driver.switchTo().alert();
@@ -1320,6 +1385,7 @@ public class ActionClass extends BaseClass {
 			boolFound = false;
 			e.printStackTrace();
 			logger.warn("Unable to execute the getAlertText method \t" + e.getMessage());
+			reporterLog("Unable to execute the getAlertText method \t" + e.getMessage());
 		}
 		return boolFound;
 
@@ -1328,23 +1394,20 @@ public class ActionClass extends BaseClass {
 	public static void mita_AssertTitle(String expected) throws IOException {
 		try {
 			logger.info("Executing - AssertTitle method");
+			reporterLog(Driver_Script.Actionvalue);
 			actual = driver.getTitle();
 			if (actual.equalsIgnoreCase(expected)) {
-				System.out.println("pass");
 				mita_Web_writePass();
-				Driver_Script.mita_Web_writePass();
+				mita_Web_writePass();
 			} else {
-				System.out.println("fail");
 				mita_Web_ScreenShot();
-				Driver_Script.mita_Web_writeFail();
+				mita_Web_writeFail();
 			}
 
 		} catch (Exception e) {
-
-			System.err.format("No Element Found to perform ngvt_Click \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to execute the Asserttitle method \t" + e.getMessage());
-
+			reporterLog("Unable to execute the Asserttitle method \t" + e.getMessage());
 		}
 
 	}
@@ -1353,21 +1416,17 @@ public class ActionClass extends BaseClass {
 			throws IOException {
 		try {
 			logger.info("Executing - AssertEquals method");
+			reporterLog(Driver_Script.Actionvalue);
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mita_JSHighlight_for_validation(element);
 			String actualValue = driver.findElement(locator).getText();
 			softAssert.assertEquals(actualValue, expectedValue);
-			System.out.println("pass");
-			Driver_Script.mita_Web_writePass();
+			mita_Web_writePass();
 		} catch (Exception e) {
-			System.out.println("fail");
-			Driver_Script.mita_Web_writeFail();
+			mita_Web_writeFail();
 			logger.warn("Asserts are not equal \t" + e.getMessage());
-			/*
-			 * System.err.format("No Element Found to perform ngvt_Click \t" + e);
-			 * mita_Web_write_when_Locator_isnotvalid();
-			 */
+			reporterLog("Asserts are not equal \t" + e.getMessage());
 
 		}
 	}
@@ -1376,23 +1435,22 @@ public class ActionClass extends BaseClass {
 			throws IOException {
 		try {
 			logger.info("Executing - EqualsValidation method");
+			reporterLog(Driver_Script.Actionvalue);
 			locator = mita_locator(LocatorType, LocatorValue);
 			actual = driver.findElement(locator).getText();
 
 			if (actual.equalsIgnoreCase(expected)) {
-				System.out.println("pass");
-				Driver_Script.mita_Web_writePass();
+				Machint_JSHighlight(element);
+				mita_Web_writePass();
 			} else {
-				System.out.println("fail");
+				mita_JSHighlight_for_validation(element);
 				mita_Web_ScreenShot();
-				Driver_Script.mita_Web_writeFail();
-				// mita_write_text_not_Matched();
+				mita_Web_writeFail();
 			}
 		} catch (Exception e) {
-
-			System.err.format("No Element Found to perform ngvt_Click \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to execute the Equals validation method\t" + e.getMessage());
+			reporterLog("Unable to execute the Equals validation method\t" + e.getMessage());
 		}
 	}
 
@@ -1402,16 +1460,18 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - GettheFirstValue method");
+			reporterLog(Driver_Script.Actionvalue);
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mita_Wait(WaitType);
 			value1 = element.getText();
 			mita_Web_write();
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			// System.out.println(e.getMessage());
 			mita_Web_write_when_Locator_isnotvalid();
-			System.err.format("No Element Found to get the value \t" + e);
+			// System.err.format("No Element Found to get the value \t" + e);
 			logger.warn("Unable to execute the GetFirstValue method \t" + e.getMessage());
+			reporterLog("Unable to execute the GetFirstValue method \t" + e.getMessage());
 		}
 
 	}
@@ -1421,6 +1481,7 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - SettheFirstValue method");
+			reporterLog(Driver_Script.Actionvalue);
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mita_JSHighlight(element);
@@ -1435,9 +1496,10 @@ public class ActionClass extends BaseClass {
 
 		catch (Exception e) {
 
-			System.err.format("No Element Found to perform ngvt_Click \t" + e);
+//			System.err.format("No Element Found to perform ngvt_Click \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to execute the SetFirstValue method \t" + e.getMessage());
+			reporterLog("Unable to execute the SetFirstValue method \t" + e.getMessage());
 		}
 	}
 
@@ -1445,6 +1507,7 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - gettheSecondValue method");
+			reporterLog(Driver_Script.Actionvalue);
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mita_Wait(WaitType);
@@ -1452,9 +1515,10 @@ public class ActionClass extends BaseClass {
 			mita_Wait(WaitType);
 		} catch (Exception e) {
 
-			System.err.format("No Element Found to perform  \t" + e);
+//			System.err.format("No Element Found to perform  \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to execute the gettheSecondValue method \t" + e.getMessage());
+			reporterLog("Unable to execute the gettheSecondValue method \t" + e.getMessage());
 		}
 
 	}
@@ -1463,6 +1527,7 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - settheSecondValue method");
+			reporterLog(Driver_Script.Actionvalue);
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mita_JSHighlight(element);
@@ -1476,10 +1541,10 @@ public class ActionClass extends BaseClass {
 		}
 
 		catch (Exception e) {
-
-			System.err.format("No Element Found to perform ngvt_Click \t" + e);
+//			System.err.format("No Element Found to perform ngvt_Click \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to execute the setSecondValue method \t" + e.getMessage());
+			reporterLog("Unable to execute the setSecondValue method \t" + e.getMessage());
 		}
 	}
 
@@ -1487,6 +1552,7 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - GetTheValueFromApp method");
+			reporterLog(Driver_Script.Actionvalue);
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mita_Wait(WaitType);
@@ -1494,9 +1560,10 @@ public class ActionClass extends BaseClass {
 			System.out.println(value3 + "place holder");
 			mita_Web_write();
 		} catch (Exception e) {
-			System.err.format("No Element Found to perform ngvt_Click \t" + e);
+//			System.err.format("No Element Found to perform ngvt_Click \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to execute the getValuefromapp method \t" + e.getMessage());
+			reporterLog("Unable to execute the getValuefromapp method \t" + e.getMessage());
 
 		}
 	}
@@ -1505,6 +1572,7 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - SetThtValueInApp method");
+			reporterLog(Driver_Script.Actionvalue);
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mita_Wait(WaitType);
@@ -1518,9 +1586,10 @@ public class ActionClass extends BaseClass {
 
 		catch (Exception e) {
 
-			System.err.format("No Element Found to perform ngvt_Click \t" + e);
+//			System.err.format("No Element Found to perform ngvt_Click \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to execute the setSecondValue method \t" + e.getMessage());
+			reporterLog("Unable to execute the setSecondValue method \t" + e.getMessage());
 		}
 
 	}
@@ -1528,15 +1597,15 @@ public class ActionClass extends BaseClass {
 	public static void mita_mouseOver(String LocatorValue) throws Throwable {
 		try {
 			logger.info("Executing - mouseOver method");
+			reporterLog(Driver_Script.Actionvalue);
 			action = new Actions(driver);
 			element = driver.findElement(By.xpath(LocatorValue));
 			action.moveToElement(element).build().perform();
 		} catch (Exception e) {
-
-			System.err.format("No Element Found to perform mouse move \t" + e);
+//			System.err.format("No Element Found to perform mouse move \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to execute the mousehower method \t" + e.getMessage());
-
+			reporterLog("Unable to execute the mousehower method \t" + e.getMessage());
 		}
 	}
 
@@ -1570,8 +1639,9 @@ public class ActionClass extends BaseClass {
 				element = wait.until(ExpectedConditions.visibilityOf(element));
 			}
 		} catch (Exception e) {
-			System.err.format("No Element Found to mita_visibilityOf \t" + e);
+//			System.err.format("No Element Found to mita_visibilityOf \t" + e);
 			logger.warn("Unable to execute the visibilityOf method \t" + e.getMessage());
+			reporterLog("Unable to execute the visibilityOf method \t" + e.getMessage());
 		}
 	}
 
@@ -1583,8 +1653,9 @@ public class ActionClass extends BaseClass {
 
 			}
 		} catch (Exception e) {
-			System.err.format("No Element Found to mita_visibilityOfAllElements \t" + e);
+//			System.err.format("No Element Found to mita_visibilityOfAllElements \t" + e);
 			logger.warn("Unable to execute the visibilityOfAllElements method \t" + e.getMessage());
+			reporterLog("Unable to execute the visibilityOfAllElements method \t" + e.getMessage());
 		}
 	}
 
@@ -1595,8 +1666,9 @@ public class ActionClass extends BaseClass {
 				wait.until(ExpectedConditions.elementToBeClickable(element));
 			}
 		} catch (Exception e) {
-			System.err.format("No Element Found to mita_elementToBeClickable \t" + e);
+//			System.err.format("No Element Found to mita_elementToBeClickable \t" + e);
 			logger.warn("Unable to execute the elementtobeClickable method \t" + e.getMessage());
+			reporterLog("Unable to execute the elementtobeClickable method \t" + e.getMessage());
 		}
 	}
 
@@ -1607,8 +1679,9 @@ public class ActionClass extends BaseClass {
 				wait.until(ExpectedConditions.elementToBeSelected(element));
 			}
 		} catch (Exception e) {
-			System.err.format("No Element Found to mita_elementToBeSelected \t" + e);
+//			System.err.format("No Element Found to mita_elementToBeSelected \t" + e);
 			logger.warn("Unable to execute the elementToBeSelected method \t" + e.getMessage());
+			reporterLog("Unable to execute the elementToBeSelected method \t" + e.getMessage());
 		}
 	}
 
@@ -1621,21 +1694,23 @@ public class ActionClass extends BaseClass {
 			System.out.println("Step Name is : " + Driver_Script.Actionvalue);
 			FileUtils.copyFile(src, new File(Runner.mobileScreenshotPath + "\\ScreenShots\\" + Driver_Script.sheetName
 					+ "_" + timestamp + "_" + Driver_Script.Actionvalue + ".png"));
-			System.out.println("Successfully captured a screenshot");
+//			System.out.println("Successfully captured a screenshot");
 		} catch (Exception e) {
-			System.out.println("Exception while taking screenshot ");
+//			System.out.println("Exception while taking screenshot ");
 			logger.warn("Unable to take the Mobile Screenshot \t");
+			reporterLog("Unable to take the Mobile Screenshot \t");
 		}
 	}
 
 	public static void mita_Web_ScreenShot() {
 		try {
 			logger.info("Executing - Taking ScreenShot method");
+//			reporterLog("Executing - Taking ScreenShot method");
 			TakesScreenshot screenshot = (TakesScreenshot) driver;
 			File src = screenshot.getScreenshotAs(OutputType.FILE);
 			String timestamp = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
 			System.out.println("Step Name is : " + Driver_Script.Actionvalue);
-			
+
 			try {
 				if (bt[l].equalsIgnoreCase("Chrome")) {
 					FileUtils.copyFile(src,
@@ -1644,7 +1719,8 @@ public class ActionClass extends BaseClass {
 									+ ".png"));
 				}
 			} catch (Exception e) {
-				System.out.println("unable to take screenshot in chrome broswer");
+				logger.warn("unable to take screenshot in chrome broswer " + e.getMessage());
+				reporterLog("unable to take screenshot in chrome broswer " + e.getMessage());
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Firefox")) {
@@ -1654,7 +1730,8 @@ public class ActionClass extends BaseClass {
 									+ ".png"));
 				}
 			} catch (Exception e) {
-				System.out.println("unable to take screenshot in firefox broswer");
+				logger.warn("unable to take screenshot in firefox broswer " + e.getMessage());
+				reporterLog("unable to take screenshot in firefox broswer " + e.getMessage());
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Edge")) {
@@ -1664,15 +1741,17 @@ public class ActionClass extends BaseClass {
 									+ ".png"));
 				}
 			} catch (Exception e) {
-				System.out.println("unable to take screenshot in edge broswer");
+				logger.warn("unable to take screenshot in edge broswer " + e.getMessage());
+				reporterLog("unable to take screenshot in edge broswer " + e.getMessage());
 			}
-			
+
 //			FileUtils.copyFile(src, new File(Runner.webScreenshotPath + "\\ScreenShots\\" + Driver_Script.sheetName
 //					+ "_" + timestamp + "_" + Driver_Script.Actionvalue + ".png"));
 //			System.out.println("Successfully captured a screenshot");
 		} catch (Exception e) {
-			System.out.println("Exception while taking screenshot ");
-			logger.warn("Unable to take the Web Screenshot \t" +e.getMessage());
+//			System.out.println("Exception while taking screenshot ");
+			logger.warn("Unable to take the Web Screenshot \t" + e.getMessage());
+			reporterLog("Unable to take the Web Screenshot \t" + e.getMessage());
 		}
 	}
 
@@ -1694,6 +1773,7 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - MovetoFrame method");
+			reporterLog(Driver_Script.Actionvalue);
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mita_Wait(WaitType);
@@ -1701,26 +1781,30 @@ public class ActionClass extends BaseClass {
 			// Thread.sleep(500);
 			mita_Web_write();
 		} catch (Exception e) {
-			System.err.format("No Element Found to perform mita_Frame \t" + e);
+//			System.err.format("No Element Found to perform mita_Frame \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to handle the Frames \t" + e.getMessage());
+			reporterLog("Unable to handle the Frames \t" + e.getMessage());
 		}
 	}
 
 	public static void mita_defaultFrame() {
 		try {
 			logger.info("Executing - defaultFrame method");
+			reporterLog(Driver_Script.Actionvalue);
 			driver.switchTo().defaultContent();
 			mita_Web_write();
 		} catch (Exception e) {
-			System.out.println("No frame unable mita_defaultframe \t" + e.getStackTrace());
+//			System.out.println("No frame unable mita_defaultframe \t" + e.getStackTrace());
 			logger.warn("Unable to execute the default Frame method \t" + e.getMessage());
+			reporterLog("Unable to execute the default Frame method \t" + e.getMessage());
 		}
 	}
 
 	public static void mita_cleanTheResults() throws IOException {
 		try {
-			// logger.info("Executing - Clean the Results method");
+//			 logger.info("Executing - Clean the Results method");
+//			 reporterLog("Executing - Clean the Results method");
 			inputFile = new FileInputStream(new File(Runner.filePath));
 			XSSFWorkbook workbook = new XSSFWorkbook(inputFile);
 			sheet = workbook.getSheet(sheetNames[j]);
@@ -1751,7 +1835,8 @@ public class ActionClass extends BaseClass {
 				}
 
 			} catch (Exception e) {
-				System.out.println("test1");
+				logger.info(e.getMessage());
+				reporterLog(e.getMessage());
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Firefox")) {
@@ -1769,7 +1854,8 @@ public class ActionClass extends BaseClass {
 					outFile.close();
 				}
 			} catch (Exception e) {
-				System.out.println("test2");
+				logger.info(e.getMessage());
+				reporterLog(e.getMessage());
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Edge")) {
@@ -1787,7 +1873,8 @@ public class ActionClass extends BaseClass {
 					outFile.close();
 				}
 			} catch (Exception e) {
-				System.err.println("test3");
+				logger.info(e.getMessage());
+				reporterLog(e.getMessage());
 			}
 
 //			outFile = new FileOutputStream(new File(Runner.filePath));
@@ -1796,16 +1883,18 @@ public class ActionClass extends BaseClass {
 //			outFile.close();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
-			// logger.warn("Unable to execute the CleanResults method \t" + e.getMessage());
+			logger.warn("Unable to execute the CleanResults method \t" + e.getMessage());
+			reporterLog("Unable to execute the CleanResults method \t" + e.getMessage());
 		} catch (IOException e) {
 			e.printStackTrace();
-			// logger.warn("Unable to execute the CleanResults method \t" + e.getMessage());
+			logger.warn("Unable to execute the CleanResults method \t" + e.getMessage());
 		}
 	}
 
 	public static void mita_scenarioNumber(String name) throws IOException {
 		try {
-			logger.info("Executing - scenarioNumber method");
+//			logger.info("Executing - scenarioNumber method");
+//			reporterLog("Executing - scenarioNumber method");
 			inputFile = new FileInputStream(new File(Runner.filePath));
 			XSSFWorkbook workbook = new XSSFWorkbook(inputFile);
 			sheet = workbook.getSheet(sheetNames[j]);
@@ -1832,7 +1921,8 @@ public class ActionClass extends BaseClass {
 				}
 
 			} catch (Exception e) {
-				System.out.println("test1");
+				logger.info(e.getMessage());
+				reporterLog(e.getMessage());
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Firefox")) {
@@ -1847,7 +1937,8 @@ public class ActionClass extends BaseClass {
 					outFile.close();
 				}
 			} catch (Exception e) {
-				System.out.println("test2");
+				logger.info(e.getMessage());
+				reporterLog(e.getMessage());
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Edge")) {
@@ -1862,7 +1953,8 @@ public class ActionClass extends BaseClass {
 					outFile.close();
 				}
 			} catch (Exception e) {
-				System.err.println("test3");
+				logger.info(e.getMessage());
+				reporterLog(e.getMessage());
 			}
 
 //			outFile = new FileOutputStream(new File(Runner.filePath));
@@ -1873,15 +1965,18 @@ public class ActionClass extends BaseClass {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 			logger.warn("Unable to execute the scenarionumber method \t" + e.getMessage());
+			reporterLog("Unable to execute the scenarionumber method \t" + e.getMessage());
 		} catch (IOException e) {
 			e.printStackTrace();
 			logger.warn("Unable to execute the scenarionumber method \t" + e.getMessage());
+			reporterLog("Unable to execute the scenarionumber method \t" + e.getMessage());
 		}
 	}
 
 	public static void mita_executionType(String name) throws IOException {
 		try {
-			// logger.info("Executing - "+Driver_Script.type);
+//			 logger.info("Executing - "+Driver_Script.type);
+//			 reporterLog("Executing - "+Driver_Script.type);
 			inputFile = new FileInputStream(new File(Runner.filePath));
 			XSSFWorkbook workbook = new XSSFWorkbook(inputFile);
 			sheet = workbook.getSheet(sheetNames[j]);
@@ -1902,13 +1997,14 @@ public class ActionClass extends BaseClass {
 
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mita_Web_ScreenShot();
+//					mita_Web_ScreenShot();
 					inputFile.close();
 					outFile.close();
 				}
 
 			} catch (Exception e) {
-				System.out.println("test1");
+				logger.info(e.getMessage());
+				reporterLog(e.getMessage());
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Firefox")) {
@@ -1918,12 +2014,13 @@ public class ActionClass extends BaseClass {
 
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mita_Web_ScreenShot();
+//					mita_Web_ScreenShot();
 					inputFile.close();
 					outFile.close();
 				}
 			} catch (Exception e) {
-				System.out.println("test2");
+				logger.info(e.getMessage());
+				reporterLog(e.getMessage());
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Edge")) {
@@ -1933,12 +2030,13 @@ public class ActionClass extends BaseClass {
 
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mita_Web_ScreenShot();
+//					mita_Web_ScreenShot();
 					inputFile.close();
 					outFile.close();
 				}
 			} catch (Exception e) {
-				System.err.println("test3");
+				logger.info(e.getMessage());
+				reporterLog(e.getMessage());
 			}
 
 //			outFile = new FileOutputStream(new File(Runner.filePath));
@@ -1949,9 +2047,11 @@ public class ActionClass extends BaseClass {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 			logger.warn("Unable to execute the " + Driver_Script.type + "script " + e.getMessage());
+			reporterLog("Unable to execute the " + Driver_Script.type + "script " + e.getMessage());
 		} catch (IOException e) {
 			e.printStackTrace();
 			logger.warn("Unable to execute the " + Driver_Script.type + "script " + e.getMessage());
+			reporterLog("Unable to execute the " + Driver_Script.type + "script " + e.getMessage());
 		}
 	}
 
@@ -1963,6 +2063,7 @@ public class ActionClass extends BaseClass {
 			String WaitType) throws Exception {
 		try {
 			logger.info("Executing - EnterTextKey method");
+			reporterLog("Executing - EnterTextKey method");
 			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			// Machint_JSHighlight(element);
@@ -1975,8 +2076,9 @@ public class ActionClass extends BaseClass {
 			mita_Mobile_write();
 		} catch (Exception e) {
 			mita_Mobile_write_when_Locator_isnotvalid();
-			System.err.format("No Element Found to Machint_EnterTextKey \t" + e);
+//			System.err.format("No Element Found to Machint_EnterTextKey \t" + e);
 			logger.warn("Unable to execute the Entertextkey method \t" + e.getMessage());
+			reporterLog("Unable to execute the Entertextkey method \t" + e.getMessage());
 		}
 	}
 
@@ -2532,14 +2634,14 @@ public class ActionClass extends BaseClass {
 			logger.info("Executing - EqualsValidation method");
 			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
 			actual = mobiledriver.findElement(locator).getText();
-
+		
 			if (actual.equalsIgnoreCase(expected)) {
-				System.out.println("pass");
-				Driver_Script.mita_Mobile_writePass();
+				Machint_JSHighlight(element);
+				mita_Mobile_writePass();
 			} else {
-				System.out.println("fail");
+				mita_JSHighlight_for_validation(element);;
 				mita_Mobile_ScreenShot();
-				Driver_Script.mita_Mobile_writeFail();
+				mita_Mobile_writeFail();
 			}
 		} catch (Exception e) {
 
@@ -3611,13 +3713,12 @@ public class ActionClass extends BaseClass {
 	public static void mita_Web_wait_time(long sleepTime) throws InterruptedException, IOException {
 		try {
 			logger.info("Executing - Wait method");
+			reporterLog(Driver_Script.Actionvalue);
 			Thread.sleep(sleepTime);
 			mita_Web_write();
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+		} catch (Exception e) {
 			logger.warn("Unable to execute the Wait method \t" + e.getMessage());
-		} catch (IOException e) {
-			e.printStackTrace();
+			reporterLog("Unable to execute the Wait method \t" + e.getMessage());
 		}
 	}
 
@@ -3945,6 +4046,7 @@ public class ActionClass extends BaseClass {
 	public static void scrollDown(String LocatorType, String LocatorValue) throws IOException, InterruptedException {
 		try {
 			logger.info("Executing - EnterTextKey method");
+			reporterLog(Driver_Script.Actionvalue);
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mita_JSHighlight(element);
@@ -3953,9 +4055,10 @@ public class ActionClass extends BaseClass {
 			Thread.sleep(1000);
 			mita_Web_write();
 		} catch (Exception e) {
-			System.err.format("No Element Found to perform entering the values \t" + e);
+//			System.err.format("No Element Found to perform entering the values \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to execute the EnterTextKey method \t" + e.getMessage());
+			reporterLog("Unable to execute the EnterTextKey method \t" + e.getMessage());
 
 		}
 	}
@@ -3982,6 +4085,7 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - SettheLeadid method");
+			reporterLog(Driver_Script.Actionvalue);
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mita_JSHighlight(element);
@@ -3993,9 +4097,10 @@ public class ActionClass extends BaseClass {
 			// Thread.sleep(500);
 			mita_Web_write();
 		} catch (Exception e) {
-			System.err.format("No Element Found to perform get the lead \t" + e);
+//			System.err.format("No Element Found to perform get the lead \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to set the value \t" + e.getMessage());
+			reporterLog("Unable to set the value \t" + e.getMessage());
 		}
 	}
 
@@ -4050,6 +4155,7 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - GettheLeadId method");
+			reporterLog(Driver_Script.Actionvalue);
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			leadID = element.getText();
@@ -4063,9 +4169,10 @@ public class ActionClass extends BaseClass {
 			System.out.println(leadID);
 			mita_Web_write();
 		} catch (Exception e) {
-			System.err.format("No Element Found to perform get the lead \t" + e);
+//			System.err.format("No Element Found to perform get the lead \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to get the value \t" + e.getMessage());
+			reporterLog("Unable to get the value \t" + e.getMessage());
 		}
 	}
 
@@ -4096,6 +4203,7 @@ public class ActionClass extends BaseClass {
 			String WaitType) throws Exception {
 		try {
 			logger.info("Executing - EnterCharacter method");
+			reporterLog(Driver_Script.Actionvalue);
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mita_JSHighlight(element);
@@ -4117,6 +4225,7 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - zeroStartsNumber method");
+			reporterLog(Driver_Script.Actionvalue);
 			int number = Integer.parseInt(value);
 			String randomNumber = generateNumber(number);
 			locator = mita_locator(LocatorType, LocatorValue);
@@ -4130,8 +4239,9 @@ public class ActionClass extends BaseClass {
 			mita_Web_write();
 		} catch (Exception e) {
 			mita_Web_write_when_Locator_isnotvalid();
-			System.err.format("No Element Found to Machint_zeroStartsNumber \t" + e);
+//			System.err.format("No Element Found to Machint_zeroStartsNumber \t" + e);
 			logger.warn("Unable to execute the Machint_zeroStartsNumber method \t" + e.getMessage());
+			reporterLog("Unable to execute the Machint_zeroStartsNumber method \t" + e.getMessage());
 		}
 	}
 
@@ -4149,15 +4259,17 @@ public class ActionClass extends BaseClass {
 	public static void mita_uploadsendkeys(String LocatorType, String LocatorValue, String value) throws Exception {
 		try {
 			logger.info("Executing - uploadSendKEys method");
+			reporterLog(Driver_Script.Actionvalue);
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			Thread.sleep(1000);
 			element.sendKeys(value);
 			mita_Web_write();
 		} catch (Exception e) {
-			System.err.format("No Element Found to perform get the lead \t" + e);
+//			System.err.format("No Element Found to perform get the lead \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to set the value \t" + e.getMessage());
+			reporterLog("Unable to set the value \t" + e.getMessage());
 		}
 	}
 
@@ -4189,6 +4301,7 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - SettheLeadid method");
+			reporterLog(Driver_Script.Actionvalue);
 			locator = mita_locator(LocatorType, LocatorValue);
 			/*
 			 * element = driver.findElement(locator); mita_JSHighlight(element);
@@ -4206,9 +4319,10 @@ public class ActionClass extends BaseClass {
 			// Thread.sleep(500);
 			mita_Web_write();
 		} catch (Exception e) {
-			System.err.format("No Element Found to perform set the otp \t" + e);
+//			System.err.format("No Element Found to perform set the otp \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to set the value \t" + e.getMessage());
+			reporterLog("Unable to set the value \t" + e.getMessage());
 		}
 
 	}
@@ -4308,6 +4422,7 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - WebDynamicString method");
+			reporterLog(Driver_Script.Actionvalue);
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mita_Wait(WaitType);
@@ -4317,9 +4432,10 @@ public class ActionClass extends BaseClass {
 			element.sendKeys(random);
 			mita_Web_write();
 		} catch (Exception e) {
-			System.err.format("No Element Found to perform entering the values \t" + e);
+//			System.err.format("No Element Found to perform entering the values \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to execute the WebDynamicString method \t" + e.getMessage());
+			reporterLog("Unable to execute the WebDynamicString method \t" + e.getMessage());
 
 		}
 	}
@@ -4354,6 +4470,7 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - WebAppendText method");
+			reporterLog(Driver_Script.Actionvalue);
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mita_JSHighlight(element);
@@ -4364,9 +4481,10 @@ public class ActionClass extends BaseClass {
 			Thread.sleep(500);
 			mita_Web_write();
 		} catch (Exception e) {
-			System.err.format("No Element Found to perform entering the values \t" + e);
+//			System.err.format("No Element Found to perform entering the values \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to execute the WebAppendText method \t" + e.getMessage());
+			reporterLog("Unable to execute the WebAppendText method \t" + e.getMessage());
 
 		}
 	}
@@ -4398,6 +4516,7 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - EnterTextKey method");
+			reporterLog(Driver_Script.Actionvalue);
 			try {
 				if (element.isDisplayed())
 					locator = mita_locator(LocatorType, LocatorValue);
@@ -4422,16 +4541,17 @@ public class ActionClass extends BaseClass {
 	public static void mita_refresh() {
 		try {
 			logger.info("Executing - Refresh method");
+			reporterLog(Driver_Script.Actionvalue);
 			driver.navigate().refresh();
 			mita_Web_write();
 		} catch (Exception e) {
 			logger.warn("Unable to refresh \t" + e.getMessage());
+			reporterLog("Unable to refresh \t" + e.getMessage());
 		}
 	}
-	
+
 	public static String getCurrentTime() {
 		timestamp1 = DateTime.now().toString("yyyy-dd-M--HH-mm-ss");
-		System.out.println(timestamp1);
 		return timestamp1;
 	}
 }

@@ -31,8 +31,7 @@ public class Runner {
 		static TestNG testNg;
 
 		public static void main(String[] args) {
-			
-
+		
 //				Runner runner = new Runner();
 
 			// Common Arguments
@@ -45,25 +44,25 @@ public class Runner {
 //			logFile();
 
 			// Web Arguments
-//			browserType = args[3];
-//			System.out.println("Browser Type : " + browserType);
-			executionType = args[3];
+			browserType = args[3];
+			System.out.println("Browser Type : " + browserType);
+			executionType = args[4];
 			System.out.println("Execution Type : " + executionType);
-			driverurl = args[4];
+			driverurl = args[5];
 			System.out.println("URL is: " + driverurl);
-			webScreenshotPath = args[5];
+			webScreenshotPath = args[6];
 			System.out.println("Web ScreenShots Path: " + webScreenshotPath);
 
 			// Mobile Arguments
-			apkPath = args[6];
+			apkPath = args[7];
 			System.out.println("ApkPath is: " + apkPath);
-			deviceType = args[7];
+			deviceType = args[8];
 			System.out.println("Mobile DeviceType: " + deviceType);
-			deviceName = args[8];
+			deviceName = args[9];
 			System.out.println("Mobile DeviceName: " + deviceName);
-			apkPackageName = args[9];
+			apkPackageName = args[10];
 			System.out.println("ApkPackage Name: " + apkPackageName);
-			mobileScreenshotPath = args[10];
+			mobileScreenshotPath = args[11];
 			System.out.println("Mobile ScreenShots Path: " + mobileScreenshotPath);
 			
 			

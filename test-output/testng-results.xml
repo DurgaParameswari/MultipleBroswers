@@ -131,12 +131,12 @@
       <![CDATA[End<br/>]]>
     </line>
   </reporter-output>
-  <suite started-at="2022-12-05T17:22:27 IST" name="Command line suite" finished-at="2022-12-05T17:26:49 IST" duration-ms="261259">
+  <suite started-at="2022-12-05T18:00:11 IST" name="Command line suite" finished-at="2022-12-05T18:03:48 IST" duration-ms="216565">
     <groups>
     </groups>
-    <test started-at="2022-12-05T17:22:27 IST" name="Command line test" finished-at="2022-12-05T17:26:49 IST" duration-ms="261259">
+    <test started-at="2022-12-05T18:00:11 IST" name="Command line test" finished-at="2022-12-05T18:03:48 IST" duration-ms="216565">
       <class name="com.mavenpackage.Driver_Script">
-        <test-method signature="mydriverscript()[pri:0, instance:com.mavenpackage.Driver_Script@7d3e8655]" started-at="2022-12-05T17:22:27 IST" name="mydriverscript" finished-at="2022-12-05T17:26:48 IST" duration-ms="260384" status="PASS">
+        <test-method signature="mydriverscript()[pri:0, instance:com.mavenpackage.Driver_Script@7d3e8655]" started-at="2022-12-05T18:00:11 IST" name="mydriverscript" finished-at="2022-12-05T18:03:47 IST" duration-ms="216041" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Broswer type is chrome<br/>]]>
@@ -266,7 +266,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- mydriverscript -->
-        <test-method is-config="true" signature="Close()[pri:0, instance:com.mavenpackage.Driver_Script@7d3e8655]" started-at="2022-12-05T17:26:49 IST" name="Close" finished-at="2022-12-05T17:26:49 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="Close()[pri:0, instance:com.mavenpackage.Driver_Script@7d3e8655]" started-at="2022-12-05T18:03:48 IST" name="Close" finished-at="2022-12-05T18:03:48 IST" duration-ms="2" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[End<br/>]]>

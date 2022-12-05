@@ -43,6 +43,7 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.IndexedColors;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.joda.time.DateTime;
 import org.json.JSONObject;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -104,7 +105,6 @@ public class ActionClass extends BaseClass {
 	public static String actual;
 	public static int i = 1, k = 1, lastRow, j;
 
-	// --------------------
 
 	public static By by1, locator1;
 	public static Select select1;
@@ -122,6 +122,9 @@ public class ActionClass extends BaseClass {
 	public static String value1, value2, value3;
 	public static String leadID;
 	public static String randomString;
+	
+	public static String timestamp1;
+	
 	static Logger logger = Logger.getLogger(ActionClass.class);
 
 	@SuppressWarnings("deprecation")
@@ -1635,27 +1638,33 @@ public class ActionClass extends BaseClass {
 			
 			try {
 				if (bt[l].equalsIgnoreCase("Chrome")) {
-					FileUtils.copyFile(src, new File(Runner.webScreenshotPath +"\\ScreenShots\\Web\\"+bt[l]+"\\" + Driver_Script.sheetName
-							+ "_" + timestamp + "_" + Driver_Script.Actionvalue + ".png"));
+					FileUtils.copyFile(src,
+							new File(Runner.webScreenshotPath + "\\ScreenShots\\Web\\" + bt[l] + "\\" + timestamp1
+									+ "\\" + Driver_Script.sheetName + "_" + timestamp + "_" + Driver_Script.Actionvalue
+									+ ".png"));
 				}
 			} catch (Exception e) {
-				System.out.println("test1");
+				System.out.println("unable to take screenshot in chrome broswer");
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Firefox")) {
-					FileUtils.copyFile(src, new File(Runner.webScreenshotPath +"\\ScreenShots\\Web\\" +bt[l]+"\\"+ Driver_Script.sheetName
-							+ "_" + timestamp + "_" + Driver_Script.Actionvalue + ".png"));
+					FileUtils.copyFile(src,
+							new File(Runner.webScreenshotPath + "\\ScreenShots\\Web\\" + bt[l] + "\\" + timestamp1
+									+ "\\" + Driver_Script.sheetName + "_" + timestamp + "_" + Driver_Script.Actionvalue
+									+ ".png"));
 				}
 			} catch (Exception e) {
-				System.out.println("test1");
+				System.out.println("unable to take screenshot in firefox broswer");
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Edge")) {
-					FileUtils.copyFile(src, new File(Runner.webScreenshotPath +"\\ScreenShots\\Web\\" +bt[l]+"\\"+ Driver_Script.sheetName
-							+ "_" + timestamp + "_" + Driver_Script.Actionvalue + ".png"));
+					FileUtils.copyFile(src,
+							new File(Runner.webScreenshotPath + "\\ScreenShots\\Web\\" + bt[l] + "\\" + timestamp1
+									+ "\\" + Driver_Script.sheetName + "_" + timestamp + "_" + Driver_Script.Actionvalue
+									+ ".png"));
 				}
 			} catch (Exception e) {
-				System.out.println("test3");
+				System.out.println("unable to take screenshot in edge broswer");
 			}
 			
 //			FileUtils.copyFile(src, new File(Runner.webScreenshotPath + "\\ScreenShots\\" + Driver_Script.sheetName
@@ -1663,7 +1672,7 @@ public class ActionClass extends BaseClass {
 //			System.out.println("Successfully captured a screenshot");
 		} catch (Exception e) {
 			System.out.println("Exception while taking screenshot ");
-			logger.warn("Unable to take the Web Screenshot \t");
+			logger.warn("Unable to take the Web Screenshot \t" +e.getMessage());
 		}
 	}
 
@@ -4418,5 +4427,11 @@ public class ActionClass extends BaseClass {
 		} catch (Exception e) {
 			logger.warn("Unable to refresh \t" + e.getMessage());
 		}
+	}
+	
+	public static String getCurrentTime() {
+		timestamp1 = DateTime.now().toString("yyyy-dd-M--HH-mm-ss");
+		System.out.println(timestamp1);
+		return timestamp1;
 	}
 }

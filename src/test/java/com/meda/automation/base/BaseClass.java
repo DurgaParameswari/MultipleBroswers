@@ -63,6 +63,7 @@ public class BaseClass extends ExcelData
 					+ "browser " + e.getMessage());
 			reporterLog(Driver_Script.Actionvalue + ": Unable to select the " + browserType
 					+ "browser " + e.getMessage());
+			result = false;
 		}
 		return driver;
 	}
@@ -78,6 +79,7 @@ public class BaseClass extends ExcelData
 			} catch (Exception e) {
 				logger.info("User not selected Chrome Broswer " + e.getMessage());
 				reporterLog("User not selected Chrome Broswer " + e.getMessage());
+				result = false;
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Firefox")) {
@@ -86,6 +88,7 @@ public class BaseClass extends ExcelData
 			} catch (Exception e) {
 				logger.info("User not selected Firefox Broswer " + e.getMessage());
 				reporterLog("User not selected Firefox Broswer " + e.getMessage());
+				result = false;
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Edge")) {
@@ -94,12 +97,14 @@ public class BaseClass extends ExcelData
 			} catch (Exception e) {
 				logger.info("User not selected Edge Broswer " + e.getMessage());
 				reporterLog("User not selected Edge Broswer " + e.getMessage());
+				result = false;
 			}
 		} catch (Exception e) {
 			logger.warn("Executing - " + Driver_Script.Actionvalue + ": Unable to select the " + bt[l] + " browser "
 					+ e.getMessage());
 			reporterLog(Driver_Script.Actionvalue + ": Unable to select the " + bt[l] + " browser "
 					+ e.getMessage());
+			result = false;
 		}
 		return driver;
 	}
@@ -119,6 +124,7 @@ public class BaseClass extends ExcelData
 				options.addArguments("--window-size=1920,1080");
 				options.addArguments("--start-maximized");
 				options.addArguments("--headless");
+				reporterLog("Chrome browser started");
 				driver = new ChromeDriver(options);
 				// maximize window
 				reporterLog("Maximize Window");
@@ -132,6 +138,7 @@ public class BaseClass extends ExcelData
 			} else if (executionType.equalsIgnoreCase("Head")) {
 				logger.info("Execution Type is " + executionType);
 				reporterLog("Execution Type is " + executionType);
+				reporterLog("Chrome browser started");
 				driver = new ChromeDriver(options);
 				// maximize window
 				reporterLog("Maximize Window");
@@ -161,6 +168,7 @@ public class BaseClass extends ExcelData
 
 			reporterLog(Driver_Script.Actionvalue + ": Unable to launch the Chrome browser "
 					+ e.getMessage());
+			result = false;
 		}
 	}
 
@@ -177,6 +185,7 @@ public class BaseClass extends ExcelData
 				logger.info("Execution Type is " + executionType);
 				reporterLog("Execution Type is " + executionType);
 				firefoxOptions.setHeadless(true);
+				reporterLog("Firefox browser started");
 				driver = new FirefoxDriver(firefoxOptions);
 				// maximize window
 				reporterLog("Maximize Window");
@@ -189,6 +198,7 @@ public class BaseClass extends ExcelData
 			} else if (executionType.equalsIgnoreCase("Head")) {
 				logger.info("Execution Type is " + executionType);
 				reporterLog("Execution Type is " + executionType);
+				reporterLog("Firefox browser started");
 				driver = new FirefoxDriver(firefoxOptions);
 				// maximize window
 				reporterLog("Maximize Window");
@@ -204,6 +214,7 @@ public class BaseClass extends ExcelData
 
 			reporterLog(Driver_Script.Actionvalue + ": Unable to launch the Firefox browser"
 					+ e.getMessage());
+			result = false;
 		}
 	}
 
@@ -221,6 +232,7 @@ public class BaseClass extends ExcelData
 				reporterLog("Execution Type is " + executionType);
 				edgeOptions.setCapability("UseChromium", true);
 				edgeOptions.setCapability("headless", true);
+				reporterLog("Edge browser started");
 				driver = new EdgeDriver(edgeOptions);
 				// maximize window
 				reporterLog("Maximize Window");
@@ -233,6 +245,7 @@ public class BaseClass extends ExcelData
 			} else if (executionType.equalsIgnoreCase("Head")) {
 				logger.info("Execution Type is " + executionType);
 				reporterLog("Execution Type is " + executionType);
+				reporterLog("Edge browser started");
 				driver = new EdgeDriver(edgeOptions);
 				// maximize window
 				reporterLog("Maximize Window");
@@ -248,6 +261,7 @@ public class BaseClass extends ExcelData
 
 			reporterLog("Executing - " + Driver_Script.Actionvalue + ": Unable to launch the Edge browser"
 					+ e.getMessage());
+			result = false;
 		}
 	}
 
@@ -260,6 +274,7 @@ public class BaseClass extends ExcelData
 		} catch (Exception e) {
 			logger.error("Not able to Close the Browser --- " + e.getMessage());
 			reporterLog("Not able to Close the Browser --- " + e.getMessage());
+			result = false;
 		}
 	}
 
@@ -290,6 +305,7 @@ public class BaseClass extends ExcelData
 					+ e.getMessage());
 			reporterLog("Executing - " + Driver_Script.Actionvalue + ": Unable to launch the Andriod driver "
 					+ e.getMessage());
+			result = false;
 		}
 		return mobiledriver;
 	}

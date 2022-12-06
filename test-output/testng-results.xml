@@ -17,6 +17,9 @@
       <![CDATA[Execution Type is Head<br/>]]>
     </line>
     <line>
+      <![CDATA[Chrome browser started<br/>]]>
+    </line>
+    <line>
       <![CDATA[Maximize Window<br/>]]>
     </line>
     <line>
@@ -57,6 +60,9 @@
     </line>
     <line>
       <![CDATA[Execution Type is Head<br/>]]>
+    </line>
+    <line>
+      <![CDATA[Firefox browser started<br/>]]>
     </line>
     <line>
       <![CDATA[Maximize Window<br/>]]>
@@ -101,6 +107,9 @@
       <![CDATA[Execution Type is Head<br/>]]>
     </line>
     <line>
+      <![CDATA[Edge browser started<br/>]]>
+    </line>
+    <line>
       <![CDATA[Maximize Window<br/>]]>
     </line>
     <line>
@@ -131,12 +140,12 @@
       <![CDATA[End<br/>]]>
     </line>
   </reporter-output>
-  <suite started-at="2022-12-05T18:00:11 IST" name="Command line suite" finished-at="2022-12-05T18:03:48 IST" duration-ms="216565">
+  <suite started-at="2022-12-06T18:13:11 IST" name="Command line suite" finished-at="2022-12-06T18:16:46 IST" duration-ms="215341">
     <groups>
     </groups>
-    <test started-at="2022-12-05T18:00:11 IST" name="Command line test" finished-at="2022-12-05T18:03:48 IST" duration-ms="216565">
+    <test started-at="2022-12-06T18:13:11 IST" name="Command line test" finished-at="2022-12-06T18:16:46 IST" duration-ms="215341">
       <class name="com.mavenpackage.Driver_Script">
-        <test-method signature="mydriverscript()[pri:0, instance:com.mavenpackage.Driver_Script@7d3e8655]" started-at="2022-12-05T18:00:11 IST" name="mydriverscript" finished-at="2022-12-05T18:03:47 IST" duration-ms="216041" status="PASS">
+        <test-method signature="mydriverscript()[pri:0, instance:com.mavenpackage.Driver_Script@1b66c0fb]" started-at="2022-12-06T18:13:11 IST" name="mydriverscript" finished-at="2022-12-06T18:16:45 IST" duration-ms="213973" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Broswer type is chrome<br/>]]>
@@ -152,6 +161,9 @@
             </line>
             <line>
               <![CDATA[Execution Type is Head<br/>]]>
+            </line>
+            <line>
+              <![CDATA[Chrome browser started<br/>]]>
             </line>
             <line>
               <![CDATA[Maximize Window<br/>]]>
@@ -196,6 +208,9 @@
               <![CDATA[Execution Type is Head<br/>]]>
             </line>
             <line>
+              <![CDATA[Firefox browser started<br/>]]>
+            </line>
+            <line>
               <![CDATA[Maximize Window<br/>]]>
             </line>
             <line>
@@ -238,6 +253,9 @@
               <![CDATA[Execution Type is Head<br/>]]>
             </line>
             <line>
+              <![CDATA[Edge browser started<br/>]]>
+            </line>
+            <line>
               <![CDATA[Maximize Window<br/>]]>
             </line>
             <line>
@@ -266,7 +284,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- mydriverscript -->
-        <test-method is-config="true" signature="Close()[pri:0, instance:com.mavenpackage.Driver_Script@7d3e8655]" started-at="2022-12-05T18:03:48 IST" name="Close" finished-at="2022-12-05T18:03:48 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="Close()[pri:0, instance:com.mavenpackage.Driver_Script@1b66c0fb]" started-at="2022-12-06T18:16:46 IST" name="Close" finished-at="2022-12-06T18:16:46 IST" duration-ms="278" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[End<br/>]]>

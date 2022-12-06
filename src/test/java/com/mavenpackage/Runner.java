@@ -1,10 +1,8 @@
 package com.mavenpackage;
 
 import org.testng.TestNG;
-import org.testng.annotations.Listeners;
 
 import com.meda.automation.managers.TestListener;
-
 
 public class Runner {
 	static TestNG testNg;
@@ -21,10 +19,6 @@ public class Runner {
 	public static String deviceName;
 	public static String apkPackageName;
 	public static String mobileScreenshotPath;
-
-	@Listeners (
-			
-			)
 	
 	
 	public static class runner {

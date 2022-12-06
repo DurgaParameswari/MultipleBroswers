@@ -18,6 +18,7 @@ import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
+import com.mavenpackage.Driver_Script;
 import com.meda.automation.Utils.ActionClass;
 
 public class TestListener extends ActionClass implements ITestListener {
@@ -66,7 +67,6 @@ public class TestListener extends ActionClass implements ITestListener {
 		}
 		addExtentLabelToTest(result);
 		ExtentTestManager.endTest();
-
 	}
 
 	@Override
@@ -94,27 +94,27 @@ public class TestListener extends ActionClass implements ITestListener {
 		} else
 			ExtentTestManager.getTest().skip(MarkupHelper.createLabel("Test Skipped", ExtentColor.ORANGE));
 	}
-	
+
 	private static synchronized String takeScreenshot(String methodName) {
-        DateFormat dateFormat = new SimpleDateFormat("MMM_dd_yyyy_HH_mm_ss_SSS");
-        Date date = new Date();
-        String dateName = dateFormat.format(date);
-        String filePathExtent = ExtentManager.OUTPUT_FOLDER_SCREENSHOTS + "extent_"+ sheetNames + "_" + dateName + ".png";
-        String filePath = ExtentManager.getReportBaseDirectory() + filePathExtent;
-        String scrBase64 = null;
-        try {
-        	// Take a ScreenShot
-    		scrBase64 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
-    		// convert the BASE64 to File type
-    		File file = OutputType.FILE.convertFromBase64Png(scrBase64);
-    		// store the converted file as Image on D driver
-    		FileUtils.copyFile(file, new File(filePath), true);
-        	
-        }catch (IOException e){
-            e.getStackTrace();
-            Reporter.log("Failed To Take screenshot " + e, true);
-        }
-        return scrBase64;
-    }
+		DateFormat dateFormat = new SimpleDateFormat("MMM_dd_yyyy_HH_mm_ss_SSS");
+		Date date = new Date();
+		String dateName = dateFormat.format(date);
+		String filePathExtent = ExtentManager.OUTPUT_FOLDER_SCREENSHOTS + Driver_Script.sheetName + "_" + dateName
+				+ ".png";
+		String filePath = ExtentManager.getReportBaseDirectory() + filePathExtent;
+		String scrBase64 = null;
+		try {
+			// Take a ScreenShot
+			scrBase64 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
+			// convert the BASE64 to File type
+			File file = OutputType.FILE.convertFromBase64Png(scrBase64);
+			// store the converted file as Image on D driver
+			FileUtils.copyFile(file, new File(filePath), true);
+		} catch (IOException e) {
+			e.getStackTrace();
+			Reporter.log("Failed To Take screenshot " + e, true);
+		}
+		return scrBase64;
+	}
 
 }

@@ -9,13 +9,12 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-public class ExtentManager {
+public class ExtentManager{
 	private static String reportBaseDirectory;
 	private static ExtentReports extent;
 	public static final String OUTPUT_FOLDER_SCREENSHOTS = "/Screenshots/";
 	public static final String REPORT_FILE_PATH = System.getProperty("user.dir") + "/Automation_Reports/";
-
-	static String ts = timeStamp();
+	public static String ts = timeStamp();
 
 	public static ExtentReports getInstance() {
 		if (extent == null)
@@ -27,8 +26,9 @@ public class ExtentManager {
 	public static void createInstance() {
 		ExtentManager.initDirectories();
 		setReportBaseDirectory(REPORT_FILE_PATH);
-		ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(
-				REPORT_FILE_PATH + "Test-Automaton-Report_" + ts + ".html");
+	
+	ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(
+		REPORT_FILE_PATH + "Test-Automaton-Report_" + ts + ".html");
 		htmlReporter.config().setTheme(Theme.DARK);
 		htmlReporter.config().setEncoding("utf-8");
 		htmlReporter.config().setReportName("Automation Test Results");
@@ -52,7 +52,7 @@ public class ExtentManager {
 
 	public static void initDirectories() {
 		try {
-			createFolder(REPORT_FILE_PATH);
+			createFolder(REPORT_FILE_PATH + OUTPUT_FOLDER_SCREENSHOTS);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -67,10 +67,8 @@ public class ExtentManager {
 	// Get the time stamp
 	public static String timeStamp() {
 		Date date = new Date();
-		Timestamp ts = new Timestamp(date.getTime());
-		SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMdd_HH-mm-ss");
-//		System.out.println(formatter.format(ts));
+		Timestamp	ts = new Timestamp(date.getTime());
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMdd-HHmmss");
 		return formatter.format(ts);
 	}
-
 }

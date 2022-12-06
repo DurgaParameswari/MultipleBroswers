@@ -1,193 +1,193 @@
-2022-12-05 18:00:11,739  INFO [main] ExcelData:51 - Reading Excel file
-2022-12-05 18:00:12,647  INFO [main] Driver_Script:22 - Broswer type is chrome
-2022-12-05 18:00:13,152  INFO [main] Driver_Script:31 - Executing - Sheet1 and Row count is: 11
-2022-12-05 18:00:13,153  INFO [main] Driver_Script:274 - WEB Execution Starting:
-2022-12-05 18:00:13,501  INFO [main] BaseClass:73 - Select the chrome browser
-2022-12-05 18:00:13,502  INFO [main] BaseClass:109 - Executing - Take URL: Launching google chrome browser..
-2022-12-05 18:00:14,262  INFO [main] BaseClass:133 - Execution Type is Head
-2022-12-05 18:00:24,295  INFO [main] ActionClass:143 - Take URL: Updating the result in excel
-2022-12-05 18:00:24,860  INFO [main] ActionClass:1707 - Executing - Taking ScreenShot method
-2022-12-05 18:00:25,287  INFO [main] ExcelData:212 - Executing - wait: Reading wait time from excel
-2022-12-05 18:00:25,288  INFO [main] ExcelData:215 - Test data is: 5000
-2022-12-05 18:00:25,289  INFO [main] ActionClass:3715 - Executing - Wait method
-2022-12-05 18:00:30,303  INFO [main] ActionClass:143 - wait: Updating the result in excel
-2022-12-05 18:00:30,731  INFO [main] ActionClass:1707 - Executing - Taking ScreenShot method
-2022-12-05 18:00:31,208  INFO [main] ExcelData:223 - Executing - Scenario 1: Reading description from excel
-2022-12-05 18:00:31,461  INFO [main] ActionClass:1707 - Executing - Taking ScreenShot method
-2022-12-05 18:00:31,870  INFO [main] ExcelData:149 - Executing - Click on login button: Reading locator value from excel
-2022-12-05 18:00:31,871  INFO [main] ExcelData:152 - Locator value is: //div[text()='Login']
-2022-12-05 18:00:31,871  INFO [main] ActionClass:1241 - Executing - Click method
-2022-12-05 18:00:32,187  INFO [main] ActionClass:143 - Click on login button: Updating the result in excel
-2022-12-05 18:00:32,683  INFO [main] ActionClass:1707 - Executing - Taking ScreenShot method
-2022-12-05 18:00:33,103  INFO [main] ExcelData:134 - Executing - Enter Email ID: Reading locator value and test data from excel
-2022-12-05 18:00:33,104  INFO [main] ExcelData:137 - Locator value is: //input[@name='username']
-2022-12-05 18:00:33,104  INFO [main] ExcelData:140 - Test data is: durga440gmail.com
-2022-12-05 18:00:33,104  INFO [main] ActionClass:1216 - Executing - EnterTextField method
-2022-12-05 18:00:33,352  INFO [main] ActionClass:143 - Enter Email ID: Updating the result in excel
-2022-12-05 18:00:33,532  INFO [main] ActionClass:1707 - Executing - Taking ScreenShot method
-2022-12-05 18:00:33,911  INFO [main] ExcelData:134 - Executing - Enter Password: Reading locator value and test data from excel
-2022-12-05 18:00:33,911  INFO [main] ExcelData:137 - Locator value is: //input[@name='password']
-2022-12-05 18:00:33,911  INFO [main] ExcelData:140 - Test data is: Machint@123
-2022-12-05 18:00:33,912  INFO [main] ActionClass:1216 - Executing - EnterTextField method
-2022-12-05 18:00:34,176  INFO [main] ActionClass:143 - Enter Password: Updating the result in excel
-2022-12-05 18:00:34,399  INFO [main] ActionClass:1707 - Executing - Taking ScreenShot method
-2022-12-05 18:00:34,773  INFO [main] ExcelData:149 - Executing - Click on Sign in: Reading locator value from excel
-2022-12-05 18:00:34,774  INFO [main] ExcelData:152 - Locator value is: //div[text()='Sign in']
-2022-12-05 18:00:34,775  INFO [main] ActionClass:1241 - Executing - Click method
-2022-12-05 18:00:34,973  INFO [main] ActionClass:143 - Click on Sign in: Updating the result in excel
-2022-12-05 18:00:35,284  INFO [main] ActionClass:1707 - Executing - Taking ScreenShot method
-2022-12-05 18:00:35,868  INFO [main] ExcelData:175 - Executing - Validate Error Message : Reading locator value and test data from excel
-2022-12-05 18:00:35,868  INFO [main] ExcelData:178 - Locator value is: //span[text()='invalid email address']
-2022-12-05 18:00:35,869  INFO [main] ExcelData:181 - Test data is: invalid email addresss
-2022-12-05 18:00:35,869  INFO [main] ActionClass:1437 - Executing - EqualsValidation method
-2022-12-05 18:00:35,928  INFO [main] ActionClass:1707 - Executing - Taking ScreenShot method
-2022-12-05 18:00:36,295  INFO [main] ActionClass:298 - Validate Error Message : Updating the result in excel
-2022-12-05 18:00:36,497  INFO [main] ActionClass:1707 - Executing - Taking ScreenShot method
-2022-12-05 18:00:36,888  INFO [main] ActionClass:4543 - Executing - Refresh method
-2022-12-05 18:00:37,470  INFO [main] ActionClass:143 - Refresh Page: Updating the result in excel
-2022-12-05 18:00:37,792  INFO [main] ActionClass:1707 - Executing - Taking ScreenShot method
-2022-12-05 18:00:38,360  INFO [main] ExcelData:223 - Executing - End: Reading description from excel
-2022-12-05 18:00:38,522  INFO [main] ActionClass:1707 - Executing - Taking ScreenShot method
-2022-12-05 18:00:42,816  INFO [main] Driver_Script:22 - Broswer type is firefox
-2022-12-05 18:00:42,937  INFO [main] Driver_Script:31 - Executing - Sheet1 and Row count is: 11
-2022-12-05 18:00:42,938  INFO [main] Driver_Script:274 - WEB Execution Starting:
-2022-12-05 18:00:43,112  INFO [main] BaseClass:73 - Select the firefox browser
-2022-12-05 18:00:43,113  INFO [main] BaseClass:169 - Executing - Take URL: Launching Firefox browser..
-2022-12-05 18:02:08,033  INFO [main] BaseClass:190 - Execution Type is Head
-2022-12-05 18:02:21,182  INFO [main] ActionClass:143 - Take URL: Updating the result in excel
-2022-12-05 18:02:21,440  INFO [main] ActionClass:1707 - Executing - Taking ScreenShot method
-2022-12-05 18:02:21,550  INFO [main] ExcelData:212 - Executing - wait: Reading wait time from excel
-2022-12-05 18:02:21,551  INFO [main] ExcelData:215 - Test data is: 5000
-2022-12-05 18:02:21,552  INFO [main] ActionClass:3715 - Executing - Wait method
-2022-12-05 18:02:26,556  INFO [main] ActionClass:143 - wait: Updating the result in excel
-2022-12-05 18:02:26,758  INFO [main] ActionClass:1707 - Executing - Taking ScreenShot method
-2022-12-05 18:02:26,907  INFO [main] ExcelData:223 - Executing - Scenario 1: Reading description from excel
-2022-12-05 18:02:27,079  INFO [main] ActionClass:1707 - Executing - Taking ScreenShot method
-2022-12-05 18:02:27,494  INFO [main] ExcelData:149 - Executing - Click on login button: Reading locator value from excel
-2022-12-05 18:02:27,496  INFO [main] ExcelData:152 - Locator value is: //div[text()='Login']
-2022-12-05 18:02:27,497  INFO [main] ActionClass:1241 - Executing - Click method
-2022-12-05 18:02:27,971  INFO [main] ActionClass:143 - Click on login button: Updating the result in excel
-2022-12-05 18:02:28,130  INFO [main] ActionClass:1707 - Executing - Taking ScreenShot method
-2022-12-05 18:02:28,230  INFO [main] ExcelData:134 - Executing - Enter Email ID: Reading locator value and test data from excel
-2022-12-05 18:02:28,230  INFO [main] ExcelData:137 - Locator value is: //input[@name='username']
-2022-12-05 18:02:28,231  INFO [main] ExcelData:140 - Test data is: durga440gmail.com
-2022-12-05 18:02:28,232  INFO [main] ActionClass:1216 - Executing - EnterTextField method
-2022-12-05 18:02:28,331  INFO [main] ActionClass:143 - Enter Email ID: Updating the result in excel
-2022-12-05 18:02:28,556  INFO [main] ActionClass:1707 - Executing - Taking ScreenShot method
-2022-12-05 18:02:28,682  INFO [main] ExcelData:134 - Executing - Enter Password: Reading locator value and test data from excel
-2022-12-05 18:02:28,685  INFO [main] ExcelData:137 - Locator value is: //input[@name='password']
-2022-12-05 18:02:28,685  INFO [main] ExcelData:140 - Test data is: Machint@123
-2022-12-05 18:02:28,686  INFO [main] ActionClass:1216 - Executing - EnterTextField method
-2022-12-05 18:02:28,773  INFO [main] ActionClass:143 - Enter Password: Updating the result in excel
-2022-12-05 18:02:28,913  INFO [main] ActionClass:1707 - Executing - Taking ScreenShot method
-2022-12-05 18:02:29,007  INFO [main] ExcelData:149 - Executing - Click on Sign in: Reading locator value from excel
-2022-12-05 18:02:29,007  INFO [main] ExcelData:152 - Locator value is: //div[text()='Sign in']
-2022-12-05 18:02:29,008  INFO [main] ActionClass:1241 - Executing - Click method
-2022-12-05 18:02:29,307  INFO [main] ActionClass:143 - Click on Sign in: Updating the result in excel
-2022-12-05 18:02:29,463  INFO [main] ActionClass:1707 - Executing - Taking ScreenShot method
-2022-12-05 18:02:29,557  INFO [main] ExcelData:175 - Executing - Validate Error Message : Reading locator value and test data from excel
-2022-12-05 18:02:29,557  INFO [main] ExcelData:178 - Locator value is: //span[text()='invalid email address']
-2022-12-05 18:02:29,557  INFO [main] ExcelData:181 - Test data is: invalid email addresss
-2022-12-05 18:02:29,558  INFO [main] ActionClass:1437 - Executing - EqualsValidation method
-2022-12-05 18:02:29,625  INFO [main] ActionClass:1707 - Executing - Taking ScreenShot method
-2022-12-05 18:02:29,716  INFO [main] ActionClass:298 - Validate Error Message : Updating the result in excel
-2022-12-05 18:02:29,844  INFO [main] ActionClass:1707 - Executing - Taking ScreenShot method
-2022-12-05 18:02:29,930  INFO [main] ActionClass:4543 - Executing - Refresh method
-2022-12-05 18:02:33,113  INFO [main] ActionClass:143 - Refresh Page: Updating the result in excel
-2022-12-05 18:02:33,262  INFO [main] ActionClass:1707 - Executing - Taking ScreenShot method
-2022-12-05 18:02:33,375  INFO [main] ExcelData:223 - Executing - End: Reading description from excel
-2022-12-05 18:02:33,539  INFO [main] ActionClass:1707 - Executing - Taking ScreenShot method
-2022-12-05 18:02:36,175  INFO [main] Driver_Script:22 - Broswer type is edge
-2022-12-05 18:02:36,268  INFO [main] Driver_Script:31 - Executing - Sheet1 and Row count is: 11
-2022-12-05 18:02:36,269  INFO [main] Driver_Script:274 - WEB Execution Starting:
-2022-12-05 18:02:36,386  INFO [main] BaseClass:73 - Select the edge browser
-2022-12-05 18:02:36,386  INFO [main] BaseClass:212 - Executing - Take URL: Launching Edge browser..
-2022-12-05 18:03:19,700  INFO [main] BaseClass:234 - Execution Type is Head
-2022-12-05 18:03:28,539  INFO [main] ActionClass:143 - Take URL: Updating the result in excel
-2022-12-05 18:03:28,694  INFO [main] ActionClass:1707 - Executing - Taking ScreenShot method
-2022-12-05 18:03:29,095  INFO [main] ExcelData:212 - Executing - wait: Reading wait time from excel
-2022-12-05 18:03:29,096  INFO [main] ExcelData:215 - Test data is: 5000
-2022-12-05 18:03:29,096  INFO [main] ActionClass:3715 - Executing - Wait method
-2022-12-05 18:03:34,109  INFO [main] ActionClass:143 - wait: Updating the result in excel
-2022-12-05 18:03:34,260  INFO [main] ActionClass:1707 - Executing - Taking ScreenShot method
-2022-12-05 18:03:34,551  INFO [main] ExcelData:223 - Executing - Scenario 1: Reading description from excel
-2022-12-05 18:03:34,690  INFO [main] ActionClass:1707 - Executing - Taking ScreenShot method
-2022-12-05 18:03:35,004  INFO [main] ExcelData:149 - Executing - Click on login button: Reading locator value from excel
-2022-12-05 18:03:35,004  INFO [main] ExcelData:152 - Locator value is: //div[text()='Login']
-2022-12-05 18:03:35,004  INFO [main] ActionClass:1241 - Executing - Click method
-2022-12-05 18:03:35,253  INFO [main] ActionClass:143 - Click on login button: Updating the result in excel
-2022-12-05 18:03:35,413  INFO [main] ActionClass:1707 - Executing - Taking ScreenShot method
-2022-12-05 18:03:35,845  INFO [main] ExcelData:134 - Executing - Enter Email ID: Reading locator value and test data from excel
-2022-12-05 18:03:35,845  INFO [main] ExcelData:137 - Locator value is: //input[@name='username']
-2022-12-05 18:03:35,845  INFO [main] ExcelData:140 - Test data is: durga440gmail.com
-2022-12-05 18:03:35,846  INFO [main] ActionClass:1216 - Executing - EnterTextField method
-2022-12-05 18:03:36,178  INFO [main] ActionClass:143 - Enter Email ID: Updating the result in excel
-2022-12-05 18:03:36,325  INFO [main] ActionClass:1707 - Executing - Taking ScreenShot method
-2022-12-05 18:03:36,660  INFO [main] ExcelData:134 - Executing - Enter Password: Reading locator value and test data from excel
-2022-12-05 18:03:36,661  INFO [main] ExcelData:137 - Locator value is: //input[@name='password']
-2022-12-05 18:03:36,661  INFO [main] ExcelData:140 - Test data is: Machint@123
-2022-12-05 18:03:36,663  INFO [main] ActionClass:1216 - Executing - EnterTextField method
-2022-12-05 18:03:36,968  INFO [main] ActionClass:143 - Enter Password: Updating the result in excel
-2022-12-05 18:03:37,096  INFO [main] ActionClass:1707 - Executing - Taking ScreenShot method
-2022-12-05 18:03:37,418  INFO [main] ExcelData:149 - Executing - Click on Sign in: Reading locator value from excel
-2022-12-05 18:03:37,419  INFO [main] ExcelData:152 - Locator value is: //div[text()='Sign in']
-2022-12-05 18:03:37,419  INFO [main] ActionClass:1241 - Executing - Click method
-2022-12-05 18:03:37,606  INFO [main] ActionClass:143 - Click on Sign in: Updating the result in excel
-2022-12-05 18:03:38,035  INFO [main] ActionClass:1707 - Executing - Taking ScreenShot method
-2022-12-05 18:03:38,742  INFO [main] ExcelData:175 - Executing - Validate Error Message : Reading locator value and test data from excel
-2022-12-05 18:03:38,743  INFO [main] ExcelData:178 - Locator value is: //span[text()='invalid email address']
-2022-12-05 18:03:38,743  INFO [main] ExcelData:181 - Test data is: invalid email addresss
-2022-12-05 18:03:38,743  INFO [main] ActionClass:1437 - Executing - EqualsValidation method
-2022-12-05 18:03:38,796  INFO [main] ActionClass:1707 - Executing - Taking ScreenShot method
-2022-12-05 18:03:39,108  INFO [main] ActionClass:298 - Validate Error Message : Updating the result in excel
-2022-12-05 18:03:39,252  INFO [main] ActionClass:1707 - Executing - Taking ScreenShot method
-2022-12-05 18:03:39,610  INFO [main] ActionClass:4543 - Executing - Refresh method
-2022-12-05 18:03:40,428  INFO [main] ActionClass:143 - Refresh Page: Updating the result in excel
-2022-12-05 18:03:40,628  INFO [main] ActionClass:1707 - Executing - Taking ScreenShot method
-2022-12-05 18:03:41,034  INFO [main] ExcelData:223 - Executing - End: Reading description from excel
-2022-12-05 18:03:41,178  INFO [main] ActionClass:1707 - Executing - Taking ScreenShot method
-2022-12-05 18:03:47,818 DEBUG [main] cache:45 - Couldn't find template in cache for "index.ftl"("en", UTF-8, parsed); will try to load it.
-2022-12-05 18:03:47,820 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("index_en.ftl"): Not found
-2022-12-05 18:03:47,823 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("index.ftl"): Found
-2022-12-05 18:03:47,824 DEBUG [main] cache:45 - Loading template for "index.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/M0137/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/index.ftl"
-2022-12-05 18:03:48,055 DEBUG [main] cache:45 - Couldn't find template in cache for "head.ftl"("en", UTF-8, parsed); will try to load it.
-2022-12-05 18:03:48,056 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("head_en.ftl"): Not found
-2022-12-05 18:03:48,057 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("head.ftl"): Found
-2022-12-05 18:03:48,057 DEBUG [main] cache:45 - Loading template for "head.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/M0137/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/head.ftl"
-2022-12-05 18:03:48,062 DEBUG [main] cache:45 - Couldn't find template in cache for "nav.ftl"("en", UTF-8, parsed); will try to load it.
-2022-12-05 18:03:48,064 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("nav_en.ftl"): Not found
-2022-12-05 18:03:48,065 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("nav.ftl"): Found
-2022-12-05 18:03:48,066 DEBUG [main] cache:45 - Loading template for "nav.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/M0137/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/nav.ftl"
-2022-12-05 18:03:48,080 DEBUG [main] cache:45 - Couldn't find template in cache for "test-view/test-view.ftl"("en", UTF-8, parsed); will try to load it.
-2022-12-05 18:03:48,081 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("test-view/test-view_en.ftl"): Not found
-2022-12-05 18:03:48,082 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("test-view/test-view.ftl"): Found
-2022-12-05 18:03:48,082 DEBUG [main] cache:45 - Loading template for "test-view/test-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/M0137/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/test-view/test-view.ftl"
-2022-12-05 18:03:48,106 DEBUG [main] cache:45 - Couldn't find template in cache for "test-view/test-view-charts.ftl"("en", UTF-8, parsed); will try to load it.
-2022-12-05 18:03:48,107 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("test-view/test-view-charts_en.ftl"): Not found
-2022-12-05 18:03:48,109 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("test-view/test-view-charts.ftl"): Found
-2022-12-05 18:03:48,110 DEBUG [main] cache:45 - Loading template for "test-view/test-view-charts.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/M0137/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/test-view/test-view-charts.ftl"
-2022-12-05 18:03:48,133 DEBUG [main] cache:45 - Couldn't find template in cache for "test-view/standard.ftl"("en", UTF-8, parsed); will try to load it.
-2022-12-05 18:03:48,134 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("test-view/standard_en.ftl"): Not found
-2022-12-05 18:03:48,135 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("test-view/standard.ftl"): Found
-2022-12-05 18:03:48,136 DEBUG [main] cache:45 - Loading template for "test-view/standard.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/M0137/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/test-view/standard.ftl"
-2022-12-05 18:03:48,177 DEBUG [main] cache:45 - Couldn't find template in cache for "category-view/category-view.ftl"("en", UTF-8, parsed); will try to load it.
-2022-12-05 18:03:48,178 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("category-view/category-view_en.ftl"): Not found
-2022-12-05 18:03:48,179 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("category-view/category-view.ftl"): Found
-2022-12-05 18:03:48,179 DEBUG [main] cache:45 - Loading template for "category-view/category-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/M0137/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/category-view/category-view.ftl"
-2022-12-05 18:03:48,187 DEBUG [main] cache:45 - Couldn't find template in cache for "author-view/author-view.ftl"("en", UTF-8, parsed); will try to load it.
-2022-12-05 18:03:48,189 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("author-view/author-view_en.ftl"): Not found
-2022-12-05 18:03:48,190 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("author-view/author-view.ftl"): Found
-2022-12-05 18:03:48,191 DEBUG [main] cache:45 - Loading template for "author-view/author-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/M0137/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/author-view/author-view.ftl"
-2022-12-05 18:03:48,198 DEBUG [main] cache:45 - Couldn't find template in cache for "exception-view/exception-view.ftl"("en", UTF-8, parsed); will try to load it.
-2022-12-05 18:03:48,199 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("exception-view/exception-view_en.ftl"): Not found
-2022-12-05 18:03:48,200 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("exception-view/exception-view.ftl"): Found
-2022-12-05 18:03:48,201 DEBUG [main] cache:45 - Loading template for "exception-view/exception-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/M0137/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/exception-view/exception-view.ftl"
-2022-12-05 18:03:48,207 DEBUG [main] cache:45 - Couldn't find template in cache for "dashboard-view/dashboard-view.ftl"("en", UTF-8, parsed); will try to load it.
-2022-12-05 18:03:48,208 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("dashboard-view/dashboard-view_en.ftl"): Not found
-2022-12-05 18:03:48,209 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("dashboard-view/dashboard-view.ftl"): Found
-2022-12-05 18:03:48,209 DEBUG [main] cache:45 - Loading template for "dashboard-view/dashboard-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/M0137/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/dashboard-view/dashboard-view.ftl"
-2022-12-05 18:03:48,221 DEBUG [main] cache:45 - Couldn't find template in cache for "logs-view/testrunner-logs-view.ftl"("en", UTF-8, parsed); will try to load it.
-2022-12-05 18:03:48,223 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("logs-view/testrunner-logs-view_en.ftl"): Not found
-2022-12-05 18:03:48,224 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("logs-view/testrunner-logs-view.ftl"): Found
-2022-12-05 18:03:48,224 DEBUG [main] cache:45 - Loading template for "logs-view/testrunner-logs-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/M0137/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/logs-view/testrunner-logs-view.ftl"
-2022-12-05 18:03:48,281  INFO [main] BaseClass:257 - Closing the browser
+2022-12-06 18:13:11,170  INFO [main] ExcelData:53 - Reading Excel file
+2022-12-06 18:13:12,614  INFO [main] Driver_Script:23 - Broswer type is chrome
+2022-12-06 18:13:13,398  INFO [main] Driver_Script:32 - Executing - Login1 and Row count is: 11
+2022-12-06 18:13:13,400  INFO [main] Driver_Script:45 - WEB Execution Starting:
+2022-12-06 18:13:14,175  INFO [main] BaseClass:74 - Select the chrome browser
+2022-12-06 18:13:14,177  INFO [main] BaseClass:114 - Executing - Take URL: Launching google chrome browser..
+2022-12-06 18:13:15,167  INFO [main] BaseClass:139 - Execution Type is Head
+2022-12-06 18:13:24,326  INFO [main] ActionClass:142 - Take URL: Updating the result in excel
+2022-12-06 18:13:26,086  INFO [main] ActionClass:1710 - Executing - Taking ScreenShot method
+2022-12-06 18:13:26,532  INFO [main] ExcelData:220 - Executing - wait: Reading wait time from excel
+2022-12-06 18:13:26,533  INFO [main] ExcelData:223 - Test data is: 5000
+2022-12-06 18:13:26,533  INFO [main] ActionClass:3720 - Executing - Wait method
+2022-12-06 18:13:31,542  INFO [main] ActionClass:142 - wait: Updating the result in excel
+2022-12-06 18:13:32,719  INFO [main] ActionClass:1710 - Executing - Taking ScreenShot method
+2022-12-06 18:13:33,533  INFO [main] ExcelData:232 - Executing - Scenario 1: Reading description from excel
+2022-12-06 18:13:34,194  INFO [main] ActionClass:1710 - Executing - Taking ScreenShot method
+2022-12-06 18:13:34,703  INFO [main] ExcelData:152 - Executing - Click on login button: Reading locator value from excel
+2022-12-06 18:13:34,703  INFO [main] ExcelData:155 - Locator value is: //div[text()='Login']
+2022-12-06 18:13:34,703  INFO [main] ActionClass:1236 - Executing - Click method
+2022-12-06 18:13:35,468  INFO [main] ActionClass:142 - Click on login button: Updating the result in excel
+2022-12-06 18:13:36,073  INFO [main] ActionClass:1710 - Executing - Taking ScreenShot method
+2022-12-06 18:13:36,722  INFO [main] ExcelData:136 - Executing - Enter Email ID: Reading locator value and test data from excel
+2022-12-06 18:13:36,723  INFO [main] ExcelData:140 - Locator value is: //input[@name='username']
+2022-12-06 18:13:36,723  INFO [main] ExcelData:143 - Test data is: durga440gmail.com
+2022-12-06 18:13:36,735  INFO [main] ActionClass:1215 - Executing - EnterTextField method
+2022-12-06 18:13:37,321  INFO [main] ActionClass:142 - Enter Email ID: Updating the result in excel
+2022-12-06 18:13:37,803  INFO [main] ActionClass:1710 - Executing - Taking ScreenShot method
+2022-12-06 18:13:38,507  INFO [main] ExcelData:136 - Executing - Enter Password: Reading locator value and test data from excel
+2022-12-06 18:13:38,508  INFO [main] ExcelData:140 - Locator value is: //input[@name='password']
+2022-12-06 18:13:38,510  INFO [main] ExcelData:143 - Test data is: Machint@123
+2022-12-06 18:13:38,510  INFO [main] ActionClass:1215 - Executing - EnterTextField method
+2022-12-06 18:13:39,099  INFO [main] ActionClass:142 - Enter Password: Updating the result in excel
+2022-12-06 18:13:39,698  INFO [main] ActionClass:1710 - Executing - Taking ScreenShot method
+2022-12-06 18:13:40,195  INFO [main] ExcelData:152 - Executing - Click on Sign in: Reading locator value from excel
+2022-12-06 18:13:40,196  INFO [main] ExcelData:155 - Locator value is: //div[text()='Sign in']
+2022-12-06 18:13:40,196  INFO [main] ActionClass:1236 - Executing - Click method
+2022-12-06 18:13:40,469  INFO [main] ActionClass:142 - Click on Sign in: Updating the result in excel
+2022-12-06 18:13:41,124  INFO [main] ActionClass:1710 - Executing - Taking ScreenShot method
+2022-12-06 18:13:41,741  INFO [main] ExcelData:180 - Executing - Validate Error Message : Reading locator value and test data from excel
+2022-12-06 18:13:41,742  INFO [main] ExcelData:184 - Locator value is: //span[text()='invalid email address']
+2022-12-06 18:13:41,752  INFO [main] ExcelData:187 - Test data is: invalid email addressss
+2022-12-06 18:13:41,752  INFO [main] ActionClass:1432 - Executing - EqualsValidation method
+2022-12-06 18:13:41,869  INFO [main] ActionClass:1710 - Executing - Taking ScreenShot method
+2022-12-06 18:13:42,451  INFO [main] ActionClass:297 - Validate Error Message : Updating the result in excel
+2022-12-06 18:13:42,884  INFO [main] ActionClass:1710 - Executing - Taking ScreenShot method
+2022-12-06 18:13:43,474  INFO [main] ActionClass:4551 - Executing - Refresh method
+2022-12-06 18:13:44,551  INFO [main] ActionClass:142 - Refresh Page: Updating the result in excel
+2022-12-06 18:13:45,050  INFO [main] ActionClass:1710 - Executing - Taking ScreenShot method
+2022-12-06 18:13:45,756  INFO [main] ExcelData:232 - Executing - End: Reading description from excel
+2022-12-06 18:13:46,174  INFO [main] ActionClass:1710 - Executing - Taking ScreenShot method
+2022-12-06 18:13:49,039  INFO [main] Driver_Script:23 - Broswer type is firefox
+2022-12-06 18:13:49,299  INFO [main] Driver_Script:32 - Executing - Login1 and Row count is: 11
+2022-12-06 18:13:49,300  INFO [main] Driver_Script:45 - WEB Execution Starting:
+2022-12-06 18:13:49,609  INFO [main] BaseClass:74 - Select the firefox browser
+2022-12-06 18:13:49,609  INFO [main] BaseClass:177 - Executing - Take URL: Launching Firefox browser..
+2022-12-06 18:13:49,678  INFO [main] BaseClass:199 - Execution Type is Head
+2022-12-06 18:16:04,053  INFO [main] ActionClass:142 - Take URL: Updating the result in excel
+2022-12-06 18:16:04,410  INFO [main] ActionClass:1710 - Executing - Taking ScreenShot method
+2022-12-06 18:16:04,543  INFO [main] ExcelData:220 - Executing - wait: Reading wait time from excel
+2022-12-06 18:16:04,543  INFO [main] ExcelData:223 - Test data is: 5000
+2022-12-06 18:16:04,544  INFO [main] ActionClass:3720 - Executing - Wait method
+2022-12-06 18:16:09,580  INFO [main] ActionClass:142 - wait: Updating the result in excel
+2022-12-06 18:16:09,796  INFO [main] ActionClass:1710 - Executing - Taking ScreenShot method
+2022-12-06 18:16:09,929  INFO [main] ExcelData:232 - Executing - Scenario 1: Reading description from excel
+2022-12-06 18:16:10,185  INFO [main] ActionClass:1710 - Executing - Taking ScreenShot method
+2022-12-06 18:16:10,293  INFO [main] ExcelData:152 - Executing - Click on login button: Reading locator value from excel
+2022-12-06 18:16:10,293  INFO [main] ExcelData:155 - Locator value is: //div[text()='Login']
+2022-12-06 18:16:10,294  INFO [main] ActionClass:1236 - Executing - Click method
+2022-12-06 18:16:10,746  INFO [main] ActionClass:142 - Click on login button: Updating the result in excel
+2022-12-06 18:16:10,990  INFO [main] ActionClass:1710 - Executing - Taking ScreenShot method
+2022-12-06 18:16:11,104  INFO [main] ExcelData:136 - Executing - Enter Email ID: Reading locator value and test data from excel
+2022-12-06 18:16:11,104  INFO [main] ExcelData:140 - Locator value is: //input[@name='username']
+2022-12-06 18:16:11,105  INFO [main] ExcelData:143 - Test data is: durga440gmail.com
+2022-12-06 18:16:11,105  INFO [main] ActionClass:1215 - Executing - EnterTextField method
+2022-12-06 18:16:11,228  INFO [main] ActionClass:142 - Enter Email ID: Updating the result in excel
+2022-12-06 18:16:11,492  INFO [main] ActionClass:1710 - Executing - Taking ScreenShot method
+2022-12-06 18:16:11,599  INFO [main] ExcelData:136 - Executing - Enter Password: Reading locator value and test data from excel
+2022-12-06 18:16:11,600  INFO [main] ExcelData:140 - Locator value is: //input[@name='password']
+2022-12-06 18:16:11,600  INFO [main] ExcelData:143 - Test data is: Machint@123
+2022-12-06 18:16:11,600  INFO [main] ActionClass:1215 - Executing - EnterTextField method
+2022-12-06 18:16:11,729  INFO [main] ActionClass:142 - Enter Password: Updating the result in excel
+2022-12-06 18:16:11,987  INFO [main] ActionClass:1710 - Executing - Taking ScreenShot method
+2022-12-06 18:16:12,110  INFO [main] ExcelData:152 - Executing - Click on Sign in: Reading locator value from excel
+2022-12-06 18:16:12,110  INFO [main] ExcelData:155 - Locator value is: //div[text()='Sign in']
+2022-12-06 18:16:12,111  INFO [main] ActionClass:1236 - Executing - Click method
+2022-12-06 18:16:12,448  INFO [main] ActionClass:142 - Click on Sign in: Updating the result in excel
+2022-12-06 18:16:12,685  INFO [main] ActionClass:1710 - Executing - Taking ScreenShot method
+2022-12-06 18:16:12,791  INFO [main] ExcelData:180 - Executing - Validate Error Message : Reading locator value and test data from excel
+2022-12-06 18:16:12,792  INFO [main] ExcelData:184 - Locator value is: //span[text()='invalid email address']
+2022-12-06 18:16:12,792  INFO [main] ExcelData:187 - Test data is: invalid email addressss
+2022-12-06 18:16:12,793  INFO [main] ActionClass:1432 - Executing - EqualsValidation method
+2022-12-06 18:16:12,861  INFO [main] ActionClass:1710 - Executing - Taking ScreenShot method
+2022-12-06 18:16:12,942  INFO [main] ActionClass:297 - Validate Error Message : Updating the result in excel
+2022-12-06 18:16:13,208  INFO [main] ActionClass:1710 - Executing - Taking ScreenShot method
+2022-12-06 18:16:13,299  INFO [main] ActionClass:4551 - Executing - Refresh method
+2022-12-06 18:16:16,448  INFO [main] ActionClass:142 - Refresh Page: Updating the result in excel
+2022-12-06 18:16:16,685  INFO [main] ActionClass:1710 - Executing - Taking ScreenShot method
+2022-12-06 18:16:16,793  INFO [main] ExcelData:232 - Executing - End: Reading description from excel
+2022-12-06 18:16:17,173  INFO [main] ActionClass:1710 - Executing - Taking ScreenShot method
+2022-12-06 18:16:19,491  INFO [main] Driver_Script:23 - Broswer type is edge
+2022-12-06 18:16:19,634  INFO [main] Driver_Script:32 - Executing - Login1 and Row count is: 11
+2022-12-06 18:16:19,635  INFO [main] Driver_Script:45 - WEB Execution Starting:
+2022-12-06 18:16:19,813  INFO [main] BaseClass:74 - Select the edge browser
+2022-12-06 18:16:19,813  INFO [main] BaseClass:223 - Executing - Take URL: Launching Edge browser..
+2022-12-06 18:16:19,864  INFO [main] BaseClass:246 - Execution Type is Head
+2022-12-06 18:16:29,574  INFO [main] ActionClass:142 - Take URL: Updating the result in excel
+2022-12-06 18:16:30,050  INFO [main] ActionClass:1710 - Executing - Taking ScreenShot method
+2022-12-06 18:16:30,384  INFO [main] ExcelData:220 - Executing - wait: Reading wait time from excel
+2022-12-06 18:16:30,385  INFO [main] ExcelData:223 - Test data is: 5000
+2022-12-06 18:16:30,386  INFO [main] ActionClass:3720 - Executing - Wait method
+2022-12-06 18:16:35,388  INFO [main] ActionClass:142 - wait: Updating the result in excel
+2022-12-06 18:16:35,573  INFO [main] ActionClass:1710 - Executing - Taking ScreenShot method
+2022-12-06 18:16:35,931  INFO [main] ExcelData:232 - Executing - Scenario 1: Reading description from excel
+2022-12-06 18:16:36,137  INFO [main] ActionClass:1710 - Executing - Taking ScreenShot method
+2022-12-06 18:16:36,453  INFO [main] ExcelData:152 - Executing - Click on login button: Reading locator value from excel
+2022-12-06 18:16:36,454  INFO [main] ExcelData:155 - Locator value is: //div[text()='Login']
+2022-12-06 18:16:36,454  INFO [main] ActionClass:1236 - Executing - Click method
+2022-12-06 18:16:36,780  INFO [main] ActionClass:142 - Click on login button: Updating the result in excel
+2022-12-06 18:16:37,133  INFO [main] ActionClass:1710 - Executing - Taking ScreenShot method
+2022-12-06 18:16:37,635  INFO [main] ExcelData:136 - Executing - Enter Email ID: Reading locator value and test data from excel
+2022-12-06 18:16:37,636  INFO [main] ExcelData:140 - Locator value is: //input[@name='username']
+2022-12-06 18:16:37,637  INFO [main] ExcelData:143 - Test data is: durga440gmail.com
+2022-12-06 18:16:37,637  INFO [main] ActionClass:1215 - Executing - EnterTextField method
+2022-12-06 18:16:37,937  INFO [main] ActionClass:142 - Enter Email ID: Updating the result in excel
+2022-12-06 18:16:38,191  INFO [main] ActionClass:1710 - Executing - Taking ScreenShot method
+2022-12-06 18:16:38,573  INFO [main] ExcelData:136 - Executing - Enter Password: Reading locator value and test data from excel
+2022-12-06 18:16:38,574  INFO [main] ExcelData:140 - Locator value is: //input[@name='password']
+2022-12-06 18:16:38,574  INFO [main] ExcelData:143 - Test data is: Machint@123
+2022-12-06 18:16:38,578  INFO [main] ActionClass:1215 - Executing - EnterTextField method
+2022-12-06 18:16:38,857  INFO [main] ActionClass:142 - Enter Password: Updating the result in excel
+2022-12-06 18:16:39,084  INFO [main] ActionClass:1710 - Executing - Taking ScreenShot method
+2022-12-06 18:16:39,416  INFO [main] ExcelData:152 - Executing - Click on Sign in: Reading locator value from excel
+2022-12-06 18:16:39,417  INFO [main] ExcelData:155 - Locator value is: //div[text()='Sign in']
+2022-12-06 18:16:39,417  INFO [main] ActionClass:1236 - Executing - Click method
+2022-12-06 18:16:39,591  INFO [main] ActionClass:142 - Click on Sign in: Updating the result in excel
+2022-12-06 18:16:40,063  INFO [main] ActionClass:1710 - Executing - Taking ScreenShot method
+2022-12-06 18:16:40,555  INFO [main] ExcelData:180 - Executing - Validate Error Message : Reading locator value and test data from excel
+2022-12-06 18:16:40,556  INFO [main] ExcelData:184 - Locator value is: //span[text()='invalid email address']
+2022-12-06 18:16:40,556  INFO [main] ExcelData:187 - Test data is: invalid email addressss
+2022-12-06 18:16:40,557  INFO [main] ActionClass:1432 - Executing - EqualsValidation method
+2022-12-06 18:16:40,630  INFO [main] ActionClass:1710 - Executing - Taking ScreenShot method
+2022-12-06 18:16:40,961  INFO [main] ActionClass:297 - Validate Error Message : Updating the result in excel
+2022-12-06 18:16:41,171  INFO [main] ActionClass:1710 - Executing - Taking ScreenShot method
+2022-12-06 18:16:41,493  INFO [main] ActionClass:4551 - Executing - Refresh method
+2022-12-06 18:16:42,337  INFO [main] ActionClass:142 - Refresh Page: Updating the result in excel
+2022-12-06 18:16:42,670  INFO [main] ActionClass:1710 - Executing - Taking ScreenShot method
+2022-12-06 18:16:43,121  INFO [main] ExcelData:232 - Executing - End: Reading description from excel
+2022-12-06 18:16:43,323  INFO [main] ActionClass:1710 - Executing - Taking ScreenShot method
+2022-12-06 18:16:45,195 DEBUG [main] cache:45 - Couldn't find template in cache for "v3html/v3-html-index.ftl"("en", UTF-8, parsed); will try to load it.
+2022-12-06 18:16:45,204 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/v3-html-index_en.ftl"): Not found
+2022-12-06 18:16:45,210 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/v3-html-index.ftl"): Found
+2022-12-06 18:16:45,210 DEBUG [main] cache:45 - Loading template for "v3html/v3-html-index.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/M0137/.m2/repository/com/aventstack/extentreports/4.0.6/extentreports-4.0.6.jar!/com/aventstack/extentreports/view/v3html/v3-html-index.ftl"
+2022-12-06 18:16:45,852 DEBUG [main] cache:45 - Couldn't find template in cache for "v3html/v3-html-head.ftl"("en", UTF-8, parsed); will try to load it.
+2022-12-06 18:16:45,853 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/v3-html-head_en.ftl"): Not found
+2022-12-06 18:16:45,854 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/v3-html-head.ftl"): Found
+2022-12-06 18:16:45,854 DEBUG [main] cache:45 - Loading template for "v3html/v3-html-head.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/M0137/.m2/repository/com/aventstack/extentreports/4.0.6/extentreports-4.0.6.jar!/com/aventstack/extentreports/view/v3html/v3-html-head.ftl"
+2022-12-06 18:16:45,915 DEBUG [main] cache:45 - Couldn't find template in cache for "v3html/v3-html-nav.ftl"("en", UTF-8, parsed); will try to load it.
+2022-12-06 18:16:45,917 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/v3-html-nav_en.ftl"): Not found
+2022-12-06 18:16:45,918 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/v3-html-nav.ftl"): Found
+2022-12-06 18:16:45,919 DEBUG [main] cache:45 - Loading template for "v3html/v3-html-nav.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/M0137/.m2/repository/com/aventstack/extentreports/4.0.6/extentreports-4.0.6.jar!/com/aventstack/extentreports/view/v3html/v3-html-nav.ftl"
+2022-12-06 18:16:45,945 DEBUG [main] cache:45 - Couldn't find template in cache for "v3html/test-view/v3-html-test-view.ftl"("en", UTF-8, parsed); will try to load it.
+2022-12-06 18:16:45,947 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/test-view/v3-html-test-view_en.ftl"): Not found
+2022-12-06 18:16:45,948 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/test-view/v3-html-test-view.ftl"): Found
+2022-12-06 18:16:45,949 DEBUG [main] cache:45 - Loading template for "v3html/test-view/v3-html-test-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/M0137/.m2/repository/com/aventstack/extentreports/4.0.6/extentreports-4.0.6.jar!/com/aventstack/extentreports/view/v3html/test-view/v3-html-test-view.ftl"
+2022-12-06 18:16:46,003 DEBUG [main] cache:45 - Couldn't find template in cache for "v3html/test-view/v3-html-test-view-charts.ftl"("en", UTF-8, parsed); will try to load it.
+2022-12-06 18:16:46,008 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/test-view/v3-html-test-view-charts_en.ftl"): Not found
+2022-12-06 18:16:46,010 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/test-view/v3-html-test-view-charts.ftl"): Found
+2022-12-06 18:16:46,011 DEBUG [main] cache:45 - Loading template for "v3html/test-view/v3-html-test-view-charts.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/M0137/.m2/repository/com/aventstack/extentreports/4.0.6/extentreports-4.0.6.jar!/com/aventstack/extentreports/view/v3html/test-view/v3-html-test-view-charts.ftl"
+2022-12-06 18:16:46,102 DEBUG [main] cache:45 - Couldn't find template in cache for "v3html/test-view/v3-html-standard.ftl"("en", UTF-8, parsed); will try to load it.
+2022-12-06 18:16:46,103 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/test-view/v3-html-standard_en.ftl"): Not found
+2022-12-06 18:16:46,104 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/test-view/v3-html-standard.ftl"): Found
+2022-12-06 18:16:46,105 DEBUG [main] cache:45 - Loading template for "v3html/test-view/v3-html-standard.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/M0137/.m2/repository/com/aventstack/extentreports/4.0.6/extentreports-4.0.6.jar!/com/aventstack/extentreports/view/v3html/test-view/v3-html-standard.ftl"
+2022-12-06 18:16:46,274 DEBUG [main] cache:45 - Couldn't find template in cache for "v3html/category-view/v3-html-category-view.ftl"("en", UTF-8, parsed); will try to load it.
+2022-12-06 18:16:46,277 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/category-view/v3-html-category-view_en.ftl"): Not found
+2022-12-06 18:16:46,280 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/category-view/v3-html-category-view.ftl"): Found
+2022-12-06 18:16:46,283 DEBUG [main] cache:45 - Loading template for "v3html/category-view/v3-html-category-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/M0137/.m2/repository/com/aventstack/extentreports/4.0.6/extentreports-4.0.6.jar!/com/aventstack/extentreports/view/v3html/category-view/v3-html-category-view.ftl"
+2022-12-06 18:16:46,290 DEBUG [main] cache:45 - Couldn't find template in cache for "v3html/exception-view/v3-html-exception-view.ftl"("en", UTF-8, parsed); will try to load it.
+2022-12-06 18:16:46,291 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/exception-view/v3-html-exception-view_en.ftl"): Not found
+2022-12-06 18:16:46,292 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/exception-view/v3-html-exception-view.ftl"): Found
+2022-12-06 18:16:46,293 DEBUG [main] cache:45 - Loading template for "v3html/exception-view/v3-html-exception-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/M0137/.m2/repository/com/aventstack/extentreports/4.0.6/extentreports-4.0.6.jar!/com/aventstack/extentreports/view/v3html/exception-view/v3-html-exception-view.ftl"
+2022-12-06 18:16:46,307 DEBUG [main] cache:45 - Couldn't find template in cache for "v3html/author-view/v3-html-author-view.ftl"("en", UTF-8, parsed); will try to load it.
+2022-12-06 18:16:46,309 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/author-view/v3-html-author-view_en.ftl"): Not found
+2022-12-06 18:16:46,310 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/author-view/v3-html-author-view.ftl"): Found
+2022-12-06 18:16:46,310 DEBUG [main] cache:45 - Loading template for "v3html/author-view/v3-html-author-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/M0137/.m2/repository/com/aventstack/extentreports/4.0.6/extentreports-4.0.6.jar!/com/aventstack/extentreports/view/v3html/author-view/v3-html-author-view.ftl"
+2022-12-06 18:16:46,321 DEBUG [main] cache:45 - Couldn't find template in cache for "v3html/dashboard-view/v3-html-dashboard-view.ftl"("en", UTF-8, parsed); will try to load it.
+2022-12-06 18:16:46,322 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/dashboard-view/v3-html-dashboard-view_en.ftl"): Not found
+2022-12-06 18:16:46,323 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/dashboard-view/v3-html-dashboard-view.ftl"): Found
+2022-12-06 18:16:46,324 DEBUG [main] cache:45 - Loading template for "v3html/dashboard-view/v3-html-dashboard-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/M0137/.m2/repository/com/aventstack/extentreports/4.0.6/extentreports-4.0.6.jar!/com/aventstack/extentreports/view/v3html/dashboard-view/v3-html-dashboard-view.ftl"
+2022-12-06 18:16:46,369 DEBUG [main] cache:45 - Couldn't find template in cache for "v3html/logs-view/v3-html-testrunner-logs-view.ftl"("en", UTF-8, parsed); will try to load it.
+2022-12-06 18:16:46,370 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/logs-view/v3-html-testrunner-logs-view_en.ftl"): Not found
+2022-12-06 18:16:46,371 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/logs-view/v3-html-testrunner-logs-view.ftl"): Found
+2022-12-06 18:16:46,372 DEBUG [main] cache:45 - Loading template for "v3html/logs-view/v3-html-testrunner-logs-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/M0137/.m2/repository/com/aventstack/extentreports/4.0.6/extentreports-4.0.6.jar!/com/aventstack/extentreports/view/v3html/logs-view/v3-html-testrunner-logs-view.ftl"
+2022-12-06 18:16:46,463  INFO [main] BaseClass:271 - Closing the browser

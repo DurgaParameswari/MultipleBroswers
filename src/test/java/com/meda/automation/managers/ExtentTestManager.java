@@ -10,7 +10,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-public class ExtentTestManager {
+public class ExtentTestManager  {
 	public static WebDriver driver;
 
 	static Map<Integer, ExtentTest> extentTestMap = new HashMap<>();

@@ -41,7 +41,6 @@ import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.IndexedColors;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.joda.time.DateTime;
-import org.joda.time.Duration;
 import org.json.JSONObject;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -110,8 +109,8 @@ public class ActionClass extends BaseClass {
 	public static String Parent;
 	public static Robot robot;
 	public static int xOffset;
-	private Duration STEP_DURATION = Duration.millis(20);
-	private Duration NO_TIME = Duration.millis(0);
+	private Duration STEP_DURATION = Duration.ofMillis(20);
+	private Duration NO_TIME = Duration.ofMillis(0);
 	private Origin VIEW = Origin.viewport();
 	public static final String BASE_URL = "https://machintsolutions-test.appiancloud.com";
 	public static String OTP;
@@ -123,7 +122,6 @@ public class ActionClass extends BaseClass {
 	public static String timeStamp;
 
 	static Logger logger = Logger.getLogger(ActionClass.class);
-
 
 	public static WebElement fluentWait(final By locator1) {
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(30))
@@ -1345,7 +1343,7 @@ public class ActionClass extends BaseClass {
 		try {
 			logger.info("Executing - dismissAlert method");
 			reporterLog(Driver_Script.Actionvalue);
-			wait = new WebDriverWait(driver, 1000);
+			wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
 			wait.until(ExpectedConditions.alertIsPresent());
 			Alert alert = driver.switchTo().alert();
 			if (alert != null) {
@@ -1367,7 +1365,7 @@ public class ActionClass extends BaseClass {
 		try {
 			logger.info("Executing - getAlertText method");
 			reporterLog(Driver_Script.Actionvalue);
-			wait = new WebDriverWait(driver, Duration.ofseconds(1000));
+			wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
 			wait.until(ExpectedConditions.alertIsPresent());
 			Alert alert = driver.switchTo().alert();
 			String AlertMsg = driver.switchTo().alert().getText();
@@ -1433,19 +1431,19 @@ public class ActionClass extends BaseClass {
 			softAssert = new SoftAssert();
 			locator = mita_locator(LocatorType, LocatorValue);
 			actual = driver.findElement(locator).getText();
-			
+
 //			softAssert.assertEquals(actual, expected);
 
 			if (actual.equalsIgnoreCase(expected)) {
 				Machint_JSHighlight(element);
 				mita_Web_writePass();
-				
+
 			} else {
 				result = false;
 				mita_JSHighlight_for_validation(element);
 				mita_Web_ScreenShot();
-				mita_Web_writeFail();	
-				
+				mita_Web_writeFail();
+
 			}
 		} catch (Exception e) {
 			mita_Web_write_when_Locator_isnotvalid();
@@ -1493,8 +1491,7 @@ public class ActionClass extends BaseClass {
 			// element.sendKeys(value1);
 			// Thread.sleep(500);
 			mita_Web_write();
-		}
-		catch (Exception e) {
+		} catch (Exception e) {
 //			System.err.format("No Element Found to perform ngvt_Click \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to execute the SetFirstValue method \t" + e.getMessage());
@@ -1537,8 +1534,7 @@ public class ActionClass extends BaseClass {
 			// element.sendKeys(value2);
 			// Thread.sleep(500);
 			mita_Web_write();
-		}
-		catch (Exception e) {
+		} catch (Exception e) {
 //			System.err.format("No Element Found to perform ngvt_Click \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to execute the setSecondValue method \t" + e.getMessage());
@@ -1581,8 +1577,7 @@ public class ActionClass extends BaseClass {
 			// element.sendKeys(value3);
 			// Thread.sleep(500);
 			mita_Web_write();
-		}
-		catch (Exception e) {
+		} catch (Exception e) {
 //			System.err.format("No Element Found to perform ngvt_Click \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to execute the setSecondValue method \t" + e.getMessage());
@@ -1632,7 +1627,7 @@ public class ActionClass extends BaseClass {
 
 	public static void mita_visibilityOf() throws Exception {
 		try {
-			wait = new WebDriverWait(driver, 1000);
+			wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
 			if (element != null) {
 				element = wait.until(ExpectedConditions.visibilityOf(element));
 			}
@@ -1646,7 +1641,7 @@ public class ActionClass extends BaseClass {
 
 	public static void mita_visibilityOfAllElements() throws Exception {
 		try {
-			wait = new WebDriverWait(driver, 1000);
+			wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
 			if (element != null) {
 				wait.until(ExpectedConditions.visibilityOfAllElements(element));
 			}
@@ -1660,7 +1655,7 @@ public class ActionClass extends BaseClass {
 
 	public static void mita_elementToBeClickable() throws Exception {
 		try {
-			wait = new WebDriverWait(driver, 1000);
+			wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
 			if (element != null) {
 				wait.until(ExpectedConditions.elementToBeClickable(element));
 			}
@@ -1674,7 +1669,7 @@ public class ActionClass extends BaseClass {
 
 	public static void mita_elementToBeSelected() throws Exception {
 		try {
-			wait = new WebDriverWait(driver, 1000);
+			wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
 			if (element != null) {
 				wait.until(ExpectedConditions.elementToBeSelected(element));
 			}
@@ -1948,7 +1943,7 @@ public class ActionClass extends BaseClass {
 				if (bt[l].equalsIgnoreCase("Edge")) {
 					Cell searchText2 = sheet.getRow(k).createCell(6);
 					searchText2.setCellValue(name);
-				searchText2.setCellStyle(style);
+					searchText2.setCellStyle(style);
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
 					mita_Web_ScreenShot();
@@ -2013,7 +2008,7 @@ public class ActionClass extends BaseClass {
 					Cell searchText2 = sheet.getRow(i).createCell(5);
 					searchText2.setCellValue(name);
 					searchText2.setCellStyle(style);
-		outFile = new FileOutputStream(new File(Runner.filePath));
+					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
 //					mita_Web_ScreenShot();
 					inputFile.close();
@@ -2429,7 +2424,7 @@ public class ActionClass extends BaseClass {
 
 	public static void Machint_Mobile_visibilityOf() {
 		try {
-			wait = new WebDriverWait(mobiledriver, 1000);
+			wait = new WebDriverWait(mobiledriver, Duration.ofSeconds(1000));
 			if (element != null) {
 				wait.until(ExpectedConditions.visibilityOf(element));
 			}
@@ -2441,7 +2436,7 @@ public class ActionClass extends BaseClass {
 
 	public static void Machint_visibilityOfAllElements() {
 		try {
-			wait = new WebDriverWait(mobiledriver, 1000);
+			wait = new WebDriverWait(mobiledriver, Duration.ofSeconds(1000));
 			if (element != null) {
 				wait.until(ExpectedConditions.visibilityOfAllElements(element));
 			}
@@ -2453,7 +2448,7 @@ public class ActionClass extends BaseClass {
 
 	public static void Machint_elementToBeClickable() throws IOException {
 		try {
-			wait = new WebDriverWait(mobiledriver, 1000);
+			wait = new WebDriverWait(mobiledriver, Duration.ofSeconds(1000));
 			if (element != null) {
 				wait.until(ExpectedConditions.elementToBeClickable(element));
 			}
@@ -2465,7 +2460,7 @@ public class ActionClass extends BaseClass {
 
 	public static void Machint_elementSelectionStateToBe() throws IOException {
 		try {
-			wait = new WebDriverWait(mobiledriver, 1000);
+			wait = new WebDriverWait(mobiledriver, Duration.ofSeconds(1000));
 			if (element != null) {
 				wait.until(ExpectedConditions.elementSelectionStateToBe(element, flag));
 			}
@@ -2477,7 +2472,7 @@ public class ActionClass extends BaseClass {
 
 	public static void Machint_elementToBeSelected() throws IOException {
 		try {
-			wait = new WebDriverWait(mobiledriver, 1000);
+			wait = new WebDriverWait(mobiledriver, Duration.ofSeconds(1000));
 			if (element != null) {
 				wait.until(ExpectedConditions.elementToBeSelected(element));
 			}
@@ -2501,7 +2496,7 @@ public class ActionClass extends BaseClass {
 
 	public static void Machint_invisibilityOf() {
 		try {
-			wait = new WebDriverWait(mobiledriver, 1000);
+			wait = new WebDriverWait(mobiledriver, Duration.ofSeconds(1000));
 			if (by != null) {
 				wait.until(ExpectedConditions.invisibilityOf(element));
 			}
@@ -2513,7 +2508,7 @@ public class ActionClass extends BaseClass {
 
 	public static void Machint_invisibilityOfAllElements() {
 		try {
-			wait = new WebDriverWait(mobiledriver, 1000);
+			wait = new WebDriverWait(mobiledriver, Duration.ofSeconds(1000));
 			if (element != null) {
 				wait.until(ExpectedConditions.invisibilityOfAllElements(element));
 			}
@@ -2536,7 +2531,7 @@ public class ActionClass extends BaseClass {
 		boolean boolFound = false;
 		try {
 			logger.info("Executing - acceptAlert method");
-			wait = new WebDriverWait(mobiledriver, 1000);
+			wait = new WebDriverWait(mobiledriver, Duration.ofSeconds(1000));
 			wait.until(ExpectedConditions.alertIsPresent());
 			alert = mobiledriver.switchTo().alert();
 			if (alert != null) {
@@ -2558,7 +2553,7 @@ public class ActionClass extends BaseClass {
 		boolean boolFound = false;
 		try {
 			logger.info("Executing - dismissAlert method");
-			wait = new WebDriverWait(mobiledriver, 1000);
+			wait = new WebDriverWait(mobiledriver, Duration.ofSeconds(1000));
 			wait.until(ExpectedConditions.alertIsPresent());
 			alert = mobiledriver.switchTo().alert();
 			if (alert != null) {
@@ -2580,7 +2575,7 @@ public class ActionClass extends BaseClass {
 		boolean boolFound = false;
 		try {
 			logger.info("Executing - getAlertText method");
-			wait = new WebDriverWait(mobiledriver, 1000);
+			wait = new WebDriverWait(mobiledriver, Duration.ofSeconds(1000));
 			wait.until(ExpectedConditions.alertIsPresent());
 			alert = mobiledriver.switchTo().alert();
 			String AlertMsg = mobiledriver.switchTo().alert().getText();
@@ -3051,8 +3046,8 @@ public class ActionClass extends BaseClass {
 			AndroidElement SecondElement = mobiledriver.findElement(locator1);
 			System.out.println(SecondElement);
 			TouchAction t = new TouchAction(mobiledriver);
-			// Swiping clock using longpress options
-			t.longPress(longPressOptions().withElement(element(FirstElement)).withDuration(ofSeconds(2)))
+			// Swiping clock using long press options
+			t.longPress(longPressOptions().withElement(element(FirstElement)).withDuration(Duration.ofSeconds(5)))
 					.moveTo(element(SecondElement)).release().perform();
 		} catch (Exception e) {
 			mita_Mobile_write_when_Locator_isnotvalid();
@@ -3400,7 +3395,7 @@ public class ActionClass extends BaseClass {
 			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
 			AndroidElement element = mobiledriver.findElement(locator);
 			new TouchAction((PerformsTouchActions) mobiledriver).tap(tapOptions().withElement(element(element)))
-					.waitAction(waitOptions(Duration.millis(250))).perform();
+					.waitAction(waitOptions(Duration.ofMillis(250))).perform();
 			mita_Mobile_write();
 		} catch (Exception e) {
 			mita_Mobile_write_when_Locator_isnotvalid();
@@ -3415,7 +3410,7 @@ public class ActionClass extends BaseClass {
 		{
 			logger.info("Executing - TapByCoordinate method");
 			new TouchAction((PerformsTouchActions) mobiledriver).tap(point(x, y))
-					.waitAction(waitOptions(Duration.millis(250))).perform();
+					.waitAction(waitOptions(Duration.ofMillis(250))).perform();
 			mita_Mobile_write();
 		} catch (Exception e) {
 			mita_Mobile_write_when_Locator_isnotvalid();
@@ -3466,7 +3461,7 @@ public class ActionClass extends BaseClass {
 			int endPoint = (int) (size.width * endPercentage);
 
 			new TouchAction((PerformsTouchActions) mobiledriver).press(point(startPoint, anchor))
-					.waitAction(waitOptions(Duration.millis(1000))).moveTo(point(endPoint, anchor)).release()
+					.waitAction(waitOptions(Duration.ofMillis(1000))).moveTo(point(endPoint, anchor)).release()
 					.perform();
 			mita_Mobile_write();
 		} catch (Exception e) {
@@ -3488,7 +3483,7 @@ public class ActionClass extends BaseClass {
 			int endPoint = (int) (size.height * endPercentage);
 
 			new TouchAction((PerformsTouchActions) mobiledriver).press(point(anchor, startPoint))
-					.waitAction(waitOptions(Duration.millis(1000))).moveTo(point(anchor, endPoint)).release()
+					.waitAction(waitOptions(Duration.ofMillis(1000))).moveTo(point(anchor, endPoint)).release()
 					.perform();
 			mita_Mobile_write();
 		} catch (Exception e) {

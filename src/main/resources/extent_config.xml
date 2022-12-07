@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+	<configuration>
+		<null>
+			<documentTitle>MST Automation Report</documentTitle>
+			<null>
+				<null>
+					<protocol>https</protocol>
+					<null>
+						<null>
+							<encoding>UTF-8</encoding>
+							<null>
+								<null>
+									<theme>standard</theme>
+									<null>
+										<reportName
+											<![CDATA[<img src="../logo.png" style="position:absolute;left:75px;"/> <message>MST Automation Demo result summary</message> </reportName> 
+<!–locationofchartsinthetestview–> 
+<!–top,bottom–>
+<testViewChartLocation>bottom</testViewChartLocation>
+</configuration> 
+</extentreports> 

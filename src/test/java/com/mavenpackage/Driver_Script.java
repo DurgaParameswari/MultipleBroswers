@@ -16,14 +16,12 @@ public class Driver_Script extends ActionClass {
 	public static void ReadExcel() throws Throwable {
 		try {
 			readExcelsheets();
-
 			if (Runner.browserType.contains(",") || Runner.browserType != " ") {
 				bt = Runner.browserType.split(",");
 				for (l = 0; l < bt.length; l++) {
 					logger.info("Broswer type is " + bt[l]);
 					reporterLog("Broswer type is " + bt[l]);
 					getCurrentTime();
-
 					for (j = 0; j < sheetNames.length; j++) {
 						sheet = excelWorkbook.getSheet(sheetNames[j]);
 						mita_cleanTheResults();
@@ -478,7 +476,7 @@ public class Driver_Script extends ActionClass {
 					logger.info("Entered keyword is not available in the script");
 					reporterLog("Entered keyword is not available in the script");
 				}
-				ExtentManager.createInstance();
+				ExtentManager.getInstance();
 			}
 		} catch (NoSuchElementException e) {
 //			System.out.println("WEB-Please do spell ckeck");

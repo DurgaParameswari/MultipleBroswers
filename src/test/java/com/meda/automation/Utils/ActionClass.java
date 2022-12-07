@@ -8,8 +8,8 @@ import static io.appium.java_client.touch.TapOptions.tapOptions;
 import static io.appium.java_client.touch.WaitOptions.waitOptions;
 import static io.appium.java_client.touch.offset.ElementOption.element;
 import static io.appium.java_client.touch.offset.PointOption.point;
-import static java.time.Duration.ofSeconds;
 
+import java.time.Duration;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.Toolkit;
@@ -23,7 +23,6 @@ import java.io.IOException;
 import java.sql.Driver;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -34,7 +33,6 @@ import java.util.List;
 import java.util.Random;
 import java.util.Set;
 import java.util.stream.Collectors;
-
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.RandomStringUtils;
 import org.apache.log4j.Logger;
@@ -43,6 +41,7 @@ import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.IndexedColors;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.joda.time.DateTime;
+import org.joda.time.Duration;
 import org.json.JSONObject;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -111,8 +110,8 @@ public class ActionClass extends BaseClass {
 	public static String Parent;
 	public static Robot robot;
 	public static int xOffset;
-	private Duration STEP_DURATION = Duration.ofMillis(20);
-	private Duration NO_TIME = Duration.ofMillis(0);
+	private Duration STEP_DURATION = Duration.millis(20);
+	private Duration NO_TIME = Duration.millis(0);
 	private Origin VIEW = Origin.viewport();
 	public static final String BASE_URL = "https://machintsolutions-test.appiancloud.com";
 	public static String OTP;
@@ -1323,7 +1322,7 @@ public class ActionClass extends BaseClass {
 		try {
 			logger.info("Executing - acceptAlert method");
 			reporterLog(Driver_Script.Actionvalue);
-			wait = new WebDriverWait(driver, 1000);
+			wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
 			wait.until(ExpectedConditions.alertIsPresent());
 			Alert alert = driver.switchTo().alert();
 			if (alert != null) {
@@ -1368,7 +1367,7 @@ public class ActionClass extends BaseClass {
 		try {
 			logger.info("Executing - getAlertText method");
 			reporterLog(Driver_Script.Actionvalue);
-			wait = new WebDriverWait(driver, 1000);
+			wait = new WebDriverWait(driver, Duration.ofseconds(1000));
 			wait.until(ExpectedConditions.alertIsPresent());
 			Alert alert = driver.switchTo().alert();
 			String AlertMsg = driver.switchTo().alert().getText();
@@ -2490,7 +2489,7 @@ public class ActionClass extends BaseClass {
 
 	public static void Machint_frameToBeAvailableAndSwitchToIt() {
 		try {
-			wait = new WebDriverWait(mobiledriver, 1000);
+			wait = new WebDriverWait(mobiledriver, Duration.ofSeconds(1000));
 			if (element != null) {
 				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(element));
 			}
@@ -3401,7 +3400,7 @@ public class ActionClass extends BaseClass {
 			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
 			AndroidElement element = mobiledriver.findElement(locator);
 			new TouchAction((PerformsTouchActions) mobiledriver).tap(tapOptions().withElement(element(element)))
-					.waitAction(waitOptions(Duration.ofMillis(250))).perform();
+					.waitAction(waitOptions(Duration.millis(250))).perform();
 			mita_Mobile_write();
 		} catch (Exception e) {
 			mita_Mobile_write_when_Locator_isnotvalid();
@@ -3416,7 +3415,7 @@ public class ActionClass extends BaseClass {
 		{
 			logger.info("Executing - TapByCoordinate method");
 			new TouchAction((PerformsTouchActions) mobiledriver).tap(point(x, y))
-					.waitAction(waitOptions(Duration.ofMillis(250))).perform();
+					.waitAction(waitOptions(Duration.millis(250))).perform();
 			mita_Mobile_write();
 		} catch (Exception e) {
 			mita_Mobile_write_when_Locator_isnotvalid();
@@ -3467,7 +3466,7 @@ public class ActionClass extends BaseClass {
 			int endPoint = (int) (size.width * endPercentage);
 
 			new TouchAction((PerformsTouchActions) mobiledriver).press(point(startPoint, anchor))
-					.waitAction(waitOptions(Duration.ofMillis(1000))).moveTo(point(endPoint, anchor)).release()
+					.waitAction(waitOptions(Duration.millis(1000))).moveTo(point(endPoint, anchor)).release()
 					.perform();
 			mita_Mobile_write();
 		} catch (Exception e) {
@@ -3489,7 +3488,7 @@ public class ActionClass extends BaseClass {
 			int endPoint = (int) (size.height * endPercentage);
 
 			new TouchAction((PerformsTouchActions) mobiledriver).press(point(anchor, startPoint))
-					.waitAction(waitOptions(Duration.ofMillis(1000))).moveTo(point(anchor, endPoint)).release()
+					.waitAction(waitOptions(Duration.millis(1000))).moveTo(point(anchor, endPoint)).release()
 					.perform();
 			mita_Mobile_write();
 		} catch (Exception e) {

@@ -1,7 +1,7 @@
-2022-12-08 11:54:31,125  INFO [main] ExcelData:54 - Reading Excel file
-2022-12-08 11:54:32,155  INFO [main] Driver_Script:22 - Broswer type is chrome
-2022-12-08 11:54:32,629  INFO [main] Driver_Script:30 - Executing - Login1 and Row count is: 11
-2022-12-08 11:54:32,630  INFO [main] Driver_Script:43 - WEB Execution Starting:
-2022-12-08 11:54:32,927  INFO [main] BaseClass:71 - Select the chrome browser
-2022-12-08 11:54:32,930  INFO [main] BaseClass:110 - Executing - Take URL: Launching google chrome browser..
-2022-12-08 11:55:17,043  INFO [main] BaseClass:135 - Execution Type is Head
+2022-12-08 12:44:31,066  INFO [main] ExcelData:54 - Reading Excel file
+2022-12-08 12:44:31,946  INFO [main] Driver_Script:22 - Broswer type is chrome
+2022-12-08 12:44:32,683  INFO [main] Driver_Script:33 - Executing - Login1 and Row count is: 11
+2022-12-08 12:44:32,691  INFO [main] Driver_Script:46 - WEB Execution Starting:
+2022-12-08 12:44:32,987  INFO [main] BaseClass:75 - Select the chrome browser
+2022-12-08 12:44:32,988  INFO [main] BaseClass:115 - Executing - Take URL: Launching google chrome browser..
+2022-12-08 12:45:59,623  INFO [main] BaseClass:140 - Execution Type is Head

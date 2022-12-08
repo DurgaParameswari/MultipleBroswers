@@ -3,7 +3,6 @@ package com.meda.automation.managers;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.openqa.selenium.WebDriver;
 import org.testng.Reporter;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -11,7 +10,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
 public class ExtentTestManager  {
-	public static WebDriver driver;
+//	public static WebDriver driver;
 
 	static Map<Integer, ExtentTest> extentTestMap = new HashMap<>();
 	static ExtentReports extent = ExtentManager.getInstance();

@@ -3,10 +3,9 @@ package com.meda.automation.base;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.TimeUnit;
-
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -27,9 +26,7 @@ import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class BaseClass extends ExcelData
-
-{
+public class BaseClass extends ExcelData {
 	public static WebDriver driver;
 	public static AndroidDriver<AndroidElement> mobiledriver;
 	static Logger logger = Logger.getLogger(BaseClass.class);
@@ -61,8 +58,8 @@ public class BaseClass extends ExcelData
 		} catch (Exception e) {
 			logger.warn("Executing - " + Driver_Script.Actionvalue + ": Unable to select the " + browserType
 					+ "browser " + e.getMessage());
-			reporterLog(Driver_Script.Actionvalue + ": Unable to select the " + browserType
-					+ "browser " + e.getMessage());
+			reporterLog(
+					Driver_Script.Actionvalue + ": Unable to select the " + browserType + "browser " + e.getMessage());
 			result = false;
 		}
 		return driver;
@@ -102,13 +99,12 @@ public class BaseClass extends ExcelData
 		} catch (Exception e) {
 			logger.warn("Executing - " + Driver_Script.Actionvalue + ": Unable to select the " + bt[l] + " browser "
 					+ e.getMessage());
-			reporterLog(Driver_Script.Actionvalue + ": Unable to select the " + bt[l] + " browser "
-					+ e.getMessage());
+			reporterLog(Driver_Script.Actionvalue + ": Unable to select the " + bt[l] + " browser " + e.getMessage());
 			result = false;
 		}
 		return driver;
 	}
-	
+
 	public static void initChromeDriver(String appURL) throws Exception {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue + ": Launching google chrome browser..");
@@ -133,8 +129,8 @@ public class BaseClass extends ExcelData
 				// Navigate URL method
 				reporterLog("Navigates to URL is " + appURL);
 				driver.get(appURL);
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-				driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+				driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 			} else if (executionType.equalsIgnoreCase("Head")) {
 				logger.info("Execution Type is " + executionType);
 				reporterLog("Execution Type is " + executionType);
@@ -147,8 +143,8 @@ public class BaseClass extends ExcelData
 				// Navigate URL method
 				reporterLog("Navigates to URL is " + appURL);
 				driver.get(appURL);
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-				driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+				driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 			}
 			Map<String, Object> prefs = new HashMap<String, Object>();
 
@@ -166,8 +162,7 @@ public class BaseClass extends ExcelData
 			logger.warn("Executing - " + Driver_Script.Actionvalue + ": Unable to launch the Chrome browser "
 					+ e.getMessage());
 
-			reporterLog(Driver_Script.Actionvalue + ": Unable to launch the Chrome browser "
-					+ e.getMessage());
+			reporterLog(Driver_Script.Actionvalue + ": Unable to launch the Chrome browser " + e.getMessage());
 			result = false;
 		}
 	}
@@ -193,8 +188,8 @@ public class BaseClass extends ExcelData
 				// Navigate URL method
 				reporterLog("Navigates to URL is " + appURL);
 				driver.get(appURL);
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-				driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+				driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 			} else if (executionType.equalsIgnoreCase("Head")) {
 				logger.info("Execution Type is " + executionType);
 				reporterLog("Execution Type is " + executionType);
@@ -206,14 +201,14 @@ public class BaseClass extends ExcelData
 				// Navigate URL method
 				reporterLog("Navigates to URL is " + appURL);
 				driver.get(appURL);
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+				driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 			}
 		} catch (Exception e) {
 			logger.warn("Executing - " + Driver_Script.Actionvalue + ": Unable to launch the Firefox browser"
 					+ e.getMessage());
 
-			reporterLog(Driver_Script.Actionvalue + ": Unable to launch the Firefox browser"
-					+ e.getMessage());
+			reporterLog(Driver_Script.Actionvalue + ": Unable to launch the Firefox browser" + e.getMessage());
 			result = false;
 		}
 	}
@@ -240,8 +235,8 @@ public class BaseClass extends ExcelData
 				// Navigate URL method
 				reporterLog("Navigates to URL is " + appURL);
 				driver.get(appURL);
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-				driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+				driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 			} else if (executionType.equalsIgnoreCase("Head")) {
 				logger.info("Execution Type is " + executionType);
 				reporterLog("Execution Type is " + executionType);
@@ -253,7 +248,7 @@ public class BaseClass extends ExcelData
 				// Navigate URL method
 				reporterLog("Navigates to URL is " + appURL);
 				driver.get(appURL);
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			}
 		} catch (Exception e) {
 			logger.warn("Executing - " + Driver_Script.Actionvalue + ": Unable to launch the Edge browser"
@@ -298,7 +293,7 @@ public class BaseClass extends ExcelData
 			cap.setCapability("noReset", true);
 			cap.setCapability("noSign", true);
 			mobiledriver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"), cap);
-			mobiledriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			mobiledriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			// mita_acceptAlert();
 		} catch (Exception e) {
 			logger.warn("Executing - " + Driver_Script.Actionvalue + ": Unable to launch the Andriod driver "
@@ -310,5 +305,4 @@ public class BaseClass extends ExcelData
 		return mobiledriver;
 	}
 
-	
 }

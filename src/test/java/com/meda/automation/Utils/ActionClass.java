@@ -68,10 +68,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
+import com.aventstack.extentreports.Status;
 import com.google.common.base.Function;
 import com.mavenpackage.Driver_Script;
 import com.mavenpackage.Runner;
 import com.meda.automation.base.BaseClass;
+import com.meda.automation.managers.ExtentTestManager;
 
 import io.appium.java_client.FindsByAndroidUIAutomator;
 import io.appium.java_client.MobileElement;
@@ -1437,12 +1439,13 @@ public class ActionClass extends BaseClass {
 			if (actual.equalsIgnoreCase(expected)) {
 				Machint_JSHighlight(element);
 				mita_Web_writePass();
-
-			} else {
+				ExtentTestManager.getTest().log(Status.PASS, "Passed");
+				} else {
 				result = false;
 				mita_JSHighlight_for_validation(element);
 				mita_Web_ScreenShot();
 				mita_Web_writeFail();
+				ExtentTestManager.getTest().log(Status.PASS, "Failed");
 
 			}
 		} catch (Exception e) {

@@ -3325,3 +3325,80 @@ Session ID: f3231a23ae8d6a17e3e330c5f51cd288
 2022-12-08 17:57:40,856  INFO [main] ExcelData:141 - Locator value is: (//div[contains(@class,'DropdownWidget---dropdown_value')])[5]
 2022-12-08 17:57:40,856  INFO [main] ExcelData:144 - Test data is: Bike, Car and Commercial Insurance
 2022-12-08 17:57:40,856  INFO [main] ActionClass:1053 - Executing - EnterTextKey method
+2022-12-08 17:57:45,258  INFO [main] ActionClass:141 - keys Sub Product: Updating the result in excel
+2022-12-08 17:57:45,900  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:57:46,310  INFO [main] ExcelData:153 - Executing - Click on next button: Reading locator value from excel
+2022-12-08 17:57:46,311  INFO [main] ExcelData:156 - Locator value is: //button[text()='Next']
+2022-12-08 17:57:46,311  INFO [main] ActionClass:1209 - Executing - Click method
+2022-12-08 17:57:46,801  INFO [main] ActionClass:141 - Click on next button: Updating the result in excel
+2022-12-08 17:57:47,486  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:57:48,185  INFO [main] ExcelData:221 - Executing - wait: Reading wait time from excel
+2022-12-08 17:57:48,190  INFO [main] ExcelData:224 - Test data is: 5000
+2022-12-08 17:57:48,190  INFO [main] ActionClass:3662 - Executing - Wait method
+2022-12-08 17:57:53,204  INFO [main] ActionClass:141 - wait: Updating the result in excel
+2022-12-08 17:57:53,994  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:57:54,818  INFO [main] ExcelData:233 - Executing - Scenario 3: Reading description from excel
+2022-12-08 17:57:55,671  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:57:56,536  INFO [main] ExcelData:181 - Executing - Validate Personal Details: Reading locator value and test data from excel
+2022-12-08 17:57:56,537  INFO [main] ExcelData:185 - Locator value is: //div[text()='Personal Details']
+2022-12-08 17:57:56,537  INFO [main] ExcelData:188 - Test data is: Personal Details
+2022-12-08 17:57:56,537  INFO [main] ActionClass:1397 - Executing - EqualsValidation method
+2022-12-08 17:57:56,771  INFO [main] ActionClass:205 - Validate Personal Details: Updating the result in excel
+2022-12-08 17:57:57,678  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:57:58,383  INFO [main] ExcelData:137 - Executing - Enter fisrtname: Reading locator value and test data from excel
+2022-12-08 17:57:58,383  INFO [main] ExcelData:141 - Locator value is: (//input[contains(@class,'TextInput---inSideBySideItem')])[1]
+2022-12-08 17:57:58,383  INFO [main] ExcelData:144 - Test data is: Durga
+2022-12-08 17:57:58,384  INFO [main] ActionClass:1189 - Executing - EnterTextField method
+2022-12-08 17:57:59,677  INFO [main] ActionClass:141 - Enter fisrtname: Updating the result in excel
+2022-12-08 17:58:00,496  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:58:01,231  INFO [main] ExcelData:137 - Executing - Enter middle name: Reading locator value and test data from excel
+2022-12-08 17:58:01,231  INFO [main] ExcelData:141 - Locator value is: (//input[contains(@class,'TextInput---inSideBySideItem')])[2]
+2022-12-08 17:58:01,232  INFO [main] ExcelData:144 - Test data is: Test
+2022-12-08 17:58:01,232  INFO [main] ActionClass:1189 - Executing - EnterTextField method
+2022-12-08 17:58:02,039  INFO [main] ActionClass:141 - Enter middle name: Updating the result in excel
+2022-12-08 17:58:03,037  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:58:04,171  INFO [main] ExcelData:137 - Executing - Enter last name: Reading locator value and test data from excel
+2022-12-08 17:58:04,171  INFO [main] ExcelData:141 - Locator value is: (//input[contains(@class,'TextInput---inSideBySideItem')])[3]
+2022-12-08 17:58:04,171  INFO [main] ExcelData:144 - Test data is: Test
+2022-12-08 17:58:04,171  INFO [main] ActionClass:1189 - Executing - EnterTextField method
+2022-12-08 17:58:05,138  INFO [main] ActionClass:141 - Enter last name: Updating the result in excel
+2022-12-08 17:58:06,013  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:58:06,888  INFO [main] ExcelData:137 - Executing - Enter pan number: Reading locator value and test data from excel
+2022-12-08 17:58:06,889  INFO [main] ExcelData:141 - Locator value is: (//input[contains(@class,'TextInput---inSideBySideItem')])[5]
+2022-12-08 17:58:06,890  INFO [main] ExcelData:144 - Test data is: ABCDE2346H
+2022-12-08 17:58:06,891  INFO [main] ActionClass:1189 - Executing - EnterTextField method
+2022-12-08 17:58:08,000  INFO [main] ActionClass:141 - Enter pan number: Updating the result in excel
+2022-12-08 17:58:08,825  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:58:09,556  INFO [main] ExcelData:221 - Executing - wait: Reading wait time from excel
+2022-12-08 17:58:09,557  INFO [main] ExcelData:224 - Test data is: 10000
+2022-12-08 17:58:09,557  INFO [main] ActionClass:3662 - Executing - Wait method
+2022-12-08 17:58:19,559  INFO [main] ActionClass:141 - wait: Updating the result in excel
+2022-12-08 17:58:20,295  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:58:20,830  INFO [main] ExcelData:137 - Executing - Enter date of birth: Reading locator value and test data from excel
+2022-12-08 17:58:20,830  INFO [main] ExcelData:141 - Locator value is: //input[contains(@class,'DatePickerWidget---inSideBySideItem')]
+2022-12-08 17:58:20,831  INFO [main] ExcelData:144 - Test data is: 04/05/1997
+2022-12-08 17:58:20,831  INFO [main] ActionClass:1189 - Executing - EnterTextField method
+2022-12-08 17:58:21,827  INFO [main] ActionClass:141 - Enter date of birth: Updating the result in excel
+2022-12-08 17:58:22,694  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:58:23,453  INFO [main] ExcelData:137 - Executing - Enter phone number: Reading locator value and test data from excel
+2022-12-08 17:58:23,453  INFO [main] ExcelData:141 - Locator value is: (//input[contains(@class,'TextInput---inSideBySideItem')])[6]
+2022-12-08 17:58:23,453  INFO [main] ExcelData:144 - Test data is: 7472152295
+2022-12-08 17:58:23,453  INFO [main] ActionClass:1189 - Executing - EnterTextField method
+2022-12-08 17:58:24,232  INFO [main] ActionClass:141 - Enter phone number: Updating the result in excel
+2022-12-08 17:58:24,919  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:58:25,600  INFO [main] ExcelData:137 - Executing - enter email ID: Reading locator value and test data from excel
+2022-12-08 17:58:25,601  INFO [main] ExcelData:141 - Locator value is: (//input[contains(@class,'TextInput---inSideBySideItem')])[7]
+2022-12-08 17:58:25,601  INFO [main] ExcelData:144 - Test data is: durga.ponnana@machint.com
+2022-12-08 17:58:25,601  INFO [main] ActionClass:1189 - Executing - EnterTextField method
+2022-12-08 17:58:27,062  INFO [main] ActionClass:141 - enter email ID: Updating the result in excel
+2022-12-08 17:58:27,830  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:58:28,344  INFO [main] ExcelData:137 - Executing - enter monthly income: Reading locator value and test data from excel
+2022-12-08 17:58:28,344  INFO [main] ExcelData:141 - Locator value is: (//input[contains(@class,'TextInput---inSideBySideItem')])[8]
+2022-12-08 17:58:28,345  INFO [main] ExcelData:144 - Test data is: 45000
+2022-12-08 17:58:28,345  INFO [main] ActionClass:1189 - Executing - EnterTextField method
+2022-12-08 17:58:28,783  INFO [main] ActionClass:141 - enter monthly income: Updating the result in excel
+2022-12-08 17:58:29,365  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:58:30,075  INFO [main] ExcelData:137 - Executing - Keys gender: Reading locator value and test data from excel
+2022-12-08 17:58:30,076  INFO [main] ExcelData:141 - Locator value is: (//div[contains(@class,'DropdownWidget---inSideBySideItem')])[1]
+2022-12-08 17:58:30,076  INFO [main] ExcelData:144 - Test data is: Female
+2022-12-08 17:58:30,077  INFO [main] ActionClass:1053 - Executing - EnterTextKey method

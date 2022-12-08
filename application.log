@@ -3402,3 +3402,409 @@ Session ID: f3231a23ae8d6a17e3e330c5f51cd288
 2022-12-08 17:58:30,076  INFO [main] ExcelData:141 - Locator value is: (//div[contains(@class,'DropdownWidget---inSideBySideItem')])[1]
 2022-12-08 17:58:30,076  INFO [main] ExcelData:144 - Test data is: Female
 2022-12-08 17:58:30,077  INFO [main] ActionClass:1053 - Executing - EnterTextKey method
+2022-12-08 17:58:34,775  INFO [main] ActionClass:141 - Keys gender: Updating the result in excel
+2022-12-08 17:58:35,420  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:58:36,128  INFO [main] ExcelData:153 - Executing - Click on martial status: Reading locator value from excel
+2022-12-08 17:58:36,129  INFO [main] ExcelData:156 - Locator value is: (//label[@class='RadioSelect---choice_label'])[2]
+2022-12-08 17:58:36,129  INFO [main] ActionClass:1209 - Executing - Click method
+2022-12-08 17:58:36,706  INFO [main] ActionClass:141 - Click on martial status: Updating the result in excel
+2022-12-08 17:58:37,460  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:58:38,078  INFO [main] ExcelData:137 - Executing - Enter father name: Reading locator value and test data from excel
+2022-12-08 17:58:38,078  INFO [main] ExcelData:141 - Locator value is: (//input[contains(@class,'TextInput---inSideBySideItem')])[9]
+2022-12-08 17:58:38,078  INFO [main] ExcelData:144 - Test data is: Test
+2022-12-08 17:58:38,078  INFO [main] ActionClass:1189 - Executing - EnterTextField method
+2022-12-08 17:58:38,629  INFO [main] ActionClass:141 - Enter father name: Updating the result in excel
+2022-12-08 17:58:39,405  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:58:39,908  INFO [main] ExcelData:137 - Executing - keys Caste: Reading locator value and test data from excel
+2022-12-08 17:58:39,909  INFO [main] ExcelData:141 - Locator value is: (//div[contains(@class,'DropdownWidget---inSideBySideItem')])[2]
+2022-12-08 17:58:39,909  INFO [main] ExcelData:144 - Test data is: OBC
+2022-12-08 17:58:39,911  INFO [main] ActionClass:1053 - Executing - EnterTextKey method
+2022-12-08 17:58:44,422  INFO [main] ActionClass:141 - keys Caste: Updating the result in excel
+2022-12-08 17:58:44,795  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:58:45,155  INFO [main] ExcelData:137 - Executing - Keys religion: Reading locator value and test data from excel
+2022-12-08 17:58:45,155  INFO [main] ExcelData:141 - Locator value is: (//div[contains(@class,'DropdownWidget---inSideBySideItem')])[3]
+2022-12-08 17:58:45,155  INFO [main] ExcelData:144 - Test data is: Buddhist
+2022-12-08 17:58:45,156  INFO [main] ActionClass:1053 - Executing - EnterTextKey method
+2022-12-08 17:58:49,447  INFO [main] ActionClass:141 - Keys religion: Updating the result in excel
+2022-12-08 17:58:49,906  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:58:50,544  INFO [main] ExcelData:137 - Executing - keys qualification: Reading locator value and test data from excel
+2022-12-08 17:58:50,544  INFO [main] ExcelData:141 - Locator value is: (//div[contains(@class,'DropdownWidget---inSideBySideItem')])[4]
+2022-12-08 17:58:50,544  INFO [main] ExcelData:144 - Test data is: Engineer
+2022-12-08 17:58:50,545  INFO [main] ActionClass:1053 - Executing - EnterTextKey method
+2022-12-08 17:58:54,942  INFO [main] ActionClass:141 - keys qualification: Updating the result in excel
+2022-12-08 17:58:55,585  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:58:56,010  INFO [main] ExcelData:153 - Executing - Click on next button: Reading locator value from excel
+2022-12-08 17:58:56,010  INFO [main] ExcelData:156 - Locator value is: //button[text()='Next']
+2022-12-08 17:58:56,010  INFO [main] ActionClass:1209 - Executing - Click method
+2022-12-08 17:58:56,227  INFO [main] ActionClass:141 - Click on next button: Updating the result in excel
+2022-12-08 17:58:56,678  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:58:57,034  INFO [main] ExcelData:233 - Executing - Scenario 3: Reading description from excel
+2022-12-08 17:58:57,465  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:58:58,036  INFO [main] ExcelData:181 - Executing - Validate kyc documents: Reading locator value and test data from excel
+2022-12-08 17:58:58,036  INFO [main] ExcelData:185 - Locator value is: //div[text()='KYC Documents']
+2022-12-08 17:58:58,037  INFO [main] ExcelData:188 - Test data is: KYC Documents
+2022-12-08 17:58:58,037  INFO [main] ActionClass:1397 - Executing - EqualsValidation method
+2022-12-08 17:58:58,100  INFO [main] ActionClass:205 - Validate kyc documents: Updating the result in excel
+2022-12-08 17:58:58,667  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:58:59,101  INFO [main] ExcelData:153 - Executing - Click on add new row: Reading locator value from excel
+2022-12-08 17:58:59,102  INFO [main] ExcelData:156 - Locator value is: //a[text()='Add new row']
+2022-12-08 17:58:59,102  INFO [main] ActionClass:1209 - Executing - Click method
+2022-12-08 17:58:59,335  INFO [main] ActionClass:141 - Click on add new row: Updating the result in excel
+2022-12-08 17:58:59,900  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:59:00,452  INFO [main] ExcelData:221 - Executing - wait: Reading wait time from excel
+2022-12-08 17:59:00,453  INFO [main] ExcelData:224 - Test data is: 2000
+2022-12-08 17:59:00,453  INFO [main] ActionClass:3662 - Executing - Wait method
+2022-12-08 17:59:02,467  INFO [main] ActionClass:141 - wait: Updating the result in excel
+2022-12-08 17:59:03,239  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:59:03,855  INFO [main] ExcelData:137 - Executing - Keys document type: Reading locator value and test data from excel
+2022-12-08 17:59:03,856  INFO [main] ExcelData:141 - Locator value is: (//div[contains(@class,'DropdownWidget---dropdown_value')])[1]
+2022-12-08 17:59:03,856  INFO [main] ExcelData:144 - Test data is: National Id
+2022-12-08 17:59:03,856  INFO [main] ActionClass:1189 - Executing - EnterTextField method
+2022-12-08 17:59:04,120  INFO [main] ActionClass:379 - Keys document type: Updating the result in excel
+2022-12-08 17:59:04,781  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:59:06,047  WARN [main] ActionClass:1202 - Unable to execute the EnterTextField method 	invalid element state
+  (Session info: headless chrome=108.0.5359.99)
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6ec369fa8f682bb947def776f658ecb1, clearElement {id=9a612648-53c5-4463-8623-c7d5c1997ec7}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.99, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\M0137\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:49948}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49948/devtoo..., se:cdpVersion: 108.0.5359.99, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (6ec369fa8f682bb947def776f658ecb1)] -> xpath: (//div[contains(@class,'DropdownWidget---dropdown_value')])[1]]
+Session ID: 6ec369fa8f682bb947def776f658ecb1
+2022-12-08 17:59:07,035  INFO [main] Driver_Script:32 - Executing - Sheet13 and Row count is: 53
+2022-12-08 17:59:07,035  INFO [main] Driver_Script:44 - WEB Execution Starting:
+2022-12-08 17:59:07,529  INFO [main] BaseClass:69 - Select the chrome browser
+2022-12-08 17:59:07,529  INFO [main] BaseClass:104 - Executing - Take URL: Launching google chrome browser..
+2022-12-08 17:59:07,582  INFO [main] BaseClass:110 - Execution Type is Headless
+2022-12-08 17:59:10,868  INFO [main] ActionClass:141 - Take URL: Updating the result in excel
+2022-12-08 17:59:11,349  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:59:11,610  INFO [main] ExcelData:233 - Executing - Scenario 1: Reading description from excel
+2022-12-08 17:59:12,304  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:59:12,809  INFO [main] ExcelData:137 - Executing - Enter Username: Reading locator value and test data from excel
+2022-12-08 17:59:12,810  INFO [main] ExcelData:141 - Locator value is: //input[@id='un']
+2022-12-08 17:59:12,810  INFO [main] ExcelData:144 - Test data is: TEST_USER_AD
+2022-12-08 17:59:12,810  INFO [main] ActionClass:1189 - Executing - EnterTextField method
+2022-12-08 17:59:13,315  INFO [main] ActionClass:141 - Enter Username: Updating the result in excel
+2022-12-08 17:59:13,928  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:59:14,423  INFO [main] ExcelData:137 - Executing - Enter Password: Reading locator value and test data from excel
+2022-12-08 17:59:14,424  INFO [main] ExcelData:141 - Locator value is: //input[@id='pw']
+2022-12-08 17:59:14,424  INFO [main] ExcelData:144 - Test data is: Machint@123
+2022-12-08 17:59:14,424  INFO [main] ActionClass:1189 - Executing - EnterTextField method
+2022-12-08 17:59:14,756  INFO [main] ActionClass:141 - Enter Password: Updating the result in excel
+2022-12-08 17:59:15,118  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:59:15,391  INFO [main] ExcelData:153 - Executing - Click on Sign in: Reading locator value from excel
+2022-12-08 17:59:15,391  INFO [main] ExcelData:156 - Locator value is: //input[@class='btn primary' and @value='Sign In']
+2022-12-08 17:59:15,391  INFO [main] ActionClass:1209 - Executing - Click method
+2022-12-08 17:59:23,732  INFO [main] ActionClass:141 - Click on Sign in: Updating the result in excel
+2022-12-08 17:59:24,332  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:59:25,615  INFO [main] ExcelData:221 - Executing - wait: Reading wait time from excel
+2022-12-08 17:59:25,615  INFO [main] ExcelData:224 - Test data is: 5000
+2022-12-08 17:59:25,615  INFO [main] ActionClass:3662 - Executing - Wait method
+2022-12-08 17:59:30,645  INFO [main] ActionClass:141 - wait: Updating the result in excel
+2022-12-08 17:59:31,353  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:59:32,535  INFO [main] ExcelData:181 - Executing - Validate HOME text: Reading locator value and test data from excel
+2022-12-08 17:59:32,535  INFO [main] ExcelData:185 - Locator value is: //div[text()='HOME']
+2022-12-08 17:59:32,536  INFO [main] ExcelData:188 - Test data is: HOME
+2022-12-08 17:59:32,536  INFO [main] ActionClass:1397 - Executing - EqualsValidation method
+2022-12-08 17:59:32,674  INFO [main] ActionClass:205 - Validate HOME text: Updating the result in excel
+2022-12-08 17:59:33,299  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:59:33,783  INFO [main] ExcelData:181 - Executing - Validate My cases text: Reading locator value and test data from excel
+2022-12-08 17:59:33,784  INFO [main] ExcelData:185 - Locator value is: //div[text()='My Cases']
+2022-12-08 17:59:33,784  INFO [main] ExcelData:188 - Test data is: My Cases
+2022-12-08 17:59:33,785  INFO [main] ActionClass:1397 - Executing - EqualsValidation method
+2022-12-08 17:59:33,882  INFO [main] ActionClass:205 - Validate My cases text: Updating the result in excel
+2022-12-08 17:59:34,712  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:59:35,267  INFO [main] ExcelData:181 - Executing - Validate My tasks text: Reading locator value and test data from excel
+2022-12-08 17:59:35,267  INFO [main] ExcelData:185 - Locator value is: //div[text()='MY Tasks']
+2022-12-08 17:59:35,268  INFO [main] ExcelData:188 - Test data is: MY Tasks
+2022-12-08 17:59:35,268  INFO [main] ActionClass:1397 - Executing - EqualsValidation method
+2022-12-08 17:59:35,351  INFO [main] ActionClass:205 - Validate My tasks text: Updating the result in excel
+2022-12-08 17:59:35,983  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:59:36,530  INFO [main] ExcelData:181 - Executing - Validate Reports text: Reading locator value and test data from excel
+2022-12-08 17:59:36,531  INFO [main] ExcelData:185 - Locator value is: //div[text()='Reports']
+2022-12-08 17:59:36,531  INFO [main] ExcelData:188 - Test data is: Reports
+2022-12-08 17:59:36,531  INFO [main] ActionClass:1397 - Executing - EqualsValidation method
+2022-12-08 17:59:36,727  INFO [main] ActionClass:205 - Validate Reports text: Updating the result in excel
+2022-12-08 17:59:37,415  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:59:38,075  INFO [main] ExcelData:181 - Executing - Validate Actions text: Reading locator value and test data from excel
+2022-12-08 17:59:38,075  INFO [main] ExcelData:185 - Locator value is: //div[text()='Actions']
+2022-12-08 17:59:38,075  INFO [main] ExcelData:188 - Test data is: Actions
+2022-12-08 17:59:38,075  INFO [main] ActionClass:1397 - Executing - EqualsValidation method
+2022-12-08 17:59:38,199  INFO [main] ActionClass:205 - Validate Actions text: Updating the result in excel
+2022-12-08 17:59:38,846  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:59:39,283  INFO [main] ExcelData:153 - Executing - Click on Actions: Reading locator value from excel
+2022-12-08 17:59:39,283  INFO [main] ExcelData:156 - Locator value is: //div[text()='Actions']
+2022-12-08 17:59:39,283  INFO [main] ActionClass:1209 - Executing - Click method
+2022-12-08 17:59:39,627  INFO [main] ActionClass:141 - Click on Actions: Updating the result in excel
+2022-12-08 17:59:40,235  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:59:40,640  INFO [main] ExcelData:221 - Executing - wait: Reading wait time from excel
+2022-12-08 17:59:40,641  INFO [main] ExcelData:224 - Test data is: 10000
+2022-12-08 17:59:40,641  INFO [main] ActionClass:3662 - Executing - Wait method
+2022-12-08 17:59:50,651  INFO [main] ActionClass:141 - wait: Updating the result in excel
+2022-12-08 17:59:51,024  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:59:51,285  INFO [main] ExcelData:233 - Executing - Scenario 2: Reading description from excel
+2022-12-08 17:59:51,701  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:59:51,943  INFO [main] ExcelData:153 - Executing - Click on Lead management: Reading locator value from excel
+2022-12-08 17:59:51,943  INFO [main] ExcelData:156 - Locator value is: //span[text()='Lead Management']
+2022-12-08 17:59:51,943  INFO [main] ActionClass:1209 - Executing - Click method
+2022-12-08 17:59:52,137  INFO [main] ActionClass:141 - Click on Lead management: Updating the result in excel
+2022-12-08 17:59:52,682  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:59:53,183  INFO [main] ExcelData:221 - Executing - wait: Reading wait time from excel
+2022-12-08 17:59:53,183  INFO [main] ExcelData:224 - Test data is: 5000
+2022-12-08 17:59:53,183  INFO [main] ActionClass:3662 - Executing - Wait method
+2022-12-08 17:59:58,192  INFO [main] ActionClass:141 - wait: Updating the result in excel
+2022-12-08 17:59:58,699  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:59:59,029  INFO [main] ExcelData:153 - Executing - click on lead long form: Reading locator value from excel
+2022-12-08 17:59:59,030  INFO [main] ExcelData:156 - Locator value is: //h4[text()='Lead Long Form(Direct)']
+2022-12-08 17:59:59,030  INFO [main] ActionClass:1209 - Executing - Click method
+2022-12-08 17:59:59,330  INFO [main] ActionClass:141 - click on lead long form: Updating the result in excel
+2022-12-08 17:59:59,668  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 17:59:59,987  INFO [main] ExcelData:221 - Executing - wait: Reading wait time from excel
+2022-12-08 17:59:59,987  INFO [main] ExcelData:224 - Test data is: 5000
+2022-12-08 17:59:59,987  INFO [main] ActionClass:3662 - Executing - Wait method
+2022-12-08 18:00:04,993  INFO [main] ActionClass:141 - wait: Updating the result in excel
+2022-12-08 18:00:05,299  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:00:05,494  INFO [main] ExcelData:137 - Executing - keys lob: Reading locator value and test data from excel
+2022-12-08 18:00:05,495  INFO [main] ExcelData:141 - Locator value is: (//div[contains(@class,'DropdownWidget---dropdown_value')])[1]
+2022-12-08 18:00:05,495  INFO [main] ExcelData:144 - Test data is: Insurance
+2022-12-08 18:00:05,495  INFO [main] ActionClass:1053 - Executing - EnterTextKey method
+2022-12-08 18:00:09,511  INFO [main] ActionClass:141 - keys lob: Updating the result in excel
+2022-12-08 18:00:09,857  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:00:10,059  INFO [main] ExcelData:137 - Executing - keys Product Category: Reading locator value and test data from excel
+2022-12-08 18:00:10,059  INFO [main] ExcelData:141 - Locator value is: (//div[contains(@class,'DropdownWidget---dropdown_value')])[2]
+2022-12-08 18:00:10,059  INFO [main] ExcelData:144 - Test data is: General Insurance
+2022-12-08 18:00:10,059  INFO [main] ActionClass:1053 - Executing - EnterTextKey method
+2022-12-08 18:00:14,109  INFO [main] ActionClass:141 - keys Product Category: Updating the result in excel
+2022-12-08 18:00:14,629  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:00:15,034  INFO [main] ExcelData:137 - Executing - keys Product: Reading locator value and test data from excel
+2022-12-08 18:00:15,035  INFO [main] ExcelData:141 - Locator value is: (//div[contains(@class,'DropdownWidget---dropdown_value')])[3]
+2022-12-08 18:00:15,035  INFO [main] ExcelData:144 - Test data is: Motor Insurance
+2022-12-08 18:00:15,035  INFO [main] ActionClass:1053 - Executing - EnterTextKey method
+2022-12-08 18:00:19,386  INFO [main] ActionClass:141 - keys Product: Updating the result in excel
+2022-12-08 18:00:20,143  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:00:20,532  INFO [main] ExcelData:137 - Executing - keys Client Code: Reading locator value and test data from excel
+2022-12-08 18:00:20,532  INFO [main] ExcelData:141 - Locator value is: (//div[contains(@class,'DropdownWidget---dropdown_value')])[4]
+2022-12-08 18:00:20,533  INFO [main] ExcelData:144 - Test data is: ICICI Home
+2022-12-08 18:00:20,534  INFO [main] ActionClass:1053 - Executing - EnterTextKey method
+2022-12-08 18:00:25,157  INFO [main] ActionClass:141 - keys Client Code: Updating the result in excel
+2022-12-08 18:00:25,734  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:00:26,156  INFO [main] ExcelData:137 - Executing - keys Sub Product: Reading locator value and test data from excel
+2022-12-08 18:00:26,156  INFO [main] ExcelData:141 - Locator value is: (//div[contains(@class,'DropdownWidget---dropdown_value')])[5]
+2022-12-08 18:00:26,157  INFO [main] ExcelData:144 - Test data is: Bike, Car and Commercial Insurance
+2022-12-08 18:00:26,157  INFO [main] ActionClass:1053 - Executing - EnterTextKey method
+2022-12-08 18:00:30,302  INFO [main] ActionClass:141 - keys Sub Product: Updating the result in excel
+2022-12-08 18:00:30,741  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:00:31,078  INFO [main] ExcelData:153 - Executing - Click on next button: Reading locator value from excel
+2022-12-08 18:00:31,078  INFO [main] ExcelData:156 - Locator value is: //button[text()='Next']
+2022-12-08 18:00:31,079  INFO [main] ActionClass:1209 - Executing - Click method
+2022-12-08 18:00:31,354  INFO [main] ActionClass:141 - Click on next button: Updating the result in excel
+2022-12-08 18:00:31,776  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:00:32,041  INFO [main] ExcelData:221 - Executing - wait: Reading wait time from excel
+2022-12-08 18:00:32,041  INFO [main] ExcelData:224 - Test data is: 5000
+2022-12-08 18:00:32,041  INFO [main] ActionClass:3662 - Executing - Wait method
+2022-12-08 18:00:37,051  INFO [main] ActionClass:141 - wait: Updating the result in excel
+2022-12-08 18:00:37,475  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:00:37,848  INFO [main] ExcelData:233 - Executing - Scenario 3: Reading description from excel
+2022-12-08 18:00:38,413  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:00:38,800  INFO [main] ExcelData:181 - Executing - Validate Personal Details: Reading locator value and test data from excel
+2022-12-08 18:00:38,800  INFO [main] ExcelData:185 - Locator value is: //div[text()='Personal Details']
+2022-12-08 18:00:38,801  INFO [main] ExcelData:188 - Test data is: Personal Details
+2022-12-08 18:00:38,801  INFO [main] ActionClass:1397 - Executing - EqualsValidation method
+2022-12-08 18:00:38,921  INFO [main] ActionClass:205 - Validate Personal Details: Updating the result in excel
+2022-12-08 18:00:39,730  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:00:40,038  INFO [main] ExcelData:137 - Executing - Enter fisrtname: Reading locator value and test data from excel
+2022-12-08 18:00:40,038  INFO [main] ExcelData:141 - Locator value is: (//input[contains(@class,'TextInput---inSideBySideItem')])[1]
+2022-12-08 18:00:40,039  INFO [main] ExcelData:144 - Test data is: Durga
+2022-12-08 18:00:40,039  INFO [main] ActionClass:1189 - Executing - EnterTextField method
+2022-12-08 18:00:40,512  INFO [main] ActionClass:141 - Enter fisrtname: Updating the result in excel
+2022-12-08 18:00:41,108  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:00:41,563  INFO [main] ExcelData:137 - Executing - Enter middle name: Reading locator value and test data from excel
+2022-12-08 18:00:41,564  INFO [main] ExcelData:141 - Locator value is: (//input[contains(@class,'TextInput---inSideBySideItem')])[2]
+2022-12-08 18:00:41,569  INFO [main] ExcelData:144 - Test data is: Test
+2022-12-08 18:00:41,570  INFO [main] ActionClass:1189 - Executing - EnterTextField method
+2022-12-08 18:00:41,979  INFO [main] ActionClass:141 - Enter middle name: Updating the result in excel
+2022-12-08 18:00:42,393  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:00:42,783  INFO [main] ExcelData:137 - Executing - Enter last name: Reading locator value and test data from excel
+2022-12-08 18:00:42,783  INFO [main] ExcelData:141 - Locator value is: (//input[contains(@class,'TextInput---inSideBySideItem')])[3]
+2022-12-08 18:00:42,784  INFO [main] ExcelData:144 - Test data is: Test
+2022-12-08 18:00:42,784  INFO [main] ActionClass:1189 - Executing - EnterTextField method
+2022-12-08 18:00:43,455  INFO [main] ActionClass:141 - Enter last name: Updating the result in excel
+2022-12-08 18:00:43,859  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:00:44,167  INFO [main] ExcelData:137 - Executing - Enter pan number: Reading locator value and test data from excel
+2022-12-08 18:00:44,168  INFO [main] ExcelData:141 - Locator value is: (//input[contains(@class,'TextInput---inSideBySideItem')])[5]
+2022-12-08 18:00:44,168  INFO [main] ExcelData:144 - Test data is: ABCDE2346H
+2022-12-08 18:00:44,168  INFO [main] ActionClass:1189 - Executing - EnterTextField method
+2022-12-08 18:00:44,751  INFO [main] ActionClass:141 - Enter pan number: Updating the result in excel
+2022-12-08 18:00:45,443  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:00:46,002  INFO [main] ExcelData:221 - Executing - wait: Reading wait time from excel
+2022-12-08 18:00:46,002  INFO [main] ExcelData:224 - Test data is: 10000
+2022-12-08 18:00:46,002  INFO [main] ActionClass:3662 - Executing - Wait method
+2022-12-08 18:00:56,009  INFO [main] ActionClass:141 - wait: Updating the result in excel
+2022-12-08 18:00:56,602  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:00:57,181  INFO [main] ExcelData:137 - Executing - Enter date of birth: Reading locator value and test data from excel
+2022-12-08 18:00:57,182  INFO [main] ExcelData:141 - Locator value is: //input[contains(@class,'DatePickerWidget---inSideBySideItem')]
+2022-12-08 18:00:57,182  INFO [main] ExcelData:144 - Test data is: 04/05/1997
+2022-12-08 18:00:57,182  INFO [main] ActionClass:1189 - Executing - EnterTextField method
+2022-12-08 18:00:58,536  INFO [main] ActionClass:141 - Enter date of birth: Updating the result in excel
+2022-12-08 18:00:59,389  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:01:00,054  INFO [main] ExcelData:137 - Executing - Enter phone number: Reading locator value and test data from excel
+2022-12-08 18:01:00,055  INFO [main] ExcelData:141 - Locator value is: (//input[contains(@class,'TextInput---inSideBySideItem')])[6]
+2022-12-08 18:01:00,055  INFO [main] ExcelData:144 - Test data is: 7472152295
+2022-12-08 18:01:00,055  INFO [main] ActionClass:1189 - Executing - EnterTextField method
+2022-12-08 18:01:00,649  INFO [main] ActionClass:141 - Enter phone number: Updating the result in excel
+2022-12-08 18:01:01,357  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:01:01,816  INFO [main] ExcelData:137 - Executing - enter email ID: Reading locator value and test data from excel
+2022-12-08 18:01:01,816  INFO [main] ExcelData:141 - Locator value is: (//input[contains(@class,'TextInput---inSideBySideItem')])[7]
+2022-12-08 18:01:01,816  INFO [main] ExcelData:144 - Test data is: durga.ponnana@machint.com
+2022-12-08 18:01:01,817  INFO [main] ActionClass:1189 - Executing - EnterTextField method
+2022-12-08 18:01:02,544  INFO [main] ActionClass:141 - enter email ID: Updating the result in excel
+2022-12-08 18:01:03,178  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:01:03,612  INFO [main] ExcelData:137 - Executing - enter monthly income: Reading locator value and test data from excel
+2022-12-08 18:01:03,613  INFO [main] ExcelData:141 - Locator value is: (//input[contains(@class,'TextInput---inSideBySideItem')])[8]
+2022-12-08 18:01:03,613  INFO [main] ExcelData:144 - Test data is: 45000
+2022-12-08 18:01:03,614  INFO [main] ActionClass:1189 - Executing - EnterTextField method
+2022-12-08 18:01:04,043  INFO [main] ActionClass:141 - enter monthly income: Updating the result in excel
+2022-12-08 18:01:04,593  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:01:05,019  INFO [main] ExcelData:137 - Executing - Keys gender: Reading locator value and test data from excel
+2022-12-08 18:01:05,019  INFO [main] ExcelData:141 - Locator value is: (//div[contains(@class,'DropdownWidget---inSideBySideItem')])[1]
+2022-12-08 18:01:05,020  INFO [main] ExcelData:144 - Test data is: Female
+2022-12-08 18:01:05,020  INFO [main] ActionClass:1053 - Executing - EnterTextKey method
+2022-12-08 18:01:09,236  INFO [main] ActionClass:141 - Keys gender: Updating the result in excel
+2022-12-08 18:01:09,803  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:01:10,113  INFO [main] ExcelData:153 - Executing - Click on martial status: Reading locator value from excel
+2022-12-08 18:01:10,113  INFO [main] ExcelData:156 - Locator value is: (//label[@class='RadioSelect---choice_label'])[2]
+2022-12-08 18:01:10,114  INFO [main] ActionClass:1209 - Executing - Click method
+2022-12-08 18:01:10,519  INFO [main] ActionClass:141 - Click on martial status: Updating the result in excel
+2022-12-08 18:01:11,249  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:01:11,787  INFO [main] ExcelData:137 - Executing - Enter father name: Reading locator value and test data from excel
+2022-12-08 18:01:11,787  INFO [main] ExcelData:141 - Locator value is: (//input[contains(@class,'TextInput---inSideBySideItem')])[9]
+2022-12-08 18:01:11,787  INFO [main] ExcelData:144 - Test data is: Test
+2022-12-08 18:01:11,788  INFO [main] ActionClass:1189 - Executing - EnterTextField method
+2022-12-08 18:01:12,217  INFO [main] ActionClass:141 - Enter father name: Updating the result in excel
+2022-12-08 18:01:12,914  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:01:13,417  INFO [main] ExcelData:137 - Executing - keys Caste: Reading locator value and test data from excel
+2022-12-08 18:01:13,418  INFO [main] ExcelData:141 - Locator value is: (//div[contains(@class,'DropdownWidget---inSideBySideItem')])[2]
+2022-12-08 18:01:13,418  INFO [main] ExcelData:144 - Test data is: OBC
+2022-12-08 18:01:13,418  INFO [main] ActionClass:1053 - Executing - EnterTextKey method
+2022-12-08 18:01:17,486  INFO [main] ActionClass:141 - keys Caste: Updating the result in excel
+2022-12-08 18:01:17,876  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:01:18,243  INFO [main] ExcelData:137 - Executing - Keys religion: Reading locator value and test data from excel
+2022-12-08 18:01:18,244  INFO [main] ExcelData:141 - Locator value is: (//div[contains(@class,'DropdownWidget---inSideBySideItem')])[3]
+2022-12-08 18:01:18,244  INFO [main] ExcelData:144 - Test data is: Buddhist
+2022-12-08 18:01:18,244  INFO [main] ActionClass:1053 - Executing - EnterTextKey method
+2022-12-08 18:01:22,339  INFO [main] ActionClass:141 - Keys religion: Updating the result in excel
+2022-12-08 18:01:22,896  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:01:23,299  INFO [main] ExcelData:137 - Executing - keys qualification: Reading locator value and test data from excel
+2022-12-08 18:01:23,300  INFO [main] ExcelData:141 - Locator value is: (//div[contains(@class,'DropdownWidget---inSideBySideItem')])[4]
+2022-12-08 18:01:23,300  INFO [main] ExcelData:144 - Test data is: Engineer
+2022-12-08 18:01:23,300  INFO [main] ActionClass:1053 - Executing - EnterTextKey method
+2022-12-08 18:01:27,467  INFO [main] ActionClass:141 - keys qualification: Updating the result in excel
+2022-12-08 18:01:28,117  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:01:28,623  INFO [main] ExcelData:153 - Executing - Click on next button: Reading locator value from excel
+2022-12-08 18:01:28,624  INFO [main] ExcelData:156 - Locator value is: //button[text()='Next']
+2022-12-08 18:01:28,624  INFO [main] ActionClass:1209 - Executing - Click method
+2022-12-08 18:01:29,192  INFO [main] ActionClass:141 - Click on next button: Updating the result in excel
+2022-12-08 18:01:29,898  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:01:30,866  INFO [main] ExcelData:233 - Executing - Scenario 3: Reading description from excel
+2022-12-08 18:01:31,514  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:01:31,885  INFO [main] ExcelData:181 - Executing - Validate kyc documents: Reading locator value and test data from excel
+2022-12-08 18:01:31,885  INFO [main] ExcelData:185 - Locator value is: //div[text()='KYC Documents']
+2022-12-08 18:01:31,886  INFO [main] ExcelData:188 - Test data is: KYC Documents
+2022-12-08 18:01:31,886  INFO [main] ActionClass:1397 - Executing - EqualsValidation method
+2022-12-08 18:01:31,960  INFO [main] ActionClass:205 - Validate kyc documents: Updating the result in excel
+2022-12-08 18:01:32,660  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:01:32,960  INFO [main] ExcelData:153 - Executing - Click on add new row: Reading locator value from excel
+2022-12-08 18:01:32,960  INFO [main] ExcelData:156 - Locator value is: //a[text()='Add new row']
+2022-12-08 18:01:32,961  INFO [main] ActionClass:1209 - Executing - Click method
+2022-12-08 18:01:33,142  INFO [main] ActionClass:141 - Click on add new row: Updating the result in excel
+2022-12-08 18:01:33,598  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:01:33,894  INFO [main] ExcelData:221 - Executing - wait: Reading wait time from excel
+2022-12-08 18:01:33,894  INFO [main] ExcelData:224 - Test data is: 2000
+2022-12-08 18:01:33,894  INFO [main] ActionClass:3662 - Executing - Wait method
+2022-12-08 18:01:35,903  INFO [main] ActionClass:141 - wait: Updating the result in excel
+2022-12-08 18:01:36,519  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:01:36,946  INFO [main] ExcelData:137 - Executing - Keys document type: Reading locator value and test data from excel
+2022-12-08 18:01:36,946  INFO [main] ExcelData:141 - Locator value is: (//div[contains(@class,'DropdownWidget---dropdown_value')])[1]
+2022-12-08 18:01:36,947  INFO [main] ExcelData:144 - Test data is: National Id
+2022-12-08 18:01:36,947  INFO [main] ActionClass:1189 - Executing - EnterTextField method
+2022-12-08 18:01:37,320  INFO [main] ActionClass:379 - Keys document type: Updating the result in excel
+2022-12-08 18:01:37,897  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:01:39,153  WARN [main] ActionClass:1202 - Unable to execute the EnterTextField method 	invalid element state
+  (Session info: headless chrome=108.0.5359.99)
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [27bb26084a43f1f869259131cc870acb, clearElement {id=89ddb609-687c-40eb-ab66-a30f90d5039c}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.99, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\M0137\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50028}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50028/devtoo..., se:cdpVersion: 108.0.5359.99, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (27bb26084a43f1f869259131cc870acb)] -> xpath: (//div[contains(@class,'DropdownWidget---dropdown_value')])[1]]
+Session ID: 27bb26084a43f1f869259131cc870acb
+2022-12-08 18:01:40,032  INFO [main] Driver_Script:32 - Executing - Sheet14 and Row count is: 53
+2022-12-08 18:01:40,033  INFO [main] Driver_Script:44 - WEB Execution Starting:
+2022-12-08 18:01:40,641  INFO [main] BaseClass:69 - Select the chrome browser
+2022-12-08 18:01:40,642  INFO [main] BaseClass:104 - Executing - Take URL: Launching google chrome browser..
+2022-12-08 18:01:40,710  INFO [main] BaseClass:110 - Execution Type is Headless
+2022-12-08 18:01:45,230  INFO [main] ActionClass:141 - Take URL: Updating the result in excel
+2022-12-08 18:01:45,829  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:01:46,235  INFO [main] ExcelData:233 - Executing - Scenario 1: Reading description from excel
+2022-12-08 18:01:46,800  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:01:47,223  INFO [main] ExcelData:137 - Executing - Enter Username: Reading locator value and test data from excel
+2022-12-08 18:01:47,223  INFO [main] ExcelData:141 - Locator value is: //input[@id='un']
+2022-12-08 18:01:47,230  INFO [main] ExcelData:144 - Test data is: TEST_USER_AD
+2022-12-08 18:01:47,230  INFO [main] ActionClass:1189 - Executing - EnterTextField method
+2022-12-08 18:01:47,618  INFO [main] ActionClass:141 - Enter Username: Updating the result in excel
+2022-12-08 18:01:48,106  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:01:48,378  INFO [main] ExcelData:137 - Executing - Enter Password: Reading locator value and test data from excel
+2022-12-08 18:01:48,378  INFO [main] ExcelData:141 - Locator value is: //input[@id='pw']
+2022-12-08 18:01:48,379  INFO [main] ExcelData:144 - Test data is: Machint@123
+2022-12-08 18:01:48,379  INFO [main] ActionClass:1189 - Executing - EnterTextField method
+2022-12-08 18:01:48,661  INFO [main] ActionClass:141 - Enter Password: Updating the result in excel
+2022-12-08 18:01:49,187  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:01:49,503  INFO [main] ExcelData:153 - Executing - Click on Sign in: Reading locator value from excel
+2022-12-08 18:01:49,503  INFO [main] ExcelData:156 - Locator value is: //input[@class='btn primary' and @value='Sign In']
+2022-12-08 18:01:49,504  INFO [main] ActionClass:1209 - Executing - Click method
+2022-12-08 18:01:59,843  INFO [main] ActionClass:141 - Click on Sign in: Updating the result in excel
+2022-12-08 18:02:00,439  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:02:02,188  INFO [main] ExcelData:221 - Executing - wait: Reading wait time from excel
+2022-12-08 18:02:02,188  INFO [main] ExcelData:224 - Test data is: 5000
+2022-12-08 18:02:02,189  INFO [main] ActionClass:3662 - Executing - Wait method
+2022-12-08 18:02:07,211  INFO [main] ActionClass:141 - wait: Updating the result in excel
+2022-12-08 18:02:07,682  WARN [main] ActionClass:161 - C:\Users\M0137\git\repository3\MultipleBroswers\TestCasesinExcell\Myhero\MyHeroTestdata.xlsx (The requested operation cannot be performed on a file with a user-mapped section open)
+2022-12-08 18:02:07,683  INFO [main] ExcelData:181 - Executing - Validate HOME text: Reading locator value and test data from excel
+2022-12-08 18:02:07,683  INFO [main] ExcelData:185 - Locator value is: //div[text()='HOME']
+2022-12-08 18:02:07,683  INFO [main] ExcelData:188 - Test data is: HOME
+2022-12-08 18:02:07,686  INFO [main] ActionClass:1397 - Executing - EqualsValidation method
+2022-12-08 18:02:09,064  INFO [main] ActionClass:205 - Validate HOME text: Updating the result in excel
+2022-12-08 18:02:09,724  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:02:10,253  INFO [main] ExcelData:181 - Executing - Validate My cases text: Reading locator value and test data from excel
+2022-12-08 18:02:10,253  INFO [main] ExcelData:185 - Locator value is: //div[text()='My Cases']
+2022-12-08 18:02:10,254  INFO [main] ExcelData:188 - Test data is: My Cases
+2022-12-08 18:02:10,254  INFO [main] ActionClass:1397 - Executing - EqualsValidation method
+2022-12-08 18:02:10,339  INFO [main] ActionClass:205 - Validate My cases text: Updating the result in excel
+2022-12-08 18:02:11,210  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:02:11,847  INFO [main] ExcelData:181 - Executing - Validate My tasks text: Reading locator value and test data from excel
+2022-12-08 18:02:11,847  INFO [main] ExcelData:185 - Locator value is: //div[text()='MY Tasks']
+2022-12-08 18:02:11,847  INFO [main] ExcelData:188 - Test data is: MY Tasks
+2022-12-08 18:02:11,848  INFO [main] ActionClass:1397 - Executing - EqualsValidation method
+2022-12-08 18:02:11,927  INFO [main] ActionClass:205 - Validate My tasks text: Updating the result in excel
+2022-12-08 18:02:12,798  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:02:13,382  INFO [main] ExcelData:181 - Executing - Validate Reports text: Reading locator value and test data from excel
+2022-12-08 18:02:13,382  INFO [main] ExcelData:185 - Locator value is: //div[text()='Reports']
+2022-12-08 18:02:13,382  INFO [main] ExcelData:188 - Test data is: Reports
+2022-12-08 18:02:13,382  INFO [main] ActionClass:1397 - Executing - EqualsValidation method
+2022-12-08 18:02:13,484  INFO [main] ActionClass:205 - Validate Reports text: Updating the result in excel
+2022-12-08 18:02:14,063  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:02:14,633  INFO [main] ExcelData:181 - Executing - Validate Actions text: Reading locator value and test data from excel
+2022-12-08 18:02:14,633  INFO [main] ExcelData:185 - Locator value is: //div[text()='Actions']
+2022-12-08 18:02:14,633  INFO [main] ExcelData:188 - Test data is: Actions
+2022-12-08 18:02:14,633  INFO [main] ActionClass:1397 - Executing - EqualsValidation method
+2022-12-08 18:02:14,726  INFO [main] ActionClass:205 - Validate Actions text: Updating the result in excel
+2022-12-08 18:02:15,280  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:02:15,778  INFO [main] ExcelData:153 - Executing - Click on Actions: Reading locator value from excel
+2022-12-08 18:02:15,778  INFO [main] ExcelData:156 - Locator value is: //div[text()='Actions']
+2022-12-08 18:02:15,778  INFO [main] ActionClass:1209 - Executing - Click method
+2022-12-08 18:02:16,344  INFO [main] ActionClass:141 - Click on Actions: Updating the result in excel
+2022-12-08 18:02:17,055  INFO [main] ActionClass:1661 - Executing - Taking ScreenShot method
+2022-12-08 18:02:17,505  INFO [main] ExcelData:221 - Executing - wait: Reading wait time from excel
+2022-12-08 18:02:17,505  INFO [main] ExcelData:224 - Test data is: 10000
+2022-12-08 18:02:17,505  INFO [main] ActionClass:3662 - Executing - Wait method
+2022-12-08 18:02:27,517  INFO [main] ActionClass:141 - wait: Updating the result in excel

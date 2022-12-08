@@ -285,14 +285,17 @@ public class Driver_Script extends ActionClass {
 				} else if (Actionvalue.toLowerCase().contains("enter") || Actionvalue.toLowerCase().contains("insert")
 						|| Actionvalue.toLowerCase().contains("inserting")
 						|| Actionvalue.toLowerCase().contains("entering") || Actionvalue.toLowerCase().contains("input")
-						|| Actionvalue.toLowerCase().contains("editing") || Actionvalue.toLowerCase().contains("put")) {
+						|| Actionvalue.toLowerCase().contains("editing") || Actionvalue.toLowerCase().contains("put")
+						|| Actionvalue.toLowerCase().contains("write")|| Actionvalue.toLowerCase().contains("type")){
 					mita_Enter_excelData();
 					mita_EnterTextField("xpath", LocatorId, Entervalue, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("display")) {
 					mita_Enter_excelData();
 					Machint_WebElemenDisplay("xpath", LocatorId, Entervalue, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("keys") || Actionvalue.toLowerCase().contains("keyvalue")
-						|| Actionvalue.toLowerCase().contains("keyText")) {
+						|| Actionvalue.toLowerCase().contains("keyText")
+						|| Actionvalue.toLowerCase().contains("dropdown")
+						|| Actionvalue.toLowerCase().contains("drop down")) {
 					mita_Enter_excelData();
 					mita_EnterTextKey("xpath", LocatorId, Entervalue, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("char")

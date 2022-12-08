@@ -6,7 +6,6 @@ import java.net.URL;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -213,7 +212,7 @@ public class BaseClass extends ExcelData
 					+ e.getMessage());
 
 //			reporterLog(Driver_Script.Actionvalue + ": Unable to launch the Firefox browser"
-					+ e.getMessage());
+//					+ e.getMessage());
 			result = false;
 		}
 	}
@@ -229,29 +228,29 @@ public class BaseClass extends ExcelData
 
 			if (executionType.equalsIgnoreCase("Headless")) {
 				logger.info("Execution Type is " + executionType);
-				reporterLog("Execution Type is " + executionType);
+//				reporterLog("Execution Type is " + executionType);
 				edgeOptions.setCapability("UseChromium", true);
 				edgeOptions.setCapability("headless", true);
-				reporterLog("Edge browser started");
+//				reporterLog("Edge browser started");
 				driver = new EdgeDriver(edgeOptions);
 				// maximize window
-				reporterLog("Maximize Window");
+//				reporterLog("Maximize Window");
 				driver.manage().window().maximize();
 				// Navigate URL method
-				reporterLog("Navigates to URL is " + appURL);
+//				reporterLog("Navigates to URL is " + appURL);
 				driver.get(appURL);
 				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 				driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 			} else if (executionType.equalsIgnoreCase("Head")) {
 				logger.info("Execution Type is " + executionType);
-				reporterLog("Execution Type is " + executionType);
-				reporterLog("Edge browser started");
+//				reporterLog("Execution Type is " + executionType);
+//				reporterLog("Edge browser started");
 				driver = new EdgeDriver(edgeOptions);
 				// maximize window
-				reporterLog("Maximize Window");
+//				reporterLog("Maximize Window");
 				driver.manage().window().maximize();
 				// Navigate URL method
-				reporterLog("Navigates to URL is " + appURL);
+//				reporterLog("Navigates to URL is " + appURL);
 				driver.get(appURL);
 				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			}
@@ -259,8 +258,8 @@ public class BaseClass extends ExcelData
 			logger.warn("Executing - " + Driver_Script.Actionvalue + ": Unable to launch the Edge browser"
 					+ e.getMessage());
 
-			reporterLog("Executing - " + Driver_Script.Actionvalue + ": Unable to launch the Edge browser"
-					+ e.getMessage());
+//			reporterLog("Executing - " + Driver_Script.Actionvalue + ": Unable to launch the Edge browser"
+//					+ e.getMessage());
 			result = false;
 		}
 	}
@@ -269,11 +268,11 @@ public class BaseClass extends ExcelData
 	public void Close() {
 		try {
 			logger.info("Closing the browser");
-			reporterLog(Driver_Script.Actionvalue);
+//			reporterLog(Driver_Script.Actionvalue);
 			driver.quit();
 		} catch (Exception e) {
 			logger.error("Not able to Close the Browser --- " + e.getMessage());
-			reporterLog("Not able to Close the Browser --- " + e.getMessage());
+//			reporterLog("Not able to Close the Browser --- " + e.getMessage());
 			result = false;
 		}
 	}
@@ -281,7 +280,7 @@ public class BaseClass extends ExcelData
 	public static AndroidDriver<AndroidElement> setup(String device) throws MalformedURLException {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue + ": Launching Android driver");
-			reporterLog(Driver_Script.Actionvalue + ": Launching Android driver");
+//			reporterLog(Driver_Script.Actionvalue + ": Launching Android driver");
 			File f = new File(Runner.apkPath);
 			DesiredCapabilities cap = new DesiredCapabilities();
 
@@ -303,8 +302,8 @@ public class BaseClass extends ExcelData
 		} catch (Exception e) {
 			logger.warn("Executing - " + Driver_Script.Actionvalue + ": Unable to launch the Andriod driver "
 					+ e.getMessage());
-			reporterLog("Executing - " + Driver_Script.Actionvalue + ": Unable to launch the Andriod driver "
-					+ e.getMessage());
+//			reporterLog("Executing - " + Driver_Script.Actionvalue + ": Unable to launch the Andriod driver "
+//					+ e.getMessage());
 			result = false;
 		}
 		return mobiledriver;

@@ -126,8 +126,8 @@ public class ActionClass extends BaseClass {
 	static Logger logger = Logger.getLogger(ActionClass.class);
 
 	public static WebElement fluentWait(final By locator1) {
-		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(30))
-				.pollingEvery(Duration.ofSeconds(10)).ignoring(org.openqa.selenium.NoSuchElementException.class);
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(50))
+				.pollingEvery(Duration.ofSeconds(20)).ignoring(org.openqa.selenium.NoSuchElementException.class);
 		WebElement foo = wait.until(new Function<WebDriver, WebElement>() {
 			public WebElement apply(WebDriver driver) {
 				return driver.findElement(locator1);

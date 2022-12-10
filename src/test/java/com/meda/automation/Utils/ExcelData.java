@@ -13,7 +13,6 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import com.mavenpackage.Driver_Script;
 import com.mavenpackage.Runner;
-import com.meda.automation.managers.ExtentManager;
 import com.meda.automation.managers.ExtentTestManager;
 
 public class ExcelData extends ExtentTestManager {
@@ -34,7 +33,7 @@ public class ExcelData extends ExtentTestManager {
 	public static int waitTime;
 	public static String[] sheetNames;
 	public static boolean result;
-
+	
 	static Logger logger = Logger.getLogger(ExcelData.class);
 
 	public static void readExcel() throws Exception {
@@ -239,4 +238,5 @@ public class ExcelData extends ExtentTestManager {
 		}
 	}
 
+	
 }

@@ -49,7 +49,7 @@ public class BaseClass extends ExcelData
 				break;
 
 			case "Edge":
-				initEdge(appURL);
+				initEdgeDriver(appURL);
 				break;
 
 			default:
@@ -59,7 +59,7 @@ public class BaseClass extends ExcelData
 		} catch (Exception e) {
 			logger.warn("Executing - " + Driver_Script.Actionvalue + ": Unable to select the " + browserType
 					+ "browser " + e.getMessage());
-			result = false;
+
 		}
 		return driver;
 	}
@@ -73,7 +73,7 @@ public class BaseClass extends ExcelData
 				}
 			} catch (Exception e) {
 				logger.info("User not selected Chrome Broswer " + e.getMessage());
-				result = false;
+
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Firefox")) {
@@ -81,37 +81,38 @@ public class BaseClass extends ExcelData
 				}
 			} catch (Exception e) {
 				logger.info("User not selected Firefox Broswer " + e.getMessage());
-				result = false;
+
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Edge")) {
-					initEdge(appURL);
+					initEdgeDriver(appURL);
 				}
 			} catch (Exception e) {
 				logger.info("User not selected Edge Broswer " + e.getMessage());
-				result = false;
+
 			}
 		} catch (Exception e) {
 			logger.warn("Executing - " + Driver_Script.Actionvalue + ": Unable to select the " + bt[l] + " browser "
 					+ e.getMessage());
-			result = false;
+
 		}
 		return driver;
 	}
-	
+
 	public static void initChromeDriver(String appURL) throws Exception {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue + ": Launching google chrome browser..");
-			ChromeOptions options = new ChromeOptions();
+			ChromeOptions chromeOptions = new ChromeOptions();
+
 			WebDriverManager.chromedriver().setup();
 			String executionType = Runner.executionType;
 
 			if (executionType.equalsIgnoreCase("Headless")) {
 				logger.info("Execution Type is " + executionType);
-				options.addArguments("--window-size=1920,1080");
-				options.addArguments("--start-maximized");
-				options.addArguments("--headless");
-				driver = new ChromeDriver(options);
+				chromeOptions.addArguments("--window-size=1920,1080");
+				chromeOptions.addArguments("--headless");
+
+				driver = new ChromeDriver(chromeOptions);
 				// maximize window
 				driver.manage().window().maximize();
 				driver.manage().deleteAllCookies();
@@ -121,7 +122,9 @@ public class BaseClass extends ExcelData
 				driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 			} else if (executionType.equalsIgnoreCase("Head")) {
 				logger.info("Execution Type is " + executionType);
-				driver = new ChromeDriver(options);
+
+				driver = new ChromeDriver(chromeOptions);
+
 				// maximize window
 				driver.manage().window().maximize();
 				driver.manage().deleteAllCookies();
@@ -140,25 +143,28 @@ public class BaseClass extends ExcelData
 			prefs.put("profile.default_content_setting_values.media_stream_camera", 1);
 			prefs.put("profile.default_content_setting_values.notifications", 1);
 			prefs.put("profile.default_content_setting_values.geolocation", 1);
-			options.setExperimentalOption("prefs", prefs);
+			chromeOptions.setExperimentalOption("prefs", prefs);
 
 		} catch (Exception e) {
 			logger.warn("Executing - " + Driver_Script.Actionvalue + ": Unable to launch the Chrome browser "
 					+ e.getMessage());
-			result = false;
+
 		}
 	}
 
 	public static void initFirefoxDriver(String appURL) throws Exception {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue + ": Launching Firefox browser..");
+	
+			
 			FirefoxOptions firefoxOptions = new FirefoxOptions();
-//			WebDriverManager.firefoxdriver().driverVersion("107.0").setup();
-			WebDriverManager.firefoxdriver().setup();
+//			WebDriverManager.firefoxdriver().setup();
+			WebDriverManager.firefoxdriver().driverVersion("107.0.1").setup();
 			String executionType = Runner.executionType;
 
 			if (executionType.equalsIgnoreCase("Headless")) {
 				logger.info("Execution Type is " + executionType);
+				firefoxOptions.addArguments("--window-size=1920,1080");
 				firefoxOptions.setHeadless(true);
 				driver = new FirefoxDriver(firefoxOptions);
 				// maximize window
@@ -179,22 +185,21 @@ public class BaseClass extends ExcelData
 		} catch (Exception e) {
 			logger.warn("Executing - " + Driver_Script.Actionvalue + ": Unable to launch the Firefox browser"
 					+ e.getMessage());
-			result = false;
+
 		}
 	}
 
-	public static void initEdge(String appURL) throws Exception {
+	public static void initEdgeDriver(String appURL) throws Exception {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue + ": Launching Edge browser..");
 			EdgeOptions edgeOptions = new EdgeOptions();
-//			WebDriverManager.edgedriver().driverVersion("107.0.1418.56").setup();
 			WebDriverManager.edgedriver().setup();
 			String executionType = Runner.executionType;
 
 			if (executionType.equalsIgnoreCase("Headless")) {
 				logger.info("Execution Type is " + executionType);
-				edgeOptions.setCapability("UseChromium", true);
-				edgeOptions.setCapability("headless", true);
+				edgeOptions.addArguments("--window-size=1920,1080");
+				edgeOptions.addArguments("headless");
 				driver = new EdgeDriver(edgeOptions);
 				// maximize window
 				driver.manage().window().maximize();
@@ -214,7 +219,7 @@ public class BaseClass extends ExcelData
 		} catch (Exception e) {
 			logger.warn("Executing - " + Driver_Script.Actionvalue + ": Unable to launch the Edge browser"
 					+ e.getMessage());
-			result = false;
+
 		}
 	}
 
@@ -225,7 +230,7 @@ public class BaseClass extends ExcelData
 			driver.quit();
 		} catch (Exception e) {
 			logger.error("Not able to Close the Browser --- " + e.getMessage());
-			result = false;
+
 		}
 	}
 
@@ -252,8 +257,9 @@ public class BaseClass extends ExcelData
 		} catch (Exception e) {
 			logger.warn("Executing - " + Driver_Script.Actionvalue + ": Unable to launch the Andriod driver "
 					+ e.getMessage());
-			result = false;
+
 		}
 		return mobiledriver;
 	}
+
 }

@@ -57,7 +57,6 @@ public class Runner {
 			mobileScreenshotPath = args[11];
 			System.out.println("Mobile ScreenShots Path: " + mobileScreenshotPath);
 			
-			
 			TestListener listener = new TestListener();
 			testNg = new TestNG();
 			testNg.setTestClasses(new Class[] { Driver_Script.class });

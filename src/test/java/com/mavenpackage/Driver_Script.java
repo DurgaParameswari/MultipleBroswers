@@ -284,7 +284,7 @@ public class Driver_Script extends ActionClass {
 						|| Actionvalue.toLowerCase().contains("inserting")
 						|| Actionvalue.toLowerCase().contains("entering") || Actionvalue.toLowerCase().contains("input")
 						|| Actionvalue.toLowerCase().contains("editing") || Actionvalue.toLowerCase().contains("put")
-						|| Actionvalue.toLowerCase().contains("write") || Actionvalue.toLowerCase().contains("type")) {
+						|| Actionvalue.toLowerCase().contains("write")) {
 					mita_Enter_excelData();
 					mita_EnterTextField("xpath", LocatorId, Entervalue, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("display")) {
@@ -354,9 +354,9 @@ public class Driver_Script extends ActionClass {
 						|| Actionvalue.toLowerCase().contains("browsing")
 						|| Actionvalue.toLowerCase().contains("browse")) {
 					mita_Enter_excelData();
-					mita_uploadsendkeys("xpath", LocatorId, Entervalue);
+//					mita_uploadsendkeys("xpath", LocatorId, Entervalue);
 					// mita_Enter_excelData();
-					// mita_Robot_uploadFile("xpath", LocatorId, Entervalue, "visibilityOf");
+					 mita_Robot_uploadFile("xpath", LocatorId, Entervalue, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("switch")) {
 					mita_Select_ExcelData();
 					mita_acceptAlert();
@@ -487,5 +487,4 @@ public class Driver_Script extends ActionClass {
 	public void mydriverscript() throws Throwable {
 		ReadExcel();
 	}
-
 }

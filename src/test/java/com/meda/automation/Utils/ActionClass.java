@@ -1187,7 +1187,6 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - EnterTextField method");
-			
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mita_JSHighlight(element);
@@ -1404,13 +1403,13 @@ public class ActionClass extends BaseClass {
 			if (actual.equalsIgnoreCase(expected)) {
 				Machint_JSHighlight(element);
 				mita_Web_writePass();
-				ExtentTestManager.getTest().log(Status.PASS, "Passed");
+//				ExtentTestManager.getTest().log(Status.PASS, "Passed");
 				} else {
 				
 				mita_JSHighlight_for_validation(element);
 				mita_Web_ScreenShot();
 				mita_Web_writeFail();
-				ExtentTestManager.getTest().log(Status.PASS, "Failed");
+//				ExtentTestManager.getTest().log(Status.PASS, "Failed");
 
 			}
 		} catch (Exception e) {
@@ -4500,7 +4499,7 @@ public class ActionClass extends BaseClass {
 	}
 
 	public static String getCurrentTime() {
-		timeStamp = DateTime.now().toString("yyyy-mm-dd--HH-mm-ss");
+		timeStamp = DateTime.now().toString("yyyy-m-dd--HH-mm-ss");
 		return timeStamp;
 	}
 }

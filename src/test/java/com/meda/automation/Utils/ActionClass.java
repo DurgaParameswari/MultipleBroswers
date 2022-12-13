@@ -4500,7 +4500,7 @@ public class ActionClass extends BaseClass {
 	}
 
 	public static String getCurrentTime() {
-		timeStamp = DateTime.now().toString("yyyy-dd-M--HH-mm-ss");
+		timeStamp = DateTime.now().toString("yyyy-mm-dd--HH-mm-ss");
 		return timeStamp;
 	}
 }

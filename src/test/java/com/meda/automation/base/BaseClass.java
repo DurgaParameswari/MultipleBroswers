@@ -155,11 +155,10 @@ public class BaseClass extends ExcelData
 	public static void initFirefoxDriver(String appURL) throws Exception {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue + ": Launching Firefox browser..");
-	
-			
+
 			FirefoxOptions firefoxOptions = new FirefoxOptions();
-//			WebDriverManager.firefoxdriver().setup();
-			WebDriverManager.firefoxdriver().driverVersion("107.0.1").setup();
+			WebDriverManager.firefoxdriver().setup();
+//			WebDriverManager.firefoxdriver().driverVersion("107.0.1").setup();
 			String executionType = Runner.executionType;
 
 			if (executionType.equalsIgnoreCase("Headless")) {

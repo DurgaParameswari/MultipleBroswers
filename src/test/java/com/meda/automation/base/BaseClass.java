@@ -18,9 +18,11 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterSuite;
 
+import com.aventstack.extentreports.Status;
 import com.mavenpackage.Driver_Script;
 import com.mavenpackage.Runner;
 import com.meda.automation.Utils.ExcelData;
+import com.meda.automation.managers.ExtentTestManager;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -102,6 +104,7 @@ public class BaseClass extends ExcelData
 	public static void initChromeDriver(String appURL) throws Exception {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue + ": Launching google chrome browser..");
+			ExtentTestManager.getTest().log(Status.PASS, Driver_Script.Actionvalue + ": Launching google chrome browser..");
 			ChromeOptions chromeOptions = new ChromeOptions();
 
 			WebDriverManager.chromedriver().setup();

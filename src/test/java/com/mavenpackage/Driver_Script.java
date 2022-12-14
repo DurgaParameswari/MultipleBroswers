@@ -354,10 +354,9 @@ public class Driver_Script extends ActionClass {
 						|| Actionvalue.toLowerCase().contains("browsing")
 						|| Actionvalue.toLowerCase().contains("browse")) {
 					mita_Enter_excelData();
-//					mita_uploadsendkeys("xpath", LocatorId, Entervalue,"visibilityOf");
-					// jsUpload("xpath", LocatorId, Entervalue,"visibilityOf");
+					mita_uploadsendkeys("xpath", LocatorId, Entervalue,"visibilityOf");
 					// mita_Enter_excelData();
-					mita_Robot_uploadFile("xpath", LocatorId, Entervalue, "visibilityOf");
+//					mita_Robot_uploadFile("xpath", LocatorId, Entervalue, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("switch")) {
 					mita_Select_ExcelData();
 					mita_acceptAlert();

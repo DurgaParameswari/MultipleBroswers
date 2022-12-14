@@ -1076,7 +1076,7 @@ public class ActionClass extends BaseClass {
 
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
-			// Machint_JSHighlight(element);
+			mita_JSHighlight(element);
 			mita_Wait(WaitType);
 			RestAssured.baseURI = BASE_URL;
 			RequestSpecification request = RestAssured.given();
@@ -1393,23 +1393,20 @@ public class ActionClass extends BaseClass {
 		try {
 			logger.info("Executing - EqualsValidation method");
 
-			softAssert = new SoftAssert();
+//			softAssert = new SoftAssert();
 			locator = mita_locator(LocatorType, LocatorValue);
 			actual = driver.findElement(locator).getText();
-
-//			softAssert.assertEquals(actual, expected);
-
+			
 			if (actual.equalsIgnoreCase(expected)) {
-				Machint_JSHighlight(element);
+				mita_JSHighlight(element);
+				mita_Web_ScreenShot();
 				mita_Web_writePass();
-//				ExtentTestManager.getTest().log(Status.PASS, "Passed");
+				ExtentTestManager.getTest().log(Status.PASS, actual+" "+expected+" Correct ");
 			} else {
-
 				mita_JSHighlight_for_validation(element);
 				mita_Web_ScreenShot();
 				mita_Web_writeFail();
-//				ExtentTestManager.getTest().log(Status.PASS, "Failed");
-
+				ExtentTestManager.getTest().log(Status.FAIL, actual+" "+expected+" Incorrect ");
 			}
 		} catch (Exception e) {
 			mita_Web_write_when_Locator_isnotvalid();
@@ -4203,7 +4200,6 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - uploadSendKEys method");
-
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mita_JSHighlight(element);
@@ -4216,6 +4212,27 @@ public class ActionClass extends BaseClass {
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to set the value \t" + e.getMessage());
 //			reporterLog("Unable to set the value \t" + e.getMessage());
+		}
+	}
+	
+	
+	public static void autoIT_fileUpload(String LocatorType, String LocatorValue, String value,
+			String WaitType) throws Exception, IOException, InterruptedException {
+		try {
+			logger.info("Executing - FileUpload method");
+			locator = mita_locator(LocatorType, LocatorValue);
+			element = driver.findElement(locator);
+			Machint_JSHighlight(element);
+			Machint_Mobile_Waits(WaitType);
+			element.click();
+			Thread.sleep(2000);
+			Runtime.getRuntime().exec(value);
+			Thread.sleep(2000);
+			mita_Mobile_write();
+		} catch (Exception e) {
+			mita_Mobile_write_when_Locator_isnotvalid();
+			System.err.format("No Element Found to autoIT_fileUpload \t" + e);
+			logger.warn("Unable to execute the fileUpload method \t" + e.getMessage());
 		}
 	}
 
@@ -4467,7 +4484,7 @@ public class ActionClass extends BaseClass {
 				if (element.isDisplayed())
 					locator = mita_locator(LocatorType, LocatorValue);
 				element = driver.findElement(locator);
-				// Machint_JSHighlight(element);
+				mita_JSHighlight(element);
 				element.clear();
 				element.sendKeys(value);
 				Thread.sleep(1000);
@@ -4504,27 +4521,4 @@ public class ActionClass extends BaseClass {
 		return timeStamp;
 	}
 
-	public static void jsUpload(String LocatorType, String LocatorValue, String value, String WaitType)
-			throws Exception {
-
-		try {
-			logger.info("Executing - java script upload method");
-			locator = mita_locator(LocatorType, LocatorValue);
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-			// Setting value for "style" attribute to make textbox visible
-			element = driver.findElement(locator);
-			js.executeScript("arguments[0].style.display='block';", element);
-//		driver.findElement(locator).sendKeys("D:\\testImage.png");
-			mita_JSHighlight(element);
-			mita_Wait(WaitType);
-			Thread.sleep(1000);
-			element.sendKeys(value);
-			mita_Web_write();
-		} catch (Exception e) {
-//		System.err.format("No Element Found to perform get the lead \t" + e);
-			mita_Web_write_when_Locator_isnotvalid();
-			logger.warn("Unable to set the value \t" + e.getMessage());
-//		reporterLog("Unable to set the value \t" + e.getMessage());
-		}
-	}
 }

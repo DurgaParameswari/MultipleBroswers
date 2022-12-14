@@ -159,7 +159,7 @@ public class ActionClass extends BaseClass {
 				}
 			} catch (Exception e) {
 				logger.warn(e.getMessage());
-				
+
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Firefox")) {
@@ -174,7 +174,7 @@ public class ActionClass extends BaseClass {
 				}
 			} catch (Exception e) {
 				logger.warn(e.getMessage());
-				
+
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Edge")) {
@@ -189,7 +189,7 @@ public class ActionClass extends BaseClass {
 				}
 			} catch (Exception e) {
 				logger.warn(e.getMessage());
-				
+
 			}
 		} catch (FileNotFoundException e) {
 			logger.warn(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
@@ -275,7 +275,7 @@ public class ActionClass extends BaseClass {
 				}
 			} catch (Exception e) {
 				logger.warn(e.getMessage());
-				
+
 			}
 		} catch (FileNotFoundException e) {
 			logger.warn(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
@@ -323,7 +323,7 @@ public class ActionClass extends BaseClass {
 
 			} catch (Exception e) {
 				logger.warn(e.getMessage());
-				
+
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Firefox")) {
@@ -343,7 +343,7 @@ public class ActionClass extends BaseClass {
 				}
 			} catch (Exception e) {
 				logger.warn(e.getMessage());
-				
+
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Edge")) {
@@ -362,7 +362,7 @@ public class ActionClass extends BaseClass {
 				}
 			} catch (Exception e) {
 				logger.warn(e.getMessage());
-				
+
 			}
 
 		} catch (FileNotFoundException e) {
@@ -408,7 +408,7 @@ public class ActionClass extends BaseClass {
 
 			} catch (Exception e) {
 				logger.warn(e.getMessage());
-				
+
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Firefox")) {
@@ -428,7 +428,7 @@ public class ActionClass extends BaseClass {
 				}
 			} catch (Exception e) {
 				logger.warn(e.getMessage());
-				
+
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Edge")) {
@@ -447,7 +447,7 @@ public class ActionClass extends BaseClass {
 				}
 			} catch (Exception e) {
 				logger.warn(e.getMessage());
-				
+
 			}
 
 //			outFile = new FileOutputStream(new File(Runner.filePath));
@@ -503,7 +503,7 @@ public class ActionClass extends BaseClass {
 
 			} catch (Exception e) {
 				logger.warn(e.getMessage());
-				
+
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Firefox")) {
@@ -522,7 +522,7 @@ public class ActionClass extends BaseClass {
 				}
 			} catch (Exception e) {
 				logger.warn(e.getMessage());
-				
+
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Edge")) {
@@ -541,7 +541,7 @@ public class ActionClass extends BaseClass {
 				}
 			} catch (Exception e) {
 				logger.warn(e.getMessage());
-				
+
 			}
 
 //			outFile = new FileOutputStream(new File(Runner.filePath));
@@ -586,7 +586,7 @@ public class ActionClass extends BaseClass {
 				}
 			} catch (Exception e) {
 				logger.warn(e.getMessage());
-				
+
 			}
 			try {
 				if (Runner.browserType.equalsIgnoreCase("Firefox")) {
@@ -602,7 +602,7 @@ public class ActionClass extends BaseClass {
 				}
 			} catch (Exception e) {
 				logger.warn(e.getMessage());
-				
+
 			}
 			try {
 				if (Runner.browserType.equalsIgnoreCase("Edge")) {
@@ -618,7 +618,7 @@ public class ActionClass extends BaseClass {
 				}
 			} catch (Exception e) {
 				logger.warn(e.getMessage());
-				
+
 			}
 
 		} catch (FileNotFoundException e) {
@@ -665,7 +665,7 @@ public class ActionClass extends BaseClass {
 				}
 			} catch (Exception e) {
 				logger.warn(e.getMessage());
-				
+
 			}
 			try {
 				if (Runner.browserType.equalsIgnoreCase("Firefox")) {
@@ -684,7 +684,7 @@ public class ActionClass extends BaseClass {
 				}
 			} catch (Exception e) {
 				logger.warn(e.getMessage());
-				
+
 			}
 			try {
 				if (Runner.browserType.equalsIgnoreCase("Edge")) {
@@ -703,7 +703,7 @@ public class ActionClass extends BaseClass {
 				}
 			} catch (Exception e) {
 				logger.warn(e.getMessage());
-				
+
 			}
 
 //			outFile = new FileOutputStream(new File(Runner.filePath));
@@ -756,7 +756,7 @@ public class ActionClass extends BaseClass {
 
 			} catch (Exception e) {
 				logger.warn(e.getMessage());
-				
+
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Firefox")) {
@@ -774,7 +774,7 @@ public class ActionClass extends BaseClass {
 				}
 			} catch (Exception e) {
 				logger.warn(e.getMessage());
-				
+
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Edge")) {
@@ -792,7 +792,7 @@ public class ActionClass extends BaseClass {
 				}
 			} catch (Exception e) {
 				logger.warn(e.getMessage());
-				
+
 			}
 
 //			outFile = new FileOutputStream(new File(Runner.filePath));
@@ -846,7 +846,7 @@ public class ActionClass extends BaseClass {
 
 			} catch (Exception e) {
 				logger.warn(e.getMessage());
-				
+
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Firefox")) {
@@ -866,7 +866,7 @@ public class ActionClass extends BaseClass {
 				}
 			} catch (Exception e) {
 				logger.warn(e.getMessage());
-				
+
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Edge")) {
@@ -886,7 +886,7 @@ public class ActionClass extends BaseClass {
 				}
 			} catch (Exception e) {
 				logger.warn(e.getMessage());
-				
+
 			}
 
 //			outFile = new FileOutputStream(new File(Runner.filePath));
@@ -944,7 +944,7 @@ public class ActionClass extends BaseClass {
 
 			} catch (Exception e) {
 				logger.warn(e.getMessage());
-				
+
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Firefox")) {
@@ -964,7 +964,7 @@ public class ActionClass extends BaseClass {
 				}
 			} catch (Exception e) {
 				logger.warn(e.getMessage());
-				
+
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Edge")) {
@@ -984,7 +984,7 @@ public class ActionClass extends BaseClass {
 				}
 			} catch (Exception e) {
 				logger.warn(e.getMessage());
-				
+
 			}
 
 //			outFile = new FileOutputStream(new File(Runner.filePath));
@@ -1051,7 +1051,7 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - EnterTextKey method");
-			
+
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mita_JSHighlight(element);
@@ -1073,7 +1073,7 @@ public class ActionClass extends BaseClass {
 			String WaitType) throws Exception {
 		try {
 			logger.info("Executing - Mobile number OTP method");
-			
+
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			// Machint_JSHighlight(element);
@@ -1139,7 +1139,7 @@ public class ActionClass extends BaseClass {
 			String WaitType) throws Exception {
 		try {
 			logger.info("Executing - Mobile generateRandomNumber method");
-			
+
 			int number = Integer.parseInt(value);
 			String randomNumber = generateAadharNumber(number);
 			locator = mita_locator(LocatorType, LocatorValue);
@@ -1162,7 +1162,7 @@ public class ActionClass extends BaseClass {
 			String WaitType) throws Exception {
 		try {
 			logger.info("Executing - AutoSuggestion_Dropdown method");
-			
+
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mita_JSHighlight(element);
@@ -1199,13 +1199,13 @@ public class ActionClass extends BaseClass {
 //			System.err.format("No Element Found to perform ngvt_Click \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to execute the EnterTextField method \t" + e.getMessage());
-			
+
 		}
 	}
 
 	public static void mita_Click(String LocatorType, String LocatorValue, String WaitType) throws Exception {
 		try {
-			logger.info("Executing - Click method");		
+			logger.info("Executing - Click method");
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mita_JSHighlight(element);
@@ -1217,7 +1217,7 @@ public class ActionClass extends BaseClass {
 //			System.err.format("No Element Found to perform ngvt_Click \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to execute the click method \t" + e.getMessage());
-			
+
 		}
 
 	}
@@ -1226,7 +1226,7 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - selectValue method");
-			
+
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mita_JSHighlight(element);
@@ -1239,7 +1239,7 @@ public class ActionClass extends BaseClass {
 //			System.err.format("No Element Found to perform ngvt_Click \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to execute the selectvalue method \t" + e.getMessage());
-			
+
 		}
 	}
 
@@ -1247,7 +1247,7 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - selectIndex method");
-			
+
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mita_JSHighlight(element);
@@ -1260,7 +1260,7 @@ public class ActionClass extends BaseClass {
 //			System.err.format("No Element Found to perform ngvt_Click \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to execute the selectIndex method \t" + e.getMessage());
-			
+
 		}
 	}
 
@@ -1268,7 +1268,7 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - selectVisibletext method");
-			
+
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mita_JSHighlight(element);
@@ -1281,7 +1281,7 @@ public class ActionClass extends BaseClass {
 //			System.err.format("No Element Found to perform ngvt_Click \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to execute the selectVisibletext method \t" + e.getMessage());
-			
+
 		}
 	}
 
@@ -1289,7 +1289,7 @@ public class ActionClass extends BaseClass {
 		boolean boolFound = false;
 		try {
 			logger.info("Executing - acceptAlert method");
-			
+
 			wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
 			wait.until(ExpectedConditions.alertIsPresent());
 			Alert alert = driver.switchTo().alert();
@@ -1302,7 +1302,7 @@ public class ActionClass extends BaseClass {
 			boolFound = false;
 			e.printStackTrace();
 			logger.warn("Unable to execute the acceptAlert method \t" + e.getMessage());
-			
+
 		}
 		return boolFound;
 	}
@@ -1311,7 +1311,7 @@ public class ActionClass extends BaseClass {
 		boolean boolFound = false;
 		try {
 			logger.info("Executing - dismissAlert method");
-			
+
 			wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
 			wait.until(ExpectedConditions.alertIsPresent());
 			Alert alert = driver.switchTo().alert();
@@ -1323,7 +1323,7 @@ public class ActionClass extends BaseClass {
 			boolFound = false;
 			e.printStackTrace();
 			logger.warn("Unable to execute the dismissAlert method \t" + e.getMessage());
-			
+
 		}
 		return boolFound;
 	}
@@ -1332,7 +1332,7 @@ public class ActionClass extends BaseClass {
 		boolean boolFound = false;
 		try {
 			logger.info("Executing - getAlertText method");
-			
+
 			wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
 			wait.until(ExpectedConditions.alertIsPresent());
 			Alert alert = driver.switchTo().alert();
@@ -1346,7 +1346,7 @@ public class ActionClass extends BaseClass {
 			boolFound = false;
 			e.printStackTrace();
 			logger.warn("Unable to execute the getAlertText method \t" + e.getMessage());
-			
+
 		}
 		return boolFound;
 	}
@@ -1354,7 +1354,7 @@ public class ActionClass extends BaseClass {
 	public static void mita_AssertTitle(String expected) throws IOException, Exception {
 		try {
 			logger.info("Executing - AssertTitle method");
-			
+
 			actual = driver.getTitle();
 			Assert.assertEquals(actual, expected);
 			if (actual.equalsIgnoreCase(expected)) {
@@ -1366,7 +1366,7 @@ public class ActionClass extends BaseClass {
 		} catch (Exception e) {
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to execute the Asserttitle method \t" + e.getMessage());
-			
+
 		}
 	}
 
@@ -1374,7 +1374,7 @@ public class ActionClass extends BaseClass {
 			throws IOException {
 		try {
 			logger.info("Executing - AssertEquals method");
-			
+
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mita_JSHighlight_for_validation(element);
@@ -1385,7 +1385,6 @@ public class ActionClass extends BaseClass {
 			mita_Web_writeFail();
 			logger.warn("Asserts are not equal \t" + e.getMessage());
 
-			
 		}
 	}
 
@@ -1393,7 +1392,7 @@ public class ActionClass extends BaseClass {
 			throws IOException {
 		try {
 			logger.info("Executing - EqualsValidation method");
-			
+
 			softAssert = new SoftAssert();
 			locator = mita_locator(LocatorType, LocatorValue);
 			actual = driver.findElement(locator).getText();
@@ -1404,8 +1403,8 @@ public class ActionClass extends BaseClass {
 				Machint_JSHighlight(element);
 				mita_Web_writePass();
 //				ExtentTestManager.getTest().log(Status.PASS, "Passed");
-				} else {
-				
+			} else {
+
 				mita_JSHighlight_for_validation(element);
 				mita_Web_ScreenShot();
 				mita_Web_writeFail();
@@ -1415,7 +1414,7 @@ public class ActionClass extends BaseClass {
 		} catch (Exception e) {
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to execute the Equals validation method\t" + e.getMessage());
-			
+
 		}
 	}
 
@@ -1425,7 +1424,7 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - GettheFirstValue method");
-			
+
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mita_Wait(WaitType);
@@ -1436,7 +1435,7 @@ public class ActionClass extends BaseClass {
 			mita_Web_write_when_Locator_isnotvalid();
 			// System.err.format("No Element Found to get the value \t" + e);
 			logger.warn("Unable to execute the GetFirstValue method \t" + e.getMessage());
-			
+
 		}
 	}
 
@@ -1445,7 +1444,7 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - SettheFirstValue method");
-			
+
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mita_JSHighlight(element);
@@ -1460,7 +1459,7 @@ public class ActionClass extends BaseClass {
 //			System.err.format("No Element Found to perform ngvt_Click \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to execute the SetFirstValue method \t" + e.getMessage());
-			
+
 		}
 	}
 
@@ -1468,7 +1467,7 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - gettheSecondValue method");
-			
+
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mita_Wait(WaitType);
@@ -1478,7 +1477,7 @@ public class ActionClass extends BaseClass {
 //			System.err.format("No Element Found to perform  \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to execute the gettheSecondValue method \t" + e.getMessage());
-			
+
 		}
 	}
 
@@ -1486,7 +1485,7 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - settheSecondValue method");
-			
+
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mita_JSHighlight(element);
@@ -1501,7 +1500,7 @@ public class ActionClass extends BaseClass {
 //			System.err.format("No Element Found to perform ngvt_Click \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to execute the setSecondValue method \t" + e.getMessage());
-			
+
 		}
 	}
 
@@ -1509,7 +1508,7 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - GetTheValueFromApp method");
-			
+
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mita_Wait(WaitType);
@@ -1521,7 +1520,6 @@ public class ActionClass extends BaseClass {
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to execute the getValuefromapp method \t" + e.getMessage());
 
-			
 		}
 	}
 
@@ -1543,14 +1541,14 @@ public class ActionClass extends BaseClass {
 //			System.err.format("No Element Found to perform ngvt_Click \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to execute the setSecondValue method \t" + e.getMessage());
-			
+
 		}
 	}
 
 	public static void mita_mouseOver(String LocatorValue) throws Exception {
 		try {
 			logger.info("Executing - mouseOver method");
-			
+
 			action = new Actions(driver);
 			element = driver.findElement(By.xpath(LocatorValue));
 			action.moveToElement(element).build().perform();
@@ -1558,7 +1556,7 @@ public class ActionClass extends BaseClass {
 //			System.err.format("No Element Found to perform mouse move \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to execute the mousehower method \t" + e.getMessage());
-			
+
 		}
 	}
 
@@ -1594,7 +1592,7 @@ public class ActionClass extends BaseClass {
 		} catch (Exception e) {
 //			System.err.format("No Element Found to mita_visibilityOf \t" + e);
 			logger.warn("Unable to execute the visibilityOf method \t" + e.getMessage());
-			
+
 		}
 	}
 
@@ -1607,7 +1605,7 @@ public class ActionClass extends BaseClass {
 		} catch (Exception e) {
 //			System.err.format("No Element Found to mita_visibilityOfAllElements \t" + e);
 			logger.warn("Unable to execute the visibilityOfAllElements method \t" + e.getMessage());
-			
+
 		}
 	}
 
@@ -1620,7 +1618,7 @@ public class ActionClass extends BaseClass {
 		} catch (Exception e) {
 //			System.err.format("No Element Found to mita_elementToBeClickable \t" + e);
 			logger.warn("Unable to execute the elementtobeClickable method \t" + e.getMessage());
-			
+
 		}
 	}
 
@@ -1633,7 +1631,7 @@ public class ActionClass extends BaseClass {
 		} catch (Exception e) {
 //			System.err.format("No Element Found to mita_elementToBeSelected \t" + e);
 			logger.warn("Unable to execute the elementToBeSelected method \t" + e.getMessage());
-			
+
 		}
 	}
 
@@ -1650,7 +1648,7 @@ public class ActionClass extends BaseClass {
 		} catch (Exception e) {
 //			System.out.println("Exception while taking screenshot ");
 			logger.warn("Unable to take the Mobile Screenshot \t");
-			
+
 		}
 	}
 
@@ -1671,7 +1669,7 @@ public class ActionClass extends BaseClass {
 				}
 			} catch (Exception e) {
 				logger.warn("unable to take screenshot in chrome broswer " + e.getMessage());
-				
+
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Firefox")) {
@@ -1682,7 +1680,7 @@ public class ActionClass extends BaseClass {
 				}
 			} catch (Exception e) {
 				logger.warn("unable to take screenshot in firefox broswer " + e.getMessage());
-				
+
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Edge")) {
@@ -1693,7 +1691,7 @@ public class ActionClass extends BaseClass {
 				}
 			} catch (Exception e) {
 				logger.warn("unable to take screenshot in edge broswer " + e.getMessage());
-				
+
 			}
 
 //			FileUtils.copyFile(src, new File(Runner.webScreenshotPath + "\\ScreenShots\\" + Driver_Script.sheetName
@@ -1702,7 +1700,7 @@ public class ActionClass extends BaseClass {
 		} catch (Exception e) {
 //			System.out.println("Exception while taking screenshot ");
 			logger.warn("Unable to take the Web Screenshot \t" + e.getMessage());
-			
+
 		}
 	}
 
@@ -1724,7 +1722,7 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - MovetoFrame method");
-			
+
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mita_Wait(WaitType);
@@ -1735,20 +1733,20 @@ public class ActionClass extends BaseClass {
 //			System.err.format("No Element Found to perform mita_Frame \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to handle the Frames \t" + e.getMessage());
-			
+
 		}
 	}
 
 	public static void mita_defaultFrame() {
 		try {
 			logger.info("Executing - defaultFrame method");
-			
+
 			driver.switchTo().defaultContent();
 			mita_Web_write();
 		} catch (Exception e) {
 //			System.out.println("No frame unable mita_defaultframe \t" + e.getStackTrace());
 			logger.warn("Unable to execute the default Frame method \t" + e.getMessage());
-			
+
 		}
 	}
 
@@ -1786,7 +1784,7 @@ public class ActionClass extends BaseClass {
 
 			} catch (Exception e) {
 				logger.info(e.getMessage());
-				
+
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Firefox")) {
@@ -1805,7 +1803,7 @@ public class ActionClass extends BaseClass {
 				}
 			} catch (Exception e) {
 				logger.info(e.getMessage());
-				
+
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Edge")) {
@@ -1823,7 +1821,7 @@ public class ActionClass extends BaseClass {
 				}
 			} catch (Exception e) {
 				logger.info(e.getMessage());
-				
+
 			}
 
 //			outFile = new FileOutputStream(new File(Runner.filePath));
@@ -1833,11 +1831,11 @@ public class ActionClass extends BaseClass {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 			logger.warn("Unable to execute the CleanResults method \t" + e.getMessage());
-			
+
 		} catch (IOException e) {
 			e.printStackTrace();
 			logger.warn("Unable to execute the CleanResults method \t" + e.getMessage());
-			
+
 		}
 	}
 
@@ -1911,12 +1909,12 @@ public class ActionClass extends BaseClass {
 			e.printStackTrace();
 			logger.warn("Unable to execute the scenarionumber method \t" + e.getMessage());
 //			reporterLog("Unable to execute the scenarionumber method \t" + e.getMessage());
-			
+
 		} catch (IOException e) {
 			e.printStackTrace();
 			logger.warn("Unable to execute the scenarionumber method \t" + e.getMessage());
 //			reporterLog("Unable to execute the scenarionumber method \t" + e.getMessage());
-			
+
 		}
 	}
 
@@ -1964,7 +1962,7 @@ public class ActionClass extends BaseClass {
 				}
 			} catch (Exception e) {
 				logger.info(e.getMessage());
-				
+
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Edge")) {
@@ -1980,7 +1978,7 @@ public class ActionClass extends BaseClass {
 				}
 			} catch (Exception e) {
 				logger.info(e.getMessage());
-				
+
 			}
 
 //			outFile = new FileOutputStream(new File(Runner.filePath));
@@ -1991,11 +1989,11 @@ public class ActionClass extends BaseClass {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 			logger.warn("Unable to execute the " + Driver_Script.type + "script " + e.getMessage());
-			
+
 		} catch (IOException e) {
 			e.printStackTrace();
 			logger.warn("Unable to execute the " + Driver_Script.type + "script " + e.getMessage());
-			
+
 		}
 	}
 
@@ -4201,12 +4199,15 @@ public class ActionClass extends BaseClass {
 		return str1;
 	}
 
-	public static void mita_uploadsendkeys(String LocatorType, String LocatorValue, String value) throws Exception {
+	public static void mita_uploadsendkeys(String LocatorType, String LocatorValue, String value, String WaitType)
+			throws Exception {
 		try {
 			logger.info("Executing - uploadSendKEys method");
 
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
+			mita_JSHighlight(element);
+			mita_Wait(WaitType);
 			Thread.sleep(1000);
 			element.sendKeys(value);
 			mita_Web_write();
@@ -4501,5 +4502,29 @@ public class ActionClass extends BaseClass {
 	public static String getCurrentTime() {
 		timeStamp = DateTime.now().toString("yyyy-m-dd--HH-mm-ss");
 		return timeStamp;
+	}
+
+	public static void jsUpload(String LocatorType, String LocatorValue, String value, String WaitType)
+			throws Exception {
+
+		try {
+			logger.info("Executing - java script upload method");
+			locator = mita_locator(LocatorType, LocatorValue);
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			// Setting value for "style" attribute to make textbox visible
+			element = driver.findElement(locator);
+			js.executeScript("arguments[0].style.display='block';", element);
+//		driver.findElement(locator).sendKeys("D:\\testImage.png");
+			mita_JSHighlight(element);
+			mita_Wait(WaitType);
+			Thread.sleep(1000);
+			element.sendKeys(value);
+			mita_Web_write();
+		} catch (Exception e) {
+//		System.err.format("No Element Found to perform get the lead \t" + e);
+			mita_Web_write_when_Locator_isnotvalid();
+			logger.warn("Unable to set the value \t" + e.getMessage());
+//		reporterLog("Unable to set the value \t" + e.getMessage());
+		}
 	}
 }

@@ -354,9 +354,10 @@ public class Driver_Script extends ActionClass {
 						|| Actionvalue.toLowerCase().contains("browsing")
 						|| Actionvalue.toLowerCase().contains("browse")) {
 					mita_Enter_excelData();
-//					mita_uploadsendkeys("xpath", LocatorId, Entervalue);
+//					mita_uploadsendkeys("xpath", LocatorId, Entervalue,"visibilityOf");
+					// jsUpload("xpath", LocatorId, Entervalue,"visibilityOf");
 					// mita_Enter_excelData();
-					 mita_Robot_uploadFile("xpath", LocatorId, Entervalue, "visibilityOf");
+					mita_Robot_uploadFile("xpath", LocatorId, Entervalue, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("switch")) {
 					mita_Select_ExcelData();
 					mita_acceptAlert();
@@ -480,7 +481,8 @@ public class Driver_Script extends ActionClass {
 
 		} catch (NoSuchElementException e) {
 			mita_Web_Please_do_Spellcheck();
-			logger.info("WEB-Please do spell ckeck");		}
+			logger.info("WEB-Please do spell ckeck");
+		}
 	}
 
 	@Test

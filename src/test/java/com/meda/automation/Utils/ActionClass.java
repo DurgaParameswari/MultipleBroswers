@@ -75,6 +75,7 @@ import com.mavenpackage.Runner;
 import com.meda.automation.base.BaseClass;
 import com.meda.automation.managers.ExtentTestManager;
 
+import autoitx4java.AutoItX;
 import io.appium.java_client.FindsByAndroidUIAutomator;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.MultiTouchAction;
@@ -1398,12 +1399,12 @@ public class ActionClass extends BaseClass {
 			actual = driver.findElement(locator).getText();
 			
 			if (actual.equalsIgnoreCase(expected)) {
-				mita_JSHighlight(element);
+//				mita_JSHighlight(element);
 				mita_Web_ScreenShot();
 				mita_Web_writePass();
 				ExtentTestManager.getTest().log(Status.PASS, actual+" "+expected+" Correct ");
 			} else {
-				mita_JSHighlight_for_validation(element);
+//				mita_JSHighlight_for_validation(element);
 				mita_Web_ScreenShot();
 				mita_Web_writeFail();
 				ExtentTestManager.getTest().log(Status.FAIL, actual+" "+expected+" Incorrect ");
@@ -1574,6 +1575,9 @@ public class ActionClass extends BaseClass {
 		case "elementToBeSelected":
 			mita_elementToBeSelected();
 			break;
+			
+		case "invisibilityOf":
+			mita_invisibilityOf();
 
 		default:
 			System.out.println(WaitType + " is invalid");
@@ -1631,6 +1635,18 @@ public class ActionClass extends BaseClass {
 
 		}
 	}
+	
+	public static void mita_invisibilityOf() throws Exception {
+			try {
+				wait = new WebDriverWait(mobiledriver, Duration.ofSeconds(1000));
+				if (by != null) {
+					wait.until(ExpectedConditions.invisibilityOf(element));
+				}
+			} catch (Exception e) {
+//				System.err.format("No Element Found to Machint_invisibilityOf \t" + e);
+				logger.warn("Unable to execute the invisibilityOf method \t" + e.getMessage());
+			}
+		}
 
 	public static void mita_Mobile_ScreenShot() {
 		try {
@@ -4196,14 +4212,13 @@ public class ActionClass extends BaseClass {
 		return str1;
 	}
 
-	public static void mita_uploadsendkeys(String LocatorType, String LocatorValue, String value, String WaitType)
+	public static void mita_uploadsendkeys(String LocatorType, String LocatorValue, String value)
 			throws Exception {
 		try {
 			logger.info("Executing - uploadSendKEys method");
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
-			mita_JSHighlight(element);
-			mita_Wait(WaitType);
+//			mita_Wait(WaitType);
 			Thread.sleep(1000);
 			element.sendKeys(value);
 			mita_Web_write();

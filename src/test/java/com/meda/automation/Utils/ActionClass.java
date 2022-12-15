@@ -3,6 +3,8 @@ package com.meda.automation.Utils;
 import static io.appium.java_client.touch.LongPressOptions.longPressOptions;
 
 //-----------------------------------------
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
 
 import static io.appium.java_client.touch.TapOptions.tapOptions;
 import static io.appium.java_client.touch.WaitOptions.waitOptions;
@@ -1397,17 +1399,19 @@ public class ActionClass extends BaseClass {
 //			softAssert = new SoftAssert();
 			locator = mita_locator(LocatorType, LocatorValue);
 			actual = driver.findElement(locator).getText();
-			
+
 			if (actual.equalsIgnoreCase(expected)) {
 //				mita_JSHighlight(element);
 				mita_Web_ScreenShot();
 				mita_Web_writePass();
-				ExtentTestManager.getTest().log(Status.PASS, actual+" "+expected+" Correct ");
+				ExtentTestManager.getTest().log(Status.PASS, actual + " " + expected + " Correct ");
 			} else {
 //				mita_JSHighlight_for_validation(element);
 				mita_Web_ScreenShot();
 				mita_Web_writeFail();
-				ExtentTestManager.getTest().log(Status.FAIL, actual+" "+expected+" Incorrect ");
+				ExtentTestManager.getTest().log(Status.FAIL, actual + " " + expected + " Incorrect ");
+				ExtentTestManager.getTest().log(Status.FAIL, MarkupHelper.createLabel(Driver_Script.Actionvalue + " - Assertion Failed"
+						+ "expected is [" + expected + "] but found  " + "[" + actual + "]",ExtentColor.RED));
 			}
 		} catch (Exception e) {
 			mita_Web_write_when_Locator_isnotvalid();
@@ -1575,7 +1579,7 @@ public class ActionClass extends BaseClass {
 		case "elementToBeSelected":
 			mita_elementToBeSelected();
 			break;
-			
+
 		case "invisibilityOf":
 			mita_invisibilityOf();
 
@@ -1635,18 +1639,18 @@ public class ActionClass extends BaseClass {
 
 		}
 	}
-	
+
 	public static void mita_invisibilityOf() throws Exception {
-			try {
-				wait = new WebDriverWait(mobiledriver, Duration.ofSeconds(1000));
-				if (by != null) {
-					wait.until(ExpectedConditions.invisibilityOf(element));
-				}
-			} catch (Exception e) {
-//				System.err.format("No Element Found to Machint_invisibilityOf \t" + e);
-				logger.warn("Unable to execute the invisibilityOf method \t" + e.getMessage());
+		try {
+			wait = new WebDriverWait(mobiledriver, Duration.ofSeconds(1000));
+			if (by != null) {
+				wait.until(ExpectedConditions.invisibilityOf(element));
 			}
+		} catch (Exception e) {
+//				System.err.format("No Element Found to Machint_invisibilityOf \t" + e);
+			logger.warn("Unable to execute the invisibilityOf method \t" + e.getMessage());
 		}
+	}
 
 	public static void mita_Mobile_ScreenShot() {
 		try {
@@ -4212,8 +4216,7 @@ public class ActionClass extends BaseClass {
 		return str1;
 	}
 
-	public static void mita_uploadsendkeys(String LocatorType, String LocatorValue, String value)
-			throws Exception {
+	public static void mita_uploadsendkeys(String LocatorType, String LocatorValue, String value) throws Exception {
 		try {
 			logger.info("Executing - uploadSendKEys method");
 			locator = mita_locator(LocatorType, LocatorValue);
@@ -4229,10 +4232,9 @@ public class ActionClass extends BaseClass {
 //			reporterLog("Unable to set the value \t" + e.getMessage());
 		}
 	}
-	
-	
-	public static void autoIT_fileUpload(String LocatorType, String LocatorValue, String value,
-			String WaitType) throws Exception, IOException, InterruptedException {
+
+	public static void autoIT_fileUpload(String LocatorType, String LocatorValue, String value, String WaitType)
+			throws Exception, IOException, InterruptedException {
 		try {
 			logger.info("Executing - FileUpload method");
 			locator = mita_locator(LocatorType, LocatorValue);

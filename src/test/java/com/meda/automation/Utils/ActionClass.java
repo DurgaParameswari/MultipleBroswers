@@ -583,7 +583,7 @@ public class ActionClass extends BaseClass {
 
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mita_Mobile_ScreenShot();
+//					mita_Mobile_ScreenShot();
 					inputFile.close();
 					outFile.close();
 				}
@@ -599,7 +599,7 @@ public class ActionClass extends BaseClass {
 
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mita_Mobile_ScreenShot();
+//					mita_Mobile_ScreenShot();
 					inputFile.close();
 					outFile.close();
 				}
@@ -615,7 +615,7 @@ public class ActionClass extends BaseClass {
 
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mita_Mobile_ScreenShot();
+//					mita_Mobile_ScreenShot();
 					inputFile.close();
 					outFile.close();
 				}
@@ -662,7 +662,7 @@ public class ActionClass extends BaseClass {
 
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mita_Mobile_ScreenShot();
+//					mita_Mobile_ScreenShot();
 					inputFile.close();
 					outFile.close();
 				}
@@ -681,7 +681,7 @@ public class ActionClass extends BaseClass {
 
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mita_Mobile_ScreenShot();
+//					mita_Mobile_ScreenShot();
 					inputFile.close();
 					outFile.close();
 				}
@@ -700,7 +700,7 @@ public class ActionClass extends BaseClass {
 
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mita_Mobile_ScreenShot();
+//					mita_Mobile_ScreenShot();
 					inputFile.close();
 					outFile.close();
 				}
@@ -1879,7 +1879,7 @@ public class ActionClass extends BaseClass {
 					searchText2.setCellStyle(style);
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mita_Web_ScreenShot();
+//					mita_Web_ScreenShot();
 					inputFile.close();
 					outFile.close();
 				}
@@ -1894,7 +1894,7 @@ public class ActionClass extends BaseClass {
 					searchText2.setCellStyle(style);
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mita_Web_ScreenShot();
+//					mita_Web_ScreenShot();
 					inputFile.close();
 					outFile.close();
 				}
@@ -1909,7 +1909,7 @@ public class ActionClass extends BaseClass {
 					searchText2.setCellStyle(style);
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mita_Web_ScreenShot();
+//					mita_Web_ScreenShot();
 					inputFile.close();
 					outFile.close();
 				}

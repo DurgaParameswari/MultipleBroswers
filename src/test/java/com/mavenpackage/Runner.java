@@ -23,7 +23,7 @@ public class Runner {
 		static TestNG testNg;
 
 		public static void main(String[] args) {
-		
+
 //				Runner runner = new Runner();
 
 			// Common Arguments
@@ -56,7 +56,7 @@ public class Runner {
 			System.out.println("ApkPackage Name: " + apkPackageName);
 			mobileScreenshotPath = args[11];
 			System.out.println("Mobile ScreenShots Path: " + mobileScreenshotPath);
-			
+
 			TestListener listener = new TestListener();
 			testNg = new TestNG();
 			testNg.setTestClasses(new Class[] { Driver_Script.class });

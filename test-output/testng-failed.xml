@@ -6,7 +6,6 @@
       <class name="com.mavenpackage.Driver_Script">
         <methods>
           <include name="mydriverscript"/>
-          <include name="Close"/>
         </methods>
       </class> <!-- com.mavenpackage.Driver_Script -->
     </classes>

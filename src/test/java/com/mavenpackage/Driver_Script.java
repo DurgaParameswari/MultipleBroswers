@@ -251,12 +251,12 @@ public class Driver_Script extends ActionClass {
 						|| Actionvalue.toLowerCase().contains("completing")
 						|| Actionvalue.toLowerCase().contains("completed")) {
 					mita_Mobile_write();
-					mobiledriver.quit();
+					mobileDriver.quit();
 				} else if (Actionvalue.toLowerCase().contains("end")) {
 					mita_stepName();
 					mita_scenarioNumber(Actionvalue);
 					i = k + 1;
-					mobiledriver.quit();
+					mobileDriver.quit();
 					break;
 				} else if (Actionvalue.toLowerCase().contains("")) {
 					mita_Mobile_Please_do_Spellcheck();
@@ -264,7 +264,7 @@ public class Driver_Script extends ActionClass {
 			}
 
 		} catch (NoSuchElementException e) {
-//		System.out.println("Mobile-Please do spell ckeck");
+//		System.out.println("Mobile-Please do spell check");
 			logger.info("Mobile-Please do spell ckeck");
 			mita_Mobile_Please_do_Spellcheck();
 

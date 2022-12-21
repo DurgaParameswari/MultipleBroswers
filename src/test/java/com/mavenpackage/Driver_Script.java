@@ -251,12 +251,12 @@ public class Driver_Script extends ActionClass {
 						|| Actionvalue.toLowerCase().contains("completing")
 						|| Actionvalue.toLowerCase().contains("completed")) {
 					mita_Mobile_write();
-					mobileDriver.quit();
+					mobiledriver.quit();
 				} else if (Actionvalue.toLowerCase().contains("end")) {
 					mita_stepName();
 					mita_scenarioNumber(Actionvalue);
 					i = k + 1;
-					mobileDriver.quit();
+					mobiledriver.quit();
 					break;
 				} else if (Actionvalue.toLowerCase().contains("")) {
 					mita_Mobile_Please_do_Spellcheck();

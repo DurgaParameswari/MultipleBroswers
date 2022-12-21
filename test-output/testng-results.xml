@@ -2,19 +2,19 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-12-21T17:17:49 IST" name="Command line suite" finished-at="2022-12-21T17:18:03 IST" duration-ms="13812">
+  <suite started-at="2022-12-21T17:44:52 IST" name="Command line suite" finished-at="2022-12-21T17:44:59 IST" duration-ms="7069">
     <groups>
     </groups>
-    <test started-at="2022-12-21T17:17:49 IST" name="Command line test" finished-at="2022-12-21T17:18:03 IST" duration-ms="13812">
+    <test started-at="2022-12-21T17:44:52 IST" name="Command line test" finished-at="2022-12-21T17:44:59 IST" duration-ms="7069">
       <class name="com.mavenpackage.Driver_Script">
-        <test-method signature="mydriverscript()[pri:0, instance:com.mavenpackage.Driver_Script@46271dd6]" started-at="2022-12-21T17:17:49 IST" name="mydriverscript" finished-at="2022-12-21T17:18:03 IST" duration-ms="13757" status="FAIL">
+        <test-method signature="mydriverscript()[pri:0, instance:com.mavenpackage.Driver_Script@46271dd6]" started-at="2022-12-21T17:44:52 IST" name="mydriverscript" finished-at="2022-12-21T17:44:59 IST" duration-ms="7010" status="FAIL">
           <exception class="java.lang.NoClassDefFoundError">
             <message>
               <![CDATA[org/openqa/selenium/remote/internal/JsonToWebElementConverter]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.NoClassDefFoundError: org/openqa/selenium/remote/internal/JsonToWebElementConverter
-at com.meda.automation.base.BaseClass.setup(BaseClass.java:265)
+at com.meda.automation.base.BaseClass.setup(BaseClass.java:262)
 at com.mavenpackage.Driver_Script.mobile_methods(Driver_Script.java:65)
 at com.mavenpackage.Driver_Script.ReadExcel(Driver_Script.java:42)
 at com.mavenpackage.Driver_Script.mydriverscript(Driver_Script.java:489)
@@ -41,7 +41,7 @@ at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
 at org.testng.TestNG.runSuites(TestNG.java:1063)
 at org.testng.TestNG.run(TestNG.java:1031)
-at com.mavenpackage.Runner$runner.main(Runner.java:64)
+at com.mavenpackage.Runner$runner.main(Unknown Source)
 Caused by: java.lang.ClassNotFoundException: org.openqa.selenium.remote.internal.JsonToWebElementConverter
 at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
 at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)

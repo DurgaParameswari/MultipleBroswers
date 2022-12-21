@@ -259,7 +259,7 @@ public class BaseClass extends ExcelData
 			cap.setCapability("noReset", true);
 			cap.setCapability("noSign", true);
 			System.out.println("Hi 2");
-			mobiledriver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"), cap);
+			mobiledriver = new AndroidDriver<AndroidElement>(new URL("http://localhost:4723/wd/hub"), cap);
 
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			System.out.println("Hi 3");

@@ -264,7 +264,7 @@ public class Driver_Script extends ActionClass {
 			}
 
 		} catch (NoSuchElementException e) {
-//		System.out.println("Mobile-Please do spell ckeck");
+//		System.out.println("Mobile-Please do spell check");
 			logger.info("Mobile-Please do spell ckeck");
 			mita_Mobile_Please_do_Spellcheck();
 

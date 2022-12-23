@@ -21,6 +21,7 @@ import org.testng.annotations.AfterSuite;
 import com.aventstack.extentreports.Status;
 import com.mavenpackage.Driver_Script;
 import com.mavenpackage.Runner;
+import com.mavenpackage.Runner.runner;
 import com.meda.automation.Utils.ExcelData;
 import com.meda.automation.managers.ExtentTestManager;
 
@@ -104,7 +105,8 @@ public class BaseClass extends ExcelData
 	public static void initChromeDriver(String appURL) throws Exception {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue + ": Launching google chrome browser..");
-			ExtentTestManager.getTest().log(Status.PASS, Driver_Script.Actionvalue + ": Launching google chrome browser..");
+			ExtentTestManager.getTest().log(Status.PASS,
+					Driver_Script.Actionvalue + ": Launching google chrome browser..");
 			ChromeOptions chromeOptions = new ChromeOptions();
 
 			WebDriverManager.chromedriver().setup();
@@ -225,37 +227,45 @@ public class BaseClass extends ExcelData
 		}
 	}
 
-	@AfterSuite
-	public void Close() {
-		try {
-			logger.info("Closing the browser");
-			driver.quit();
-		} catch (Exception e) {
-			logger.error("Not able to Close the Browser --- " + e.getMessage());
-
-		}
-	}
+//	@AfterSuite
+//	public void Close() {
+//		try {
+//			logger.info("Closing the browser");
+//			driver.quit();
+//		} catch (Exception e) {
+//			logger.error("Not able to Close the Browser --- " + e.getMessage());
+//
+//		}
+//	}
 
 	public static AndroidDriver<AndroidElement> setup(String device) throws MalformedURLException {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue + ": Launching Android driver");
 			File f = new File(Runner.apkPath);
 			DesiredCapabilities cap = new DesiredCapabilities();
+			System.out.println("Hi");
 
 			if (device.equalsIgnoreCase("Emulator")) {
 				cap.setCapability(MobileCapabilityType.DEVICE_NAME, Runner.deviceName);
 			} else if (device.equalsIgnoreCase("Real")) {
 				cap.setCapability(MobileCapabilityType.DEVICE_NAME, Runner.deviceName);
 			}
+
+			System.out.println("Hi 1");
 			cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Device");
-			cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
+			cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
 			cap.setCapability(MobileCapabilityType.APP, f.getAbsolutePath());
 			cap.setCapability("appPackage", Runner.apkPackageName);
 			cap.setCapability("noReset", true);
 			cap.setCapability("noSign", true);
-			mobiledriver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"), cap);
-			mobiledriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			System.out.println("Hi 2");
+			mobiledriver = new AndroidDriver<AndroidElement>(new URL("http://localhost:4723/wd/hub"), cap);
+
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			System.out.println("Hi 3");
 			// mita_acceptAlert();
+
+			mobiledriver.closeApp();
 		} catch (Exception e) {
 			logger.warn("Executing - " + Driver_Script.Actionvalue + ": Unable to launch the Andriod driver "
 					+ e.getMessage());

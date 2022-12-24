@@ -1,0 +1,30 @@
+2022-12-23 22:30:26,605  INFO [main] ExcelData:53 - Reading Excel file
+2022-12-23 22:30:27,446  INFO [main] Driver_Script:22 - Broswer type is chrome
+2022-12-23 22:30:27,661  INFO [main] Driver_Script:32 - Executing - sitemap and Row count is: 8
+2022-12-23 22:30:27,661  INFO [main] Driver_Script:44 - WEB Execution Starting:
+2022-12-23 22:30:27,734  INFO [main] BaseClass:71 - Select the chrome browser
+2022-12-23 22:30:27,735  INFO [main] BaseClass:106 - Executing - Take URL: Launching google chrome browser..
+2022-12-23 22:30:28,154  INFO [main] BaseClass:114 - Execution Type is Headless
+2022-12-23 22:30:38,516  INFO [main] ActionClass:146 - Take URL: Updating the result in excel
+2022-12-23 22:30:38,631  INFO [main] ActionClass:1677 - Executing - Taking ScreenShot method
+2022-12-23 22:30:38,929  INFO [main] ExcelData:220 - Executing - Wait: Reading wait time from excel
+2022-12-23 22:30:38,930  INFO [main] ExcelData:223 - Test data is: 3000
+2022-12-23 22:30:38,930  INFO [main] ActionClass:3678 - Executing - Wait method
+2022-12-23 22:30:41,942  INFO [main] ActionClass:146 - Wait: Updating the result in excel
+2022-12-23 22:30:42,013  INFO [main] ActionClass:1677 - Executing - Taking ScreenShot method
+2022-12-23 22:30:42,257  INFO [main] ExcelData:232 - Executing - Scenario 1: Reading description from excel
+2022-12-23 22:30:42,312  INFO [main] ActionClass:1677 - Executing - Taking ScreenShot method
+2022-12-23 22:30:42,537  INFO [main] ExcelData:152 - Executing - Click on sitemap: Reading locator value from excel
+2022-12-23 22:30:42,538  INFO [main] ExcelData:155 - Locator value is: //a[text()='Sitemap']
+2022-12-23 22:30:42,538  INFO [main] ActionClass:1213 - Executing - Click method
+2022-12-23 22:30:42,703  INFO [main] ActionClass:146 - Click on sitemap: Updating the result in excel
+2022-12-23 22:30:42,805  INFO [main] ActionClass:1677 - Executing - Taking ScreenShot method
+2022-12-23 22:30:43,113  INFO [main] ExcelData:220 - Executing - wait: Reading wait time from excel
+2022-12-23 22:30:43,115  INFO [main] ExcelData:223 - Test data is: 3000
+2022-12-23 22:30:43,115  INFO [main] ActionClass:3678 - Executing - Wait method
+2022-12-23 22:30:46,123  INFO [main] ActionClass:146 - wait: Updating the result in excel
+2022-12-23 22:30:46,172  INFO [main] ActionClass:1677 - Executing - Taking ScreenShot method
+2022-12-23 22:30:46,383  INFO [main] ExcelData:243 - Executing - Tagname: Reading locator value and test data from excel
+2022-12-23 22:30:46,383  INFO [main] ExcelData:247 - Locator value is: a
+2022-12-23 22:30:46,383  INFO [main] ExcelData:250 - Test data is: href
+2022-12-23 22:30:46,383  INFO [main] ActionClass:4546 - Executing - tagnames method

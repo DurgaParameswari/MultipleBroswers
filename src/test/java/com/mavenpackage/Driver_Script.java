@@ -463,7 +463,10 @@ public class Driver_Script extends ActionClass {
 				}else if (Actionvalue.toLowerCase().contains("heading tags")) {
 					mita_headingTags();
 					mita_headingTags(LocatorId);
-				} else if (Actionvalue.toLowerCase().contains("close")
+				}else if (Actionvalue.toLowerCase().contains("og:image")) {
+					mita_metaTags();
+					mita_metaTags("xpath",LocatorId);
+				}  else if (Actionvalue.toLowerCase().contains("close")
 						|| Actionvalue.toLowerCase().contains("test case")
 						|| Actionvalue.toLowerCase().contains("finish")
 						|| Actionvalue.toLowerCase().contains("finishing")

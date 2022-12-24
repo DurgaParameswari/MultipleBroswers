@@ -4541,7 +4541,7 @@ public class ActionClass extends BaseClass {
 
 	public static void mita_response(String LocatorValue, String value) throws Exception {
 		try {
-			logger.info("Executing - tagname method");
+			logger.info("Executing - " + Driver_Script.Actionvalue + " method");
 
 			// Get list of web-elements with tagName - a
 			List<WebElement> allLinks = driver.findElements(By.tagName(LocatorValue));
@@ -4582,13 +4582,12 @@ public class ActionClass extends BaseClass {
 		} catch (Exception e) {
 //			System.err.format("No Element Found to perform entering the values \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
-			logger.warn("Unable to execute the response method \t" + e.getMessage());
 		}
 	}
 
 	public static void mita_headingTags(String LocatorValue) throws Exception {
 		try {
-			logger.info("Executing - " + LocatorValue + " method");
+			logger.info("Executing - " + Driver_Script.Actionvalue + " method");
 			String tags = null;
 			ArrayList<String> ar = new ArrayList<String>();
 			List<WebElement> allH1 = driver.findElements(By.tagName(LocatorValue));
@@ -4609,4 +4608,28 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
+	public static void mita_metaTags(String LocatorType, String LocatorValue) throws Exception {
+		try {
+			logger.info("Executing - " + Driver_Script.Actionvalue + " method");
+			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			List<WebElement> allImg = driver.findElements(locator);
+			
+			int imgsCount = allImg.size();
+			if (allImg.size() == 0)
+			{
+				System.out.println("This page og:image not avialable");
+				actual = "This page og:image not avialable";
+			}
+			else {
+		
+			System.out.println("Total no of og:image Available: " + imgsCount);	
+			actual = "Total no of og:image Available: " + imgsCount;
+			}
+			mita_Web_writePass();
+		} catch (Exception e) {
+//			System.err.format("No Element Found to perform entering the values \t" + e);
+			mita_Web_write_when_Locator_isnotvalid();
+			logger.warn("Unable to execute the meta tags method \t" + e.getMessage());
+		}
+	}
 }

@@ -457,6 +457,12 @@ public class Driver_Script extends ActionClass {
 					mita_defaultFrame();
 				} else if (Actionvalue.toLowerCase().contains("refresh")) {
 					mita_refresh();
+				} else if (Actionvalue.toLowerCase().contains("response")) {
+					mita_response();
+					mita_response(LocatorId, Entervalue);
+				}else if (Actionvalue.toLowerCase().contains("heading tags")) {
+					mita_headingTags();
+					mita_headingTags(LocatorId);
 				} else if (Actionvalue.toLowerCase().contains("close")
 						|| Actionvalue.toLowerCase().contains("test case")
 						|| Actionvalue.toLowerCase().contains("finish")

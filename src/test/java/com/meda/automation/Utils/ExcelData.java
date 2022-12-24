@@ -33,7 +33,7 @@ public class ExcelData extends ExtentTestManager {
 	public static int waitTime;
 	public static String[] sheetNames;
 	public static boolean result;
-	
+
 	static Logger logger = Logger.getLogger(ExcelData.class);
 
 	public static void readExcel() throws Exception {
@@ -238,5 +238,32 @@ public class ExcelData extends ExtentTestManager {
 		}
 	}
 
+	public static void mita_response() {
+		try {
+			logger.info(
+					"Executing - " + Driver_Script.Actionvalue + ": Reading locator value and test data from excel");
+			cell5 = row.getCell(1);
+			LocatorId = cell5.getStringCellValue();
+			logger.info("Locator value is: " + LocatorId);
+			cell6 = row.getCell(2);
+			Entervalue = getCellContentAsString(cell6);
+			logger.info("Test data is: " + Entervalue);
+		} catch (Exception e) {
+			logger.warn("Executing - " + Driver_Script.Actionvalue
+					+ ": Unable to read the locator value and test data from excel " + e.getMessage());
+		}
+	}
 	
+	public static void mita_headingTags() {
+		try {
+			logger.info(
+					"Executing - " + Driver_Script.Actionvalue + ": Reading locator value and test data from excel");
+			cell5 = row.getCell(1);
+			LocatorId = cell5.getStringCellValue();
+			logger.info("Locator value is: " + LocatorId);
+		} catch (Exception e) {
+			logger.warn("Executing - " + Driver_Script.Actionvalue
+					+ ": Unable to read the locator value and test data from excel " + e.getMessage());
+		}
+	}
 }

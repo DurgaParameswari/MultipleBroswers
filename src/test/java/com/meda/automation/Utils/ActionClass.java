@@ -1410,8 +1410,9 @@ public class ActionClass extends BaseClass {
 				mita_Web_ScreenShot();
 				mita_Web_writeFail();
 				ExtentTestManager.getTest().log(Status.FAIL, actual + " " + expected + " Incorrect ");
-				ExtentTestManager.getTest().log(Status.FAIL, MarkupHelper.createLabel(Driver_Script.Actionvalue + " - Assertion Failed"
-						+ "expected is [" + expected + "] but found  " + "[" + actual + "]",ExtentColor.RED));
+				ExtentTestManager.getTest().log(Status.FAIL,
+						MarkupHelper.createLabel(Driver_Script.Actionvalue + " - Assertion Failed" + "expected is ["
+								+ expected + "] but found  " + "[" + actual + "]", ExtentColor.RED));
 			}
 		} catch (Exception e) {
 			mita_Web_write_when_Locator_isnotvalid();
@@ -4536,6 +4537,76 @@ public class ActionClass extends BaseClass {
 	public static String getCurrentTime() {
 		timeStamp = DateTime.now().toString("yyyy-m-dd--HH-mm-ss");
 		return timeStamp;
+	}
+
+	public static void mita_response(String LocatorValue, String value) throws Exception {
+		try {
+			logger.info("Executing - tagname method");
+
+			// Get list of web-elements with tagName - a
+			List<WebElement> allLinks = driver.findElements(By.tagName(LocatorValue));
+			System.out.println("The number of links is " + allLinks.size());
+
+			int count = 0, count1 = 0;
+
+			// Traversing through the list and printing its text along with link address
+			for (WebElement link : allLinks) {
+
+				String links = link.getText() + " - " + link.getAttribute(value);
+				System.out.println(links);
+
+				String baseUrl = driver.getCurrentUrl();
+
+				// Specify the base URL to the RESTful web service
+				RestAssured.baseURI = baseUrl;
+				// Get the RequestSpecification of the request to be sent to the server
+				RequestSpecification httpRequest = RestAssured.given();
+
+				Response response = httpRequest.get("");
+
+				// Get the status code of the request.
+				// If request is successful, status code will be 200
+				int statusCode = response.getStatusCode();
+
+				System.out.println("status code " + statusCode);
+
+				if (statusCode == 200) {
+					count = count + 1;
+				} else {
+					count1 = count1 + 1;
+				}
+			}
+			actual = "Status code 200 is " + count + ", Incorrect codes is " + count1;
+
+			mita_Web_writePass();
+		} catch (Exception e) {
+//			System.err.format("No Element Found to perform entering the values \t" + e);
+			mita_Web_write_when_Locator_isnotvalid();
+			logger.warn("Unable to execute the response method \t" + e.getMessage());
+		}
+	}
+
+	public static void mita_headingTags(String LocatorValue) throws Exception {
+		try {
+			logger.info("Executing - " + LocatorValue + " method");
+			String tags = null;
+			ArrayList<String> ar = new ArrayList<String>();
+			List<WebElement> allH1 = driver.findElements(By.tagName(LocatorValue));
+			int h1Count = allH1.size();
+			System.out.println("Total no of h1 count: " + h1Count);
+
+			for (WebElement h1Tag : allH1) {
+				tags = h1Tag.getText();
+				System.out.println(tags);
+				ar.add(tags);
+			}
+			actual = LocatorValue + " tags is  " + ar;
+			mita_Web_writePass();
+		} catch (Exception e) {
+//			System.err.format("No Element Found to perform entering the values \t" + e);
+			mita_Web_write_when_Locator_isnotvalid();
+			logger.warn("Unable to execute the heading tags method \t" + e.getMessage());
+		}
 	}
 
 }

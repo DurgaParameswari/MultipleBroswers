@@ -4623,7 +4623,7 @@ public class ActionClass extends BaseClass {
 				ar.add(tags);
 			}
 			actual = LocatorValue + " tags is  " + ar;
-			ExtentTestManager.getTest().log(Status.INFO, LocatorValue + " tags is  " + ar);
+			ExtentTestManager.getTest().log(Status.PASS, LocatorValue + " tags is  " + ar);
 			mita_Web_writePass();
 		} catch (Exception e) {
 //			System.err.format("No Element Found to perform entering the values \t" + e);
@@ -4636,7 +4636,7 @@ public class ActionClass extends BaseClass {
 	public static void mita_metaTags(String LocatorType, String LocatorValue) throws Exception {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue + " method");
-			ExtentTestManager.getTest().log(Status.INFO, Driver_Script.Actionvalue + " "+LocatorValue);
+			ExtentTestManager.getTest().log(Status.PASS, Driver_Script.Actionvalue + " "+LocatorValue);
 			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
 			List<WebElement> allImg = driver.findElements(locator);
 

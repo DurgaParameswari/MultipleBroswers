@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-12-26T18:17:34 IST" name="Command line suite" finished-at="2022-12-26T18:17:58 IST" duration-ms="23632">
+  <suite started-at="2022-12-26T18:18:29 IST" name="Command line suite" finished-at="2022-12-26T18:19:05 IST" duration-ms="35724">
     <groups>
     </groups>
-    <test started-at="2022-12-26T18:17:34 IST" name="Command line test" finished-at="2022-12-26T18:17:58 IST" duration-ms="23632">
+    <test started-at="2022-12-26T18:18:29 IST" name="Command line test" finished-at="2022-12-26T18:19:05 IST" duration-ms="35724">
       <class name="com.mavenpackage.Driver_Script">
-        <test-method signature="mydriverscript()[pri:0, instance:com.mavenpackage.Driver_Script@1a5b6f42]" started-at="2022-12-26T18:17:34 IST" name="mydriverscript" finished-at="2022-12-26T18:17:58 IST" duration-ms="23582" status="PASS">
+        <test-method signature="mydriverscript()[pri:0, instance:com.mavenpackage.Driver_Script@1a5b6f42]" started-at="2022-12-26T18:18:29 IST" name="mydriverscript" finished-at="2022-12-26T18:19:05 IST" duration-ms="35668" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- mydriverscript -->

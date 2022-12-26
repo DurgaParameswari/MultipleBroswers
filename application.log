@@ -1,7 +1,24 @@
-2022-12-26 18:18:29,390  INFO [main] ExcelData:53 - Reading Excel file
-2022-12-26 18:18:30,297  INFO [main] Driver_Script:22 - Broswer type is chrome
-2022-12-26 18:18:30,840  INFO [main] Driver_Script:32 - Executing - img and Row count is: 7
-2022-12-26 18:18:30,841  INFO [main] Driver_Script:44 - WEB Execution Starting:
-2022-12-26 18:18:31,094  INFO [main] BaseClass:73 - Select the chrome browser
-2022-12-26 18:18:31,104  INFO [main] BaseClass:110 - Executing - Take URL: Launching google chrome browser..
-2022-12-26 18:18:31,859  INFO [main] BaseClass:118 - Execution Type is Headless
+2022-12-26 18:20:08,809  INFO [main] ExcelData:53 - Reading Excel file
+2022-12-26 18:20:09,806  INFO [main] Driver_Script:22 - Broswer type is chrome
+2022-12-26 18:20:10,948  INFO [main] Driver_Script:32 - Executing - sitemap and Row count is: 7
+2022-12-26 18:20:10,952  INFO [main] Driver_Script:44 - WEB Execution Starting:
+2022-12-26 18:20:11,274  INFO [main] BaseClass:73 - Select the chrome browser
+2022-12-26 18:20:11,287  INFO [main] BaseClass:110 - Executing - Take URL: Launching google chrome browser..
+2022-12-26 18:20:12,400  INFO [main] BaseClass:118 - Execution Type is Headless
+2022-12-26 18:20:17,697  INFO [main] ActionClass:149 - Take URL: Updating the result in excel
+2022-12-26 18:20:18,102  INFO [main] ActionClass:1680 - Executing - Taking ScreenShot method
+2022-12-26 18:20:18,710  INFO [main] ExcelData:220 - Executing - wait: Reading wait time from excel
+2022-12-26 18:20:18,711  INFO [main] ExcelData:223 - Test data is: 3000
+2022-12-26 18:20:18,712  INFO [main] ActionClass:3681 - Executing - Wait method
+2022-12-26 18:20:21,719  INFO [main] ActionClass:149 - wait: Updating the result in excel
+2022-12-26 18:20:21,917  INFO [main] ActionClass:1680 - Executing - Taking ScreenShot method
+2022-12-26 18:20:22,380  INFO [main] ExcelData:232 - Executing - Scenario 1: Reading description from excel
+2022-12-26 18:20:22,532  INFO [main] ExcelData:152 - Executing - click on sitemap: Reading locator value from excel
+2022-12-26 18:20:22,534  INFO [main] ExcelData:155 - Locator value is: //a[text()='Sitemap']
+2022-12-26 18:20:22,535  INFO [main] ActionClass:1216 - Executing - Click method
+2022-12-26 18:20:23,649  INFO [main] ActionClass:149 - click on sitemap: Updating the result in excel
+2022-12-26 18:20:24,193  INFO [main] ActionClass:1680 - Executing - Taking ScreenShot method
+2022-12-26 18:20:24,657  INFO [main] ExcelData:243 - Executing - Response: Reading locator value and test data from excel
+2022-12-26 18:20:24,657  INFO [main] ExcelData:247 - Locator value is: a
+2022-12-26 18:20:24,657  INFO [main] ExcelData:250 - Test data is: href
+2022-12-26 18:20:24,658  INFO [main] ActionClass:4549 - Executing - Response method

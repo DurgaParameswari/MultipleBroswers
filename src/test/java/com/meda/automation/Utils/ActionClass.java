@@ -4547,11 +4547,11 @@ public class ActionClass extends BaseClass {
 	public static void mita_response(String LocatorValue, String value) throws Exception {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue + " method");
-			ExtentTestManager.getTest().log(Status.INFO, Driver_Script.Actionvalue + " is"+value);
+			ExtentTestManager.getTest().log(Status.PASS, Driver_Script.Actionvalue + " is"+value);
 			// Get list of web-elements with tagName - a
 			List<WebElement> allLinks = driver.findElements(By.tagName(LocatorValue));
 			System.out.println("The number of links is " + allLinks.size());
-			ExtentTestManager.getTest().log(Status.INFO, "The number of links is " + allLinks.size());
+			ExtentTestManager.getTest().log(Status.PASS, "The number of links is " + allLinks.size());
 
 			int count = 0, count1 = 0;
 

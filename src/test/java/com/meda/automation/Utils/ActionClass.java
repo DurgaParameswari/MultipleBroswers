@@ -1214,7 +1214,7 @@ public class ActionClass extends BaseClass {
 	public static void mita_Click(String LocatorType, String LocatorValue, String WaitType) throws Exception {
 		try {
 			logger.info("Executing - Click method");
-			ExtentTestManager.getTest().log(Status.INFO, Driver_Script.Actionvalue + " "+LocatorValue);
+			ExtentTestManager.getTest().log(Status.PASS, Driver_Script.Actionvalue + " "+LocatorValue);
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mita_JSHighlight(element);
@@ -3679,7 +3679,7 @@ public class ActionClass extends BaseClass {
 	public static void mita_Web_wait_time(long sleepTime) throws InterruptedException, IOException {
 		try {
 			logger.info("Executing - Wait method");
-			ExtentTestManager.getTest().log(Status.INFO, Driver_Script.Actionvalue + " "+sleepTime+" Seconds");
+//			ExtentTestManager.getTest().log(Status.INFO, Driver_Script.Actionvalue + " "+sleepTime+" Seconds");
 			Thread.sleep(sleepTime);
 			mita_Web_write();
 		} catch (Exception e) {
@@ -4575,9 +4575,7 @@ public class ActionClass extends BaseClass {
 				int statusCode = response.getStatusCode();
 
 				System.out.println("status code " + statusCode);
-				
-				ExtentTestManager.getTest().log(Status.PASS, "Link is " +links+ " and Status code is "+statusCode);
-
+	
 				inputFile = new FileInputStream(new File(Runner.filePath));
 				XSSFWorkbook workbook = new XSSFWorkbook(inputFile);
 				sheet = workbook.getSheet("Sheet1");
@@ -4612,7 +4610,7 @@ public class ActionClass extends BaseClass {
 	public static void mita_headingTags(String LocatorValue) throws Exception {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue + " method");
-			ExtentTestManager.getTest().log(Status.INFO, Driver_Script.Actionvalue  + " "+LocatorValue);
+			ExtentTestManager.getTest().log(Status.PASS, Driver_Script.Actionvalue  + " "+LocatorValue);
 			String tags = null;
 			ArrayList<String> ar = new ArrayList<String>();
 			List<WebElement> allH1 = driver.findElements(By.tagName(LocatorValue));

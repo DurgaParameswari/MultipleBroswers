@@ -4547,10 +4547,11 @@ public class ActionClass extends BaseClass {
 	public static void mita_response(String LocatorValue, String value) throws Exception {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue + " method");
-
+			ExtentTestManager.getTest().log(Status.INFO, Driver_Script.Actionvalue + " is"+value);
 			// Get list of web-elements with tagName - a
 			List<WebElement> allLinks = driver.findElements(By.tagName(LocatorValue));
 			System.out.println("The number of links is " + allLinks.size());
+			ExtentTestManager.getTest().log(Status.INFO, "The number of links is " + allLinks.size());
 
 			int count = 0, count1 = 0;
 
@@ -4574,6 +4575,8 @@ public class ActionClass extends BaseClass {
 				int statusCode = response.getStatusCode();
 
 				System.out.println("status code " + statusCode);
+				
+				ExtentTestManager.getTest().log(Status.PASS, "Link is " +links+ " and Status code is "+statusCode);
 
 				inputFile = new FileInputStream(new File(Runner.filePath));
 				XSSFWorkbook workbook = new XSSFWorkbook(inputFile);
@@ -4598,6 +4601,7 @@ public class ActionClass extends BaseClass {
 				}
 			}
 			actual = "Status code 200 is " + count + ", Incorrect codes is " + count1;
+			ExtentTestManager.getTest().log(Status.PASS, "Status code 200 is " + count + ", Incorrect codes is " + count1);
 			mita_Web_writePass();
 		} catch (Exception e) {
 //			System.err.format("No Element Found to perform entering the values \t" + e);
@@ -4634,6 +4638,7 @@ public class ActionClass extends BaseClass {
 	public static void mita_metaTags(String LocatorType, String LocatorValue) throws Exception {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue + " method");
+			ExtentTestManager.getTest().log(Status.INFO, Driver_Script.Actionvalue + " "+LocatorValue);
 			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
 			List<WebElement> allImg = driver.findElements(locator);
 
@@ -4641,16 +4646,19 @@ public class ActionClass extends BaseClass {
 			if (allImg.size() == 0) {
 				System.out.println("This page og:image not avialable");
 				actual = "This page og:image not avialable";
+				ExtentTestManager.getTest().log(Status.ERROR, "This page og:image not avialable");
 			} else {
 
 				System.out.println("Total no of og:image Available: " + imgsCount);
 				actual = "Total no of og:image Available: " + imgsCount;
+				ExtentTestManager.getTest().log(Status.PASS,"Total no of og:image Available: " + imgsCount);
 			}
 			mita_Web_writePass();
 		} catch (Exception e) {
 //			System.err.format("No Element Found to perform entering the values \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to execute the meta tags method \t" + e.getMessage());
+			ExtentTestManager.getTest().log(Status.ERROR, "Unable to execute the meta tags method \t" + e.getMessage());
 		}
 	}
 }

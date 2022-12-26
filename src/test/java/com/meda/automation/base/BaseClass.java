@@ -108,8 +108,7 @@ public class BaseClass extends ExcelData
 	public static void initChromeDriver(String appURL) throws Exception {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue + ": Launching google chrome browser..");
-			ExtentTestManager.getTest().log(Status.INFO,
-					Driver_Script.Actionvalue + ": Launching google chrome browser..");
+			ExtentTestManager.getTest().log(Status.INFO, "Launching google chrome browser..");
 			ChromeOptions chromeOptions = new ChromeOptions();
 
 			WebDriverManager.chromedriver().setup();
@@ -127,7 +126,7 @@ public class BaseClass extends ExcelData
 				driver.manage().deleteAllCookies();
 				// Navigate URL method
 				driver.get(appURL);
-				ExtentTestManager.getTest().log(Status.INFO, "URl is " + appURL);
+				ExtentTestManager.getTest().log(Status.INFO, Driver_Script.Actionvalue+" " + appURL);
 				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 				driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 			} else if (executionType.equalsIgnoreCase("Head")) {
@@ -140,7 +139,7 @@ public class BaseClass extends ExcelData
 				driver.manage().deleteAllCookies();
 				// Navigate URL method
 				driver.get(appURL);
-				ExtentTestManager.getTest().log(Status.INFO, "URl is " + appURL);
+				ExtentTestManager.getTest().log(Status.INFO, Driver_Script.Actionvalue+" " + appURL);
 				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 				driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 			}

@@ -42,6 +42,7 @@ public class BaseClass extends ExcelData
 	public static WebDriver launchBrowser(String browserType, String appURL) throws Exception {
 		try {
 			logger.info("Select the " + browserType + "browser");
+			ExtentTestManager.getTest().log(Status.INFO, "Select the " + browserType + " browser");
 			switch (browserType) {
 			case "Chrome":
 				initChromeDriver(appURL);
@@ -70,6 +71,7 @@ public class BaseClass extends ExcelData
 	public static WebDriver launchBrowsers(String browserType, String appURL) throws Exception {
 		try {
 			logger.info("Select the " + browserType + " browser");
+			ExtentTestManager.getTest().log(Status.INFO, "Select the " + browserType + " browser");
 			try {
 				if (bt[l].equalsIgnoreCase("Chrome")) {
 					initChromeDriver(appURL);
@@ -97,7 +99,8 @@ public class BaseClass extends ExcelData
 		} catch (Exception e) {
 			logger.warn("Executing - " + Driver_Script.Actionvalue + ": Unable to select the " + bt[l] + " browser "
 					+ e.getMessage());
-
+			ExtentTestManager.getTest().log(Status.ERROR, "Executing - " + Driver_Script.Actionvalue
+					+ ": Unable to select the " + bt[l] + " browser " + e.getMessage());
 		}
 		return driver;
 	}
@@ -105,7 +108,7 @@ public class BaseClass extends ExcelData
 	public static void initChromeDriver(String appURL) throws Exception {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue + ": Launching google chrome browser..");
-			ExtentTestManager.getTest().log(Status.PASS,
+			ExtentTestManager.getTest().log(Status.INFO,
 					Driver_Script.Actionvalue + ": Launching google chrome browser..");
 			ChromeOptions chromeOptions = new ChromeOptions();
 
@@ -114,6 +117,7 @@ public class BaseClass extends ExcelData
 
 			if (executionType.equalsIgnoreCase("Headless")) {
 				logger.info("Execution Type is " + executionType);
+				ExtentTestManager.getTest().log(Status.INFO, "Execution Type is " + executionType);
 				chromeOptions.addArguments("--window-size=1920,1080");
 				chromeOptions.addArguments("--headless");
 
@@ -123,11 +127,12 @@ public class BaseClass extends ExcelData
 				driver.manage().deleteAllCookies();
 				// Navigate URL method
 				driver.get(appURL);
+				ExtentTestManager.getTest().log(Status.INFO, "URl is " + appURL);
 				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 				driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 			} else if (executionType.equalsIgnoreCase("Head")) {
 				logger.info("Execution Type is " + executionType);
-
+				ExtentTestManager.getTest().log(Status.INFO, "Execution Type is " + executionType);
 				driver = new ChromeDriver(chromeOptions);
 
 				// maximize window
@@ -135,6 +140,7 @@ public class BaseClass extends ExcelData
 				driver.manage().deleteAllCookies();
 				// Navigate URL method
 				driver.get(appURL);
+				ExtentTestManager.getTest().log(Status.INFO, "URl is " + appURL);
 				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 				driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 			}
@@ -153,7 +159,8 @@ public class BaseClass extends ExcelData
 		} catch (Exception e) {
 			logger.warn("Executing - " + Driver_Script.Actionvalue + ": Unable to launch the Chrome browser "
 					+ e.getMessage());
-
+			ExtentTestManager.getTest().log(Status.ERROR, "Executing - " + Driver_Script.Actionvalue
+					+ ": Unable to launch the Chrome browser " + e.getMessage());
 		}
 	}
 

@@ -38,9 +38,14 @@ import java.util.stream.Collectors;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.RandomStringUtils;
 import org.apache.log4j.Logger;
+import org.apache.poi.common.usermodel.Hyperlink;
+import org.apache.poi.ss.usermodel.CreationHelper;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.IndexedColors;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFCreationHelper;
+import org.apache.poi.xssf.usermodel.XSSFHyperlink;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.joda.time.DateTime;
 import org.json.JSONObject;
@@ -1209,6 +1214,7 @@ public class ActionClass extends BaseClass {
 	public static void mita_Click(String LocatorType, String LocatorValue, String WaitType) throws Exception {
 		try {
 			logger.info("Executing - Click method");
+			ExtentTestManager.getTest().log(Status.INFO, Driver_Script.Actionvalue + " "+LocatorValue);
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mita_JSHighlight(element);
@@ -1217,10 +1223,9 @@ public class ActionClass extends BaseClass {
 			// Thread.sleep(500);
 			mita_Web_write();
 		} catch (Exception e) {
-//			System.err.format("No Element Found to perform ngvt_Click \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to execute the click method \t" + e.getMessage());
-
+			ExtentTestManager.getTest().log(Status.ERROR, "Unable to execute the click method \t" + e.getMessage());
 		}
 
 	}
@@ -3674,7 +3679,7 @@ public class ActionClass extends BaseClass {
 	public static void mita_Web_wait_time(long sleepTime) throws InterruptedException, IOException {
 		try {
 			logger.info("Executing - Wait method");
-
+			ExtentTestManager.getTest().log(Status.INFO, Driver_Script.Actionvalue + " "+sleepTime+" Seconds");
 			Thread.sleep(sleepTime);
 			mita_Web_write();
 		} catch (Exception e) {
@@ -4570,6 +4575,22 @@ public class ActionClass extends BaseClass {
 
 				System.out.println("status code " + statusCode);
 
+				inputFile = new FileInputStream(new File(Runner.filePath));
+				XSSFWorkbook workbook = new XSSFWorkbook(inputFile);
+				sheet = workbook.getSheet("Sheet1");
+
+				Row row = sheet.createRow(count);
+				Cell searchText2 = row.createCell(0);
+				searchText2.setCellValue(links);
+
+				Cell searchText3 = row.createCell(1);
+				searchText3.setCellValue(statusCode);
+
+				outFile = new FileOutputStream(new File(Runner.filePath));
+				workbook.write(outFile);
+				inputFile.close();
+				outFile.close();
+
 				if (statusCode == 200) {
 					count = count + 1;
 				} else {
@@ -4577,7 +4598,6 @@ public class ActionClass extends BaseClass {
 				}
 			}
 			actual = "Status code 200 is " + count + ", Incorrect codes is " + count1;
-
 			mita_Web_writePass();
 		} catch (Exception e) {
 //			System.err.format("No Element Found to perform entering the values \t" + e);
@@ -4588,23 +4608,26 @@ public class ActionClass extends BaseClass {
 	public static void mita_headingTags(String LocatorValue) throws Exception {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue + " method");
+			ExtentTestManager.getTest().log(Status.INFO, Driver_Script.Actionvalue  + " "+LocatorValue);
 			String tags = null;
 			ArrayList<String> ar = new ArrayList<String>();
 			List<WebElement> allH1 = driver.findElements(By.tagName(LocatorValue));
 			int h1Count = allH1.size();
 			System.out.println("Total no of h1 count: " + h1Count);
-
+			ExtentTestManager.getTest().log(Status.PASS, "Total no of h1 count: " + h1Count);
 			for (WebElement h1Tag : allH1) {
 				tags = h1Tag.getText();
 				System.out.println(tags);
 				ar.add(tags);
 			}
 			actual = LocatorValue + " tags is  " + ar;
+			ExtentTestManager.getTest().log(Status.INFO, LocatorValue + " tags is  " + ar);
 			mita_Web_writePass();
 		} catch (Exception e) {
 //			System.err.format("No Element Found to perform entering the values \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to execute the heading tags method \t" + e.getMessage());
+			ExtentTestManager.getTest().log(Status.ERROR,"Unable to execute the heading tags method \t" + e.getMessage());
 		}
 	}
 
@@ -4613,17 +4636,15 @@ public class ActionClass extends BaseClass {
 			logger.info("Executing - " + Driver_Script.Actionvalue + " method");
 			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
 			List<WebElement> allImg = driver.findElements(locator);
-			
+
 			int imgsCount = allImg.size();
-			if (allImg.size() == 0)
-			{
+			if (allImg.size() == 0) {
 				System.out.println("This page og:image not avialable");
 				actual = "This page og:image not avialable";
-			}
-			else {
-		
-			System.out.println("Total no of og:image Available: " + imgsCount);	
-			actual = "Total no of og:image Available: " + imgsCount;
+			} else {
+
+				System.out.println("Total no of og:image Available: " + imgsCount);
+				actual = "Total no of og:image Available: " + imgsCount;
 			}
 			mita_Web_writePass();
 		} catch (Exception e) {

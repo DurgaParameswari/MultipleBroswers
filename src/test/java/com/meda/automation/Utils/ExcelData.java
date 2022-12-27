@@ -261,6 +261,9 @@ public class ExcelData extends ExtentTestManager {
 			cell5 = row.getCell(1);
 			LocatorId = cell5.getStringCellValue();
 			logger.info("Locator value is: " + LocatorId);
+			cell6 = row.getCell(2);
+			Entervalue = getCellContentAsString(cell6);
+			logger.info("Test data is: " + Entervalue);
 		} catch (Exception e) {
 			logger.warn("Executing - " + Driver_Script.Actionvalue
 					+ ": Unable to read the locator value and test data from excel " + e.getMessage());

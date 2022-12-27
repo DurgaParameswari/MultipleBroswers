@@ -1214,7 +1214,7 @@ public class ActionClass extends BaseClass {
 	public static void mita_Click(String LocatorType, String LocatorValue, String WaitType) throws Exception {
 		try {
 			logger.info("Executing - Click method");
-			ExtentTestManager.getTest().log(Status.PASS, Driver_Script.Actionvalue + " "+LocatorValue);
+			ExtentTestManager.getTest().log(Status.PASS, Driver_Script.Actionvalue);
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mita_JSHighlight(element);
@@ -4547,7 +4547,7 @@ public class ActionClass extends BaseClass {
 	public static void mita_response(String LocatorValue, String value) throws Exception {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue + " method");
-			ExtentTestManager.getTest().log(Status.PASS, Driver_Script.Actionvalue + " is"+value);
+			ExtentTestManager.getTest().log(Status.PASS, Driver_Script.Actionvalue);
 			// Get list of web-elements with tagName - a
 			List<WebElement> allLinks = driver.findElements(By.tagName(LocatorValue));
 			System.out.println("The number of links is " + allLinks.size());
@@ -4575,10 +4575,30 @@ public class ActionClass extends BaseClass {
 				int statusCode = response.getStatusCode();
 
 				System.out.println("status code " + statusCode);
-	
+
 				inputFile = new FileInputStream(new File(Runner.filePath));
 				XSSFWorkbook workbook = new XSSFWorkbook(inputFile);
-				sheet = workbook.getSheet("Sheet1");
+				String sheetname = "Response";
+				try {
+
+					sheetname = sheetname.trim();
+
+					if (sheetname.isEmpty()) {
+						throw new Exception("Sheet name not specified..");
+					}
+
+					sheet = workbook.getSheet(sheetname);
+
+					if (sheet != null) {
+						throw new Exception("Sheet Already exist...");
+					}
+
+					sheet = workbook.createSheet(sheetname);
+
+					workbook.createSheet(sheetname);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
 
 				Row row = sheet.createRow(count);
 				Cell searchText2 = row.createCell(0);
@@ -4598,8 +4618,9 @@ public class ActionClass extends BaseClass {
 					count1 = count1 + 1;
 				}
 			}
-			actual = "Status code 200 is " + count + ", Incorrect codes is " + count1;
-			ExtentTestManager.getTest().log(Status.PASS, "Status code 200 is " + count + ", Incorrect codes is " + count1);
+			actual = "Status code 200 are: " + count + " and Incorrect status codes are: " + count1;
+			ExtentTestManager.getTest().log(Status.PASS,
+					"Status code 200 are: " + count + " and Incorrect status codes are: " + count1);
 			mita_Web_writePass();
 		} catch (Exception e) {
 //			System.err.format("No Element Found to perform entering the values \t" + e);
@@ -4607,10 +4628,185 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
+	public static void mita_response1(String LocatorValue, String value) throws Exception {
+		try {
+			logger.info("Executing - " + Driver_Script.Actionvalue + " method");
+			ExtentTestManager.getTest().log(Status.PASS, Driver_Script.Actionvalue);
+			// Get list of web-elements with tagName - a
+			List<WebElement> allLinks = driver.findElements(By.tagName(LocatorValue));
+			System.out.println("The number of links is " + allLinks.size());
+			ExtentTestManager.getTest().log(Status.PASS, "The number of links is " + allLinks.size());
+
+			int count = 0, count1 = 0;
+
+			// Traversing through the list and printing its text along with link address
+			for (WebElement link : allLinks) {
+
+				String links = link.getText() + " - " + link.getAttribute(value);
+				System.out.println(links);
+
+				String baseUrl = driver.getCurrentUrl();
+
+				// Specify the base URL to the RESTful web service
+				RestAssured.baseURI = baseUrl;
+				// Get the RequestSpecification of the request to be sent to the server
+				RequestSpecification httpRequest = RestAssured.given();
+
+				Response response = httpRequest.get("");
+
+				// Get the status code of the request.
+				// If request is successful, status code will be 200
+				int statusCode = response.getStatusCode();
+
+				System.out.println("status code " + statusCode);
+
+				inputFile = new FileInputStream(new File(Runner.filePath));
+				XSSFWorkbook workbook = new XSSFWorkbook(inputFile);
+				String sheetname = "Response";
+				try {
+
+					sheetname = sheetname.trim();
+
+					if (sheetname.isEmpty()) {
+						throw new Exception("Sheet name not specified..");
+					}
+
+					sheet = workbook.getSheet(sheetname);
+
+					if (sheet != null) {
+						throw new Exception("Sheet Already exist...");
+					}
+
+					sheet = workbook.createSheet(sheetname);
+
+					workbook.createSheet(sheetname);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+
+				Row row = sheet.createRow(count);
+				Cell searchText2 = row.createCell(0);
+				searchText2.setCellValue(links);
+
+				Cell searchText3 = row.createCell(1);
+				searchText3.setCellValue(statusCode);
+
+				outFile = new FileOutputStream(new File(Runner.filePath));
+				workbook.write(outFile);
+				inputFile.close();
+				outFile.close();
+
+				if (statusCode == 200) {
+					count = count + 1;
+				} else {
+					count1 = count1 + 1;
+				}
+			}
+			actual = "Status code 200 are: " + count + " and Incorrect status codes are: " + count1;
+			ExtentTestManager.getTest().log(Status.PASS,
+					"Status code 200 are: " + count + " and Incorrect status codes are: " + count1);
+			mita_Web_writePass();
+		} catch (Exception e) {
+//			System.err.format("No Element Found to perform entering the values \t" + e);
+			mita_Web_write_when_Locator_isnotvalid();
+		}
+	}
+
+	public static void mita_headingTags(String LocatorValue, String value) throws Exception {
+		try {
+			logger.info("Executing - " + Driver_Script.Actionvalue + " method");
+			List<WebElement> allLinks = driver.findElements(By.tagName(LocatorValue));
+//			System.out.println("all links  are "+allLinks);
+			int count = 0;
+			ArrayList<String> ar = new ArrayList<String>();
+			System.out.println("before for loop");
+			for (WebElement Element : allLinks) {
+				System.out.println("after for loop");
+				String link =Element.getAttribute("href");
+			
+				System.out.println(link);
+//
+//				String baseUrl = driver.getCurrentUrl();
+//				Thread.sleep(3000);
+//				
+//				driver.get(baseUrl);
+				
+				if (link !=""){
+					Element.click();
+		             Thread.sleep(2000);
+		             System.out.println("third");
+		            }
+
+				String tags = null;
+
+				List<WebElement> allTags = driver.findElements(By.tagName(value));
+				int tagCount = allTags.size();
+				System.out.println("Total no of " + LocatorValue + " are : " + tagCount);
+				ExtentTestManager.getTest().log(Status.PASS, "Total no of " + LocatorValue + " are : " + tagCount);
+				if (tagCount == 0) {
+					System.out.println("Missing " + LocatorValue + " tag");
+					actual = "Missing " + LocatorValue + " tag";
+					ExtentTestManager.getTest().log(Status.ERROR, "Missing " + LocatorValue + " tag");
+				} else {
+					for (WebElement tag : allTags) {
+						tags = tag.getText();
+						System.out.println(tags);
+						ar.add(tags);
+					}
+					inputFile = new FileInputStream(new File(Runner.filePath));
+					XSSFWorkbook workbook = new XSSFWorkbook(inputFile);
+					String sheetname = "tags";
+					try {
+						sheetname = sheetname.trim();
+						if (sheetname.isEmpty()) {
+							throw new Exception("Sheet name not specified..");
+						}
+						sheet = workbook.getSheet(sheetname);
+						if (sheet != null) {
+							throw new Exception("Sheet Already exist...");
+						}
+						sheet = workbook.createSheet(sheetname);
+						workbook.createSheet(sheetname);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+					String actual1 = LocatorValue + " tags is  " + ar;
+					System.err.println(actual1);
+					Row row = sheet.createRow(count);
+					Cell searchText2 = row.createCell(0);
+					searchText2.setCellValue(actual1);
+
+					outFile = new FileOutputStream(new File(Runner.filePath));
+					workbook.write(outFile);
+					inputFile.close();
+					outFile.close();
+
+//					if (statusCode == 200) {
+					count = count + 1;
+//					} else {
+//						count = count + 1;
+//					}
+					System.out.println(count);
+				}
+			}
+
+//			actual = LocatorValue + " tags is  " + ar;
+			ExtentTestManager.getTest().log(Status.PASS, LocatorValue + " tags is  " + ar);
+			mita_Web_writePass();
+
+		} catch (Exception e) {
+//			System.err.format("No Element Found to perform entering the values \t" + e);
+			mita_Web_write_when_Locator_isnotvalid();
+			logger.warn("Unable to execute the heading tags method \t" + e.getMessage());
+			ExtentTestManager.getTest().log(Status.ERROR,
+					"Unable to execute the heading tags method \t" + e.getMessage());
+		}
+	}
+
 	public static void mita_headingTags(String LocatorValue) throws Exception {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue + " method");
-			ExtentTestManager.getTest().log(Status.PASS, Driver_Script.Actionvalue  + " "+LocatorValue);
+			ExtentTestManager.getTest().log(Status.PASS, Driver_Script.Actionvalue + " " + LocatorValue);
 			String tags = null;
 			ArrayList<String> ar = new ArrayList<String>();
 			List<WebElement> allH1 = driver.findElements(By.tagName(LocatorValue));
@@ -4629,14 +4825,41 @@ public class ActionClass extends BaseClass {
 //			System.err.format("No Element Found to perform entering the values \t" + e);
 			mita_Web_write_when_Locator_isnotvalid();
 			logger.warn("Unable to execute the heading tags method \t" + e.getMessage());
-			ExtentTestManager.getTest().log(Status.ERROR,"Unable to execute the heading tags method \t" + e.getMessage());
+			ExtentTestManager.getTest().log(Status.ERROR,
+					"Unable to execute the heading tags method \t" + e.getMessage());
 		}
 	}
+
+//	public static void mita_headingTags(String LocatorValue) throws Exception {
+//		try {
+//			logger.info("Executing - " + Driver_Script.Actionvalue + " method");
+//			ExtentTestManager.getTest().log(Status.PASS, Driver_Script.Actionvalue  + " "+LocatorValue);
+//			String tags = null;
+//			ArrayList<String> ar = new ArrayList<String>();
+//			List<WebElement> allH1 = driver.findElements(By.tagName(LocatorValue));
+//			int h1Count = allH1.size();
+//			System.out.println("Total no of h1 count: " + h1Count);
+//			ExtentTestManager.getTest().log(Status.PASS, "Total no of h1 count: " + h1Count);
+//			for (WebElement h1Tag : allH1) {
+//				tags = h1Tag.getText();
+//				System.out.println(tags);
+//				ar.add(tags);
+//			}
+//			actual = LocatorValue + " tags is  " + ar;
+//			ExtentTestManager.getTest().log(Status.PASS, LocatorValue + " tags is  " + ar);
+//			mita_Web_writePass();
+//		} catch (Exception e) {
+////			System.err.format("No Element Found to perform entering the values \t" + e);
+//			mita_Web_write_when_Locator_isnotvalid();
+//			logger.warn("Unable to execute the heading tags method \t" + e.getMessage());
+//			ExtentTestManager.getTest().log(Status.ERROR,"Unable to execute the heading tags method \t" + e.getMessage());
+//		}
+//	}
 
 	public static void mita_metaTags(String LocatorType, String LocatorValue) throws Exception {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue + " method");
-			ExtentTestManager.getTest().log(Status.PASS, Driver_Script.Actionvalue + " "+LocatorValue);
+			ExtentTestManager.getTest().log(Status.PASS, Driver_Script.Actionvalue + " " + LocatorValue);
 			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
 			List<WebElement> allImg = driver.findElements(locator);
 
@@ -4649,7 +4872,7 @@ public class ActionClass extends BaseClass {
 
 				System.out.println("Total no of og:image Available: " + imgsCount);
 				actual = "Total no of og:image Available: " + imgsCount;
-				ExtentTestManager.getTest().log(Status.PASS,"Total no of og:image Available: " + imgsCount);
+				ExtentTestManager.getTest().log(Status.PASS, "Total no of og:image Available: " + imgsCount);
 			}
 			mita_Web_writePass();
 		} catch (Exception e) {

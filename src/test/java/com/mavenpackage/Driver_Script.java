@@ -457,16 +457,23 @@ public class Driver_Script extends ActionClass {
 					mita_defaultFrame();
 				} else if (Actionvalue.toLowerCase().contains("refresh")) {
 					mita_refresh();
-				} else if (Actionvalue.toLowerCase().contains("response")) {
+				} else if (Actionvalue.toLowerCase().contains("open")) {
 					mita_response();
 					mita_response(LocatorId, Entervalue);
-				}else if (Actionvalue.toLowerCase().contains("heading tags")) {
+				} else if (Actionvalue.toLowerCase().contains("heading tag")
+						|| Actionvalue.toLowerCase().contains("h1 tag")
+						|| Actionvalue.toLowerCase().contains("h2 tag")
+						|| Actionvalue.toLowerCase().contains("h3 tag")
+						|| Actionvalue.toLowerCase().contains("h4 tag") 	
+						|| Actionvalue.toLowerCase().contains("h5 tag"))
+						{
 					mita_headingTags();
-					mita_headingTags(LocatorId);
-				}else if (Actionvalue.toLowerCase().contains("og:image")) {
+					mita_headingTags(LocatorId,Entervalue);
+//					mita_headingTags(LocatorId);
+				} else if (Actionvalue.toLowerCase().contains("image")) {
 					mita_metaTags();
-					mita_metaTags("xpath",LocatorId);
-				}  else if (Actionvalue.toLowerCase().contains("close")
+					mita_metaTags("xpath", LocatorId);
+				} else if (Actionvalue.toLowerCase().contains("close")
 						|| Actionvalue.toLowerCase().contains("test case")
 						|| Actionvalue.toLowerCase().contains("finish")
 						|| Actionvalue.toLowerCase().contains("finishing")

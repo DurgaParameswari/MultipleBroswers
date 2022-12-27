@@ -4716,82 +4716,74 @@ public class ActionClass extends BaseClass {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue + " method");
 			List<WebElement> allLinks = driver.findElements(By.tagName(LocatorValue));
-//			System.out.println("all links  are "+allLinks);
-			int count = 0;
-			ArrayList<String> ar = new ArrayList<String>();
-			System.out.println("before for loop");
-			for (WebElement Element : allLinks) {
-				System.out.println("after for loop");
-				String link =Element.getAttribute("href");
-			
-				System.out.println(link);
-//
-//				String baseUrl = driver.getCurrentUrl();
-//				Thread.sleep(3000);
-//				
-//				driver.get(baseUrl);
-				
-				if (link !=""){
-					Element.click();
-		             Thread.sleep(2000);
-		             System.out.println("third");
-		            }
+			ArrayList<String> hrefs = new ArrayList<String>();
+			int linkCount = allLinks.size();
 
-				String tags = null;
+			System.out.println("Total number of page on the webpage: " + linkCount);
+
+			String[] texts = new String[linkCount];
+
+			int t = 0;
+			for (WebElement text : allLinks) {
+				texts[t] = text.getAttribute("href");
+//				System.out.println(texts[t]);
+				t++;
+			}
+			String tags = null, actual1 = null;
+			int count = 0;
+			for (String clicks : texts) {
+				
+				driver.get(clicks);
 
 				List<WebElement> allTags = driver.findElements(By.tagName(value));
 				int tagCount = allTags.size();
-				System.out.println("Total no of " + LocatorValue + " are : " + tagCount);
-				ExtentTestManager.getTest().log(Status.PASS, "Total no of " + LocatorValue + " are : " + tagCount);
+				System.out.println("Total no of " + value + " are : " + tagCount);
+				ExtentTestManager.getTest().log(Status.PASS, "Total no of " + value + " are : " + tagCount);
+
 				if (tagCount == 0) {
 					System.out.println("Missing " + LocatorValue + " tag");
-					actual = "Missing " + LocatorValue + " tag";
+					actual1 = "Missing " + LocatorValue + " tag";
 					ExtentTestManager.getTest().log(Status.ERROR, "Missing " + LocatorValue + " tag");
 				} else {
 					for (WebElement tag : allTags) {
 						tags = tag.getText();
 						System.out.println(tags);
-						ar.add(tags);
+						hrefs.add(tags);
 					}
-					inputFile = new FileInputStream(new File(Runner.filePath));
-					XSSFWorkbook workbook = new XSSFWorkbook(inputFile);
-					String sheetname = "tags";
-					try {
-						sheetname = sheetname.trim();
-						if (sheetname.isEmpty()) {
-							throw new Exception("Sheet name not specified..");
-						}
-						sheet = workbook.getSheet(sheetname);
-						if (sheet != null) {
-							throw new Exception("Sheet Already exist...");
-						}
-						sheet = workbook.createSheet(sheetname);
-						workbook.createSheet(sheetname);
-					} catch (Exception e) {
-						e.printStackTrace();
-					}
-					String actual1 = LocatorValue + " tags is  " + ar;
-					System.err.println(actual1);
-					Row row = sheet.createRow(count);
-					Cell searchText2 = row.createCell(0);
-					searchText2.setCellValue(actual1);
-
-					outFile = new FileOutputStream(new File(Runner.filePath));
-					workbook.write(outFile);
-					inputFile.close();
-					outFile.close();
-
-//					if (statusCode == 200) {
-					count = count + 1;
-//					} else {
-//						count = count + 1;
-//					}
-					System.out.println(count);
 				}
+				inputFile = new FileInputStream(new File(Runner.filePath));
+				XSSFWorkbook workbook = new XSSFWorkbook(inputFile);
+				String sheetname = "tags";
+				try {
+					sheetname = sheetname.trim();
+					if (sheetname.isEmpty()) {
+						throw new Exception("Sheet name not specified..");
+					}
+					sheet = workbook.getSheet(sheetname);
+					if (sheet != null) {
+						throw new Exception("Sheet Already exist...");
+					}
+					sheet = workbook.createSheet(sheetname);
+					workbook.createSheet(sheetname);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+				actual1 = "h1 tags is  " + tags;
+				System.out.println(actual1);
+				Row row = sheet.createRow(count);
+				Cell searchText2 = row.createCell(0);
+				searchText2.setCellValue(actual1);
+
+				outFile = new FileOutputStream(new File(Runner.filePath));
+				workbook.write(outFile);
+				inputFile.close();
+				outFile.close();
+				count = count + 1;
+//				driver.navigate().back();
 			}
 
 //			actual = LocatorValue + " tags is  " + ar;
-			ExtentTestManager.getTest().log(Status.PASS, LocatorValue + " tags is  " + ar);
+			ExtentTestManager.getTest().log(Status.PASS, LocatorValue + " tags is  " + hrefs);
 			mita_Web_writePass();
 
 		} catch (Exception e) {

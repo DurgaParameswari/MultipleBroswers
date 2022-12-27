@@ -1,128 +1,29 @@
-2022-12-27 17:19:41,434  INFO [main] ExcelData:53 - Reading Excel file
-2022-12-27 17:19:42,400  INFO [main] Driver_Script:22 - Broswer type is chrome
-2022-12-27 17:19:42,911  INFO [main] Driver_Script:32 - Executing - headingtag and Row count is: 8
-2022-12-27 17:19:42,914  INFO [main] Driver_Script:44 - WEB Execution Starting:
-2022-12-27 17:19:43,088  INFO [main] BaseClass:73 - Select the chrome browser
-2022-12-27 17:19:43,117  INFO [main] BaseClass:110 - Executing - Take URL: Launching google chrome browser..
-2022-12-27 17:19:43,779  INFO [main] BaseClass:133 - Execution Type is Head
-2022-12-27 17:19:55,294  INFO [main] ActionClass:149 - Take URL: Updating the result in excel
-2022-12-27 17:19:55,620  INFO [main] ActionClass:1680 - Executing - Taking ScreenShot method
-2022-12-27 17:19:56,284  INFO [main] ExcelData:220 - Executing - wait: Reading wait time from excel
-2022-12-27 17:19:56,288  INFO [main] ExcelData:223 - Test data is: 3000
-2022-12-27 17:19:56,289  INFO [main] ActionClass:3681 - Executing - Wait method
-2022-12-27 17:19:59,292  INFO [main] ActionClass:149 - wait: Updating the result in excel
-2022-12-27 17:19:59,439  INFO [main] ActionClass:1680 - Executing - Taking ScreenShot method
-2022-12-27 17:19:59,826  INFO [main] ExcelData:232 - Executing - Scenario 1: Reading description from excel
-2022-12-27 17:19:59,974  INFO [main] ExcelData:152 - Executing - click on sitemap: Reading locator value from excel
-2022-12-27 17:19:59,975  INFO [main] ExcelData:155 - Locator value is: //a[text()='Sitemap']
-2022-12-27 17:19:59,975  INFO [main] ActionClass:1216 - Executing - Click method
-2022-12-27 17:20:01,747  INFO [main] ActionClass:149 - click on sitemap: Updating the result in excel
-2022-12-27 17:20:02,327  INFO [main] ActionClass:1680 - Executing - Taking ScreenShot method
-2022-12-27 17:20:03,091  INFO [main] ExcelData:220 - Executing - wait: Reading wait time from excel
-2022-12-27 17:20:03,091  INFO [main] ExcelData:223 - Test data is: 3000
-2022-12-27 17:20:03,092  INFO [main] ActionClass:3681 - Executing - Wait method
-2022-12-27 17:20:06,100  INFO [main] ActionClass:149 - wait: Updating the result in excel
-2022-12-27 17:20:06,223  INFO [main] ActionClass:1680 - Executing - Taking ScreenShot method
-2022-12-27 17:20:06,720  INFO [main] ExcelData:259 - Executing - Verify the number of h1 tags in sitemap page: Reading locator value and test data from excel
-2022-12-27 17:20:06,721  INFO [main] ExcelData:263 - Locator value is: a
-2022-12-27 17:20:06,721  INFO [main] ExcelData:266 - Test data is: h1
-2022-12-27 17:20:06,721  INFO [main] ActionClass:4717 - Executing - Verify the number of h1 tags in sitemap page method
-2022-12-27 17:21:03,870  INFO [main] ActionClass:387 - Verify the number of h1 tags in sitemap page: Updating the result in excel
-2022-12-27 17:21:03,947  INFO [main] ActionClass:1680 - Executing - Taking ScreenShot method
-2022-12-27 17:21:04,971  WARN [main] ActionClass:4800 - Unable to execute the heading tags method 	element not interactable
-  (Session info: chrome=108.0.5359.125)
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'M0137', ip: '192.168.1.231', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [905b8604c550a447f3ae593fef33822d, clickElement {id=58937b9a-d66a-408f-a6f9-a2752b1015ee}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\PCEB7B~1.DES\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:59956}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59956/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (905b8604c550a447f3ae593fef33822d)] -> tag name: a]
-Session ID: 905b8604c550a447f3ae593fef33822d
-2022-12-27 17:21:05,051 DEBUG [main] cache:45 - Couldn't find template in cache for "v3html/v3-html-index.ftl"("en", UTF-8, parsed); will try to load it.
-2022-12-27 17:21:05,053 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/v3-html-index_en.ftl"): Not found
-2022-12-27 17:21:05,055 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/v3-html-index.ftl"): Found
-2022-12-27 17:21:05,056 DEBUG [main] cache:45 - Loading template for "v3html/v3-html-index.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/PC.DESKTOP-Q8L0TS6/.m2/repository/com/aventstack/extentreports/4.0.6/extentreports-4.0.6.jar!/com/aventstack/extentreports/view/v3html/v3-html-index.ftl"
-2022-12-27 17:21:05,344 DEBUG [main] cache:45 - Couldn't find template in cache for "v3html/v3-html-head.ftl"("en", UTF-8, parsed); will try to load it.
-2022-12-27 17:21:05,345 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/v3-html-head_en.ftl"): Not found
-2022-12-27 17:21:05,348 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/v3-html-head.ftl"): Found
-2022-12-27 17:21:05,350 DEBUG [main] cache:45 - Loading template for "v3html/v3-html-head.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/PC.DESKTOP-Q8L0TS6/.m2/repository/com/aventstack/extentreports/4.0.6/extentreports-4.0.6.jar!/com/aventstack/extentreports/view/v3html/v3-html-head.ftl"
-2022-12-27 17:21:05,357 DEBUG [main] cache:45 - Couldn't find template in cache for "v3html/v3-html-nav.ftl"("en", UTF-8, parsed); will try to load it.
-2022-12-27 17:21:05,360 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/v3-html-nav_en.ftl"): Not found
-2022-12-27 17:21:05,361 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/v3-html-nav.ftl"): Found
-2022-12-27 17:21:05,362 DEBUG [main] cache:45 - Loading template for "v3html/v3-html-nav.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/PC.DESKTOP-Q8L0TS6/.m2/repository/com/aventstack/extentreports/4.0.6/extentreports-4.0.6.jar!/com/aventstack/extentreports/view/v3html/v3-html-nav.ftl"
-2022-12-27 17:21:05,374 DEBUG [main] cache:45 - Couldn't find template in cache for "v3html/test-view/v3-html-test-view.ftl"("en", UTF-8, parsed); will try to load it.
-2022-12-27 17:21:05,375 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/test-view/v3-html-test-view_en.ftl"): Not found
-2022-12-27 17:21:05,376 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/test-view/v3-html-test-view.ftl"): Found
-2022-12-27 17:21:05,376 DEBUG [main] cache:45 - Loading template for "v3html/test-view/v3-html-test-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/PC.DESKTOP-Q8L0TS6/.m2/repository/com/aventstack/extentreports/4.0.6/extentreports-4.0.6.jar!/com/aventstack/extentreports/view/v3html/test-view/v3-html-test-view.ftl"
-2022-12-27 17:21:05,389 DEBUG [main] cache:45 - Couldn't find template in cache for "v3html/test-view/v3-html-test-view-charts.ftl"("en", UTF-8, parsed); will try to load it.
-2022-12-27 17:21:05,390 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/test-view/v3-html-test-view-charts_en.ftl"): Not found
-2022-12-27 17:21:05,390 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/test-view/v3-html-test-view-charts.ftl"): Found
-2022-12-27 17:21:05,391 DEBUG [main] cache:45 - Loading template for "v3html/test-view/v3-html-test-view-charts.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/PC.DESKTOP-Q8L0TS6/.m2/repository/com/aventstack/extentreports/4.0.6/extentreports-4.0.6.jar!/com/aventstack/extentreports/view/v3html/test-view/v3-html-test-view-charts.ftl"
-2022-12-27 17:21:05,412 DEBUG [main] cache:45 - Couldn't find template in cache for "v3html/test-view/v3-html-standard.ftl"("en", UTF-8, parsed); will try to load it.
-2022-12-27 17:21:05,413 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/test-view/v3-html-standard_en.ftl"): Not found
-2022-12-27 17:21:05,415 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/test-view/v3-html-standard.ftl"): Found
-2022-12-27 17:21:05,416 DEBUG [main] cache:45 - Loading template for "v3html/test-view/v3-html-standard.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/PC.DESKTOP-Q8L0TS6/.m2/repository/com/aventstack/extentreports/4.0.6/extentreports-4.0.6.jar!/com/aventstack/extentreports/view/v3html/test-view/v3-html-standard.ftl"
-2022-12-27 17:21:05,451 DEBUG [main] cache:45 - Couldn't find template in cache for "v3html/category-view/v3-html-category-view.ftl"("en", UTF-8, parsed); will try to load it.
-2022-12-27 17:21:05,452 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/category-view/v3-html-category-view_en.ftl"): Not found
-2022-12-27 17:21:05,453 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/category-view/v3-html-category-view.ftl"): Found
-2022-12-27 17:21:05,454 DEBUG [main] cache:45 - Loading template for "v3html/category-view/v3-html-category-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/PC.DESKTOP-Q8L0TS6/.m2/repository/com/aventstack/extentreports/4.0.6/extentreports-4.0.6.jar!/com/aventstack/extentreports/view/v3html/category-view/v3-html-category-view.ftl"
-2022-12-27 17:21:05,462 DEBUG [main] cache:45 - Couldn't find template in cache for "v3html/exception-view/v3-html-exception-view.ftl"("en", UTF-8, parsed); will try to load it.
-2022-12-27 17:21:05,463 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/exception-view/v3-html-exception-view_en.ftl"): Not found
-2022-12-27 17:21:05,464 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/exception-view/v3-html-exception-view.ftl"): Found
-2022-12-27 17:21:05,467 DEBUG [main] cache:45 - Loading template for "v3html/exception-view/v3-html-exception-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/PC.DESKTOP-Q8L0TS6/.m2/repository/com/aventstack/extentreports/4.0.6/extentreports-4.0.6.jar!/com/aventstack/extentreports/view/v3html/exception-view/v3-html-exception-view.ftl"
-2022-12-27 17:21:05,472 DEBUG [main] cache:45 - Couldn't find template in cache for "v3html/author-view/v3-html-author-view.ftl"("en", UTF-8, parsed); will try to load it.
-2022-12-27 17:21:05,475 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/author-view/v3-html-author-view_en.ftl"): Not found
-2022-12-27 17:21:05,478 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/author-view/v3-html-author-view.ftl"): Found
-2022-12-27 17:21:05,480 DEBUG [main] cache:45 - Loading template for "v3html/author-view/v3-html-author-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/PC.DESKTOP-Q8L0TS6/.m2/repository/com/aventstack/extentreports/4.0.6/extentreports-4.0.6.jar!/com/aventstack/extentreports/view/v3html/author-view/v3-html-author-view.ftl"
-2022-12-27 17:21:05,488 DEBUG [main] cache:45 - Couldn't find template in cache for "v3html/dashboard-view/v3-html-dashboard-view.ftl"("en", UTF-8, parsed); will try to load it.
-2022-12-27 17:21:05,490 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/dashboard-view/v3-html-dashboard-view_en.ftl"): Not found
-2022-12-27 17:21:05,491 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/dashboard-view/v3-html-dashboard-view.ftl"): Found
-2022-12-27 17:21:05,491 DEBUG [main] cache:45 - Loading template for "v3html/dashboard-view/v3-html-dashboard-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/PC.DESKTOP-Q8L0TS6/.m2/repository/com/aventstack/extentreports/4.0.6/extentreports-4.0.6.jar!/com/aventstack/extentreports/view/v3html/dashboard-view/v3-html-dashboard-view.ftl"
-2022-12-27 17:21:05,521 DEBUG [main] cache:45 - Couldn't find template in cache for "v3html/logs-view/v3-html-testrunner-logs-view.ftl"("en", UTF-8, parsed); will try to load it.
-2022-12-27 17:21:05,522 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/logs-view/v3-html-testrunner-logs-view_en.ftl"): Not found
-2022-12-27 17:21:05,523 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/logs-view/v3-html-testrunner-logs-view.ftl"): Found
-2022-12-27 17:21:05,524 DEBUG [main] cache:45 - Loading template for "v3html/logs-view/v3-html-testrunner-logs-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/PC.DESKTOP-Q8L0TS6/.m2/repository/com/aventstack/extentreports/4.0.6/extentreports-4.0.6.jar!/com/aventstack/extentreports/view/v3html/logs-view/v3-html-testrunner-logs-view.ftl"
-2022-12-27 17:21:05,534 DEBUG [main] cache:45 - Couldn't find template in cache for "v3html/v3-html-index.ftl"("en", UTF-8, parsed); will try to load it.
-2022-12-27 17:21:05,535 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/v3-html-index_en.ftl"): Not found
-2022-12-27 17:21:05,536 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/v3-html-index.ftl"): Found
-2022-12-27 17:21:05,536 DEBUG [main] cache:45 - Loading template for "v3html/v3-html-index.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/PC.DESKTOP-Q8L0TS6/.m2/repository/com/aventstack/extentreports/4.0.6/extentreports-4.0.6.jar!/com/aventstack/extentreports/view/v3html/v3-html-index.ftl"
-2022-12-27 17:21:05,548 DEBUG [main] cache:45 - Couldn't find template in cache for "v3html/v3-html-head.ftl"("en", UTF-8, parsed); will try to load it.
-2022-12-27 17:21:05,550 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/v3-html-head_en.ftl"): Not found
-2022-12-27 17:21:05,551 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/v3-html-head.ftl"): Found
-2022-12-27 17:21:05,551 DEBUG [main] cache:45 - Loading template for "v3html/v3-html-head.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/PC.DESKTOP-Q8L0TS6/.m2/repository/com/aventstack/extentreports/4.0.6/extentreports-4.0.6.jar!/com/aventstack/extentreports/view/v3html/v3-html-head.ftl"
-2022-12-27 17:21:05,556 DEBUG [main] cache:45 - Couldn't find template in cache for "v3html/v3-html-nav.ftl"("en", UTF-8, parsed); will try to load it.
-2022-12-27 17:21:05,557 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/v3-html-nav_en.ftl"): Not found
-2022-12-27 17:21:05,557 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/v3-html-nav.ftl"): Found
-2022-12-27 17:21:05,557 DEBUG [main] cache:45 - Loading template for "v3html/v3-html-nav.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/PC.DESKTOP-Q8L0TS6/.m2/repository/com/aventstack/extentreports/4.0.6/extentreports-4.0.6.jar!/com/aventstack/extentreports/view/v3html/v3-html-nav.ftl"
-2022-12-27 17:21:05,568 DEBUG [main] cache:45 - Couldn't find template in cache for "v3html/test-view/v3-html-test-view.ftl"("en", UTF-8, parsed); will try to load it.
-2022-12-27 17:21:05,569 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/test-view/v3-html-test-view_en.ftl"): Not found
-2022-12-27 17:21:05,570 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/test-view/v3-html-test-view.ftl"): Found
-2022-12-27 17:21:05,570 DEBUG [main] cache:45 - Loading template for "v3html/test-view/v3-html-test-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/PC.DESKTOP-Q8L0TS6/.m2/repository/com/aventstack/extentreports/4.0.6/extentreports-4.0.6.jar!/com/aventstack/extentreports/view/v3html/test-view/v3-html-test-view.ftl"
-2022-12-27 17:21:05,588 DEBUG [main] cache:45 - Couldn't find template in cache for "v3html/test-view/v3-html-test-view-charts.ftl"("en", UTF-8, parsed); will try to load it.
-2022-12-27 17:21:05,589 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/test-view/v3-html-test-view-charts_en.ftl"): Not found
-2022-12-27 17:21:05,603 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/test-view/v3-html-test-view-charts.ftl"): Found
-2022-12-27 17:21:05,604 DEBUG [main] cache:45 - Loading template for "v3html/test-view/v3-html-test-view-charts.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/PC.DESKTOP-Q8L0TS6/.m2/repository/com/aventstack/extentreports/4.0.6/extentreports-4.0.6.jar!/com/aventstack/extentreports/view/v3html/test-view/v3-html-test-view-charts.ftl"
-2022-12-27 17:21:05,626 DEBUG [main] cache:45 - Couldn't find template in cache for "v3html/test-view/v3-html-standard.ftl"("en", UTF-8, parsed); will try to load it.
-2022-12-27 17:21:05,627 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/test-view/v3-html-standard_en.ftl"): Not found
-2022-12-27 17:21:05,628 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/test-view/v3-html-standard.ftl"): Found
-2022-12-27 17:21:05,628 DEBUG [main] cache:45 - Loading template for "v3html/test-view/v3-html-standard.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/PC.DESKTOP-Q8L0TS6/.m2/repository/com/aventstack/extentreports/4.0.6/extentreports-4.0.6.jar!/com/aventstack/extentreports/view/v3html/test-view/v3-html-standard.ftl"
-2022-12-27 17:21:05,639 DEBUG [main] cache:45 - Couldn't find template in cache for "v3html/category-view/v3-html-category-view.ftl"("en", UTF-8, parsed); will try to load it.
-2022-12-27 17:21:05,640 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/category-view/v3-html-category-view_en.ftl"): Not found
-2022-12-27 17:21:05,641 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/category-view/v3-html-category-view.ftl"): Found
-2022-12-27 17:21:05,642 DEBUG [main] cache:45 - Loading template for "v3html/category-view/v3-html-category-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/PC.DESKTOP-Q8L0TS6/.m2/repository/com/aventstack/extentreports/4.0.6/extentreports-4.0.6.jar!/com/aventstack/extentreports/view/v3html/category-view/v3-html-category-view.ftl"
-2022-12-27 17:21:05,646 DEBUG [main] cache:45 - Couldn't find template in cache for "v3html/exception-view/v3-html-exception-view.ftl"("en", UTF-8, parsed); will try to load it.
-2022-12-27 17:21:05,648 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/exception-view/v3-html-exception-view_en.ftl"): Not found
-2022-12-27 17:21:05,648 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/exception-view/v3-html-exception-view.ftl"): Found
-2022-12-27 17:21:05,649 DEBUG [main] cache:45 - Loading template for "v3html/exception-view/v3-html-exception-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/PC.DESKTOP-Q8L0TS6/.m2/repository/com/aventstack/extentreports/4.0.6/extentreports-4.0.6.jar!/com/aventstack/extentreports/view/v3html/exception-view/v3-html-exception-view.ftl"
-2022-12-27 17:21:05,654 DEBUG [main] cache:45 - Couldn't find template in cache for "v3html/author-view/v3-html-author-view.ftl"("en", UTF-8, parsed); will try to load it.
-2022-12-27 17:21:05,654 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/author-view/v3-html-author-view_en.ftl"): Not found
-2022-12-27 17:21:05,655 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/author-view/v3-html-author-view.ftl"): Found
-2022-12-27 17:21:05,656 DEBUG [main] cache:45 - Loading template for "v3html/author-view/v3-html-author-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/PC.DESKTOP-Q8L0TS6/.m2/repository/com/aventstack/extentreports/4.0.6/extentreports-4.0.6.jar!/com/aventstack/extentreports/view/v3html/author-view/v3-html-author-view.ftl"
-2022-12-27 17:21:05,662 DEBUG [main] cache:45 - Couldn't find template in cache for "v3html/dashboard-view/v3-html-dashboard-view.ftl"("en", UTF-8, parsed); will try to load it.
-2022-12-27 17:21:05,663 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/dashboard-view/v3-html-dashboard-view_en.ftl"): Not found
-2022-12-27 17:21:05,666 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/dashboard-view/v3-html-dashboard-view.ftl"): Found
-2022-12-27 17:21:05,667 DEBUG [main] cache:45 - Loading template for "v3html/dashboard-view/v3-html-dashboard-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/PC.DESKTOP-Q8L0TS6/.m2/repository/com/aventstack/extentreports/4.0.6/extentreports-4.0.6.jar!/com/aventstack/extentreports/view/v3html/dashboard-view/v3-html-dashboard-view.ftl"
-2022-12-27 17:21:05,688 DEBUG [main] cache:45 - Couldn't find template in cache for "v3html/logs-view/v3-html-testrunner-logs-view.ftl"("en", UTF-8, parsed); will try to load it.
-2022-12-27 17:21:05,689 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/logs-view/v3-html-testrunner-logs-view_en.ftl"): Not found
-2022-12-27 17:21:05,696 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("v3html/logs-view/v3-html-testrunner-logs-view.ftl"): Found
-2022-12-27 17:21:05,698 DEBUG [main] cache:45 - Loading template for "v3html/logs-view/v3-html-testrunner-logs-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/PC.DESKTOP-Q8L0TS6/.m2/repository/com/aventstack/extentreports/4.0.6/extentreports-4.0.6.jar!/com/aventstack/extentreports/view/v3html/logs-view/v3-html-testrunner-logs-view.ftl"
+2022-12-27 22:08:11,877  INFO [main] ExcelData:53 - Reading Excel file
+2022-12-27 22:08:12,535  INFO [main] Driver_Script:22 - Broswer type is chrome
+2022-12-27 22:08:12,840  INFO [main] Driver_Script:32 - Executing - headingtag and Row count is: 8
+2022-12-27 22:08:12,841  INFO [main] Driver_Script:44 - WEB Execution Starting:
+2022-12-27 22:08:12,943  INFO [main] BaseClass:73 - Select the chrome browser
+2022-12-27 22:08:12,952  INFO [main] BaseClass:110 - Executing - Take URL: Launching google chrome browser..
+2022-12-27 22:08:13,312  INFO [main] BaseClass:118 - Execution Type is Headless
+2022-12-27 22:08:31,111  INFO [main] ActionClass:149 - Take URL: Updating the result in excel
+2022-12-27 22:08:31,176  INFO [main] ActionClass:1680 - Executing - Taking ScreenShot method
+2022-12-27 22:08:31,422  INFO [main] ExcelData:220 - Executing - wait: Reading wait time from excel
+2022-12-27 22:08:31,423  INFO [main] ExcelData:223 - Test data is: 3000
+2022-12-27 22:08:31,423  INFO [main] ActionClass:3681 - Executing - Wait method
+2022-12-27 22:08:34,431  INFO [main] ActionClass:149 - wait: Updating the result in excel
+2022-12-27 22:08:34,485  INFO [main] ActionClass:1680 - Executing - Taking ScreenShot method
+2022-12-27 22:08:34,691  INFO [main] ExcelData:232 - Executing - Scenario 1: Reading description from excel
+2022-12-27 22:08:34,743  INFO [main] ExcelData:152 - Executing - click on sitemap: Reading locator value from excel
+2022-12-27 22:08:34,744  INFO [main] ExcelData:155 - Locator value is: //a[text()='Sitemap']
+2022-12-27 22:08:34,744  INFO [main] ActionClass:1216 - Executing - Click method
+2022-12-27 22:08:35,695  INFO [main] ActionClass:149 - click on sitemap: Updating the result in excel
+2022-12-27 22:08:35,761  INFO [main] ActionClass:1680 - Executing - Taking ScreenShot method
+2022-12-27 22:08:36,116  INFO [main] ExcelData:220 - Executing - wait: Reading wait time from excel
+2022-12-27 22:08:36,117  INFO [main] ExcelData:223 - Test data is: 3000
+2022-12-27 22:08:36,117  INFO [main] ActionClass:3681 - Executing - Wait method
+2022-12-27 22:08:39,124  INFO [main] ActionClass:149 - wait: Updating the result in excel
+2022-12-27 22:08:39,180  INFO [main] ActionClass:1680 - Executing - Taking ScreenShot method
+2022-12-27 22:08:39,443  INFO [main] ExcelData:259 - Executing - Verify the number of h1 tags in sitemap page: Reading locator value and test data from excel
+2022-12-27 22:08:39,444  INFO [main] ExcelData:263 - Locator value is: a
+2022-12-27 22:08:39,444  INFO [main] ExcelData:266 - Test data is: h1
+2022-12-27 22:08:39,444  INFO [main] ActionClass:4717 - Executing - Verify the number of h1 tags in sitemap page method

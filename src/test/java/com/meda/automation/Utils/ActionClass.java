@@ -4714,7 +4714,7 @@ public class ActionClass extends BaseClass {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue + " method");
 
-			String tags = null, actual1 = null, actual2 = null, actual3 = null;
+			String tags = null, actual1 = null, actual2 = null;
 			int count = 0, failCount = 0;
 			List<WebElement> allLinks = driver.findElements(By.tagName(LocatorValue));
 			ArrayList<String> hrefs = new ArrayList<String>();
@@ -4797,7 +4797,7 @@ public class ActionClass extends BaseClass {
 			}
 
 			actual =  "Missing "+value+"tag count is:  " + failCount;
-			ExtentTestManager.getTest().log(Status.PASS, LocatorValue + " tags is  " + hrefs);
+			ExtentTestManager.getTest().log(Status.PASS,  "Missing "+value+"tag count is:  " + failCount);
 			mita_Web_writePass();
 
 		} catch (Exception e) {

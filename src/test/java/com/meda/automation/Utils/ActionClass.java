@@ -4515,9 +4515,7 @@ public class ActionClass extends BaseClass {
 				mita_Web_write();
 			} catch (Exception e) {
 				mita_Web_write();
-
 			}
-
 		} catch (Exception e) {
 			mita_Web_write_when_Locator_isnotvalid();
 //			System.err.format("No Element Found to Machint_WebElemenDisplay \t" + e);
@@ -4715,6 +4713,9 @@ public class ActionClass extends BaseClass {
 	public static void mita_headingTags(String LocatorValue, String value) throws Exception {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue + " method");
+
+			String tags = null, actual1 = null, actual2 = null, actual3 = null;
+			int count = 0, failCount = 0;
 			List<WebElement> allLinks = driver.findElements(By.tagName(LocatorValue));
 			ArrayList<String> hrefs = new ArrayList<String>();
 			int linkCount = allLinks.size();
@@ -4729,21 +4730,22 @@ public class ActionClass extends BaseClass {
 //				System.out.println(texts[t]);
 				t++;
 			}
-			String tags = null, actual1 = null;
-			int count = 0;
+
 			for (String clicks : texts) {
-				
+
 				driver.get(clicks);
 
 				List<WebElement> allTags = driver.findElements(By.tagName(value));
 				int tagCount = allTags.size();
 				System.out.println("Total no of " + value + " are : " + tagCount);
-				ExtentTestManager.getTest().log(Status.PASS, "Total no of " + value + " are : " + tagCount);
+//				ExtentTestManager.getTest().log(Status.PASS, "Total no of " + value + " are : " + tagCount);
 
 				if (tagCount == 0) {
-					System.out.println("Missing " + LocatorValue + " tag");
-					actual1 = "Missing " + LocatorValue + " tag";
-					ExtentTestManager.getTest().log(Status.ERROR, "Missing " + LocatorValue + " tag");
+					System.out.println("Missing " + value + " tag");
+					actual2 = "Missing " + value + " tag";
+					ExtentTestManager.getTest().log(Status.ERROR, "Missing " + value + " tag");
+					failCount = failCount+1;
+					hrefs.add(actual2);
 				} else {
 					for (WebElement tag : allTags) {
 						tags = tag.getText();
@@ -4751,6 +4753,7 @@ public class ActionClass extends BaseClass {
 						hrefs.add(tags);
 					}
 				}
+
 				inputFile = new FileInputStream(new File(Runner.filePath));
 				XSSFWorkbook workbook = new XSSFWorkbook(inputFile);
 				String sheetname = "tags";
@@ -4768,21 +4771,32 @@ public class ActionClass extends BaseClass {
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
-				actual1 = "h1 tags is  " + tags;
+
+				actual1 = "links is " + clicks;
 				System.out.println(actual1);
+				actual2 = value+" tag is " + hrefs;
+				System.out.println(actual2);
+				
 				Row row = sheet.createRow(count);
 				Cell searchText2 = row.createCell(0);
 				searchText2.setCellValue(actual1);
+
+				Cell searchText3 = row.createCell(1);
+				searchText3.setCellValue(actual2);
+
+//				Cell searchText4 = row.createCell(2);
+//				searchText4.setCellValue(actual3);
 
 				outFile = new FileOutputStream(new File(Runner.filePath));
 				workbook.write(outFile);
 				inputFile.close();
 				outFile.close();
+				hrefs.clear();
+				
 				count = count + 1;
-//				driver.navigate().back();
 			}
 
-//			actual = LocatorValue + " tags is  " + ar;
+			actual =  "Missing "+value+"tag count is:  " + failCount;
 			ExtentTestManager.getTest().log(Status.PASS, LocatorValue + " tags is  " + hrefs);
 			mita_Web_writePass();
 

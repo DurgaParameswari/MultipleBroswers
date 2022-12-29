@@ -22,6 +22,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.sql.Driver;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -66,6 +68,9 @@ import org.openqa.selenium.interactions.PointerInput.Kind;
 import org.openqa.selenium.interactions.PointerInput.MouseButton;
 import org.openqa.selenium.interactions.PointerInput.Origin;
 import org.openqa.selenium.interactions.Sequence;
+import org.openqa.selenium.logging.LogEntries;
+import org.openqa.selenium.logging.LogEntry;
+import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -2749,7 +2754,7 @@ public class ActionClass extends BaseClass {
 	public void Machint_Mobile_switchToFrame(String ParentFrame, String ChildFrame) throws IOException {
 		try {
 			logger.info("Executing - switchToFrame method");
-			mobiledriver.switchTo().frame(ParentFrame).switchTo().frame(ChildFrame);
+			driver.switchTo().frame(ParentFrame).switchTo().frame(ChildFrame);
 			mita_Mobile_write();
 		} catch (NoSuchFrameException e) {
 			mita_Mobile_write_when_Locator_isnotvalid();
@@ -2769,7 +2774,7 @@ public class ActionClass extends BaseClass {
 	public static void Machint_Mobile_defaultFrame() throws IOException {
 		try {
 			logger.info("Executing - defaultFrame method");
-			mobiledriver.switchTo().defaultContent();
+			driver.switchTo().defaultContent();
 			mita_Mobile_write();
 		} catch (Exception e) {
 			mita_Mobile_write_when_Locator_isnotvalid();
@@ -2779,17 +2784,17 @@ public class ActionClass extends BaseClass {
 	}
 
 	// Move to child window function
-	public static void Machint_Mobile_moveToChildWindow() throws IOException, InterruptedException {
+	public static void Machint_web_moveToChildWindow() throws IOException, InterruptedException {
 		try {
 			logger.info("Executing - moveToChildWindow method");
-			Parent = mobiledriver.getWindowHandle();
-			Set<String> s = mobiledriver.getWindowHandles();
+			Parent = driver.getWindowHandle();
+			Set<String> s = driver.getWindowHandles();
 			Iterator<String> I1 = s.iterator();
 
 			while (I1.hasNext()) {
 				String child_window = I1.next();
 				if (!Parent.equals(child_window)) {
-					mobiledriver.switchTo().window(child_window);
+					driver.switchTo().window(child_window);
 					mita_Mobile_write();
 				}
 			}
@@ -2798,14 +2803,13 @@ public class ActionClass extends BaseClass {
 			System.out.println("No frame unable Machint_defaultframe \t" + e.getStackTrace());
 			logger.warn("Unable to execute the moveToChildWindow method \t" + e.getMessage());
 		}
-
 	}
 
 	// Move to parent window function
 	public static void Machint_Mobile_moveToParentWindow() throws IOException, InterruptedException {
 		try {
 			logger.info("Executing - moveToParentWindow method");
-			mobiledriver.switchTo().window(Parent);
+			driver.switchTo().window(Parent);
 			mita_Mobile_write();
 		} catch (Exception e) {
 			mita_Mobile_write_when_Locator_isnotvalid();
@@ -2818,14 +2822,14 @@ public class ActionClass extends BaseClass {
 	public static void Machint_Mobile_closeWindow() throws IOException {
 		try {
 			logger.info("Executing - closetWindow method");
-			Parent = mobiledriver.getWindowHandle();
-			Set<String> s = mobiledriver.getWindowHandles();
+			Parent = driver.getWindowHandle();
+			Set<String> s = driver.getWindowHandles();
 			Iterator<String> I1 = s.iterator();
 
 			while (I1.hasNext()) {
 				String child_window = I1.next();
 				if (!Parent.equals(child_window)) {
-					mobiledriver.close();
+					driver.close();
 				}
 			}
 		} catch (Exception e) {
@@ -4744,7 +4748,7 @@ public class ActionClass extends BaseClass {
 					System.out.println("Missing " + value + " tag");
 					actual2 = "Missing " + value + " tag";
 					ExtentTestManager.getTest().log(Status.ERROR, "Missing " + value + " tag");
-					failCount = failCount+1;
+					failCount = failCount + 1;
 					hrefs.add(actual2);
 				} else {
 					for (WebElement tag : allTags) {
@@ -4773,8 +4777,8 @@ public class ActionClass extends BaseClass {
 				}
 
 				actual1 = "links is " + clicks;
-				actual2 = value+" tag is " + hrefs;
-				
+				actual2 = value + " tag is " + hrefs;
+
 				Row row = sheet.createRow(count);
 				Cell searchText2 = row.createCell(0);
 				searchText2.setCellValue(actual1);
@@ -4787,12 +4791,11 @@ public class ActionClass extends BaseClass {
 				inputFile.close();
 				outFile.close();
 				hrefs.clear();
-				
 				count = count + 1;
 			}
 
-			actual =  "Missing "+value+" tag count is:  " + failCount;
-			ExtentTestManager.getTest().log(Status.PASS,  "Missing "+value+"tag count is:  " + failCount);
+			actual = "Missing " + value + " tag count is:  " + failCount;
+			ExtentTestManager.getTest().log(Status.PASS, "Missing " + value + "tag count is:  " + failCount);
 			mita_Web_writePass();
 
 		} catch (Exception e) {
@@ -4857,16 +4860,15 @@ public class ActionClass extends BaseClass {
 //			ExtentTestManager.getTest().log(Status.ERROR, "Unable to execute the meta tags method \t" + e.getMessage());
 //		}
 //	}
-	
+
 	public static void mita_metaTags(String LocatorType, String LocatorValue, String value) throws Exception {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue + " method");
 			ExtentTestManager.getTest().log(Status.PASS, Driver_Script.Actionvalue + " " + LocatorValue);
-			
-			String tags = null, actual1 = null, actual2 = null;
+
+			String actual1 = null, actual2 = null;
 			int count = 0, failCount = 0;
 			List<WebElement> allLinks = driver.findElements(By.tagName(value));
-			ArrayList<String> hrefs = new ArrayList<String>();
 			int linkCount = allLinks.size();
 
 			System.out.println("Total number of page on the webpage: " + linkCount);
@@ -4883,60 +4885,58 @@ public class ActionClass extends BaseClass {
 			for (String clicks : texts) {
 
 				driver.get(clicks);
-			locator = mita_locator(LocatorType, LocatorValue);
-			List<WebElement> allImg = driver.findElements(locator);
+				locator = mita_locator(LocatorType, LocatorValue);
+				List<WebElement> allImg = driver.findElements(locator);
 
-			int imgsCount = allImg.size();
-			if (allImg.size() == 0) {
-				System.out.println("This page og:image not avialable");
-				actual2 = "This page og:image not avialable";
+				int imgsCount = allImg.size();
+				if (allImg.size() == 0) {
+					System.out.println("Meta is missing");
+					actual2 = "Meta is missing";
 //				ExtentTestManager.getTest().log(Status.ERROR, "This page og:image not avialable");
-				failCount = failCount+1;
-			} else {
-				System.out.println("Total no of og:image Available: " + imgsCount);
-				actual2 = "Total no of og:image Available: " + imgsCount;
+					failCount = failCount + 1;
+				} else {
+					System.out.println("Total no of og:image Available: " + imgsCount);
+					actual2 = "Total no of og:image Available: " + imgsCount;
 //				ExtentTestManager.getTest().log(Status.PASS, "Total no of og:image Available: " + imgsCount);
-			}
-			
-			inputFile = new FileInputStream(new File(Runner.filePath));
-			XSSFWorkbook workbook = new XSSFWorkbook(inputFile);
-			String sheetname = "image";
-			try {
-				sheetname = sheetname.trim();
-				if (sheetname.isEmpty()) {
-					throw new Exception("Sheet name not specified..");
 				}
-				sheet = workbook.getSheet(sheetname);
-				if (sheet != null) {
-					throw new Exception("Sheet Already exist...");
+
+				inputFile = new FileInputStream(new File(Runner.filePath));
+				XSSFWorkbook workbook = new XSSFWorkbook(inputFile);
+				String sheetname = "image";
+				try {
+					sheetname = sheetname.trim();
+					if (sheetname.isEmpty()) {
+						throw new Exception("Sheet name not specified..");
+					}
+					sheet = workbook.getSheet(sheetname);
+					if (sheet != null) {
+						throw new Exception("Sheet Already exist...");
+					}
+					sheet = workbook.createSheet(sheetname);
+					workbook.createSheet(sheetname);
+				} catch (Exception e) {
+					e.printStackTrace();
 				}
-				sheet = workbook.createSheet(sheetname);
-				workbook.createSheet(sheetname);
-			} catch (Exception e) {
-				e.printStackTrace();
+				actual = "Missing meta count is:  " + failCount;
+				actual1 = "links is " + clicks;
+				System.out.println(actual1);
+				System.out.println(actual2);
+
+				Row row = sheet.createRow(count);
+				Cell searchText2 = row.createCell(0);
+				searchText2.setCellValue(actual1);
+
+				Cell searchText3 = row.createCell(1);
+				searchText3.setCellValue(actual2);
+
+				outFile = new FileOutputStream(new File(Runner.filePath));
+				workbook.write(outFile);
+				inputFile.close();
+				outFile.close();
+//			hrefs.clear();
+				count = count + 1;
 			}
 
-			actual1 = "links is " + clicks;
-			System.out.println(actual1);
-//			actual2 = "This page og:image not avialable";;
-			System.out.println(actual2);
-			
-			Row row = sheet.createRow(count);
-			Cell searchText2 = row.createCell(0);
-			searchText2.setCellValue(actual1);
-
-			Cell searchText3 = row.createCell(1);
-			searchText3.setCellValue(actual2);
-
-			outFile = new FileOutputStream(new File(Runner.filePath));
-			workbook.write(outFile);
-			inputFile.close();
-			outFile.close();
-			hrefs.clear();
-			
-			count = count + 1;
-		}
-			
 			mita_Web_writePass();
 		} catch (Exception e) {
 //			System.err.format("No Element Found to perform entering the values \t" + e);
@@ -4945,6 +4945,139 @@ public class ActionClass extends BaseClass {
 			ExtentTestManager.getTest().log(Status.ERROR, "Unable to execute the meta tags method \t" + e.getMessage());
 		}
 	}
-	
-	
+
+	public static void mita_brokenLinks(String LocatorType, String LocatorValue, String value) throws Exception {
+		try {
+			logger.info("Executing - " + Driver_Script.Actionvalue + " method");
+			ExtentTestManager.getTest().log(Status.PASS, Driver_Script.Actionvalue);
+
+			String actual1 = null, actual2 = null;
+			int actual3 = 0;
+			int count = 0, failCount = 0;
+			List<WebElement> allLinks = driver.findElements(By.tagName(LocatorValue));
+			int linkCount = allLinks.size();
+
+			for (int i = 0; i < linkCount; i++) {
+				WebElement element = allLinks.get(i);
+
+				String url = element.getAttribute(value);
+
+				// Sometimes we may face exception "java.net.MalformedURLException". Keep the
+				// code in try catch block to continue the broken link analysis
+				try {
+					// Use URL Class - Create object of the URL Class and pass the urlLink as
+					// parameter
+					URL link = new URL(url);
+					// Create a connection using URL object (i.e., link)
+					HttpURLConnection httpConn = (HttpURLConnection) link.openConnection();
+					// Set the timeout for 2 seconds
+					httpConn.setConnectTimeout(2000);
+					// connect using connect method
+					httpConn.connect();
+					// use getResponseCode() to get the response code.
+					if (httpConn.getResponseCode() == 200) {
+						System.out.println(
+								url + " - " + httpConn.getResponseCode() + "-" + httpConn.getResponseMessage());
+						actual1 = url;
+						actual2 = httpConn.getResponseMessage();
+						actual3 = httpConn.getResponseCode();
+					} else {
+						System.out.println(
+								url + " - " + httpConn.getResponseCode() + "-" + httpConn.getResponseMessage());
+						actual1 = url;
+						actual2 = httpConn.getResponseMessage();
+						actual3 = httpConn.getResponseCode();
+						failCount = failCount + 1;
+					}
+				}
+				// getResponseCode method returns = IOException - if an error occurred
+				// connecting to the server.
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+
+				inputFile = new FileInputStream(new File(Runner.filePath));
+				XSSFWorkbook workbook = new XSSFWorkbook(inputFile);
+				String sheetname = "BrokenLinks";
+				try {
+					sheetname = sheetname.trim();
+					if (sheetname.isEmpty()) {
+						throw new Exception("Sheet name not specified..");
+					}
+					sheet = workbook.getSheet(sheetname);
+					if (sheet != null) {
+						throw new Exception("Sheet Already exist...");
+					}
+					sheet = workbook.createSheet(sheetname);
+					workbook.createSheet(sheetname);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+				actual = "Broken links count is :  " + failCount;
+				System.out.println(actual1);
+
+				Row row = sheet.createRow(count);
+				Cell searchText2 = row.createCell(0);
+				searchText2.setCellValue(actual1);
+
+				Cell searchText3 = row.createCell(1);
+				searchText3.setCellValue(actual2);
+
+				Cell searchText4 = row.createCell(2);
+				searchText4.setCellValue(actual3);
+
+				outFile = new FileOutputStream(new File(Runner.filePath));
+				workbook.write(outFile);
+				inputFile.close();
+				outFile.close();
+				count = count + 1;
+			}
+			mita_Web_writePass();
+		} catch (Exception e) {
+//			System.err.format("No Element Found to perform entering the values \t" + e);
+			mita_Web_write_when_Locator_isnotvalid();
+			logger.warn("Unable to execute the brokenLinks method \t" + e.getMessage());
+			ExtentTestManager.getTest().log(Status.ERROR,
+					"Unable to execute the brokenLinks method \t" + e.getMessage());
+		}
+	}
+
+	public static void mita_getCurrentUrl(String expected) throws Exception {
+		try {
+			logger.info("Executing - " + Driver_Script.Actionvalue);
+
+			actual = driver.getCurrentUrl();
+			System.out.println(actual);
+			if (actual.contains(expected)) {
+				mita_Web_writePass();
+			} else {
+				actual = expected + " missing";
+				mita_Web_ScreenShot();
+				mita_Web_writeFail();
+			}
+		} catch (Exception e) {
+			mita_Web_write_when_Locator_isnotvalid();
+			logger.warn("Unable to execute the getCurrentUrl method \t" + e.getMessage());
+		}
+	}
+
+	public static void Machint_web_consoleLogs() throws Exception {
+		try {
+			logger.info("Executing - " + Driver_Script.Actionvalue);
+			ArrayList<String> ar = new ArrayList<String>();
+			String log = null;
+			LogEntries entry = driver.manage().logs().get(LogType.BROWSER);
+			List<LogEntry> logs = entry.getAll();
+			for (LogEntry L : logs) {
+				log = L.getMessage();
+				System.out.println(L.getMessage());
+				ar.add(log);
+			}
+			actual = log;
+			mita_Web_writePass();
+		} catch (Exception e) {
+			mita_Web_write_when_Locator_isnotvalid();
+			logger.warn("Unable to execute the consoleLogs method \t" + e.getMessage());
+		}
+	}
 }

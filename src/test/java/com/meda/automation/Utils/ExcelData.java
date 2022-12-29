@@ -285,4 +285,33 @@ public class ExcelData extends ExtentTestManager {
 					+ ": Unable to read the locator value and test data from excel " + e.getMessage());
 		}
 	}
+	
+	public static void mita_brokenLinks() {
+		try {
+			logger.info(
+					"Executing - " + Driver_Script.Actionvalue + ": Reading locator value and test data from excel");
+			cell2 = row.getCell(1);
+			LocatorId = cell2.getStringCellValue();
+			logger.info("Locator value is: " + LocatorId);
+			cell6 = row.getCell(2);
+			Entervalue = getCellContentAsString(cell6);
+			logger.info("Test data is: " + Entervalue);
+		} catch (Exception e) {
+			logger.warn("Executing - " + Driver_Script.Actionvalue
+					+ ": Unable to read the locator value and test data from excel " + e.getMessage());
+		}	
+	}
+	
+	public static void mita_getCurrentUrl() {
+		try {
+			logger.info(
+					"Executing - " + Driver_Script.Actionvalue + ": Reading locator value and test data from excel");
+			cell9 = row.getCell(2);
+			expectedValue = cell9.getStringCellValue();
+			logger.info("Test data is: " + expectedValue);
+		} catch (Exception e) {
+			logger.warn("Executing - " + Driver_Script.Actionvalue
+					+ ": Unable to read the locator value and test data from excel " + e.getMessage());
+		}
+}
 }

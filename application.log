@@ -1,7 +1,44 @@
-2022-12-30 13:01:35,697  INFO [main] ExcelData:53 - Reading Excel file
-2022-12-30 13:01:36,739  INFO [main] Driver_Script:22 - Broswer type is chrome
-2022-12-30 13:01:37,331  INFO [main] Driver_Script:32 - Executing - GeneralInsurance and Row count is: 75
-2022-12-30 13:01:37,333  INFO [main] Driver_Script:44 - WEB Execution Starting:
-2022-12-30 13:01:37,668  INFO [main] BaseClass:73 - Select the chrome browser
-2022-12-30 13:01:37,700  INFO [main] BaseClass:110 - Executing - Take URL: Launching google chrome browser..
-2022-12-30 13:01:38,444  INFO [main] BaseClass:118 - Execution Type is Headless
+2022-12-30 13:13:19,318  INFO [main] ExcelData:53 - Reading Excel file
+2022-12-30 13:13:20,276  INFO [main] Driver_Script:22 - Broswer type is chrome
+2022-12-30 13:13:20,855  INFO [main] Driver_Script:32 - Executing - GeneralInsurance and Row count is: 75
+2022-12-30 13:13:20,856  INFO [main] Driver_Script:44 - WEB Execution Starting:
+2022-12-30 13:13:21,106  INFO [main] BaseClass:73 - Select the chrome browser
+2022-12-30 13:13:21,118  INFO [main] BaseClass:110 - Executing - Take URL: Launching google chrome browser..
+2022-12-30 13:13:22,604  INFO [main] BaseClass:118 - Execution Type is Headless
+2022-12-30 13:13:28,011  INFO [main] ActionClass:154 - Take URL: Updating the result in excel
+2022-12-30 13:13:28,286  INFO [main] ActionClass:1685 - Executing - Taking ScreenShot method
+2022-12-30 13:13:28,986  INFO [main] ExcelData:232 - Executing - Scenario 1: Reading description from excel
+2022-12-30 13:13:29,246  INFO [main] ExcelData:136 - Executing - Enter Username: Reading locator value and test data from excel
+2022-12-30 13:13:29,249  INFO [main] ExcelData:140 - Locator value is: //input[@id='un']
+2022-12-30 13:13:29,254  INFO [main] ExcelData:143 - Test data is: TEST_USER_AD
+2022-12-30 13:13:29,255  INFO [main] ActionClass:1202 - Executing - EnterTextField method
+2022-12-30 13:13:29,585  INFO [main] ActionClass:154 - Enter Username: Updating the result in excel
+2022-12-30 13:13:29,852  INFO [main] ActionClass:1685 - Executing - Taking ScreenShot method
+2022-12-30 13:13:30,333  INFO [main] ExcelData:136 - Executing - Enter Password: Reading locator value and test data from excel
+2022-12-30 13:13:30,334  INFO [main] ExcelData:140 - Locator value is: //input[@id='pw']
+2022-12-30 13:13:30,335  INFO [main] ExcelData:143 - Test data is: Machint@123
+2022-12-30 13:13:30,335  INFO [main] ActionClass:1202 - Executing - EnterTextField method
+2022-12-30 13:13:30,914  INFO [main] ActionClass:154 - Enter Password: Updating the result in excel
+2022-12-30 13:13:31,170  INFO [main] ActionClass:1685 - Executing - Taking ScreenShot method
+2022-12-30 13:13:31,404  INFO [main] ExcelData:152 - Executing - Click on Sign in: Reading locator value from excel
+2022-12-30 13:13:31,405  INFO [main] ExcelData:155 - Locator value is: //input[@class='btn primary' and @value='Sign In']
+2022-12-30 13:13:31,405  INFO [main] ActionClass:1221 - Executing - Click method
+2022-12-30 13:13:36,271  INFO [main] ActionClass:154 - Click on Sign in: Updating the result in excel
+2022-12-30 13:13:36,407  INFO [main] ActionClass:1685 - Executing - Taking ScreenShot method
+2022-12-30 13:13:37,168  INFO [main] ExcelData:220 - Executing - wait: Reading wait time from excel
+2022-12-30 13:13:37,170  INFO [main] ExcelData:223 - Test data is: 5000
+2022-12-30 13:13:37,170  INFO [main] ActionClass:3685 - Executing - Wait method
+2022-12-30 13:13:42,173  INFO [main] ActionClass:154 - wait: Updating the result in excel
+2022-12-30 13:13:42,364  INFO [main] ActionClass:1685 - Executing - Taking ScreenShot method
+2022-12-30 13:13:42,945  INFO [main] ExcelData:180 - Executing - Validate HOME text: Reading locator value and test data from excel
+2022-12-30 13:13:42,946  INFO [main] ExcelData:184 - Locator value is: //div[text()='HOME']
+2022-12-30 13:13:42,946  INFO [main] ExcelData:187 - Test data is: HOME
+2022-12-30 13:13:42,947  INFO [main] ActionClass:1407 - Executing - EqualsValidation method
+2022-12-30 13:13:43,008  INFO [main] ActionClass:1685 - Executing - Taking ScreenShot method
+2022-12-30 13:13:43,430  INFO [main] ActionClass:218 - Validate HOME text: Updating the result in excel
+2022-12-30 13:13:43,789  INFO [main] ActionClass:1685 - Executing - Taking ScreenShot method
+2022-12-30 13:13:44,274  INFO [main] ExcelData:180 - Executing - Validate My cases text: Reading locator value and test data from excel
+2022-12-30 13:13:44,275  INFO [main] ExcelData:184 - Locator value is: //div[text()='My Cases']
+2022-12-30 13:13:44,276  INFO [main] ExcelData:187 - Test data is: My Case
+2022-12-30 13:13:44,277  INFO [main] ActionClass:1407 - Executing - EqualsValidation method
+2022-12-30 13:13:44,381  INFO [main] ActionClass:1685 - Executing - Taking ScreenShot method

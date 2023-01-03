@@ -5080,4 +5080,30 @@ public class ActionClass extends BaseClass {
 			logger.warn("Unable to execute the consoleLogs method \t" + e.getMessage());
 		}
 	}
+	
+	
+	public static void mita_web_listbox(String LocatorType, String LocatorValue, String value,String WaitType) throws Exception {
+		try {
+			logger.info("Executing - " + Driver_Script.Actionvalue);
+			locator = mita_locator(LocatorType, LocatorValue);
+			element = driver.findElement(locator);
+			mita_Wait(WaitType);
+			element.click();
+			
+			List<WebElement> allLinks = driver.findElements(By.xpath("//li[@role='option']"));			
+			for(int i=0;i<allLinks.size();i++)
+	          {
+//	            System.out.println(allLinks.get(i).getText());
+	            if(allLinks.get(i).getText().equalsIgnoreCase(value))
+	            {
+	            	allLinks.get(i).click();
+	                break;
+	            }
+	          }		
+			mita_Web_writePass();
+		} catch (Exception e) {
+			mita_Web_write_when_Locator_isnotvalid();
+			logger.warn("Unable to execute the consoleLogs method \t" + e.getMessage());
+		}
+	}
 }

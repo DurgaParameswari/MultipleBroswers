@@ -481,10 +481,13 @@ public class Driver_Script extends ActionClass {
 					mita_getCurrentUrl(expectedValue);
 				} 	else if (Actionvalue.toLowerCase().contains("child window")) {
 					Machint_web_moveToChildWindow();
-				} 
-				
+				}	
 				else if (Actionvalue.toLowerCase().contains("console logs")) {
 					Machint_web_consoleLogs();
+				} 
+				else if(Actionvalue.toLowerCase().contains("listbox")) {
+					Machint_web_listbox();
+					mita_web_listbox("xpath", LocatorId, SelectValue, "visibilityOf");
 				} 
 				else if (Actionvalue.toLowerCase().contains("close")
 						|| Actionvalue.toLowerCase().contains("test case")

@@ -68,7 +68,7 @@ public class ExtentManager {
 	public static String timeStamp() {
 		Date date = new Date();
 		Timestamp ts = new Timestamp(date.getTime());
-		SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd--hh-mm-ss");
 //       System.out.println(formatter.format(ts));
 		return formatter.format(ts);
 	}

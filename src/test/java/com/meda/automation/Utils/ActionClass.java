@@ -1219,12 +1219,12 @@ public class ActionClass extends BaseClass {
 	public static void mita_Click(String LocatorType, String LocatorValue, String WaitType) throws Exception {
 		try {
 			logger.info("Executing - Click method");
-			ExtentTestManager.getTest().log(Status.PASS, Driver_Script.Actionvalue);
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mita_JSHighlight(element);
 			mita_Wait(WaitType);
 			element.click();
+			ExtentTestManager.getTest().log(Status.PASS, Driver_Script.Actionvalue);
 			// Thread.sleep(500);
 			mita_Web_write();
 		} catch (Exception e) {
@@ -1686,7 +1686,7 @@ public class ActionClass extends BaseClass {
 //			reporterLog("Executing - Taking ScreenShot method");
 			TakesScreenshot screenshot = (TakesScreenshot) driver;
 			File src = screenshot.getScreenshotAs(OutputType.FILE);
-			String timestamp = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+			String timestamp = new SimpleDateFormat("yyyy-MM-dd--hh-mm-ss").format(new Date());
 			System.out.println("Step Name is : " + Driver_Script.Actionvalue);
 			try {
 				if (bt[l].equalsIgnoreCase("Chrome")) {
@@ -4542,7 +4542,7 @@ public class ActionClass extends BaseClass {
 	}
 
 	public static String getCurrentTime() {
-		timeStamp = DateTime.now().toString("yyyy-m-dd--HH-mm-ss");
+		timeStamp = DateTime.now().toString("yyyy-MM-dd--hh-mm-ss");
 		return timeStamp;
 	}
 

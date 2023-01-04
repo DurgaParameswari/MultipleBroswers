@@ -481,7 +481,8 @@ public class Driver_Script extends ActionClass {
 					mita_getCurrentUrl(expectedValue);
 				} 	else if (Actionvalue.toLowerCase().contains("child window")) {
 					Machint_web_moveToChildWindow();
-				}	
+				} 
+				
 				else if (Actionvalue.toLowerCase().contains("console logs")) {
 					Machint_web_consoleLogs();
 				} 

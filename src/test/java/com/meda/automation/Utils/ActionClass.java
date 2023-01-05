@@ -5103,7 +5103,7 @@ public class ActionClass extends BaseClass {
 			mita_Web_writePass();
 		} catch (Exception e) {
 			mita_Web_write_when_Locator_isnotvalid();
-			logger.warn("Unable to execute the consoleLogs method \t" + e.getMessage());
+			logger.warn("Unable to execute the listbox method \t" + e.getMessage());
 		}
 	}
 }

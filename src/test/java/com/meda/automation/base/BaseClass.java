@@ -21,7 +21,6 @@ import org.testng.annotations.AfterSuite;
 import com.aventstack.extentreports.Status;
 import com.mavenpackage.Driver_Script;
 import com.mavenpackage.Runner;
-import com.mavenpackage.Runner.runner;
 import com.meda.automation.Utils.ExcelData;
 import com.meda.automation.managers.ExtentTestManager;
 
@@ -47,15 +46,12 @@ public class BaseClass extends ExcelData
 			case "Chrome":
 				initChromeDriver(appURL);
 				break;
-
 			case "Firefox":
 				initFirefoxDriver(appURL);
 				break;
-
 			case "Edge":
 				initEdgeDriver(appURL);
 				break;
-
 			default:
 				System.out.println("browser : " + browserType + " is invalid");
 				logger.warn("browser : " + browserType + " is invalid");
@@ -63,7 +59,6 @@ public class BaseClass extends ExcelData
 		} catch (Exception e) {
 			logger.warn("Executing - " + Driver_Script.Actionvalue + ": Unable to select the " + browserType
 					+ "browser " + e.getMessage());
-
 		}
 		return driver;
 	}
@@ -78,7 +73,6 @@ public class BaseClass extends ExcelData
 				}
 			} catch (Exception e) {
 				logger.info("User not selected Chrome Broswer " + e.getMessage());
-
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Firefox")) {
@@ -86,7 +80,6 @@ public class BaseClass extends ExcelData
 				}
 			} catch (Exception e) {
 				logger.info("User not selected Firefox Broswer " + e.getMessage());
-
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Edge")) {
@@ -94,7 +87,6 @@ public class BaseClass extends ExcelData
 				}
 			} catch (Exception e) {
 				logger.info("User not selected Edge Broswer " + e.getMessage());
-
 			}
 		} catch (Exception e) {
 			logger.warn("Executing - " + Driver_Script.Actionvalue + ": Unable to select the " + bt[l] + " browser "
@@ -110,16 +102,13 @@ public class BaseClass extends ExcelData
 			logger.info("Executing - " + Driver_Script.Actionvalue + ": Launching google chrome browser..");
 			ExtentTestManager.getTest().log(Status.PASS, "Launching google chrome browser..");
 			ChromeOptions chromeOptions = new ChromeOptions();
-
 			WebDriverManager.chromedriver().setup();
 			String executionType = Runner.executionType;
-
 			if (executionType.equalsIgnoreCase("Headless")) {
 				logger.info("Execution Type is " + executionType);
 				ExtentTestManager.getTest().log(Status.PASS, "Execution Type is " + executionType);
 				chromeOptions.addArguments("--window-size=1920,1080");
 				chromeOptions.addArguments("--headless");
-
 				driver = new ChromeDriver(chromeOptions);
 				// maximize window
 				driver.manage().window().maximize();
@@ -133,7 +122,6 @@ public class BaseClass extends ExcelData
 				logger.info("Execution Type is " + executionType);
 				ExtentTestManager.getTest().log(Status.PASS, "Execution Type is " + executionType);
 				driver = new ChromeDriver(chromeOptions);
-
 				// maximize window
 				driver.manage().window().maximize();
 				driver.manage().deleteAllCookies();
@@ -154,7 +142,6 @@ public class BaseClass extends ExcelData
 			prefs.put("profile.default_content_setting_values.notifications", 1);
 			prefs.put("profile.default_content_setting_values.geolocation", 1);
 			chromeOptions.setExperimentalOption("prefs", prefs);
-
 		} catch (Exception e) {
 			logger.warn("Executing - " + Driver_Script.Actionvalue + ": Unable to launch the Chrome browser "
 					+ e.getMessage());
@@ -166,12 +153,9 @@ public class BaseClass extends ExcelData
 	public static void initFirefoxDriver(String appURL) throws Exception {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue + ": Launching Firefox browser..");
-
 			FirefoxOptions firefoxOptions = new FirefoxOptions();
 			WebDriverManager.firefoxdriver().setup();
-//			WebDriverManager.firefoxdriver().driverVersion("107.0.1").setup();
 			String executionType = Runner.executionType;
-
 			if (executionType.equalsIgnoreCase("Headless")) {
 				logger.info("Execution Type is " + executionType);
 				firefoxOptions.addArguments("--window-size=1920,1080");
@@ -205,7 +189,6 @@ public class BaseClass extends ExcelData
 			EdgeOptions edgeOptions = new EdgeOptions();
 			WebDriverManager.edgedriver().setup();
 			String executionType = Runner.executionType;
-
 			if (executionType.equalsIgnoreCase("Headless")) {
 				logger.info("Execution Type is " + executionType);
 				edgeOptions.addArguments("--window-size=1920,1080");
@@ -229,20 +212,18 @@ public class BaseClass extends ExcelData
 		} catch (Exception e) {
 			logger.warn("Executing - " + Driver_Script.Actionvalue + ": Unable to launch the Edge browser"
 					+ e.getMessage());
-
 		}
 	}
 
-//	@AfterSuite
-//	public void Close() {
-//		try {
-//			logger.info("Closing the browser");
-//			driver.quit();
-//		} catch (Exception e) {
-//			logger.error("Not able to Close the Browser --- " + e.getMessage());
-//
-//		}
-//	}
+	@AfterSuite
+	public void Close() {
+		try {
+			logger.info("Closing the browser");
+			driver.quit();
+		} catch (Exception e) {
+			logger.error("Not able to Close the Browser --- " + e.getMessage());
+		}
+	}
 
 	public static AndroidDriver<AndroidElement> setup(String device) throws MalformedURLException {
 		try {
@@ -250,13 +231,11 @@ public class BaseClass extends ExcelData
 			File f = new File(Runner.apkPath);
 			DesiredCapabilities cap = new DesiredCapabilities();
 			System.out.println("Hi");
-
 			if (device.equalsIgnoreCase("Emulator")) {
 				cap.setCapability(MobileCapabilityType.DEVICE_NAME, Runner.deviceName);
 			} else if (device.equalsIgnoreCase("Real")) {
 				cap.setCapability(MobileCapabilityType.DEVICE_NAME, Runner.deviceName);
 			}
-
 			System.out.println("Hi 1");
 			cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Device");
 			cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
@@ -266,16 +245,13 @@ public class BaseClass extends ExcelData
 			cap.setCapability("noSign", true);
 			System.out.println("Hi 2");
 			mobiledriver = new AndroidDriver<AndroidElement>(new URL("http://0.0.0.0:4723/wd/hub"), cap);
-
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			System.out.println("Hi 3");
 			// mita_acceptAlert();
-
 			mobiledriver.closeApp();
 		} catch (Exception e) {
 			logger.warn("Executing - " + Driver_Script.Actionvalue + ": Unable to launch the Andriod driver "
 					+ e.getMessage());
-
 		}
 		return mobiledriver;
 	}

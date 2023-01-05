@@ -149,7 +149,7 @@ public class ActionClass extends BaseClass {
 		return foo;
 	};
 
-	public static void mita_Web_write() throws IOException {
+	public static void mitaWebWrite() throws IOException {
 		try {
 			logger.info(Driver_Script.Actionvalue + ": Updating the result in excel");
 			inputFile = new FileInputStream(new File(Runner.filePath));
@@ -166,13 +166,12 @@ public class ActionClass extends BaseClass {
 					searchText2.setCellStyle(style);
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mita_Web_ScreenShot();
+					mitaWebScreenShot();
 					inputFile.close();
 					outFile.close();
 				}
 			} catch (Exception e) {
 				logger.warn(e.getMessage());
-
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Firefox")) {
@@ -181,13 +180,12 @@ public class ActionClass extends BaseClass {
 					searchText2.setCellStyle(style);
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mita_Web_ScreenShot();
+					mitaWebScreenShot();
 					inputFile.close();
 					outFile.close();
 				}
 			} catch (Exception e) {
 				logger.warn(e.getMessage());
-
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Edge")) {
@@ -196,13 +194,12 @@ public class ActionClass extends BaseClass {
 					searchText2.setCellStyle(style);
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mita_Web_ScreenShot();
+					mitaWebScreenShot();
 					inputFile.close();
 					outFile.close();
 				}
 			} catch (Exception e) {
 				logger.warn(e.getMessage());
-
 			}
 		} catch (FileNotFoundException e) {
 			logger.warn(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
@@ -213,82 +210,62 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void mita_Web_writePass() throws IOException {
+	public static void mitaWebWritePass() throws IOException {
 		try {
 			logger.info(Driver_Script.Actionvalue + ": Updating the result in excel");
 			inputFile = new FileInputStream(new File(Runner.filePath));
 			XSSFWorkbook workbook = new XSSFWorkbook(inputFile);
 			sheet = workbook.getSheet(sheetNames[j]);
-
 			CellStyle style = workbook.createCellStyle();
 			style.setFillForegroundColor(IndexedColors.LIGHT_GREEN.getIndex());
 			style.setFillPattern(CellStyle.SOLID_FOREGROUND);
-
-//			Cell searchText2 = sheet.getRow(k).createCell(4);
-//			searchText2.setCellValue("PASS");
-//			searchText2.setCellStyle(style);
-//
-//			Cell ActualValue = sheet.getRow(k).createCell(3);
-//			ActualValue.setCellValue(ActionClass.actual);
-
 			try {
 				if (bt[l].equalsIgnoreCase("Chrome")) {
 					Cell searchText2 = sheet.getRow(k).createCell(4);
 					searchText2.setCellValue("PASS");
 					searchText2.setCellStyle(style);
-
 					Cell ActualValue = sheet.getRow(k).createCell(3);
 					ActualValue.setCellValue(ActionClass.actual);
-
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mita_Web_ScreenShot();
+					mitaWebScreenShot();
 					inputFile.close();
 					outFile.close();
 				}
-
 			} catch (Exception e) {
 				logger.warn(e.getMessage());
-//				
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Firefox")) {
-
 					Cell searchText2 = sheet.getRow(k).createCell(5);
 					searchText2.setCellValue("PASS");
 					searchText2.setCellStyle(style);
-
 					Cell ActualValue = sheet.getRow(k).createCell(3);
 					ActualValue.setCellValue(ActionClass.actual);
-
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mita_Web_ScreenShot();
+					mitaWebScreenShot();
 					inputFile.close();
 					outFile.close();
 				}
 			} catch (Exception e) {
-				logger.warn(e.getMessage());
-//				
+				logger.warn(e.getMessage());	
 			}
 			try {
 				if (bt[l].equalsIgnoreCase("Edge")) {
 					Cell searchText2 = sheet.getRow(k).createCell(6);
 					searchText2.setCellValue("PASS");
 					searchText2.setCellStyle(style);
-
 					Cell ActualValue = sheet.getRow(k).createCell(3);
 					ActualValue.setCellValue(ActionClass.actual);
-
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mita_Web_ScreenShot();
+					mitaWebScreenShot();
 					inputFile.close();
 					outFile.close();
 				}
 			} catch (Exception e) {
 				logger.warn(e.getMessage());
-
 			}
 		} catch (FileNotFoundException e) {
 			logger.warn(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
@@ -299,10 +276,9 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void mita_Web_writeFail() throws IOException {
+	public static void mitaWebWriteFail() throws IOException {
 		try {
 			logger.info(Driver_Script.Actionvalue + ": Updating the result in excel");
-//			reporterLog(Driver_Script.Actionvalue + ": Updating the result in excel");
 			inputFile = new FileInputStream(new File(Runner.filePath));
 			XSSFWorkbook workbook = new XSSFWorkbook(inputFile);
 			sheet = workbook.getSheet(sheetNames[j]);
@@ -311,25 +287,16 @@ public class ActionClass extends BaseClass {
 			style.setFillForegroundColor(IndexedColors.RED.getIndex());
 			style.setFillPattern(CellStyle.SOLID_FOREGROUND);
 
-//			Cell searchText2 = sheet.getRow(k).createCell(4);
-//			searchText2.setCellValue("FAIL");
-//			searchText2.setCellStyle(style);
-//
-//			Cell ActualValue = sheet.getRow(k).createCell(3);
-//			ActualValue.setCellValue(ActionClass.actual);
-
 			try {
 				if (bt[l].equalsIgnoreCase("Chrome")) {
 					Cell searchText2 = sheet.getRow(k).createCell(4);
 					searchText2.setCellValue("FAIL");
 					searchText2.setCellStyle(style);
-
 					Cell ActualValue = sheet.getRow(k).createCell(3);
 					ActualValue.setCellValue(ActionClass.actual);
-
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mita_Web_ScreenShot();
+					mitaWebScreenShot();
 					inputFile.close();
 					outFile.close();
 				}
@@ -350,7 +317,7 @@ public class ActionClass extends BaseClass {
 
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mita_Web_ScreenShot();
+					mitaWebScreenShot();
 					inputFile.close();
 					outFile.close();
 				}
@@ -369,7 +336,7 @@ public class ActionClass extends BaseClass {
 
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mita_Web_ScreenShot();
+					mitaWebScreenShot();
 					inputFile.close();
 					outFile.close();
 				}
@@ -387,7 +354,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void mita_Web_write_when_Locator_isnotvalid() throws IOException {
+	public static void mitaWebWriteWhenLocatorIsNotValid() throws IOException {
 		try {
 			logger.info(Driver_Script.Actionvalue + ": Updating the result in excel");
 			// mita_writeFail();
@@ -411,7 +378,7 @@ public class ActionClass extends BaseClass {
 
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mita_Web_ScreenShot();
+					mitaWebScreenShot();
 					inputFile.close();
 					outFile.close();
 					k = lastRow + 1;
@@ -432,7 +399,7 @@ public class ActionClass extends BaseClass {
 
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mita_Web_ScreenShot();
+					mitaWebScreenShot();
 					inputFile.close();
 					outFile.close();
 					k = lastRow + 1;
@@ -451,7 +418,7 @@ public class ActionClass extends BaseClass {
 
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mita_Web_ScreenShot();
+					mitaWebScreenShot();
 					inputFile.close();
 					outFile.close();
 					k = lastRow + 1;
@@ -482,7 +449,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void mita_Web_Please_do_Spellcheck() throws IOException {
+	public static void mitaWebPleasedoSpellcheck() throws IOException {
 		try {
 			logger.info(Driver_Script.Actionvalue + ": Updating the result in excel");
 			// mita_writeFail();
@@ -506,7 +473,7 @@ public class ActionClass extends BaseClass {
 
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mita_Web_ScreenShot();
+					mitaWebScreenShot();
 					inputFile.close();
 					outFile.close();
 					k = lastRow + 1;
@@ -526,7 +493,7 @@ public class ActionClass extends BaseClass {
 
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mita_Web_ScreenShot();
+					mitaWebScreenShot();
 					inputFile.close();
 					outFile.close();
 					k = lastRow + 1;
@@ -545,7 +512,7 @@ public class ActionClass extends BaseClass {
 
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mita_Web_ScreenShot();
+					mitaWebScreenShot();
 					inputFile.close();
 					outFile.close();
 					k = lastRow + 1;
@@ -574,7 +541,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void mita_Mobile_write() throws IOException {
+	public static void mitaMobileWrite() throws IOException {
 		try {
 			logger.info(Driver_Script.Actionvalue + ": Updating the result in excel");
 			inputFile = new FileInputStream(new File(Runner.filePath));
@@ -643,7 +610,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void mita_Mobile_writePass() throws IOException {
+	public static void mitaMobileWritePass() throws IOException {
 		try {
 			logger.info(Driver_Script.Actionvalue + ": Updating the result in excel");
 			inputFile = new FileInputStream(new File(Runner.filePath));
@@ -734,7 +701,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void mita_Mobile_writeFail() throws IOException {
+	public static void mitaMobileWriteFail() throws IOException {
 		try {
 			logger.info(Driver_Script.Actionvalue + ": Updating the result in excel");
 			inputFile = new FileInputStream(new File(Runner.filePath));
@@ -762,7 +729,7 @@ public class ActionClass extends BaseClass {
 					ActualValue.setCellValue(ActionClass.actual);
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mita_Mobile_ScreenShot();
+					mitaMobileScreenShot();
 					inputFile.close();
 					outFile.close();
 				}
@@ -781,7 +748,7 @@ public class ActionClass extends BaseClass {
 					ActualValue.setCellValue(ActionClass.actual);
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mita_Mobile_ScreenShot();
+					mitaMobileScreenShot();
 					inputFile.close();
 					outFile.close();
 				}
@@ -799,7 +766,7 @@ public class ActionClass extends BaseClass {
 					ActualValue.setCellValue(ActionClass.actual);
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mita_Mobile_ScreenShot();
+					mitaMobileScreenShot();
 					inputFile.close();
 					outFile.close();
 				}
@@ -824,7 +791,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void mita_Mobile_write_when_Locator_isnotvalid() throws IOException {
+	public static void mitaMobileWriteWhenLocatorIsNotValid() throws IOException {
 		try {
 			logger.info(Driver_Script.Actionvalue + ": Updating the result in excel");
 			// mita_writeFail();
@@ -849,7 +816,7 @@ public class ActionClass extends BaseClass {
 
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mita_Mobile_ScreenShot();
+					mitaMobileScreenShot();
 					inputFile.close();
 					outFile.close();
 					k = lastRow + 1;
@@ -870,7 +837,7 @@ public class ActionClass extends BaseClass {
 
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mita_Mobile_ScreenShot();
+					mitaMobileScreenShot();
 					inputFile.close();
 					outFile.close();
 					k = lastRow + 1;
@@ -890,7 +857,7 @@ public class ActionClass extends BaseClass {
 
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mita_Mobile_ScreenShot();
+					mitaMobileScreenShot();
 					inputFile.close();
 					outFile.close();
 					k = lastRow + 1;
@@ -947,7 +914,7 @@ public class ActionClass extends BaseClass {
 
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mita_Mobile_ScreenShot();
+					mitaMobileScreenShot();
 					inputFile.close();
 					outFile.close();
 					k = lastRow + 1;
@@ -968,7 +935,7 @@ public class ActionClass extends BaseClass {
 
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mita_Mobile_ScreenShot();
+					mitaMobileScreenShot();
 					inputFile.close();
 					outFile.close();
 					k = lastRow + 1;
@@ -988,7 +955,7 @@ public class ActionClass extends BaseClass {
 
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mita_Mobile_ScreenShot();
+					mitaMobileScreenShot();
 					inputFile.close();
 					outFile.close();
 					k = lastRow + 1;
@@ -1064,20 +1031,19 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - EnterTextKey method");
-
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
-			mita_JSHighlight(element);
-			mita_Wait(WaitType);
+			mitaWebJSHighlight(element);
+			mitaWebWait(WaitType);
 			element.click();
 			element.sendKeys(value);
 			Thread.sleep(500);
 			element.sendKeys(Keys.ENTER);
 			Thread.sleep(3000);
-			mita_Web_write();
+			mitaWebWrite();
 		} catch (Exception e) {
 //			System.err.format("No Element Found to perform entering the values \t" + e);
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the EnterTextKey method \t" + e.getMessage());
 		}
 	}
@@ -1089,8 +1055,8 @@ public class ActionClass extends BaseClass {
 
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
-			mita_JSHighlight(element);
-			mita_Wait(WaitType);
+			mitaWebJSHighlight(element);
+			mitaWebWait(WaitType);
 			RestAssured.baseURI = BASE_URL;
 			RequestSpecification request = RestAssured.given();
 			request.header("Appian-API-Key",
@@ -1109,9 +1075,9 @@ public class ActionClass extends BaseClass {
 			// Assert.assertEquals(statusCode, 201);
 			element.clear();
 			element.sendKeys(value);
-			mita_Web_write();
+			mitaWebWrite();
 		} catch (Exception e) {
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to handling the OTP \t" + e);
 			logger.warn("Unable to execute handling otp method \t" + e.getMessage());
 		}
@@ -1124,8 +1090,8 @@ public class ActionClass extends BaseClass {
 			logger.info("Executing - Upload file method");
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
-			mita_JSHighlight(element);
-			mita_Wait(WaitType);
+			mitaWebJSHighlight(element);
+			mitaWebWait(WaitType);
 			element.click();
 			robot = new Robot();
 			robot.setAutoDelay(1000);
@@ -1139,10 +1105,10 @@ public class ActionClass extends BaseClass {
 			robot.setAutoDelay(1000);
 			robot.keyPress(KeyEvent.VK_ENTER);
 			robot.keyRelease(KeyEvent.VK_ENTER);
-			mita_Web_write();
+			mitaWebWrite();
 		} catch (Exception e) {
 			System.err.format("No Element Found to Machint_Robot_uploadFile \t" + e);
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the Upload file method \t" + e.getMessage());
 		}
 	}
@@ -1157,16 +1123,16 @@ public class ActionClass extends BaseClass {
 			String randomNumber = generateAadharNumber(number);
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
-			mita_JSHighlight(element);
-			mita_Wait(WaitType);
+			mitaWebJSHighlight(element);
+			mitaWebWait(WaitType);
 			element.clear();
 			Thread.sleep(1000);
 			element.sendKeys(randomNumber);
 			// Thread.sleep(2000);
-			mita_Web_write();
+			mitaWebWrite();
 		} catch (Exception e) {
 			System.err.format("No Element Found to perform ngvt_Click \t" + e);
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the generaterandomnumber method \t" + e.getMessage());
 		}
 	}
@@ -1178,19 +1144,19 @@ public class ActionClass extends BaseClass {
 
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
-			mita_JSHighlight(element);
+			mitaWebJSHighlight(element);
 			element.click();
-			mita_Wait(WaitType);
+			mitaWebWait(WaitType);
 			// Thread.sleep(1000);
 			element.sendKeys(value);
 			Thread.sleep(1000);
 			Actions act = new Actions(driver);
 			// act.sendKeys(Keys.DOWN).perform();
 			act.sendKeys(Keys.ENTER).perform();
-			mita_Web_write();
+			mitaWebWrite();
 		} catch (Exception e) {
 //			System.err.format("No Element Found to perform AutoSuggestion_Dropdown \t" + e);
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the Auto Suggestion dropdown method \t" + e.getMessage());
 		}
 
@@ -1202,15 +1168,15 @@ public class ActionClass extends BaseClass {
 			logger.info("Executing - EnterTextField method");
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
-			mita_JSHighlight(element);
-			mita_Wait(WaitType);
+			mitaWebJSHighlight(element);
+			mitaWebWait(WaitType);
 			element.clear();
 			element.sendKeys(value);
 			// Thread.sleep(500);
-			mita_Web_write();
+			mitaWebWrite();
 		} catch (Exception e) {
 //			System.err.format("No Element Found to perform ngvt_Click \t" + e);
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the EnterTextField method \t" + e.getMessage());
 
 		}
@@ -1221,14 +1187,14 @@ public class ActionClass extends BaseClass {
 			logger.info("Executing - Click method");
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
-			mita_JSHighlight(element);
-			mita_Wait(WaitType);
+			mitaWebJSHighlight(element);
+			mitaWebWait(WaitType);
 			element.click();
 			ExtentTestManager.getTest().log(Status.PASS, Driver_Script.Actionvalue);
 			// Thread.sleep(500);
-			mita_Web_write();
+			mitaWebWrite();
 		} catch (Exception e) {
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the click method \t" + e.getMessage());
 			ExtentTestManager.getTest().log(Status.ERROR, "Unable to execute the click method \t" + e.getMessage());
 		}
@@ -1242,15 +1208,15 @@ public class ActionClass extends BaseClass {
 
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
-			mita_JSHighlight(element);
-			mita_Wait(WaitType);
+			mitaWebJSHighlight(element);
+			mitaWebWait(WaitType);
 			select = new Select(element);
 			select.selectByValue(text);
 			// Thread.sleep(500);
-			mita_Web_write();
+			mitaWebWrite();
 		} catch (Exception e) {
 //			System.err.format("No Element Found to perform ngvt_Click \t" + e);
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the selectvalue method \t" + e.getMessage());
 
 		}
@@ -1263,15 +1229,15 @@ public class ActionClass extends BaseClass {
 
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
-			mita_JSHighlight(element);
-			mita_Wait(WaitType);
+			mitaWebJSHighlight(element);
+			mitaWebWait(WaitType);
 			select = new Select(element);
 			select.selectByIndex(value);
-			mita_Web_write();
+			mitaWebWrite();
 			// Thread.sleep(500);
 		} catch (Exception e) {
 //			System.err.format("No Element Found to perform ngvt_Click \t" + e);
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the selectIndex method \t" + e.getMessage());
 
 		}
@@ -1284,15 +1250,15 @@ public class ActionClass extends BaseClass {
 
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
-			mita_JSHighlight(element);
-			mita_Wait(WaitType);
+			mitaWebJSHighlight(element);
+			mitaWebWait(WaitType);
 			select = new Select(element);
 			select.selectByVisibleText(text);
-			mita_Web_write();
+			mitaWebWrite();
 			// Thread.sleep(500);
 		} catch (Exception e) {
 //			System.err.format("No Element Found to perform ngvt_Click \t" + e);
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the selectVisibletext method \t" + e.getMessage());
 
 		}
@@ -1310,7 +1276,7 @@ public class ActionClass extends BaseClass {
 				alert.accept();
 				boolFound = true;
 			}
-			mita_Web_write();
+			mitaWebWrite();
 		} catch (Exception e) {
 			boolFound = false;
 			e.printStackTrace();
@@ -1364,44 +1330,44 @@ public class ActionClass extends BaseClass {
 		return boolFound;
 	}
 
-	public static void mita_AssertTitle(String expected) throws IOException, Exception {
+	public static void mitaWebAssertTitle(String expected) throws IOException, Exception {
 		try {
 			logger.info("Executing - AssertTitle method");
 
 			actual = driver.getTitle();
 			Assert.assertEquals(actual, expected);
 			if (actual.equalsIgnoreCase(expected)) {
-				mita_Web_writePass();
+				mitaWebWritePass();
 			} else {
-				mita_Web_ScreenShot();
-				mita_Web_writeFail();
+				mitaWebScreenShot();
+				mitaWebWriteFail();
 			}
 		} catch (Exception e) {
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the Asserttitle method \t" + e.getMessage());
 
 		}
 	}
 
-	public static void mita_AssertEquals(String LocatorType, String LocatorValue, String expectedValue)
+	public static void mitaWebAssertEquals(String LocatorType, String LocatorValue, String expectedValue)
 			throws IOException {
 		try {
 			logger.info("Executing - AssertEquals method");
 
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
-			mita_JSHighlight_for_validation(element);
+			mitaWebJSHighlightForValidation(element);
 			String actualValue = driver.findElement(locator).getText();
 			softAssert.assertEquals(actualValue, expectedValue);
-			mita_Web_writePass();
+			mitaWebWritePass();
 		} catch (Exception e) {
-			mita_Web_writeFail();
+			mitaWebWriteFail();
 			logger.warn("Asserts are not equal \t" + e.getMessage());
 
 		}
 	}
 
-	public static void mita_Equals_Validation(String LocatorType, String LocatorValue, String expected)
+	public static void mitaWebEqualsValidation(String LocatorType, String LocatorValue, String expected)
 			throws IOException {
 		try {
 			logger.info("Executing - EqualsValidation method");
@@ -1412,20 +1378,20 @@ public class ActionClass extends BaseClass {
 
 			if (actual.equalsIgnoreCase(expected)) {
 //				mita_JSHighlight(element);
-				mita_Web_ScreenShot();
-				mita_Web_writePass();
+				mitaWebScreenShot();
+				mitaWebWritePass();
 				ExtentTestManager.getTest().log(Status.PASS, actual + " " + expected + " Correct ");
 			} else {
 //				mita_JSHighlight_for_validation(element);
-				mita_Web_ScreenShot();
-				mita_Web_writeFail();
+				mitaWebScreenShot();
+				mitaWebWriteFail();
 				ExtentTestManager.getTest().log(Status.FAIL, actual + " " + expected + " Incorrect ");
 				ExtentTestManager.getTest().log(Status.FAIL,
 						MarkupHelper.createLabel(Driver_Script.Actionvalue + " - Assertion Failed" + "expected is ["
 								+ expected + "] but found  " + "[" + actual + "]", ExtentColor.RED));
 			}
 		} catch (Exception e) {
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the Equals validation method\t" + e.getMessage());
 
 		}
@@ -1433,19 +1399,19 @@ public class ActionClass extends BaseClass {
 
 	// Get the first value from WEB
 
-	public static void Machint_Web_GetTheFirstValue(String LocatorType, String LocatorValue, String WaitType)
+	public static void mitaWebGetTheFirstValue(String LocatorType, String LocatorValue, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - GettheFirstValue method");
 
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
-			mita_Wait(WaitType);
+			mitaWebWait(WaitType);
 			value1 = element.getText();
-			mita_Web_write();
+			mitaWebWrite();
 		} catch (Exception e) {
 			// System.out.println(e.getMessage());
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 			// System.err.format("No Element Found to get the value \t" + e);
 			logger.warn("Unable to execute the GetFirstValue method \t" + e.getMessage());
 
@@ -1453,112 +1419,112 @@ public class ActionClass extends BaseClass {
 	}
 
 	// Set the first value
-	public static void Machint_Web_SetTheFirstValue(String LocatorType, String LocatorValue, String WaitType)
+	public static void mitaWebSetTheFirstValue(String LocatorType, String LocatorValue, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - SettheFirstValue method");
 
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
-			mita_JSHighlight(element);
-			mita_Wait(WaitType);
+			mitaWebJSHighlight(element);
+			mitaWebWait(WaitType);
 			element.clear();
 			Thread.sleep(1000);
 			sendChar(element, value1);
 			// element.sendKeys(value1);
 			// Thread.sleep(500);
-			mita_Web_write();
+			mitaWebWrite();
 		} catch (Exception e) {
 //			System.err.format("No Element Found to perform ngvt_Click \t" + e);
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the SetFirstValue method \t" + e.getMessage());
 
 		}
 	}
 
-	public static void Machint_Web_GetTheSecondValue(String LocatorType, String LocatorValue, String WaitType)
+	public static void mitaWebGetTheSecondValue(String LocatorType, String LocatorValue, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - gettheSecondValue method");
 
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
-			mita_Wait(WaitType);
+			mitaWebWait(WaitType);
 			value2 = element.getText();
-			mita_Wait(WaitType);
+			mitaWebWait(WaitType);
 		} catch (Exception e) {
 //			System.err.format("No Element Found to perform  \t" + e);
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the gettheSecondValue method \t" + e.getMessage());
 
 		}
 	}
 
-	public static void Machint_Web_SetTheSecondValue(String LocatorType, String LocatorValue, String WaitType)
+	public static void mitaWebSetTheSecondValue(String LocatorType, String LocatorValue, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - settheSecondValue method");
 
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
-			mita_JSHighlight(element);
-			mita_Wait(WaitType);
+			mitaWebJSHighlight(element);
+			mitaWebWait(WaitType);
 			element.clear();
 			Thread.sleep(1000);
 			sendChar(element, value2);
 			// element.sendKeys(value2);
 			// Thread.sleep(500);
-			mita_Web_write();
+			mitaWebWrite();
 		} catch (Exception e) {
 //			System.err.format("No Element Found to perform ngvt_Click \t" + e);
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the setSecondValue method \t" + e.getMessage());
 
 		}
 	}
 
-	public static void Machint_Web_GetTheValueFromApp(String LocatorType, String LocatorValue, String WaitType)
+	public static void mitaWebGetTheValueFromApp(String LocatorType, String LocatorValue, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - GetTheValueFromApp method");
 
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
-			mita_Wait(WaitType);
+			mitaWebWait(WaitType);
 			value3 = element.getAttribute("value");
 			System.out.println(value3 + "place holder");
-			mita_Web_write();
+			mitaWebWrite();
 		} catch (Exception e) {
 //			System.err.format("No Element Found to perform ngvt_Click \t" + e);
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the getValuefromapp method \t" + e.getMessage());
 
 		}
 	}
 
-	public static void Machint_Web_SetThtValueInApp(String LocatorType, String LocatorValue, String WaitType)
+	public static void mitaWebSetThtValueInApp(String LocatorType, String LocatorValue, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - SetThtValueInApp method");
 
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
-			mita_Wait(WaitType);
+			mitaWebWait(WaitType);
 			element.clear();
 			Thread.sleep(1000);
 			sendChar(element, value3);
 			// element.sendKeys(value3);
 			// Thread.sleep(500);
-			mita_Web_write();
+			mitaWebWrite();
 		} catch (Exception e) {
 //			System.err.format("No Element Found to perform ngvt_Click \t" + e);
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the setSecondValue method \t" + e.getMessage());
 
 		}
 	}
 
-	public static void mita_mouseOver(String LocatorValue) throws Exception {
+	public static void mitaWebMouseOver(String LocatorValue) throws Exception {
 		try {
 			logger.info("Executing - mouseOver method");
 
@@ -1567,39 +1533,39 @@ public class ActionClass extends BaseClass {
 			action.moveToElement(element).build().perform();
 		} catch (Exception e) {
 //			System.err.format("No Element Found to perform mouse move \t" + e);
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the mousehower method \t" + e.getMessage());
 
 		}
 	}
 
-	public static void mita_Wait(String WaitType) throws Exception {
+	public static void mitaWebWait(String WaitType) throws Exception {
 		switch (WaitType) {
 		case "visibilityOf":
-			mita_visibilityOf();
+			mitaWebVisibilityOf();
 			break;
 
 		case "visibilityOfAllElements":
-			mita_visibilityOfAllElements();
+			mitaWebVisibilityOfAllElements();
 			break;
 
 		case "elementToBeClickable":
-			mita_elementToBeClickable();
+			mitaWebElementToBeClickable();
 			break;
 
 		case "elementToBeSelected":
-			mita_elementToBeSelected();
+			mitaWebElementToBeSelected();
 			break;
 
 		case "invisibilityOf":
-			mita_invisibilityOf();
+			mitaWebInvisibilityOf();
 
 		default:
 			System.out.println(WaitType + " is invalid");
 		}
 	}
 
-	public static void mita_visibilityOf() throws Exception {
+	public static void mitaWebVisibilityOf() throws Exception {
 		try {
 			wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
 			if (element != null) {
@@ -1612,7 +1578,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void mita_visibilityOfAllElements() throws Exception {
+	public static void mitaWebVisibilityOfAllElements() throws Exception {
 		try {
 			wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
 			if (element != null) {
@@ -1625,7 +1591,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void mita_elementToBeClickable() throws Exception {
+	public static void mitaWebElementToBeClickable() throws Exception {
 		try {
 			wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
 			if (element != null) {
@@ -1638,7 +1604,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void mita_elementToBeSelected() throws Exception {
+	public static void mitaWebElementToBeSelected() throws Exception {
 		try {
 			wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
 			if (element != null) {
@@ -1651,7 +1617,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void mita_invisibilityOf() throws Exception {
+	public static void mitaWebInvisibilityOf() throws Exception {
 		try {
 			wait = new WebDriverWait(mobiledriver, Duration.ofSeconds(1000));
 			if (by != null) {
@@ -1663,7 +1629,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void mita_Mobile_ScreenShot() {
+	public static void mitaMobileScreenShot() {
 		try {
 			logger.info("Executing - Taking ScreenShot method");
 			TakesScreenshot screenshot = (TakesScreenshot) mobiledriver;
@@ -1680,7 +1646,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void mita_Web_ScreenShot() {
+	public static void mitaWebScreenShot() {
 		try {
 			logger.info("Executing - Taking ScreenShot method");
 //			reporterLog("Executing - Taking ScreenShot method");
@@ -1732,34 +1698,34 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void mita_JSHighlight(WebElement ele) {
+	public static void mitaWebJSHighlight(WebElement ele) {
 		if (driver instanceof JavascriptExecutor) {
 			((JavascriptExecutor) driver).executeScript(
 					"arguments[0].setAttribute('style', 'background: skyblue; border: 2px solid yellow;');", ele);
 		}
 	}
 
-	public static void mita_JSHighlight_for_validation(WebElement ele) {
+	public static void mitaWebJSHighlightForValidation(WebElement ele) {
 		if (driver instanceof JavascriptExecutor) {
 			((JavascriptExecutor) driver).executeScript(
 					"arguments[0].setAttribute('style', 'background: skyblue; border: 2px solid red;');", ele);
 		}
 	}
 
-	public static void mita_Frame_webElement(String LocatorType, String LocatorValue, String WaitType)
+	public static void mitaWebFrameWebElement(String LocatorType, String LocatorValue, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - MovetoFrame method");
 
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
-			mita_Wait(WaitType);
+			mitaWebWait(WaitType);
 			driver.switchTo().frame(element);
 			// Thread.sleep(500);
-			mita_Web_write();
+			mitaWebWrite();
 		} catch (Exception e) {
 //			System.err.format("No Element Found to perform mita_Frame \t" + e);
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to handle the Frames \t" + e.getMessage());
 
 		}
@@ -1770,7 +1736,7 @@ public class ActionClass extends BaseClass {
 			logger.info("Executing - defaultFrame method");
 
 			driver.switchTo().defaultContent();
-			mita_Web_write();
+			mitaWebWrite();
 		} catch (Exception e) {
 //			System.out.println("No frame unable mita_defaultframe \t" + e.getStackTrace());
 			logger.warn("Unable to execute the default Frame method \t" + e.getMessage());
@@ -2034,7 +2000,7 @@ public class ActionClass extends BaseClass {
 		try {
 			logger.info("Executing - EnterTextKey method");
 //			reporterLog("Executing - EnterTextKey method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			// Machint_JSHighlight(element);
 			Machint_Mobile_Waits(WaitType);
@@ -2043,9 +2009,9 @@ public class ActionClass extends BaseClass {
 			Thread.sleep(1000);
 			element.sendKeys(Keys.ENTER);
 			Thread.sleep(5000);
-			mita_Mobile_write();
+			mitaWebWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 //			System.err.format("No Element Found to Machint_EnterTextKey \t" + e);
 			logger.warn("Unable to execute the Entertextkey method \t" + e.getMessage());
 //			reporterLog("Unable to execute the Entertextkey method \t" + e.getMessage());
@@ -2057,16 +2023,16 @@ public class ActionClass extends BaseClass {
 			String WaitType) throws Exception {
 		try {
 			logger.info("Executing - EnterTextField method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			// Machint_JSHighlight(element);
 			Machint_Mobile_Waits(WaitType);
 			element.clear();
 			element.sendKeys(value);
 			// Thread.sleep(2000);
-			mita_Mobile_write();
+			mitaWebWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to Machint_Mobile_EnterTextField \t" + e);
 			logger.warn("Unable to execute the Entertextfield method \t" + e.getMessage());
 		}
@@ -2076,14 +2042,14 @@ public class ActionClass extends BaseClass {
 	public static void Machint_Mobile_Click(String LocatorType, String LocatorValue, String WaitType) throws Exception {
 		try {
 			logger.info("Executing - Click method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			Machint_Mobile_Waits(WaitType);
 			element.click();
-			mita_Mobile_write();
+			mitaWebWrite();
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to perform Machint_Mobile_Click \t" + e);
 			logger.warn("Unable to execute the Click method \t" + e.getMessage());
 		}
@@ -2094,14 +2060,14 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - GetTheFirstValue method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			Machint_Mobile_Waits(WaitType);
 			value1 = element.getText();
-			mita_Mobile_write();
+			mitaWebWrite();
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to get the value \t" + e);
 			logger.warn("Unable to execute the GetFirstValue method \t" + e.getMessage());
 		}
@@ -2112,14 +2078,14 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - GetTheSecondValue method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			Machint_Mobile_Waits(WaitType);
 			value2 = element.getText();
-			mita_Mobile_write();
+			mitaWebWrite();
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to get the value \t" + e);
 			logger.warn("Unable to execute the GetSecondValue method \t" + e.getMessage());
 		}
@@ -2131,16 +2097,16 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - SetTheFirstValue method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			// Machint_JSHighlight(element);
 			Machint_Mobile_Waits(WaitType);
 			element.clear();
 			element.sendKeys(value1);
 			// Thread.sleep(2000);
-			mita_Mobile_write();
+			mitaWebWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to set the value \t" + e);
 			logger.warn("Unable to execute the SetFirstValue method \t" + e.getMessage());
 		}
@@ -2152,16 +2118,16 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - SetTheSecondValue method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			// Machint_JSHighlight(element);
 			Machint_Mobile_Waits(WaitType);
 			element.clear();
 			element.sendKeys(value2);
 			// Thread.sleep(2000);
-			mita_Mobile_write();
+			mitaWebWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to set the value \t" + e);
 			logger.warn("Unable to execute the SetSecondValue method \t" + e.getMessage());
 		}
@@ -2172,16 +2138,16 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - Context click method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			Machint_JSHighlight(element);
 			Machint_Mobile_Waits(WaitType);
 			action = new Actions(mobiledriver);
 			action.contextClick(element).build().perform();
 			Thread.sleep(1000);
-			mita_Mobile_write();
+			mitaWebWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to perform Machint_DoubleClick \t" + e);
 			logger.warn("Unable to execute the contextclick method \t" + e.getMessage());
 		}
@@ -2192,16 +2158,16 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - double click method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			Machint_JSHighlight(element);
 			Machint_Mobile_Waits(WaitType);
 			action = new Actions(mobiledriver);
 			action.moveToElement(element).doubleClick().build().perform();
 			Thread.sleep(1000);
-			mita_Mobile_write();
+			mitaMobileWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to perform Machint_DoubleClick \t" + e);
 			logger.warn("Unable to execute the doubleclick method \t" + e.getMessage());
 		}
@@ -2213,16 +2179,16 @@ public class ActionClass extends BaseClass {
 		boolean flag = false;
 		try {
 			logger.info("Executing - DragandDrop method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			action = new Actions(mobiledriver);
 			action.dragAndDropBy(element, x, y).build().perform();
 			flag = true;
-			mita_Mobile_write();
+			mitaMobileWrite();
 			return flag;
 
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the DragandDrop method \t" + e.getMessage());
 			return false;
 
@@ -2235,16 +2201,16 @@ public class ActionClass extends BaseClass {
 		try {
 			logger.info("Executing - ClickAndHold method");
 			action = new Actions(mobiledriver);
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			action.clickAndHold(element).build().perform();
 			Machint_JSHighlight(element);
 			Machint_Mobile_Waits(WaitType);
 			element.click();
 			Thread.sleep(3000);
-			mita_Mobile_write();
+			mitaMobileWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to perform Machint_Mobile_ClickAndHoldAction\t" + e);
 			logger.warn("Unable to execute the ClickAndHold method \t" + e.getMessage());
 		}
@@ -2255,16 +2221,16 @@ public class ActionClass extends BaseClass {
 			String WaitType) throws Exception {
 		try {
 			logger.info("Executing - selectValue method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			// Machint_JSHighlight(element);
 			Machint_Mobile_Waits(WaitType);
 			select = new Select(element);
 			select.selectByValue(text);
 			Thread.sleep(2000);
-			mita_Mobile_write();
+			mitaMobileWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to Machint_selectValue \t" + e);
 			logger.warn("Unable to execute the selectValue method \t" + e.getMessage());
 		}
@@ -2275,16 +2241,16 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - selectIndex method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			// Machint_JSHighlight(element);
 			Machint_Mobile_Waits(WaitType);
 			select = new Select(element);
 			select.selectByIndex(value);
 			Thread.sleep(2000);
-			mita_Mobile_write();
+			mitaMobileWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to Machint_selectIndex \t" + e);
 			logger.warn("Unable to execute the selectIndex method \t" + e.getMessage());
 		}
@@ -2295,7 +2261,7 @@ public class ActionClass extends BaseClass {
 			String WaitType) throws Exception {
 		try {
 			logger.info("Executing - selectVisibleText method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			System.out.println(locator);
 			element = mobiledriver.findElement(locator);
 			System.out.println(element);
@@ -2305,9 +2271,9 @@ public class ActionClass extends BaseClass {
 			System.out.println(select);
 			select.selectByVisibleText(text);
 			Thread.sleep(2000);
-			mita_Mobile_write();
+			mitaMobileWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to Machint_selectVisibleText \t" + e);
 			logger.warn("Unable to execute the selectVisibletext method \t" + e.getMessage());
 		}
@@ -2318,7 +2284,7 @@ public class ActionClass extends BaseClass {
 			String WaitType) throws Exception {
 		try {
 			logger.info("Executing - getdropdownOptions method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			// Machint_JSHighlight(element);
 			Machint_Mobile_Waits(WaitType);
@@ -2326,9 +2292,9 @@ public class ActionClass extends BaseClass {
 			List<WebElement> dropdownOptions = select.getOptions();
 			System.out.println(dropdownOptions.size());
 			Thread.sleep(1000);
-			mita_Mobile_write();
+			mitaMobileWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to Machint_getdropdownOptions \t" + e);
 			logger.warn("Unable to execute the getdropdownOptions method \t" + e.getMessage());
 		}
@@ -2339,16 +2305,16 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - deselectAll method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			Machint_JSHighlight(element);
 			Machint_Mobile_Waits(WaitType);
 			select = new Select(element);
 			select.deselectAll();
 			Thread.sleep(1000);
-			mita_Mobile_write();
+			mitaMobileWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to Machint_deselectAll \t" + e);
 			logger.warn("Unable to execute the deselectAll method \t" + e.getMessage());
 		}
@@ -2509,12 +2475,12 @@ public class ActionClass extends BaseClass {
 			if (alert != null) {
 				alert.accept();
 				boolFound = true;
-				mita_Mobile_write();
+				mitaWebWrite();
 			}
 		} catch (Exception e) {
 			boolFound = false;
 			e.printStackTrace();
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the acceptAlert method \t" + e.getMessage());
 		}
 		return boolFound;
@@ -2531,7 +2497,7 @@ public class ActionClass extends BaseClass {
 			if (alert != null) {
 				alert.dismiss();
 				boolFound = true;
-				mita_Mobile_write();
+				mitaWebWrite();
 			}
 		} catch (Exception e) {
 			boolFound = false;
@@ -2555,7 +2521,7 @@ public class ActionClass extends BaseClass {
 				alert.accept();
 				System.out.println(AlertMsg);
 				boolFound = true;
-				mita_Mobile_write();
+				mitaWebWrite();
 			}
 		} catch (Exception e) {
 			boolFound = false;
@@ -2572,7 +2538,7 @@ public class ActionClass extends BaseClass {
 			logger.info("Executing - getTitle method");
 			String Title = mobiledriver.getTitle();
 			Assert.assertEquals(Title, Expected);
-			mita_Mobile_write();
+			mitaWebWrite();
 		} catch (Exception e) {
 			System.err.format("No Element Found to Machint_invisibilityOf \t" + e);
 			logger.warn("Unable to execute the getTitle method \t" + e.getMessage());
@@ -2580,189 +2546,188 @@ public class ActionClass extends BaseClass {
 	}
 
 	// AssertEquals function
-	public static void Machint_Mobile_AssertEquals(String LocatorType, String LocatorValue, String expectedValue)
+	public static void mitaMobileAssertEquals(String LocatorType, String LocatorValue, String expectedValue)
 			throws IOException, InterruptedException {
 		try {
 			logger.info("Executing - AssertEquals method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			System.out.println("locator " + locator);
 			actualValue = mobiledriver.findElement(locator).getText();
 			System.out.println("Actual Value is \t" + actualValue);
 			Assert.assertEquals(actualValue, expectedValue);
-			mita_Mobile_write();
+			mitaMobileWrite();
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 			System.err.format("No Element Found to perform ngvt_Click \t" + e);
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the AssertEquals method \t" + e.getMessage());
 		}
 	}
 
-	public static void Machint_Mobile_Equals_Validation(String LocatorType, String LocatorValue, String expected)
+	public static void mitaMobileEqualsValidation(String LocatorType, String LocatorValue, String expected)
 			throws IOException {
 		try {
 			logger.info("Executing - EqualsValidation method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			actual = mobiledriver.findElement(locator).getText();
 			Assert.assertEquals(actual, expected);
 			if (actual.equalsIgnoreCase(expected)) {
 				Machint_JSHighlight(element);
-				mita_Mobile_writePass();
+				mitaMobileWritePass();
 			} else {
-				mita_JSHighlight_for_validation(element);
-				;
-				mita_Mobile_ScreenShot();
-				mita_Mobile_writeFail();
+				mitaWebJSHighlightForValidation(element);
+				mitaMobileScreenShot();
+				mitaMobileWriteFail();
 			}
 		} catch (Exception e) {
 
 			System.err.format("No Element Found to perform ngvt_Click \t" + e);
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the EqualsValidation method \t" + e.getMessage());
 		}
 
 	}
 
 	// AssertNotEquals function
-	public static boolean Machint_Mobile_NotEquals_Validation(String LocatorType, String LocatorValue, String expected)
+	public static boolean mitaMobileNotEqualsValidation(String LocatorType, String LocatorValue, String expected)
 			throws IOException, InterruptedException {
 		try {
 			logger.info("Executing - NotEqualsValidation method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			String element = mobiledriver.findElement(locator).getText();
 			flag = false;
 			if (element != null) {
 				Assert.assertNotEquals(element, expected);
 				flag = true;
-				mita_Mobile_write();
+				mitaMobileWrite();
 			} else {
 				System.out.println("Actual Value and Expected Value Matched");
 			}
 		} catch (Exception e) {
 
 			System.err.format("No Element Found to perform ngvt_Click \t" + e);
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the NotEqualsValidation method \t" + e.getMessage());
 		}
 		return flag;
 	}
 
 	// AssertTrue function
-	public static void Machint_Mobile_True_Validation(String LocatorType, String LocatorValue)
+	public static void mitaMobileTrueValidation(String LocatorType, String LocatorValue)
 			throws IOException, InterruptedException {
 		try {
 			logger.info("Executing - TrueValidation method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			boolean displayed = element.isDisplayed();
 			Assert.assertTrue(displayed);
 			if (displayed = true) {
 				System.out.println("Element displayed");
-				mita_Mobile_write();
+				mitaMobileWrite();
 			} else {
 				System.out.println("Element not displayed");
 			}
 		} catch (Exception e) {
 			System.err.format("No Element Found to perform ngvt_Click \t" + e);
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the MobileTrueValidation method \t" + e.getMessage());
 		}
 	}
 
 	// AssertFalse function
-	public static void Machint_Mobile_False_Validation(String LocatorType, String LocatorValue)
+	public static void mitaMobileFalseValidation(String LocatorType, String LocatorValue)
 			throws IOException, InterruptedException {
 		try {
 			logger.info("Executing - FalseValidation method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			boolean displayed = element.isDisplayed();
 			Assert.assertFalse(displayed);
 			if (displayed = false) {
 				System.out.println("Element is not displayed");
-				mita_Mobile_write();
+				mitaMobileWrite();
 			} else {
 				System.out.println("Element is displayed");
 			}
 		} catch (Exception e) {
 			System.err.format("No Element Found to perform ngvt_Click \t" + e);
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the FalseValidation method \t" + e.getMessage());
 		}
 	}
 
 	// Move to(Mouse Over) function
-	public static void Machint_mouseHover(String LocatorValue) throws Exception {
+	public static void mitaMobileMouseHover(String LocatorValue) throws Exception {
 		try {
 			logger.info("Executing - MouseHover method");
 			action = new Actions(mobiledriver);
 			element = mobiledriver.findElement(By.xpath(LocatorValue));
 			action.moveToElement(element).build().perform();
-			mita_Mobile_write();
+			mitaWebWrite();
 		} catch (Exception e) {
 			System.err.format("No Element Found to perform ngvt_Click \t" + e);
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the mouseHover method \t" + e.getMessage());
 		}
 	}
 
 	// Frame Index function
-	public static void Machint_Mobile_Frame_index(int index) throws IOException, InterruptedException {
+	public static void mitaMobileFrameIndex(int index) throws IOException, InterruptedException {
 		try {
 			logger.info("Executing - FrameIndex method");
 			mobiledriver.switchTo().frame(index);
-			mita_Mobile_write();
+			mitaWebWrite();
 		} catch (Exception e) {
 			System.err.format("No Element Found to perform ngvt_Click \t" + e);
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the MobileFrameIndex method \t" + e.getMessage());
 		}
 	}
 
 	// Frame Name or Id function
-	public static void Machint_Frame_nameOrId(String nameOrId) throws IOException, InterruptedException {
+	public static void mitaFrameNameOrID(String nameOrId) throws IOException, InterruptedException {
 		try {
 			logger.info("Executing - Framename method");
 			mobiledriver.switchTo().frame(nameOrId);
-			mita_Mobile_write();
+			mitaWebWrite();
 		} catch (Exception e) {
 			System.err.format("No Element Found to perform ngvt_Click \t" + e);
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the FrameID method \t" + e.getMessage());
 		}
 	}
 
 	// Frame WebElement function
-	public static void Machint_Mobile_Frame_webElement(String LocatorType, String LocatorValue, String WaitType)
+	public static void mitaMobileFrameWebElement(String LocatorType, String LocatorValue, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - FrameWebElement method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			Machint_Mobile_Waits(WaitType);
 			mobiledriver.switchTo().frame(element);
 			Thread.sleep(2000);
-			mita_Mobile_write();
+			mitaMobileWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to perform Machint_Frame \t" + e);
 			logger.warn("Unable to execute the handlingFrame method \t" + e.getMessage());
 		}
 	}
 
 	// Parent frame to child frame move function
-	public void Machint_Mobile_switchToFrame(String ParentFrame, String ChildFrame) throws IOException {
+	public void mitaMobileSwitchToFrame(String ParentFrame, String ChildFrame) throws IOException {
 		try {
 			logger.info("Executing - switchToFrame method");
 			driver.switchTo().frame(ParentFrame).switchTo().frame(ChildFrame);
-			mita_Mobile_write();
+			mitaWebWrite();
 		} catch (NoSuchFrameException e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.out
 					.println("Unable to locate frame with id " + ParentFrame + " or " + ChildFrame + e.getStackTrace());
 			logger.warn("Unable to execute the switchToFrame method \t" + e.getMessage());
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.out.println("Unable to navigate to innerframe with id " + ChildFrame
 					+ "which is present on frame with id" + ParentFrame + e.getStackTrace());
 			logger.warn("Unable to execute the switchToFrame method \t" + e.getMessage());
@@ -2771,20 +2736,20 @@ public class ActionClass extends BaseClass {
 	}
 
 	// Frame exit function
-	public static void Machint_Mobile_defaultFrame() throws IOException {
+	public static void mitaMobileDefaultFrame() throws IOException {
 		try {
 			logger.info("Executing - defaultFrame method");
 			driver.switchTo().defaultContent();
-			mita_Mobile_write();
+			mitaWebWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.out.println("No frame unable Machint_defaultframe \t" + e.getStackTrace());
 			logger.warn("Unable to execute the defaultFrame method \t" + e.getMessage());
 		}
 	}
 
 	// Move to child window function
-	public static void Machint_web_moveToChildWindow() throws IOException, InterruptedException {
+	public static void mitaWebMoveToChildWindow() throws IOException, InterruptedException {
 		try {
 			logger.info("Executing - moveToChildWindow method");
 			Parent = driver.getWindowHandle();
@@ -2795,11 +2760,11 @@ public class ActionClass extends BaseClass {
 				String child_window = I1.next();
 				if (!Parent.equals(child_window)) {
 					driver.switchTo().window(child_window);
-					mita_Mobile_write();
+					mitaWebWrite();
 				}
 			}
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.out.println("No frame unable Machint_defaultframe \t" + e.getStackTrace());
 			logger.warn("Unable to execute the moveToChildWindow method \t" + e.getMessage());
 		}
@@ -2810,9 +2775,9 @@ public class ActionClass extends BaseClass {
 		try {
 			logger.info("Executing - moveToParentWindow method");
 			driver.switchTo().window(Parent);
-			mita_Mobile_write();
+			mitaMobileWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.out.println("No frame unable Machint_defaultframe \t" + e.getStackTrace());
 			logger.warn("Unable to execute the moveToParentWindow method \t" + e.getMessage());
 		}
@@ -2833,7 +2798,7 @@ public class ActionClass extends BaseClass {
 				}
 			}
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.out.println("No frame unable Machint_defaultframe \t" + e.getStackTrace());
 			logger.warn("Unable to execute the CloseWindow method \t" + e.getMessage());
 		}
@@ -2892,10 +2857,10 @@ public class ActionClass extends BaseClass {
 
 		try {
 			logger.info("Executing - isCheckBoxSelectedMobile method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			if (mobiledriver.findElement(locator).isSelected()) {
 				flag = true;
-				mita_Mobile_write();
+				mitaMobileWrite();
 			}
 			return flag;
 		} catch (Exception e) {
@@ -2924,12 +2889,12 @@ public class ActionClass extends BaseClass {
 	public static void Machint_Mobile_getText(String LocatorType, String LocatorValue) throws IOException {
 		try {
 			logger.info("Executing - getText method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			String text = element.getText();
 			System.out.println(text);
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.out.println("No frame unable Machint_defaultframe \t" + e.getStackTrace());
 			logger.warn("Unable to execute the getText method \t" + e.getMessage());
 		}
@@ -2939,12 +2904,12 @@ public class ActionClass extends BaseClass {
 	public static void Machint_Mobile_getTagName(String LocatorType, String LocatorValue) throws IOException {
 		try {
 			logger.info("Executing - getTagName method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			String tagName = element.getTagName();
 			System.out.println(tagName);
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.out.println("No frame unable Machint_defaultframe \t" + e.getStackTrace());
 			logger.warn("Unable to execute the getTagName method \t" + e.getMessage());
 		}
@@ -2955,12 +2920,12 @@ public class ActionClass extends BaseClass {
 		try {
 			logger.info("Executing - getWebElement method");
 			Thread.sleep(1000);
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			System.out.println("webelement is " + element);
-			mita_Mobile_write();
+			mitaMobileWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			e.printStackTrace();
 			System.out.print(e.toString());
 			logger.warn("Unable to execute the getWebElement method \t" + e.getMessage());
@@ -2974,13 +2939,13 @@ public class ActionClass extends BaseClass {
 			throws IOException, InterruptedException {
 		try {
 			logger.info("Executing - getAttribute method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			String Attribute_Value = element.getAttribute(sAttribute);
 			System.out.println("Attribute_Value is " + Attribute_Value);
-			mita_Mobile_write();
+			mitaMobileWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Attribute found \t" + e);
 			logger.warn("Unable to execute the getAttributeValue method \t" + e.getMessage());
 		}
@@ -2992,13 +2957,13 @@ public class ActionClass extends BaseClass {
 		try {
 			logger.info("Executing - getcssValue method");
 			Thread.sleep(1000);
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			String cssValue = element.getCssValue(css_Attribute);
 			System.out.println("cssValue is" + cssValue);
-			mita_Mobile_write();
+			mitaMobileWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Attribute found \t" + e);
 			logger.warn("Unable to execute the getCSSValue method \t" + e.getMessage());
 		}
@@ -3008,11 +2973,11 @@ public class ActionClass extends BaseClass {
 			throws IOException {
 		try {
 			logger.info("Executing - Clock method");
-			locator = Machint_Mobile_locator(Locatortype, Locatorvalue);
+			locator = mitaMobilelocator(Locatortype, Locatorvalue);
 			System.out.println(locator);
 			AndroidElement FirstElement = mobiledriver.findElement(locator);
 			System.out.println(FirstElement);
-			locator1 = Machint_Mobile_locator(Locatortype, Locatorvalue1);
+			locator1 = mitaMobilelocator(Locatortype, Locatorvalue1);
 			System.out.println(locator1);
 			AndroidElement SecondElement = mobiledriver.findElement(locator1);
 			System.out.println(SecondElement);
@@ -3021,7 +2986,7 @@ public class ActionClass extends BaseClass {
 			t.longPress(longPressOptions().withElement(element(FirstElement)).withDuration(Duration.ofSeconds(5)))
 					.moveTo(element(SecondElement)).release().perform();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Attribute found \t" + e);
 			logger.warn("Unable to execute the Clock method \t" + e.getMessage());
 		}
@@ -3082,7 +3047,7 @@ public class ActionClass extends BaseClass {
 			action = new Actions(mobiledriver);
 			action.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).perform();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Attribute found \t" + e);
 			logger.warn("Unable to execute the selectAll method \t" + e.getMessage());
 		}
@@ -3093,9 +3058,9 @@ public class ActionClass extends BaseClass {
 			logger.info("Executing - Undo method");
 			action = new Actions(mobiledriver);
 			action.keyDown(Keys.CONTROL).sendKeys("z").keyUp(Keys.CONTROL).perform();
-			mita_Mobile_write();
+			mitaWebWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Attribute found \t" + e);
 			logger.warn("Unable to execute the Undo method \t" + e.getMessage());
 		}
@@ -3106,9 +3071,9 @@ public class ActionClass extends BaseClass {
 			logger.info("Executing - Paste method");
 			action = new Actions(mobiledriver);
 			action.keyDown(Keys.CONTROL).sendKeys("v").keyUp(Keys.CONTROL).perform();
-			mita_Mobile_write();
+			mitaWebWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Attribute found \t" + e);
 			logger.warn("Unable to execute the paste method \t" + e.getMessage());
 		}
@@ -3119,9 +3084,9 @@ public class ActionClass extends BaseClass {
 			logger.info("Executing - Copy method");
 			action = new Actions(mobiledriver);
 			action.keyDown(Keys.CONTROL).sendKeys("c").keyUp(Keys.CONTROL).perform();
-			mita_Mobile_write();
+			mitaWebWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Attribute found \t" + e);
 			logger.warn("Unable to execute the Copy method \t" + e.getMessage());
 		}
@@ -3132,9 +3097,9 @@ public class ActionClass extends BaseClass {
 			logger.info("Executing - redo method");
 			action = new Actions(mobiledriver);
 			action.keyDown(Keys.CONTROL).sendKeys("y").keyUp(Keys.CONTROL).perform();
-			mita_Mobile_write();
+			mitaWebWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Attribute found \t" + e);
 			logger.warn("Unable to execute the redo method \t" + e.getMessage());
 		}
@@ -3145,9 +3110,9 @@ public class ActionClass extends BaseClass {
 			logger.info("Executing - cut method");
 			action = new Actions(mobiledriver);
 			action.keyDown(Keys.CONTROL).sendKeys("x").keyUp(Keys.CONTROL).perform();
-			mita_Mobile_write();
+			mitaWebWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Attribute found \t" + e);
 			logger.warn("Unable to execute the cut method \t" + e.getMessage());
 		}
@@ -3158,9 +3123,9 @@ public class ActionClass extends BaseClass {
 			logger.info("Executing - RefreshPage method");
 			action = new Actions(mobiledriver);
 			action.keyDown(Keys.CONTROL).sendKeys("r").keyUp(Keys.CONTROL).perform();
-			mita_Mobile_write();
+			mitaWebWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Attribute found \t" + e);
 			logger.warn("Unable to execute the refreshPage method \t" + e.getMessage());
 		}
@@ -3171,9 +3136,9 @@ public class ActionClass extends BaseClass {
 			logger.info("Executing - Mobilefind method");
 			action = new Actions(mobiledriver);
 			action.keyDown(Keys.CONTROL).sendKeys("f").keyUp(Keys.CONTROL).perform();
-			mita_Mobile_write();
+			mitaWebWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Attribute found \t" + e);
 			logger.warn("Unable to execute the find method \t" + e.getMessage());
 		}
@@ -3184,9 +3149,9 @@ public class ActionClass extends BaseClass {
 			logger.info("Executing - MobileOpenfile method");
 			action = new Actions(mobiledriver);
 			action.keyDown(Keys.CONTROL).sendKeys("o").keyUp(Keys.CONTROL).perform();
-			mita_Mobile_write();
+			mitaWebWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Attribute found \t" + e);
 			logger.warn("Unable to execute the openFile method \t" + e.getMessage());
 		}
@@ -3198,7 +3163,7 @@ public class ActionClass extends BaseClass {
 			action = new Actions(mobiledriver);
 			action.keyDown(Keys.CONTROL).sendKeys("s").keyUp(Keys.CONTROL).perform();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Attribute found \t" + e);
 			logger.warn("Unable to execute the Save method \t" + e.getMessage());
 		}
@@ -3210,7 +3175,7 @@ public class ActionClass extends BaseClass {
 			action = new Actions(mobiledriver);
 			action.sendKeys(Keys.PAGE_DOWN).build().perform();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Attribute found \t" + e);
 			logger.warn("Unable to execute the PageDown method \t" + e.getMessage());
 		}
@@ -3222,7 +3187,7 @@ public class ActionClass extends BaseClass {
 			action = new Actions(mobiledriver);
 			action.sendKeys(Keys.PAGE_UP).build().perform();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Attribute found \t" + e);
 			logger.warn("Unable to execute the PageUp method \t" + e.getMessage());
 		}
@@ -3232,14 +3197,14 @@ public class ActionClass extends BaseClass {
 	public static void Machint_Mobile_RGBtoHexa(String LocatorType, String LocatorValue) throws IOException {
 		try {
 			logger.info("Executing - RgbtoHexa method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			String Color = element.getCssValue("color");
 			System.out.println(Color);
 			String hex = String.format("#%02x%02x%02x", 0, 0, 0);
 			System.out.println(hex);
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Attribute found \t" + e);
 			logger.warn("Unable to execute the RGBtoHexa method \t" + e.getMessage());
 		}
@@ -3255,12 +3220,12 @@ public class ActionClass extends BaseClass {
 			if (sortOrder.equals("ASC")) {
 				Collections.sort(actual);
 				System.out.println(actual);
-				mita_Mobile_write();
+				mitaWebWrite();
 			} else {
 				Collections.sort(actual, Collections.reverseOrder());
 			}
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			e.printStackTrace();
 			logger.warn("Unable to execute the sorting method \t" + e.getMessage());
 		}
@@ -3272,7 +3237,7 @@ public class ActionClass extends BaseClass {
 			String WaitType) throws Exception, IOException, InterruptedException {
 		try {
 			logger.info("Executing - FileUpload method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			Machint_JSHighlight(element);
 			Machint_Mobile_Waits(WaitType);
@@ -3280,9 +3245,9 @@ public class ActionClass extends BaseClass {
 			Thread.sleep(2000);
 			Runtime.getRuntime().exec(value);
 			Thread.sleep(2000);
-			mita_Mobile_write();
+			mitaMobileWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to Machint_fileUpload \t" + e);
 			logger.warn("Unable to execute the fileUpload method \t" + e.getMessage());
 		}
@@ -3293,17 +3258,17 @@ public class ActionClass extends BaseClass {
 			String WaitType) throws Exception {
 		try {
 			logger.info("Executing - Captcha method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			Machint_JSHighlight(element);
 			Machint_Mobile_Waits(WaitType);
 			String Captcha = element.getText();
 			System.out.println(Captcha);
-			mita_Mobile_write();
+			mitaMobileWrite();
 		}
 
 		catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to perform Machint_Mobile_Click \t" + e);
 			logger.warn("Unable to execute the Captcha method \t" + e.getMessage());
 		}
@@ -3315,7 +3280,7 @@ public class ActionClass extends BaseClass {
 			String WaitType) throws Exception {
 		try {
 			logger.info("Executing - tooltip method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			System.out.println(element);
 			element = mobiledriver.findElement(locator);
 			System.out.println(element);
@@ -3329,9 +3294,9 @@ public class ActionClass extends BaseClass {
 
 			// Compare toll tip text
 			Assert.assertEquals(Value, toolTipText);
-			mita_Mobile_write();
+			mitaMobileWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to perform Machint_Mobile_Click \t" + e);
 			logger.warn("Unable to execute the tooltip method \t" + e.getMessage());
 		}
@@ -3341,7 +3306,7 @@ public class ActionClass extends BaseClass {
 			throws IOException, InterruptedException {
 		try {
 			logger.info("Executing - Scrollintoview method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			element.click();
 			Thread.sleep(500);
@@ -3351,9 +3316,9 @@ public class ActionClass extends BaseClass {
 									+ value + "\").instance(0))");
 			element1.click();
 			// Thread.sleep(500);
-			mita_Mobile_write();
+			mitaMobileWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to perform Machint_Mobile_Scrollintoview \t" + e);
 			logger.warn("Unable to execute the ScrollintoView method \t" + e.getMessage());
 		}
@@ -3363,13 +3328,13 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - SingleTap method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			AndroidElement element = mobiledriver.findElement(locator);
 			new TouchAction((PerformsTouchActions) mobiledriver).tap(tapOptions().withElement(element(element)))
 					.waitAction(waitOptions(Duration.ofMillis(250))).perform();
-			mita_Mobile_write();
+			mitaMobileWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to perform Machint_Mobile_SingleTap \t" + e);
 			logger.warn("Unable to execute the Singletap method \t" + e.getMessage());
 		}
@@ -3382,9 +3347,9 @@ public class ActionClass extends BaseClass {
 			logger.info("Executing - TapByCoordinate method");
 			new TouchAction((PerformsTouchActions) mobiledriver).tap(point(x, y))
 					.waitAction(waitOptions(Duration.ofMillis(250))).perform();
-			mita_Mobile_write();
+			mitaWebWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to perform Machint_Mobile_Tapcoordinate \t" + e);
 			logger.warn("Unable to execute the tapByCorordinate method \t" + e.getMessage());
 		}
@@ -3394,13 +3359,13 @@ public class ActionClass extends BaseClass {
 			throws IOException, InterruptedException {
 		try {
 			logger.info("Executing - PressByElement method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			AndroidElement element = mobiledriver.findElement(locator);
 			new TouchAction((PerformsTouchActions) mobiledriver).press(element(element))
 					.waitAction(waitOptions(Duration.ofSeconds(seconds))).release().perform();
-			mita_Mobile_write();
+			mitaMobileWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to perform Machint_Mobile_PressByElement \t" + e);
 			logger.warn("Unable to execute the PressByElement method \t" + e.getMessage());
 		}
@@ -3412,9 +3377,9 @@ public class ActionClass extends BaseClass {
 			logger.info("Executing - PressByCoordinates method");
 			new TouchAction((PerformsTouchActions) mobiledriver).press(point(x, y))
 					.waitAction(waitOptions(Duration.ofSeconds(seconds))).release().perform();
-			mita_Mobile_write();
+			mitaWebWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to perform Machint_Mobile_PressByCoordinates \t" + e);
 			logger.warn("Unable to execute the PressByCoordinates method \t" + e.getMessage());
 		}
@@ -3434,9 +3399,9 @@ public class ActionClass extends BaseClass {
 			new TouchAction((PerformsTouchActions) mobiledriver).press(point(startPoint, anchor))
 					.waitAction(waitOptions(Duration.ofMillis(1000))).moveTo(point(endPoint, anchor)).release()
 					.perform();
-			mita_Mobile_write();
+			mitaWebWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to perform Machint_Mobile_verticalSwipeByPercentages \t" + e);
 			logger.warn("Unable to execute the HorizontalSwipe method \t" + e.getMessage());
 		}
@@ -3456,9 +3421,9 @@ public class ActionClass extends BaseClass {
 			new TouchAction((PerformsTouchActions) mobiledriver).press(point(anchor, startPoint))
 					.waitAction(waitOptions(Duration.ofMillis(1000))).moveTo(point(anchor, endPoint)).release()
 					.perform();
-			mita_Mobile_write();
+			mitaWebWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to perform Machint_Mobile_verticalSwipeByPercentages \t" + e);
 			logger.warn("Unable to execute the VerticalSwipe method \t" + e.getMessage());
 		}
@@ -3469,7 +3434,7 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - getTooltip method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			// Machint_JSHighlight(element);
 			Machint_Mobile_Waits(WaitType);
@@ -3482,9 +3447,9 @@ public class ActionClass extends BaseClass {
 			System.out.println("The Tooltip Text is: " + toolTipText);
 
 			Assert.assertEquals(Value, toolTipText);
-			mita_Mobile_write();
+			mitaMobileWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to perform Machint_Mobile_getToolTip \t" + e);
 			logger.warn("Unable to execute the getTooltip method \t" + e.getMessage());
 		}
@@ -3494,7 +3459,7 @@ public class ActionClass extends BaseClass {
 			throws IOException, InterruptedException {
 		try {
 			logger.info("Executing - Seekbar method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			WebElement seekBar = mobiledriver.findElement(locator);
 
 			// Get start point of seekbar.
@@ -3519,11 +3484,11 @@ public class ActionClass extends BaseClass {
 			TouchAction act = new TouchAction((PerformsTouchActions) mobiledriver);
 			act.longPress(PointOption.point(startX, startY)).moveTo(PointOption.point(moveToXDirectionAt, startY))
 					.release().perform();
-			mita_Mobile_write();
+			mitaMobileWrite();
 		}
 
 		catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to perform Machint_Mobile_SeekBar \t" + e);
 			logger.warn("Unable to execute the seekbar method \t" + e.getMessage());
 		}
@@ -3535,7 +3500,7 @@ public class ActionClass extends BaseClass {
 
 		try {
 			logger.info("Executing - Sign method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			WebElement sign = mobiledriver.findElement(locator);
 			Point SP = ((MobileElement) sign).getCenter();
 			int x = SP.x;
@@ -3544,11 +3509,11 @@ public class ActionClass extends BaseClass {
 			int newy = (SP.y + 5) / 2;
 			TouchAction builder = new TouchAction((PerformsTouchActions) mobiledriver);
 			builder.press(PointOption.point(x, y)).moveTo(PointOption.point(newx, newy)).perform().release();
-			mita_Mobile_write();
+			mitaMobileWrite();
 		}
 
 		catch (Exception e1) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to perform Machint_Mobile_sign \t" + e1);
 			logger.warn("Unable to execute the Sign method \t" + e1.getMessage());
 		}
@@ -3559,11 +3524,11 @@ public class ActionClass extends BaseClass {
 			String LocatorValue1) throws Exception {
 		try {
 			logger.info("Executing - DragAndDrop method");
-			locator = Machint_Mobile_locator(Locatortype, Locatorvalue);
+			locator = mitaMobilelocator(Locatortype, Locatorvalue);
 			System.out.println(locator);
 			WebElement From = mobiledriver.findElement(locator);
 			System.out.println(From);
-			locator1 = Machint_Mobile_EndLocator(LocatorType1, LocatorValue1);
+			locator1 = mitaMobileEndLocator(LocatorType1, LocatorValue1);
 			System.out.println(locator1);
 			WebElement To = mobiledriver.findElement(locator1);
 			System.out.println(To);
@@ -3573,7 +3538,7 @@ public class ActionClass extends BaseClass {
 			act.dragAndDrop(From, To).build().perform();
 
 		} catch (Exception e1) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to perform Machint_Mobile_sign \t" + e1);
 			logger.warn("Unable to execute the dragandDrop method \t" + e1.getMessage());
 		}
@@ -3584,7 +3549,7 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - DoubleTap method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			AndroidElement Element = mobiledriver.findElement(locator);
 			// Machint_JSHighlight(element);
 			Machint_Mobile_Waits(WaitType);
@@ -3592,10 +3557,10 @@ public class ActionClass extends BaseClass {
 					.waitAction(waitOptions(Duration.ofSeconds(1))).release();
 
 			new MultiTouchAction((PerformsTouchActions) mobiledriver).add(press).perform();
-			mita_Mobile_write();
+			mitaMobileWrite();
 		} catch (Exception e) {
 			System.out.println("not found");
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the doubleTap method \t" + e.getMessage());
 		}
 	}
@@ -3637,7 +3602,7 @@ public class ActionClass extends BaseClass {
 			y = (int) Math.floor(Math.sin(theta) * radius);
 		} catch (Exception e) {
 			System.out.println("not found");
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the getPointCircle method \t" + e.getMessage());
 		}
 		return new Point(origin.x + x, origin.y + y);
@@ -3662,7 +3627,7 @@ public class ActionClass extends BaseClass {
 			((RemoteWebDriver) driver).perform(Arrays.asList(circle));
 		} catch (Exception e) {
 			System.out.println("not found");
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the DrawCircle method \t" + e.getMessage());
 		}
 	}
@@ -3671,7 +3636,7 @@ public class ActionClass extends BaseClass {
 		try {
 			logger.info("Executing - Wait method");
 			Thread.sleep(sleepTime);
-			mita_Mobile_write();
+			mitaWebWrite();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 			logger.warn("Unable to execute the Wait method \t" + e.getMessage());
@@ -3685,7 +3650,7 @@ public class ActionClass extends BaseClass {
 			logger.info("Executing - Wait method");
 //			ExtentTestManager.getTest().log(Status.INFO, Driver_Script.Actionvalue + " "+sleepTime+" Seconds");
 			Thread.sleep(sleepTime);
-			mita_Web_write();
+			mitaWebWrite();
 		} catch (Exception e) {
 			logger.warn("Unable to execute the Wait method \t" + e.getMessage());
 //			reporterLog("Unable to execute the Wait method \t" + e.getMessage());
@@ -3699,7 +3664,7 @@ public class ActionClass extends BaseClass {
 			logger.info("Executing - generateRandomNumber method");
 			int number = Integer.parseInt(value);
 			String randomNumber = generateAadharNumber(number);
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			// Machint_JSHighlight(element);
 			Machint_Mobile_Waits(WaitType);
@@ -3707,9 +3672,9 @@ public class ActionClass extends BaseClass {
 			Thread.sleep(1000);
 			element.sendKeys(randomNumber);
 			// Thread.sleep(2000);
-			mita_Mobile_write();
+			mitaMobileWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to Machint_Mobile_EnterTextField \t" + e);
 			logger.warn("Unable to execute the generaterandomnumber method \t" + e.getMessage());
 		}
@@ -3736,7 +3701,7 @@ public class ActionClass extends BaseClass {
 		try {
 			logger.info("Executing - Seekbar method");
 			Double x = Double.valueOf(number);
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			WebElement seekBar = mobiledriver.findElement(locator);
 
 			// Get start point of seekbar.
@@ -3762,11 +3727,11 @@ public class ActionClass extends BaseClass {
 			act.longPress(PointOption.point(startX, startY)).moveTo(PointOption.point(moveToXDirectionAt, startY))
 					.release().perform();
 			Thread.sleep(1000);
-			mita_Mobile_write();
+			mitaMobileWrite();
 		}
 
 		catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to perform Machint_Mobile_SeekBar \t" + e);
 			logger.warn("Unable to execute the seekbar method \t" + e.getMessage());
 		}
@@ -3777,7 +3742,7 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - Mobile number OTP method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			// Machint_JSHighlight(element);
 			Machint_Mobile_Waits(WaitType);
@@ -3799,16 +3764,16 @@ public class ActionClass extends BaseClass {
 			// Assert.assertEquals(statusCode, 201);
 			element.clear();
 			element.sendKeys(value);
-			mita_Mobile_write();
+			mitaMobileWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to Machint_Mobile_EnterTextField \t" + e);
 			logger.warn("Unable to handling the OTP method \t" + e.getMessage());
 		}
 	}
 
 	// Different type of locators function
-	public static By Machint_Mobile_locator(String locatorType, String LocatorValue) {
+	public static By mitaMobilelocator(String locatorType, String LocatorValue) {
 		switch (locatorType) {
 		case "id":
 			by = By.id(LocatorValue);
@@ -3849,7 +3814,7 @@ public class ActionClass extends BaseClass {
 		return by;
 	}
 
-	public static By Machint_Mobile_EndLocator(String locatorType1, String LocatorValue1) {
+	public static By mitaMobileEndLocator(String locatorType1, String LocatorValue1) {
 		switch (locatorType1) {
 		case "id":
 			by = By.id(LocatorValue1);
@@ -3908,10 +3873,10 @@ public class ActionClass extends BaseClass {
 			action.moveTo(PointOption.point(xOffset = 0, scrollstart));
 			action.release();
 			action.perform();
-			mita_Mobile_write();
+			mitaWebWrite();
 
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to scrollup \t" + e.getMessage());
 			logger.warn("Unable to execute the ScrollUp method \t" + e.getMessage());
 		}
@@ -3929,7 +3894,7 @@ public class ActionClass extends BaseClass {
 	 * mobiledriver.findElement(By.xpath("//android.widget.TextView[@text='1998']"))
 	 * .click();
 	 * 
-	 * } catch (Exception e) { mita_Mobile_write_when_Locator_isnotvalid();
+	 * } catch (Exception e) { mitaMobileWriteWhenLocatorIsNotValid();
 	 * System.err.format("No Element Found to scrollup \t" + e.getMessage());
 	 * logger.warn("Unable to execute the ScrollUp method \t" + e.getMessage()); } }
 	 */
@@ -3938,16 +3903,16 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - ProgressBar method");
-			locator = Machint_Mobile_locator(locatorType, locatorValue);
+			locator = mitaMobilelocator(locatorType, locatorValue);
 			// System.out.println("locator values"+ locator);
 			element = mobiledriver.findElement(locator);
 			// Thread.sleep(20000);
 			System.out.println("element values" + element);
 			Machint_Mobile_Waits(waitType);
 			System.out.println("waittype is" + waitType);
-			mita_Mobile_write();
+			mitaMobileWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to machint_ProgressBar_wait \t" + e);
 			logger.warn("Unable to execute the Progressbar method \t" + e.getMessage());
 		}
@@ -3974,7 +3939,7 @@ public class ActionClass extends BaseClass {
 	 * 
 	 * 
 	 * logger.info("Executing - Scrolldown method"); locator =
-	 * Machint_Mobile_locator(locatorType, locatorValue); //
+	 * mitaMobilelocator(locatorType, locatorValue); //
 	 * System.out.println("locator values"+ locator); element =
 	 * mobiledriver.findElement(locator);
 	 * 
@@ -3989,7 +3954,7 @@ public class ActionClass extends BaseClass {
 	 * 
 	 * 
 	 * 
-	 * mita_Mobile_write(); } catch (Exception e) {
+	 * mitaMobileWrite(); } catch (Exception e) {
 	 * System.err.format("No Element Found to perform Machint_Mobile_scrollDown \t"
 	 * + e.getMessage()); logger.warn("Unable to execute the ScrollDown method \t" +
 	 * e.getMessage()); }
@@ -3997,7 +3962,7 @@ public class ActionClass extends BaseClass {
 	 * }
 	 */
 
-	public static void Machint_Mobile_scrollDown(String text) throws IOException, InterruptedException {
+	public static void mitaMobileScrollDown(String text) throws IOException, InterruptedException {
 		try {
 			logger.info("Executing - ScrollDown method");
 			AndroidElement element = ((FindsByAndroidUIAutomator<AndroidElement>) mobiledriver)
@@ -4005,9 +3970,9 @@ public class ActionClass extends BaseClass {
 							"new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\""
 									+ text + "\").instance(0))");
 			element.isDisplayed();
-			mita_Mobile_write();
+			mitaWebWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to perform Machint_Mobile_Scrollintoview \t" + e);
 			logger.warn("Unable to execute the ScrollintoView method \t" + e.getMessage());
 		}
@@ -4019,21 +3984,21 @@ public class ActionClass extends BaseClass {
 
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
-			mita_JSHighlight(element);
+			mitaWebJSHighlight(element);
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("arguments[0].scrollIntoView();", element);
 			Thread.sleep(1000);
-			mita_Web_write();
+			mitaWebWrite();
 		} catch (Exception e) {
 //			System.err.format("No Element Found to perform entering the values \t" + e);
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the EnterTextKey method \t" + e.getMessage());
 //			reporterLog("Unable to execute the EnterTextKey method \t" + e.getMessage());
 
 		}
 	}
 
-	public static void Machint_Web_GetTheLeadID1(String LocatorType, String LocatorValue, String WaitType)
+	public static void mitaWebGetTheLeadID1(String LocatorType, String LocatorValue, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - GettheLeadId method");
@@ -4042,10 +4007,10 @@ public class ActionClass extends BaseClass {
 			leadID = element.getText();
 			leadID = leadID.substring(9, 13);
 			System.out.println(leadID);
-			mita_Web_write();
+			mitaWebWrite();
 		} catch (Exception e) {
 			System.err.format("No Element Found to perform get the lead \t" + e);
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to get the value \t" + e.getMessage());
 		}
 	}
@@ -4058,17 +4023,17 @@ public class ActionClass extends BaseClass {
 
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
-			mita_JSHighlight(element);
-			mita_Wait(WaitType);
+			mitaWebJSHighlight(element);
+			mitaWebWait(WaitType);
 			element.clear();
 			Thread.sleep(1000);
 			sendChar(element, leadID);
 			// element.sendKeys(leadID);
 			// Thread.sleep(500);
-			mita_Web_write();
+			mitaWebWrite();
 		} catch (Exception e) {
 //			System.err.format("No Element Found to perform get the lead \t" + e);
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to set the value \t" + e.getMessage());
 //			reporterLog("Unable to set the value \t" + e.getMessage());
 		}
@@ -4078,24 +4043,23 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - GettheLeadId method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			leadID = element.getText();
 			leadID = leadID.substring(10, 14);
 			System.out.println(leadID);
-			mita_Mobile_write();
+			mitaMobileWrite();
 		} catch (Exception e) {
 			System.err.format("No Element Found to perform get the lead \t" + e);
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to get the value \t" + e.getMessage());
 		}
 	}
-
-	public static void Machint_Mobile_SetTheLeadId(String locatorType, String locatorValue, String WaitType)
+	public static void mitaMobileSetTheLeadID(String locatorType, String locatorValue, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - SettheFirstValue method");
-			locator = Machint_Mobile_locator(locatorType, locatorValue);
+			locator = mitaMobilelocator(locatorType, locatorValue);
 			Machint_Mobile_Waits(WaitType);
 			element = mobiledriver.findElement(locator);
 			element.clear();
@@ -4103,10 +4067,10 @@ public class ActionClass extends BaseClass {
 			sendChar(element, leadID);
 			// element.sendKeys(leadID);
 			// Thread.sleep(500);
-			mita_Mobile_write();
+			mitaMobileWrite();
 		} catch (Exception e) {
 			System.err.format("No Element Found to perform set the lead \t" + e);
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to get the value \t" + e.getMessage());
 		}
 	}
@@ -4137,20 +4101,20 @@ public class ActionClass extends BaseClass {
 			}
 			leadID = myNumbers.toString();
 			System.out.println(leadID);
-			mita_Web_write();
+			mitaWebWrite();
 		} catch (Exception e) {
 //			System.err.format("No Element Found to perform get the lead \t" + e);
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to get the value \t" + e.getMessage());
 //			reporterLog("Unable to get the value \t" + e.getMessage());
 		}
 	}
 
-	public static void Machint_Mobile_GetTheLeadID(String LocatorType, String LocatorValue, String WaitType)
+	public static void mitaMobileGetTheLeadID(String LocatorType, String LocatorValue, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - GettheLeadId method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			leadID = element.getText();
 			StringBuilder myNumbers = new StringBuilder();
@@ -4160,39 +4124,38 @@ public class ActionClass extends BaseClass {
 				}
 			}
 			leadID = myNumbers.toString();
-			mita_Mobile_write();
+			mitaMobileWrite();
 		} catch (Exception e) {
 			System.err.format("No Element Found to perform get the lead \t" + e);
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to get the value \t" + e.getMessage());
 		}
 	}
 
 	// Enter the char by char
-	public static void Machint_Web_EnterCharacter(String LocatorType, String LocatorValue, String value,
+	public static void mitaWebEnterCharacter(String LocatorType, String LocatorValue, String value,
 			String WaitType) throws Exception {
 		try {
 			logger.info("Executing - EnterCharacter method");
 
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
-			mita_JSHighlight(element);
-			mita_Wait(WaitType);
+			mitaWebJSHighlight(element);
+			mitaWebWait(WaitType);
 			element.clear();
 			sendChar(element, value);
 			// element.sendKeys(leadID);
 			// Thread.sleep(500);
-			mita_Web_write();
+			mitaWebWrite();
 		} catch (Exception e) {
 			System.err.format("No Element Found to perform get the lead \t" + e);
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to set the value \t" + e.getMessage());
 		}
 	}
 
 	// Generate the Mobile number starts with zero
-	public static void Machint_zeroStartsNumber(String LocatorType, String LocatorValue, String value, String WaitType)
-			throws Exception {
+	public static void mitaWebZeroStartsNumber(String LocatorType, String LocatorValue, String value, String WaitType) throws Exception {
 		try {
 			logger.info("Executing - zeroStartsNumber method");
 
@@ -4201,14 +4164,14 @@ public class ActionClass extends BaseClass {
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			// Machint_JSHighlight(element);
-			mita_Wait(WaitType);
+			mitaWebWait(WaitType);
 			element.clear();
 			Thread.sleep(1000);
 			element.sendKeys(randomNumber);
 			// Thread.sleep(2000);
-			mita_Web_write();
+			mitaWebWrite();
 		} catch (Exception e) {
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 //			System.err.format("No Element Found to Machint_zeroStartsNumber \t" + e);
 			logger.warn("Unable to execute the Machint_zeroStartsNumber method \t" + e.getMessage());
 //			reporterLog("Unable to execute the Machint_zeroStartsNumber method \t" + e.getMessage());
@@ -4226,24 +4189,24 @@ public class ActionClass extends BaseClass {
 		return str1;
 	}
 
-	public static void mita_uploadsendkeys(String LocatorType, String LocatorValue, String value) throws Exception {
+	public static void mitaWebUploadSendkeys(String LocatorType, String LocatorValue, String value) throws Exception {
 		try {
 			logger.info("Executing - uploadSendKEys method");
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
-//			mita_Wait(WaitType);
+//			mitaWebWait(WaitType);
 			Thread.sleep(1000);
 			element.sendKeys(value);
-			mita_Web_write();
+			mitaWebWrite();
 		} catch (Exception e) {
 //			System.err.format("No Element Found to perform get the lead \t" + e);
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to set the value \t" + e.getMessage());
 //			reporterLog("Unable to set the value \t" + e.getMessage());
 		}
 	}
 
-	public static void autoIT_fileUpload(String LocatorType, String LocatorValue, String value, String WaitType)
+	public static void mitaWebAutoITFileUpload(String LocatorType, String LocatorValue, String value, String WaitType)
 			throws Exception, IOException, InterruptedException {
 		try {
 			logger.info("Executing - FileUpload method");
@@ -4255,22 +4218,22 @@ public class ActionClass extends BaseClass {
 			Thread.sleep(2000);
 			Runtime.getRuntime().exec(value);
 			Thread.sleep(2000);
-			mita_Mobile_write();
+			mitaWebWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to autoIT_fileUpload \t" + e);
 			logger.warn("Unable to execute the fileUpload method \t" + e.getMessage());
 		}
 	}
 
 	// Generate the Mobile number starts with zero
-	public static void Machint_Mobile_zeroStartsNumber(String LocatorType, String LocatorValue, String value,
+	public static void mitaMobileZeroStartsNumber(String LocatorType, String LocatorValue, String value,
 			String WaitType) throws Exception {
 		try {
 			logger.info("Executing - zeroStartsNumber method");
 			int number = Integer.parseInt(value);
 			String randomNumber = generateNumber(number);
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			// Machint_JSHighlight(element);
 			Machint_Mobile_Waits(WaitType);
@@ -4278,16 +4241,16 @@ public class ActionClass extends BaseClass {
 			Thread.sleep(1000);
 			element.sendKeys(randomNumber);
 			// Thread.sleep(2000);
-			mita_Mobile_write();
+			mitaMobileWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to Machint_Mobile_zeroStartsNumber \t" + e);
 			logger.warn("Unable to execute the zeroStartsNumber method \t" + e.getMessage());
 		}
 	}
 
 	// Set the Lead id
-	public static void Machint_Web_SetTheOTP(String LocatorType, String LocatorValue, String WaitType)
+	public static void mitaWebSetTheOTP(String LocatorType, String LocatorValue, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - SettheLeadid method");
@@ -4295,7 +4258,7 @@ public class ActionClass extends BaseClass {
 			locator = mita_locator(LocatorType, LocatorValue);
 			/*
 			 * element = driver.findElement(locator); mita_JSHighlight(element);
-			 * mita_Wait(WaitType); element.clear();
+			 * mitaWebWait(WaitType); element.clear();
 			 */ Thread.sleep(1000);
 			String otp[] = leadID.split("");
 			driver.findElement(By.name("pin0")).sendKeys(otp[0]);
@@ -4307,10 +4270,10 @@ public class ActionClass extends BaseClass {
 			// sendChar(element, leadID);
 			// element.sendKeys(leadID);
 			// Thread.sleep(500);
-			mita_Web_write();
+			mitaWebWrite();
 		} catch (Exception e) {
 //			System.err.format("No Element Found to perform set the otp \t" + e);
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to set the value \t" + e.getMessage());
 //			reporterLog("Unable to set the value \t" + e.getMessage());
 		}
@@ -4323,14 +4286,14 @@ public class ActionClass extends BaseClass {
 	 * @return Pass or Fail
 	 */
 
-	public static void mita_WebAddDates(String LocatorType, String LocatorValue, String value, String WaitType)
+	public static void mitaWebAddDates(String LocatorType, String LocatorValue, String value, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - WebAddDates method");
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
-			mita_JSHighlight(element);
-			mita_Wait(WaitType);
+			mitaWebJSHighlight(element);
+			mitaWebWait(WaitType);
 
 			Date returnDate = new Date();
 			Date date;
@@ -4345,20 +4308,20 @@ public class ActionClass extends BaseClass {
 			element.clear();
 			// element.sendKeys(dateStr);
 			sendChar(element, dateStr);
-			mita_Web_write();
+			mitaWebWrite();
 		} catch (Exception e) {
 			System.err.format("No Element Found to perform entering the values \t" + e);
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the WebAddDates method \t" + e.getMessage());
 
 		}
 	}
 
-	public static void mita_MobileAddDates(String LocatorType, String LocatorValue, String value, String WaitType)
+	public static void mitaMobileAddDates(String LocatorType, String LocatorValue, String value, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - MobileAddDates method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			Machint_Mobile_Waits(WaitType);
 			Date returnDate = new Date();
@@ -4374,9 +4337,9 @@ public class ActionClass extends BaseClass {
 			element.clear();
 			// element.sendKeys(dateStr);
 			sendChar(element, dateStr);
-			mita_Mobile_write();
+			mitaMobileWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to MobileAddDates \t" + e);
 			logger.warn("Unable to execute the MobileAddDates method \t" + e.getMessage());
 
@@ -4408,22 +4371,22 @@ public class ActionClass extends BaseClass {
 			return baseCal;
 	}
 
-	public static void mita_WebDynamicString(String LocatorType, String LocatorValue, String value, String WaitType)
+	public static void mitaWebDynamicString(String LocatorType, String LocatorValue, String value, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - WebDynamicString method");
 
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
-			mita_Wait(WaitType);
+			mitaWebWait(WaitType);
 			String random = dynamicString(Integer.parseInt(value));
 			System.out.println(random);
 			element.clear();
 			element.sendKeys(random);
-			mita_Web_write();
+			mitaWebWrite();
 		} catch (Exception e) {
 //			System.err.format("No Element Found to perform entering the values \t" + e);
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the WebDynamicString method \t" + e.getMessage());
 //			reporterLog("Unable to execute the WebDynamicString method \t" + e.getMessage());
 
@@ -4436,54 +4399,54 @@ public class ActionClass extends BaseClass {
 		return randomString;
 	}
 
-	public static void mita_MobileDynamicString(String LocatorType, String LocatorValue, String value, String WaitType)
+	public static void mitaMobileDynamicString(String LocatorType, String LocatorValue, String value, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - MobileDynamicString method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			Machint_Mobile_Waits(WaitType);
 			String random = dynamicString(Integer.parseInt(value));
 			System.out.println(random);
 			element.clear();
 			element.sendKeys(random);
-			mita_Mobile_write();
+			mitaMobileWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to MobileDynamicString \t" + e);
 			logger.warn("Unable to execute the MobileDynamicString method \t" + e.getMessage());
 
 		}
 	}
 
-	public static void mita_WebAppendText(String LocatorType, String LocatorValue, String value, String WaitType)
+	public static void mitaWebAppendText(String LocatorType, String LocatorValue, String value, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - WebAppendText method");
 
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
-			mita_JSHighlight(element);
-			mita_Wait(WaitType);
+			mitaWebJSHighlight(element);
+			mitaWebWait(WaitType);
 			element.click();
 			value = dynamicString(5) + value;
 			element.sendKeys(value);
 			Thread.sleep(500);
-			mita_Web_write();
+			mitaWebWrite();
 		} catch (Exception e) {
 //			System.err.format("No Element Found to perform entering the values \t" + e);
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the WebAppendText method \t" + e.getMessage());
 //			reporterLog("Unable to execute the WebAppendText method \t" + e.getMessage());
 
 		}
 	}
 
-	public static void mita_MobileAppendText(String LocatorType, String LocatorValue, String value, String WaitType)
+	public static void mitaMobileAppendText(String LocatorType, String LocatorValue, String value, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - EnterTextField method");
-			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			// Machint_JSHighlight(element);
 			Machint_Mobile_Waits(WaitType);
@@ -4491,9 +4454,9 @@ public class ActionClass extends BaseClass {
 			value = dynamicString(5) + value;
 			element.sendKeys(value);
 			// Thread.sleep(2000);
-			mita_Mobile_write();
+			mitaMobileWrite();
 		} catch (Exception e) {
-			mita_Mobile_write_when_Locator_isnotvalid();
+			mitaMobileWriteWhenLocatorIsNotValid();
 			System.err.format("No Element Found to MobileAppendText \t" + e);
 			logger.warn("Unable to execute the MobileAppendText method \t" + e.getMessage());
 		}
@@ -4502,7 +4465,7 @@ public class ActionClass extends BaseClass {
 
 	// Enter text using Keys.ENTER function to display the element
 
-	public static void Machint_WebElemenDisplay(String LocatorType, String LocatorValue, String value, String WaitType)
+	public static void mitaWebElemenDisplay(String LocatorType, String LocatorValue, String value, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - EnterTextKey method");
@@ -4511,17 +4474,17 @@ public class ActionClass extends BaseClass {
 				if (element.isDisplayed())
 					locator = mita_locator(LocatorType, LocatorValue);
 				element = driver.findElement(locator);
-				mita_JSHighlight(element);
+				mitaWebJSHighlight(element);
 				element.clear();
 				element.sendKeys(value);
 				Thread.sleep(1000);
 				driver.findElement(By.xpath("(//*[@class=\"btn btn-primary text-uppercase btn-submit\"])[2]")).click();
-				mita_Web_write();
+				mitaWebWrite();
 			} catch (Exception e) {
-				mita_Web_write();
+				mitaWebWrite();
 			}
 		} catch (Exception e) {
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 //			System.err.format("No Element Found to Machint_WebElemenDisplay \t" + e);
 			logger.warn("Unable to execute the Machint_WebElemenDisplay method \t" + e.getMessage());
 //			reporterLog("Unable to execute the Machint_WebElemenDisplay method \t" + e.getMessage());
@@ -4529,12 +4492,12 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void mita_refresh() {
+	public static void mitaWebRefresh() {
 		try {
 			logger.info("Executing - Refresh method");
 
 			driver.navigate().refresh();
-			mita_Web_write();
+			mitaWebWrite();
 		} catch (Exception e) {
 			logger.warn("Unable to refresh \t" + e.getMessage());
 
@@ -4546,7 +4509,7 @@ public class ActionClass extends BaseClass {
 		return timeStamp;
 	}
 
-	public static void mita_response(String LocatorValue, String value) throws Exception {
+	public static void mitaWebResponse(String LocatorValue, String value) throws Exception {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue + " method");
 			ExtentTestManager.getTest().log(Status.PASS, Driver_Script.Actionvalue);
@@ -4623,14 +4586,14 @@ public class ActionClass extends BaseClass {
 			actual = "Status code 200 are: " + count + " and Incorrect status codes are: " + count1;
 			ExtentTestManager.getTest().log(Status.PASS,
 					"Status code 200 are: " + count + " and Incorrect status codes are: " + count1);
-			mita_Web_writePass();
+			mitaWebWritePass();
 		} catch (Exception e) {
 //			System.err.format("No Element Found to perform entering the values \t" + e);
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 		}
 	}
 
-	public static void mita_response1(String LocatorValue, String value) throws Exception {
+	public static void mitaWebResponse1(String LocatorValue, String value) throws Exception {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue + " method");
 			ExtentTestManager.getTest().log(Status.PASS, Driver_Script.Actionvalue);
@@ -4707,14 +4670,14 @@ public class ActionClass extends BaseClass {
 			actual = "Status code 200 are: " + count + " and Incorrect status codes are: " + count1;
 			ExtentTestManager.getTest().log(Status.PASS,
 					"Status code 200 are: " + count + " and Incorrect status codes are: " + count1);
-			mita_Web_writePass();
+			mitaWebWritePass();
 		} catch (Exception e) {
 //			System.err.format("No Element Found to perform entering the values \t" + e);
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 		}
 	}
 
-	public static void mita_headingTags(String LocatorValue, String value) throws Exception {
+	public static void mitaWebHeadingTags(String LocatorValue, String value) throws Exception {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue + " method");
 
@@ -4796,18 +4759,18 @@ public class ActionClass extends BaseClass {
 
 			actual = "Missing " + value + " tag count is:  " + failCount;
 			ExtentTestManager.getTest().log(Status.PASS, "Missing " + value + "tag count is:  " + failCount);
-			mita_Web_writePass();
+			mitaWebWritePass();
 
 		} catch (Exception e) {
 //			System.err.format("No Element Found to perform entering the values \t" + e);
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the heading tags method \t" + e.getMessage());
 			ExtentTestManager.getTest().log(Status.ERROR,
 					"Unable to execute the heading tags method \t" + e.getMessage());
 		}
 	}
 
-	public static void mita_headingTags(String LocatorValue) throws Exception {
+	public static void mitaWebHeadingTags(String LocatorValue) throws Exception {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue + " method");
 			ExtentTestManager.getTest().log(Status.PASS, Driver_Script.Actionvalue + " " + LocatorValue);
@@ -4824,10 +4787,10 @@ public class ActionClass extends BaseClass {
 			}
 			actual = LocatorValue + " tags is  " + ar;
 			ExtentTestManager.getTest().log(Status.PASS, LocatorValue + " tags is  " + ar);
-			mita_Web_writePass();
+			mitaWebWritePass();
 		} catch (Exception e) {
 //			System.err.format("No Element Found to perform entering the values \t" + e);
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the heading tags method \t" + e.getMessage());
 			ExtentTestManager.getTest().log(Status.ERROR,
 					"Unable to execute the heading tags method \t" + e.getMessage());
@@ -4838,7 +4801,7 @@ public class ActionClass extends BaseClass {
 //		try {
 //			logger.info("Executing - " + Driver_Script.Actionvalue + " method");
 //			ExtentTestManager.getTest().log(Status.PASS, Driver_Script.Actionvalue + " " + LocatorValue);
-//			locator = Machint_Mobile_locator(LocatorType, LocatorValue);
+//			locator = mitaMobilelocator(LocatorType, LocatorValue);
 //			List<WebElement> allImg = driver.findElements(locator);
 //
 //			int imgsCount = allImg.size();
@@ -4855,13 +4818,13 @@ public class ActionClass extends BaseClass {
 //			mita_Web_writePass();
 //		} catch (Exception e) {
 ////			System.err.format("No Element Found to perform entering the values \t" + e);
-//			mita_Web_write_when_Locator_isnotvalid();
+//			mitaWebWriteWhenLocatorIsNotValid()
 //			logger.warn("Unable to execute the meta tags method \t" + e.getMessage());
 //			ExtentTestManager.getTest().log(Status.ERROR, "Unable to execute the meta tags method \t" + e.getMessage());
 //		}
 //	}
 
-	public static void mita_metaTags(String LocatorType, String LocatorValue, String value) throws Exception {
+	public static void mitaWebMetaTags(String LocatorType, String LocatorValue, String value) throws Exception {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue + " method");
 			ExtentTestManager.getTest().log(Status.PASS, Driver_Script.Actionvalue + " " + LocatorValue);
@@ -4937,16 +4900,16 @@ public class ActionClass extends BaseClass {
 				count = count + 1;
 			}
 
-			mita_Web_writePass();
+			mitaWebWritePass();
 		} catch (Exception e) {
 //			System.err.format("No Element Found to perform entering the values \t" + e);
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the meta tags method \t" + e.getMessage());
 			ExtentTestManager.getTest().log(Status.ERROR, "Unable to execute the meta tags method \t" + e.getMessage());
 		}
 	}
 
-	public static void mita_brokenLinks(String LocatorType, String LocatorValue, String value) throws Exception {
+	public static void mitaWebBrokenLinks(String LocatorType, String LocatorValue, String value) throws Exception {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue + " method");
 			ExtentTestManager.getTest().log(Status.PASS, Driver_Script.Actionvalue);
@@ -5032,36 +4995,36 @@ public class ActionClass extends BaseClass {
 				outFile.close();
 				count = count + 1;
 			}
-			mita_Web_writePass();
+			mitaWebWritePass();
 		} catch (Exception e) {
 //			System.err.format("No Element Found to perform entering the values \t" + e);
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the brokenLinks method \t" + e.getMessage());
 			ExtentTestManager.getTest().log(Status.ERROR,
 					"Unable to execute the brokenLinks method \t" + e.getMessage());
 		}
 	}
 
-	public static void mita_getCurrentUrl(String expected) throws Exception {
+	public static void mitaWebGetCurrentUrl(String expected) throws Exception {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue);
 
 			actual = driver.getCurrentUrl();
 			System.out.println(actual);
 			if (actual.contains(expected)) {
-				mita_Web_writePass();
+				mitaWebWritePass();
 			} else {
 				actual = expected + " missing";
-				mita_Web_ScreenShot();
-				mita_Web_writeFail();
+				mitaWebScreenShot();
+				mitaWebWriteFail();
 			}
 		} catch (Exception e) {
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the getCurrentUrl method \t" + e.getMessage());
 		}
 	}
 
-	public static void Machint_web_consoleLogs() throws Exception {
+	public static void mitaWebConsoleLogs() throws Exception {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue);
 			ArrayList<String> ar = new ArrayList<String>();
@@ -5074,20 +5037,20 @@ public class ActionClass extends BaseClass {
 				ar.add(log);
 			}
 			actual = log;
-			mita_Web_writePass();
+			mitaWebWritePass();
 		} catch (Exception e) {
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the consoleLogs method \t" + e.getMessage());
 		}
 	}
 	
 	
-	public static void mita_web_listbox(String LocatorType, String LocatorValue, String value,String WaitType) throws Exception {
+	public static void mitaWebListBox(String LocatorType, String LocatorValue, String value,String WaitType) throws Exception {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue);
 			locator = mita_locator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
-			mita_Wait(WaitType);
+			mitaWebWait(WaitType);
 			element.click();
 			
 			List<WebElement> allLinks = driver.findElements(By.xpath("//li[@role='option']"));			
@@ -5100,9 +5063,9 @@ public class ActionClass extends BaseClass {
 	                break;
 	            }
 	          }		
-			mita_Web_writePass();
+			mitaWebWritePass();
 		} catch (Exception e) {
-			mita_Web_write_when_Locator_isnotvalid();
+			mitaWebWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the listbox method \t" + e.getMessage());
 		}
 	}

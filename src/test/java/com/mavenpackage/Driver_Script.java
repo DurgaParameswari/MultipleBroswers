@@ -63,7 +63,7 @@ public class Driver_Script extends ActionClass {
 				Actionvalue = getCellContentAsString(cell0);
 				if (Actionvalue.toLowerCase().contains("apk")) {
 					setup(Runner.deviceType);
-					mita_Mobile_write();
+					mitaMobileWrite();
 				} else if (Actionvalue.toLowerCase().contains("enter") || Actionvalue.toLowerCase().contains("insert")
 						|| Actionvalue.toLowerCase().contains("inserting")
 						|| Actionvalue.toLowerCase().contains("entering") || Actionvalue.toLowerCase().contains("input")
@@ -143,7 +143,7 @@ public class Driver_Script extends ActionClass {
 						|| Actionvalue.toLowerCase().contains("find") || Actionvalue.toLowerCase().contains("finding")
 						|| Actionvalue.toLowerCase().contains("equal to")) {
 					mita_Validate_ExcelData();
-					Machint_Mobile_Equals_Validation("xpath", actualValue, expectedValue);
+					mitaMobileEqualsValidation("xpath", actualValue, expectedValue);
 				} else if (Actionvalue.toLowerCase().contains("title")) {
 					mita_ValidateTitle();
 					Machint_Mobile_getTitle(expectedValue);
@@ -166,26 +166,26 @@ public class Driver_Script extends ActionClass {
 					Machint_Mobile_generateRandomNumber("xpath", LocatorId, Entervalue, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("zero")) {
 					mita_Enter_excelData();
-					Machint_Mobile_zeroStartsNumber("xpath", LocatorId, Entervalue, "visibilityOf");
+					mitaMobileZeroStartsNumber("xpath", LocatorId, Entervalue, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("add dates")
 						|| Actionvalue.toLowerCase().contains("adddates")
 						|| Actionvalue.toLowerCase().contains("adding dates")
 						|| Actionvalue.toLowerCase().contains("addingdates")) {
 					mita_Enter_excelData();
-					mita_MobileAddDates("xpath", LocatorId, Entervalue, "visibilityOf");
+					mitaMobileAddDates("xpath", LocatorId, Entervalue, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("dynamic string")
 						|| Actionvalue.toLowerCase().contains("dynamicstring")
 						|| Actionvalue.toLowerCase().contains("dynamic")
 						|| Actionvalue.toLowerCase().contains("string dynamic")
 						|| Actionvalue.toLowerCase().contains("stringdynamic")) {
 					mita_Enter_excelData();
-					mita_MobileDynamicString("xpath", LocatorId, Entervalue, "visibilityOf");
+					mitaMobileDynamicString("xpath", LocatorId, Entervalue, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("append") || Actionvalue.toLowerCase().contains("prefix")
 						|| Actionvalue.toLowerCase().contains("pre fix")
 						|| Actionvalue.toLowerCase().contains("pre-fix") || Actionvalue.toLowerCase().contains("affix")
 						|| Actionvalue.toLowerCase().contains("join")) {
 					mita_Enter_excelData();
-					mita_MobileAppendText("xpath", LocatorId, Entervalue, "visibilityOf");
+					mitaMobileAppendText("xpath", LocatorId, Entervalue, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("handling")) {
 					mita_Enter_excelData();
 					Machint_Mobile_Number_OTP("xpath", LocatorId, Entervalue, "visibilityOf");
@@ -195,7 +195,7 @@ public class Driver_Script extends ActionClass {
 				} else if (Actionvalue.toLowerCase().contains("scrolldown")) {
 					// mita_Enter_excelData();
 					mita_ValidateTitle();
-					Machint_Mobile_scrollDown(expectedValue);
+					mitaMobileScrollDown(expectedValue);
 				} else if (Actionvalue.toLowerCase().contains("singletap")) {
 					mita_Click_excelData();
 					Machint_Mobile_SingleTap("xpath", LocatorId, "visibilityOf");
@@ -213,7 +213,7 @@ public class Driver_Script extends ActionClass {
 					Machint_Mobile_SeekBar("xpath", LocatorId, Entervalue);
 				} else if (Actionvalue.toLowerCase().contains("frame")) {
 					mita_Frame();
-					mita_Frame_webElement("xpath", LocatorId, "visibilityOf");
+					mitaMobileFrameWebElement("xpath", LocatorId, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("wait") || Actionvalue.toLowerCase().contains("standby")
 						|| Actionvalue.toLowerCase().contains("holdback") || Actionvalue.toLowerCase().contains("pause")
 						|| Actionvalue.toLowerCase().contains("halt")
@@ -226,12 +226,12 @@ public class Driver_Script extends ActionClass {
 						|| Actionvalue.toLowerCase().contains("get the lead id")
 						|| Actionvalue.toLowerCase().contains("getleadid")) {
 					mita_Click_excelData();
-					Machint_Mobile_GetTheLeadID("xpath", LocatorId, "visibilityOf");
+					mitaMobileGetTheLeadID("xpath", LocatorId, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("settheleadid")
 						|| Actionvalue.toLowerCase().contains("set the lead id")
 						|| Actionvalue.toLowerCase().contains("setleadid")) {
 					mita_Click_excelData();
-					Machint_Mobile_SetTheLeadId("xpath", LocatorId, "visibilityOf");
+					mitaMobileSetTheLeadID("xpath", LocatorId, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("closeframe")
 						|| Actionvalue.toLowerCase().contains("close frame")
 						|| Actionvalue.toLowerCase().contains("close the frame")
@@ -250,7 +250,7 @@ public class Driver_Script extends ActionClass {
 						|| Actionvalue.toLowerCase().contains("complete")
 						|| Actionvalue.toLowerCase().contains("completing")
 						|| Actionvalue.toLowerCase().contains("completed")) {
-					mita_Mobile_write();
+					mitaMobileWrite();
 					mobiledriver.quit();
 				} else if (Actionvalue.toLowerCase().contains("end")) {
 					mita_stepName();
@@ -279,7 +279,7 @@ public class Driver_Script extends ActionClass {
 				Actionvalue = getCellContentAsString(cell0);
 				if (Actionvalue.toLowerCase().contains("url")) {
 					launchBrowsers(bt[l], Runner.driverurl);
-					mita_Web_write();
+					mitaWebWrite();
 				} else if (Actionvalue.toLowerCase().contains("enter") || Actionvalue.toLowerCase().contains("insert")
 						|| Actionvalue.toLowerCase().contains("inserting")
 						|| Actionvalue.toLowerCase().contains("entering") || Actionvalue.toLowerCase().contains("input")
@@ -289,7 +289,7 @@ public class Driver_Script extends ActionClass {
 					mita_EnterTextField("xpath", LocatorId, Entervalue, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("display")) {
 					mita_Enter_excelData();
-					Machint_WebElemenDisplay("xpath", LocatorId, Entervalue, "visibilityOf");
+					mitaWebElemenDisplay("xpath", LocatorId, Entervalue, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("keys") || Actionvalue.toLowerCase().contains("keyvalue")
 						|| Actionvalue.toLowerCase().contains("keyText")
 						|| Actionvalue.toLowerCase().contains("drop down")
@@ -299,7 +299,7 @@ public class Driver_Script extends ActionClass {
 				} else if (Actionvalue.toLowerCase().contains("char")
 						|| Actionvalue.toLowerCase().contains("character")) {
 					mita_Enter_excelData();
-					Machint_Web_EnterCharacter("xpath", LocatorId, Entervalue, "visibilityOf");
+					mitaWebEnterCharacter("xpath", LocatorId, Entervalue, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("click") || Actionvalue.toLowerCase().contains("hit")
 						|| Actionvalue.toLowerCase().contains("clicking")
 						|| Actionvalue.toLowerCase().contains("submit")
@@ -307,12 +307,12 @@ public class Driver_Script extends ActionClass {
 						|| Actionvalue.toLowerCase().contains("accept")
 						|| Actionvalue.toLowerCase().contains("dismis")) {
 					mita_Click_excelData();
-					mita_Click("xpath", LocatorId, "visibilityOf");
+					mitaWebClick("xpath", LocatorId, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("select")
 						|| Actionvalue.toLowerCase().contains("select with text")
 						|| Actionvalue.toLowerCase().contains("selecting")) {
 					mita_Select_ExcelData();
-					mita_selectVisibleText("xpath", LocatorId, SelectValue, "visibilityOf");
+					mitaWebSelectVisibleText("xpath", LocatorId, SelectValue, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("auto suggestion")
 						|| Actionvalue.toLowerCase().contains("autosuggestion")
 						|| Actionvalue.toLowerCase().contains("autolist")
@@ -320,13 +320,13 @@ public class Driver_Script extends ActionClass {
 						|| Actionvalue.toLowerCase().contains("autocomplete")
 						|| Actionvalue.toLowerCase().contains("auto complete")) {
 					mita_Enter_excelData();
-					mita_AutoSuggestion_Dropdown("xpath", LocatorId, Entervalue, "visibilityOf");
+					mitaWebAutoSuggestionDropdown("xpath", LocatorId, Entervalue, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("index")) {
 					mita_Select_ExcelData();
 					mita_selectIndex("xpath", LocatorId, 1, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("scenario")) {
 					mita_stepName();
-					mita_scenarioNumber(Actionvalue);
+					mitaWebScenarioNumber(Actionvalue);
 				} else if (Actionvalue.toLowerCase().contains("handling")) {
 					mita_Enter_excelData();
 					machintWeb_Mobile_Number_OTP("xpath", LocatorId, Entervalue, "visibilityOf");
@@ -335,26 +335,26 @@ public class Driver_Script extends ActionClass {
 					Machint_Web_generateRandomNumber("xpath", LocatorId, Entervalue, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("zero")) {
 					mita_Enter_excelData();
-					Machint_zeroStartsNumber("xpath", LocatorId, Entervalue, "visibilityOf");
+					mitaMobileZeroStartsNumber("xpath", LocatorId, Entervalue, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("dynamic string")
 						|| Actionvalue.toLowerCase().contains("dynamicstring")
 						|| Actionvalue.toLowerCase().contains("dynamic")
 						|| Actionvalue.toLowerCase().contains("string dynamic")
 						|| Actionvalue.toLowerCase().contains("stringdynamic")) {
 					mita_Enter_excelData();
-					mita_WebDynamicString("xpath", LocatorId, Entervalue, "visibilityOf");
+					mitaMobileDynamicString("xpath", LocatorId, Entervalue, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("append") || Actionvalue.toLowerCase().contains("prefix")
 						|| Actionvalue.toLowerCase().contains("pre fix")
 						|| Actionvalue.toLowerCase().contains("pre-fix") || Actionvalue.toLowerCase().contains("affix")
 						|| Actionvalue.toLowerCase().contains("join")) {
 					mita_Enter_excelData();
-					mita_WebAppendText("xpath", LocatorId, Entervalue, "visibilityOf");
+					mitaMobileAppendText("xpath", LocatorId, Entervalue, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("upload")
 						|| Actionvalue.toLowerCase().contains("uploading")
 						|| Actionvalue.toLowerCase().contains("browsing")
 						|| Actionvalue.toLowerCase().contains("browse")) {
 					mita_Enter_excelData();
-					mita_uploadsendkeys("xpath", LocatorId, Entervalue);
+					mitaWebUploadSendkeys("xpath", LocatorId, Entervalue);
 					// mita_Enter_excelData();
 //					mita_Robot_uploadFile("xpath", LocatorId, Entervalue, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("switch")) {
@@ -362,10 +362,10 @@ public class Driver_Script extends ActionClass {
 					mita_acceptAlert();
 				} else if (Actionvalue.toLowerCase().contains("getvaluefromapp")) {
 					mita_Click_excelData();
-					Machint_Web_GetTheValueFromApp("xpath", LocatorId, "visibilityOf");
+					mitaWebGetTheValueFromApp("xpath", LocatorId, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("setvalueinapp")) {
 					mita_Click_excelData();
-					Machint_Web_SetThtValueInApp("xpath", LocatorId, "visibilityOf");
+					mitaWebSetThtValueInApp("xpath", LocatorId, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("getthefirstvalue")
 						|| Actionvalue.toLowerCase().contains("get the first value")
 						|| Actionvalue.toLowerCase().contains("getfirstvalue")
@@ -373,7 +373,7 @@ public class Driver_Script extends ActionClass {
 						|| Actionvalue.toLowerCase().contains("getvaluefirst")
 						|| Actionvalue.toLowerCase().contains("firstgetvalue")) {
 					mita_Click_excelData();
-					Machint_Web_GetTheFirstValue("xpath", LocatorId, "visibilityOf");
+					mitaWebGetTheFirstValue("xpath", LocatorId, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("setthefirstvalue")
 						|| Actionvalue.toLowerCase().contains("set the first value")
 						|| Actionvalue.toLowerCase().contains("setfirstvalue")
@@ -381,7 +381,7 @@ public class Driver_Script extends ActionClass {
 						|| Actionvalue.toLowerCase().contains("setvaluefirst")
 						|| Actionvalue.toLowerCase().contains("firstsetvalue")) {
 					mita_Click_excelData();
-					Machint_Web_SetTheFirstValue("xpath", LocatorId, "visibilityOf");
+					mitaWebSetTheFirstValue("xpath", LocatorId, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("getthesecondvalue")
 						|| Actionvalue.toLowerCase().contains("get the second value")
 						|| Actionvalue.toLowerCase().contains("getsecondvalue")
@@ -389,7 +389,7 @@ public class Driver_Script extends ActionClass {
 						|| Actionvalue.toLowerCase().contains("getvaluesecond")
 						|| Actionvalue.toLowerCase().contains("secondgetvalue")) {
 					mita_Click_excelData();
-					Machint_Web_GetTheSecondValue("xpath", LocatorId, "visibilityOf");
+					mitaWebGetTheSecondValue("xpath", LocatorId, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("setthesecondvalue")
 						|| Actionvalue.toLowerCase().contains("set the second value")
 						|| Actionvalue.toLowerCase().contains("setsecondvalue")
@@ -397,7 +397,7 @@ public class Driver_Script extends ActionClass {
 						|| Actionvalue.toLowerCase().contains("setvaluesecond")
 						|| Actionvalue.toLowerCase().contains("secondsetvalue")) {
 					mita_Click_excelData();
-					Machint_Web_SetTheSecondValue("xpath", LocatorId, "visibilityOf");
+					mitaWebSetTheSecondValue("xpath", LocatorId, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("validate")
 						|| Actionvalue.toLowerCase().contains("validating")
 						|| Actionvalue.toLowerCase().contains("compare")
@@ -409,13 +409,13 @@ public class Driver_Script extends ActionClass {
 						|| Actionvalue.toLowerCase().contains("find") || Actionvalue.toLowerCase().contains("finding")
 						|| Actionvalue.toLowerCase().contains("equal to")) {
 					mita_Validate_ExcelData();
-					mita_Equals_Validation("xpath", actualValue, expectedValue);
+					mitaWebEqualsValidation("xpath", actualValue, expectedValue);
 				} else if (Actionvalue.toLowerCase().contains("title")) {
 					mita_ValidateTitle();
-					mita_AssertTitle(expectedValue);
+					mitaWebAssertTitle(expectedValue);
 				} else if (Actionvalue.toLowerCase().contains("frame")) {
 					mita_Frame();
-					mita_Frame_webElement("xpath", LocatorId, "visibilityOf");
+					mitaMobileFrameWebElement("xpath", LocatorId, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("scrolldown")) {
 					mita_Click_excelData();
 					scrollDown("xpath", LocatorId);
@@ -442,12 +442,12 @@ public class Driver_Script extends ActionClass {
 						|| Actionvalue.toLowerCase().contains("mouse hower")
 						|| Actionvalue.toLowerCase().contains("mouse over")) {
 					mita_Click_excelData();
-					mita_mouseOver(LocatorId);
+					mitaWebMouseOver(LocatorId);
 				} else if (Actionvalue.toLowerCase().contains("settheotp")
 						|| Actionvalue.toLowerCase().contains("set the otp id")
 						|| Actionvalue.toLowerCase().contains("setotp")) {
 					mita_Click_excelData();
-					Machint_Web_SetTheOTP("xpath", LocatorId, "visibilityOf");
+					mitaWebSetTheOTP("xpath", LocatorId, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("closeframe")
 						|| Actionvalue.toLowerCase().contains("close frame")
 						|| Actionvalue.toLowerCase().contains("close the frame")
@@ -456,39 +456,39 @@ public class Driver_Script extends ActionClass {
 						|| Actionvalue.toLowerCase().contains("iframe")) {
 					mita_defaultFrame();
 				} else if (Actionvalue.toLowerCase().contains("refresh")) {
-					mita_refresh();
+					mitaWebRefresh();
 				} else if (Actionvalue.toLowerCase().contains("open")) {
 					mita_response();
-					mita_response(LocatorId, Entervalue);
+					mitaWebResponse(LocatorId, Entervalue);
 				} else if (Actionvalue.toLowerCase().contains("heading tag")
 						|| Actionvalue.toLowerCase().contains("h1 tag") || Actionvalue.toLowerCase().contains("h2 tag")
 						|| Actionvalue.toLowerCase().contains("h3 tag") || Actionvalue.toLowerCase().contains("h4 tag")
 						|| Actionvalue.toLowerCase().contains("h5 tag")) {
 					mita_headingTags();
-					mita_headingTags(LocatorId, Entervalue);
+					mitaWebHeadingTags(LocatorId, Entervalue);
 //					mita_headingTags(LocatorId);
 				} else if (Actionvalue.toLowerCase().contains("image")) {
 					mita_metaTags();
-					mita_metaTags("xpath", LocatorId, Entervalue);
+					mitaWebMetaTags("xpath", LocatorId, Entervalue);
 				} else if (Actionvalue.toLowerCase().contains("dead link")
 						|| Actionvalue.toLowerCase().contains("broken hyperlink")
 						||Actionvalue.toLowerCase().contains("broken links")) {
 					mita_brokenLinks();
-					mita_brokenLinks("xpath", LocatorId, Entervalue);
+					mitaWebBrokenLinks("xpath", LocatorId, Entervalue);
 				} 
 				else if (Actionvalue.toLowerCase().contains("uri")) {
 					mita_getCurrentUrl();
-					mita_getCurrentUrl(expectedValue);
+					mitaWebGetCurrentUrl(expectedValue);
 				} 	else if (Actionvalue.toLowerCase().contains("child window")) {
-					Machint_web_moveToChildWindow();
+					mitaWebMoveToChildWindow();
 				} 
 				
 				else if (Actionvalue.toLowerCase().contains("console logs")) {
-					Machint_web_consoleLogs();
+					mitaWebConsoleLogs();
 				} 
 				else if(Actionvalue.toLowerCase().contains("listbox")) {
 					Machint_web_listbox();
-					mita_web_listbox("xpath", LocatorId, SelectValue, "visibilityOf");
+					mitaWebListBox("xpath", LocatorId, SelectValue, "visibilityOf");
 				} 
 				else if (Actionvalue.toLowerCase().contains("close")
 						|| Actionvalue.toLowerCase().contains("test case")
@@ -506,13 +506,13 @@ public class Driver_Script extends ActionClass {
 					driver.close();
 					break;
 				} else if (Actionvalue.toLowerCase().contains("")) {
-					mita_Web_Please_do_Spellcheck();
+					mitaWebPleasedoSpellcheck();
 					logger.info("Entered keyword is not available in the script");
 				}
 			}
 
 		} catch (NoSuchElementException e) {
-			mita_Web_Please_do_Spellcheck();
+			mitaWebPleasedoSpellcheck();
 			logger.info("WEB-Please do spell ckeck");
 		}
 	}

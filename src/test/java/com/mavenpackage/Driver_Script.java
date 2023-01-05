@@ -92,7 +92,7 @@ public class Driver_Script extends ActionClass {
 					Machint_Mobile_selectIndex("xpath", LocatorId, 1, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("scenario")) {
 					mita_stepName();
-					mita_scenarioNumber(Actionvalue);
+					mitaWebScenarioNumber(Actionvalue);
 				} else if (Actionvalue.toLowerCase().contains("switch")) {
 					mita_Select_ExcelData();
 					Machint_Mobile_acceptAlert();
@@ -115,7 +115,7 @@ public class Driver_Script extends ActionClass {
 						|| Actionvalue.toLowerCase().contains("setvaluefirst")
 						|| Actionvalue.toLowerCase().contains("firstsetvalue")) {
 					mita_Click_excelData();
-					Machint_Mobile_SetTheFirstValue("xpath", LocatorId, "visibilityOf");
+					mitaMobileSetTheFirstValue("xpath", LocatorId, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("getthesecondvalue")
 						|| Actionvalue.toLowerCase().contains("get the second value")
 						|| Actionvalue.toLowerCase().contains("getsecondvalue")
@@ -123,7 +123,7 @@ public class Driver_Script extends ActionClass {
 						|| Actionvalue.toLowerCase().contains("getvaluesecond")
 						|| Actionvalue.toLowerCase().contains("secondgetvalue")) {
 					mita_Click_excelData();
-					Machint_Mobile_GetTheSecondValue("xpath", LocatorId, "visibilityOf");
+					mitaMobileGetTheSecondValue("xpath", LocatorId, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("setthesecondvalue")
 						|| Actionvalue.toLowerCase().contains("set the second value")
 						|| Actionvalue.toLowerCase().contains("setsecondvalue")
@@ -146,7 +146,7 @@ public class Driver_Script extends ActionClass {
 					mitaMobileEqualsValidation("xpath", actualValue, expectedValue);
 				} else if (Actionvalue.toLowerCase().contains("title")) {
 					mita_ValidateTitle();
-					Machint_Mobile_getTitle(expectedValue);
+					mitaMobileGetTitle(expectedValue);
 				} else if (Actionvalue.toLowerCase().contains("dropdown")
 						|| Actionvalue.toLowerCase().contains("drop down")) {
 					mita_Enter_excelData();
@@ -221,7 +221,7 @@ public class Driver_Script extends ActionClass {
 						|| Actionvalue.toLowerCase().contains("delay") || Actionvalue.toLowerCase().contains("hold on")
 						|| Actionvalue.toLowerCase().contains("intermission")) {
 					mita_Wait();
-					mita_Mobile_wait_time(waitTime);
+					mitaMobileWaitTime(waitTime);
 				} else if (Actionvalue.toLowerCase().contains("gettheleadid")
 						|| Actionvalue.toLowerCase().contains("get the lead id")
 						|| Actionvalue.toLowerCase().contains("getleadid")) {
@@ -254,7 +254,7 @@ public class Driver_Script extends ActionClass {
 					mobiledriver.quit();
 				} else if (Actionvalue.toLowerCase().contains("end")) {
 					mita_stepName();
-					mita_scenarioNumber(Actionvalue);
+					mitaWebScenarioNumber(Actionvalue);
 					i = k + 1;
 					mobiledriver.quit();
 					break;
@@ -426,17 +426,17 @@ public class Driver_Script extends ActionClass {
 						|| Actionvalue.toLowerCase().contains("delay") || Actionvalue.toLowerCase().contains("hold on")
 						|| Actionvalue.toLowerCase().contains("intermission")) {
 					mita_Wait();
-					mita_Web_wait_time(waitTime);
+					mitaWebWaitTime(waitTime);
 				} else if (Actionvalue.toLowerCase().contains("gettheleadid")
 						|| Actionvalue.toLowerCase().contains("get the lead id")
 						|| Actionvalue.toLowerCase().contains("getleadid")) {
 					mita_Click_excelData();
-					Machint_Web_GetTheLeadID("xpath", LocatorId, "visibilityOf");
+					mitaWebGetTheLeadID("xpath", LocatorId, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("settheleadid")
 						|| Actionvalue.toLowerCase().contains("set the lead id")
 						|| Actionvalue.toLowerCase().contains("setleadid")) {
 					mita_Click_excelData();
-					Machint_Web_SetTheLeadId("xpath", LocatorId, "visibilityOf");
+					mitaWebSetTheLeadID("xpath", LocatorId, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("mouseover")
 						|| Actionvalue.toLowerCase().contains("mousehower")
 						|| Actionvalue.toLowerCase().contains("mouse hower")
@@ -482,7 +482,6 @@ public class Driver_Script extends ActionClass {
 				} 	else if (Actionvalue.toLowerCase().contains("child window")) {
 					mitaWebMoveToChildWindow();
 				} 
-				
 				else if (Actionvalue.toLowerCase().contains("console logs")) {
 					mitaWebConsoleLogs();
 				} 
@@ -501,7 +500,7 @@ public class Driver_Script extends ActionClass {
 					driver.quit();
 				} else if (Actionvalue.toLowerCase().contains("end")) {
 					mita_stepName();
-					mita_scenarioNumber(Actionvalue);
+					mitaWebScenarioNumber(Actionvalue);
 					i = k + 1;
 					driver.close();
 					break;

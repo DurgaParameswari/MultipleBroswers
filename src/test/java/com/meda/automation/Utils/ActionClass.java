@@ -1833,7 +1833,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void mita_scenarioNumber(String name) throws IOException {
+	public static void mitaWebScenarioNumber(String name) throws IOException {
 		try {
 //			logger.info("Executing - scenarioNumber method");
 //			reporterLog("Executing - scenarioNumber method");
@@ -2074,7 +2074,7 @@ public class ActionClass extends BaseClass {
 	}
 
 	// Get the second value from mobile
-	public static void Machint_Mobile_GetTheSecondValue(String LocatorType, String LocatorValue, String WaitType)
+	public static void mitaMobileGetTheSecondValue(String LocatorType, String LocatorValue, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - GetTheSecondValue method");
@@ -2093,7 +2093,7 @@ public class ActionClass extends BaseClass {
 
 	// Set the first value from mobile
 
-	public static void Machint_Mobile_SetTheFirstValue(String LocatorType, String LocatorValue, String WaitType)
+	public static void mitaMobileSetTheFirstValue(String LocatorType, String LocatorValue, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - SetTheFirstValue method");
@@ -2533,7 +2533,7 @@ public class ActionClass extends BaseClass {
 	}
 
 	// Title verification function
-	public static void Machint_Mobile_getTitle(String Expected) throws IOException, InterruptedException {
+	public static void mitaMobileGetTitle(String Expected) throws IOException, InterruptedException {
 		try {
 			logger.info("Executing - getTitle method");
 			String Title = mobiledriver.getTitle();
@@ -3545,7 +3545,7 @@ public class ActionClass extends BaseClass {
 
 	}
 
-	public static void Machint_Mobile_DoubleTap(String LocatorType, String LocatorValue, String WaitType)
+	public static void mitaMobileDoubleTap(String LocatorType, String LocatorValue, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - DoubleTap method");
@@ -3574,7 +3574,7 @@ public class ActionClass extends BaseClass {
 	 * 20, 20); drawCircle(mobiledriver, rightEye, 20, 20); drawCircle(mobiledriver,
 	 * mouth, 40, 20); }
 	 */
-	public void Mobile_drawFace() {
+	public void mitaMobileDrawFace() {
 		logger.info("Executing - Drawface method");
 		Point head = new Point(120, 250);
 		Point leftEye = head.moveBy(-25, -25);
@@ -3593,7 +3593,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	private Point Mobile_getPointOnCircle(int step, int totalSteps, Point origin, double radius) throws IOException {
+	private Point mitaMobileGetPointOnCircle(int step, int totalSteps, Point origin, double radius) throws IOException {
 		int x = 0, y = 0;
 		try {
 			logger.info("Executing - getPointOnCircle method");
@@ -3608,10 +3608,10 @@ public class ActionClass extends BaseClass {
 		return new Point(origin.x + x, origin.y + y);
 	}
 
-	private void drawCircle(Driver mobiledriver, Point origin, double radius, int steps) throws IOException {
+	private void mitaWebDrawCircle(Driver mobiledriver, Point origin, double radius, int steps) throws IOException {
 		try {
 			logger.info("Executing - drawCircle method");
-			Point firstPoint = Mobile_getPointOnCircle(0, steps, origin, radius);
+			Point firstPoint = mitaMobileGetPointOnCircle(0, steps, origin, radius);
 
 			PointerInput finger = new PointerInput(Kind.TOUCH, "finger");
 			Sequence circle = new Sequence(finger, 0);
@@ -3619,7 +3619,7 @@ public class ActionClass extends BaseClass {
 			circle.addAction(finger.createPointerDown(MouseButton.LEFT.asArg()));
 
 			for (int i = 1; i < steps + 1; i++) {
-				Point point = Mobile_getPointOnCircle(i, steps, origin, radius);
+				Point point = mitaMobileGetPointOnCircle(i, steps, origin, radius);
 				circle.addAction(finger.createPointerMove(STEP_DURATION, VIEW, point.x, point.y));
 			}
 
@@ -3632,7 +3632,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void mita_Mobile_wait_time(long sleepTime) throws InterruptedException, IOException {
+	public static void mitaMobileWaitTime(long sleepTime) throws InterruptedException, IOException {
 		try {
 			logger.info("Executing - Wait method");
 			Thread.sleep(sleepTime);
@@ -3645,7 +3645,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void mita_Web_wait_time(long sleepTime) throws InterruptedException, IOException {
+	public static void mitaWebWaitTime(long sleepTime) throws InterruptedException, IOException {
 		try {
 			logger.info("Executing - Wait method");
 //			ExtentTestManager.getTest().log(Status.INFO, Driver_Script.Actionvalue + " "+sleepTime+" Seconds");
@@ -4016,7 +4016,7 @@ public class ActionClass extends BaseClass {
 	}
 
 	// Set the Lead id
-	public static void Machint_Web_SetTheLeadId(String LocatorType, String LocatorValue, String WaitType)
+	public static void mitaWebSetTheLeadID(String LocatorType, String LocatorValue, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - SettheLeadid method");
@@ -4085,7 +4085,7 @@ public class ActionClass extends BaseClass {
 
 	}
 
-	public static void Machint_Web_GetTheLeadID(String LocatorType, String LocatorValue, String WaitType)
+	public static void mitaWebGetTheLeadID(String LocatorType, String LocatorValue, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - GettheLeadId method");

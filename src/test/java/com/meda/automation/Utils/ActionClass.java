@@ -888,7 +888,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void mita_Mobile_Please_do_Spellcheck() throws IOException {
+	public static void mitaMobilePleaseDoSpellcheck() throws IOException {
 		try {
 			logger.info(Driver_Script.Actionvalue + ": Updating the result in excel");
 			// mita_writeFail();
@@ -986,7 +986,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static By mita_locator(String locatorType, String LocatorValue) {
+	public static By mitaWebLocator(String locatorType, String LocatorValue) {
 		switch (locatorType) {
 		case "id":
 			by = By.id(LocatorValue);
@@ -1027,11 +1027,11 @@ public class ActionClass extends BaseClass {
 		return by;
 	}
 
-	public static void mita_EnterTextKey(String LocatorType, String LocatorValue, String value, String WaitType)
+	public static void mitaWebEnterTextKey(String LocatorType, String LocatorValue, String value, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - EnterTextKey method");
-			locator = mita_locator(LocatorType, LocatorValue);
+			locator = mitaWebLocator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mitaWebJSHighlight(element);
 			mitaWebWait(WaitType);
@@ -1048,12 +1048,12 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void machintWeb_Mobile_Number_OTP(String LocatorType, String LocatorValue, String value,
+	public static void mitaWebMobileNumberOTP(String LocatorType, String LocatorValue, String value,
 			String WaitType) throws Exception {
 		try {
 			logger.info("Executing - Mobile number OTP method");
 
-			locator = mita_locator(LocatorType, LocatorValue);
+			locator = mitaWebLocator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mitaWebJSHighlight(element);
 			mitaWebWait(WaitType);
@@ -1088,7 +1088,7 @@ public class ActionClass extends BaseClass {
 			throws AWTException, Exception {
 		try {
 			logger.info("Executing - Upload file method");
-			locator = mita_locator(LocatorType, LocatorValue);
+			locator = mitaWebLocator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mitaWebJSHighlight(element);
 			mitaWebWait(WaitType);
@@ -1114,14 +1114,14 @@ public class ActionClass extends BaseClass {
 	}
 
 	// Generate the Random Aadhar number
-	public static void Machint_Web_generateRandomNumber(String LocatorType, String LocatorValue, String value,
+	public static void mitaWebGenerateRandomNumber(String LocatorType, String LocatorValue, String value,
 			String WaitType) throws Exception {
 		try {
 			logger.info("Executing - Mobile generateRandomNumber method");
 
 			int number = Integer.parseInt(value);
-			String randomNumber = generateAadharNumber(number);
-			locator = mita_locator(LocatorType, LocatorValue);
+			String randomNumber = mitaGenerateAadharNumber(number);
+			locator = mitaWebLocator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mitaWebJSHighlight(element);
 			mitaWebWait(WaitType);
@@ -1137,12 +1137,12 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void mita_AutoSuggestion_Dropdown(String LocatorType, String LocatorValue, String value,
+	public static void mitaWebAutoSuggestionDropDown(String LocatorType, String LocatorValue, String value,
 			String WaitType) throws Exception {
 		try {
 			logger.info("Executing - AutoSuggestion_Dropdown method");
 
-			locator = mita_locator(LocatorType, LocatorValue);
+			locator = mitaWebLocator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mitaWebJSHighlight(element);
 			element.click();
@@ -1162,11 +1162,11 @@ public class ActionClass extends BaseClass {
 
 	}
 
-	public static void mita_EnterTextField(String LocatorType, String LocatorValue, String value, String WaitType)
+	public static void mitaWebEnterTextField(String LocatorType, String LocatorValue, String value, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - EnterTextField method");
-			locator = mita_locator(LocatorType, LocatorValue);
+			locator = mitaWebLocator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mitaWebJSHighlight(element);
 			mitaWebWait(WaitType);
@@ -1182,10 +1182,10 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void mita_Click(String LocatorType, String LocatorValue, String WaitType) throws Exception {
+	public static void mitaWebClick(String LocatorType, String LocatorValue, String WaitType) throws Exception {
 		try {
 			logger.info("Executing - Click method");
-			locator = mita_locator(LocatorType, LocatorValue);
+			locator = mitaWebLocator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mitaWebJSHighlight(element);
 			mitaWebWait(WaitType);
@@ -1206,7 +1206,7 @@ public class ActionClass extends BaseClass {
 		try {
 			logger.info("Executing - selectValue method");
 
-			locator = mita_locator(LocatorType, LocatorValue);
+			locator = mitaWebLocator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mitaWebJSHighlight(element);
 			mitaWebWait(WaitType);
@@ -1222,12 +1222,12 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void mita_selectIndex(String LocatorType, String LocatorValue, int value, String WaitType)
+	public static void mitaSelectIndex(String LocatorType, String LocatorValue, int value, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - selectIndex method");
 
-			locator = mita_locator(LocatorType, LocatorValue);
+			locator = mitaWebLocator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mitaWebJSHighlight(element);
 			mitaWebWait(WaitType);
@@ -1243,12 +1243,12 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void mita_selectVisibleText(String LocatorType, String LocatorValue, String text, String WaitType)
+	public static void mitaWebSelectVisibleText(String LocatorType, String LocatorValue, String text, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - selectVisibletext method");
 
-			locator = mita_locator(LocatorType, LocatorValue);
+			locator = mitaWebLocator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mitaWebJSHighlight(element);
 			mitaWebWait(WaitType);
@@ -1264,7 +1264,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static boolean mita_acceptAlert() throws Exception {
+	public static boolean mitaWebAcceptAlert() throws Exception {
 		boolean boolFound = false;
 		try {
 			logger.info("Executing - acceptAlert method");
@@ -1354,7 +1354,7 @@ public class ActionClass extends BaseClass {
 		try {
 			logger.info("Executing - AssertEquals method");
 
-			locator = mita_locator(LocatorType, LocatorValue);
+			locator = mitaWebLocator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mitaWebJSHighlightForValidation(element);
 			String actualValue = driver.findElement(locator).getText();
@@ -1373,7 +1373,7 @@ public class ActionClass extends BaseClass {
 			logger.info("Executing - EqualsValidation method");
 
 //			softAssert = new SoftAssert();
-			locator = mita_locator(LocatorType, LocatorValue);
+			locator = mitaWebLocator(LocatorType, LocatorValue);
 			actual = driver.findElement(locator).getText();
 
 			if (actual.equalsIgnoreCase(expected)) {
@@ -1404,7 +1404,7 @@ public class ActionClass extends BaseClass {
 		try {
 			logger.info("Executing - GettheFirstValue method");
 
-			locator = mita_locator(LocatorType, LocatorValue);
+			locator = mitaWebLocator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mitaWebWait(WaitType);
 			value1 = element.getText();
@@ -1424,21 +1424,19 @@ public class ActionClass extends BaseClass {
 		try {
 			logger.info("Executing - SettheFirstValue method");
 
-			locator = mita_locator(LocatorType, LocatorValue);
+			locator = mitaWebLocator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mitaWebJSHighlight(element);
 			mitaWebWait(WaitType);
 			element.clear();
 			Thread.sleep(1000);
-			sendChar(element, value1);
+			mitaSendChar(element, value1);
 			// element.sendKeys(value1);
 			// Thread.sleep(500);
 			mitaWebWrite();
 		} catch (Exception e) {
-//			System.err.format("No Element Found to perform ngvt_Click \t" + e);
 			mitaWebWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the SetFirstValue method \t" + e.getMessage());
-
 		}
 	}
 
@@ -1447,13 +1445,12 @@ public class ActionClass extends BaseClass {
 		try {
 			logger.info("Executing - gettheSecondValue method");
 
-			locator = mita_locator(LocatorType, LocatorValue);
+			locator = mitaWebLocator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mitaWebWait(WaitType);
 			value2 = element.getText();
 			mitaWebWait(WaitType);
 		} catch (Exception e) {
-//			System.err.format("No Element Found to perform  \t" + e);
 			mitaWebWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the gettheSecondValue method \t" + e.getMessage());
 
@@ -1465,13 +1462,13 @@ public class ActionClass extends BaseClass {
 		try {
 			logger.info("Executing - settheSecondValue method");
 
-			locator = mita_locator(LocatorType, LocatorValue);
+			locator = mitaWebLocator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mitaWebJSHighlight(element);
 			mitaWebWait(WaitType);
 			element.clear();
 			Thread.sleep(1000);
-			sendChar(element, value2);
+			mitaSendChar(element, value2);
 			// element.sendKeys(value2);
 			// Thread.sleep(500);
 			mitaWebWrite();
@@ -1488,7 +1485,7 @@ public class ActionClass extends BaseClass {
 		try {
 			logger.info("Executing - GetTheValueFromApp method");
 
-			locator = mita_locator(LocatorType, LocatorValue);
+			locator = mitaWebLocator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mitaWebWait(WaitType);
 			value3 = element.getAttribute("value");
@@ -1507,12 +1504,12 @@ public class ActionClass extends BaseClass {
 		try {
 			logger.info("Executing - SetThtValueInApp method");
 
-			locator = mita_locator(LocatorType, LocatorValue);
+			locator = mitaWebLocator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mitaWebWait(WaitType);
 			element.clear();
 			Thread.sleep(1000);
-			sendChar(element, value3);
+			mitaSendChar(element, value3);
 			// element.sendKeys(value3);
 			// Thread.sleep(500);
 			mitaWebWrite();
@@ -1717,7 +1714,7 @@ public class ActionClass extends BaseClass {
 		try {
 			logger.info("Executing - MovetoFrame method");
 
-			locator = mita_locator(LocatorType, LocatorValue);
+			locator = mitaWebLocator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mitaWebWait(WaitType);
 			driver.switchTo().frame(element);
@@ -1731,7 +1728,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void mita_defaultFrame() {
+	public static void mitaWebDefaultFrame() {
 		try {
 			logger.info("Executing - defaultFrame method");
 
@@ -1744,7 +1741,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void mita_cleanTheResults() throws IOException {
+	public static void mitaCleanTheResults() throws IOException {
 		try {
 //			 logger.info("Executing - Clean the Results method");
 //			 reporterLog("Executing - Clean the Results method");
@@ -1833,7 +1830,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void mitaWebScenarioNumber(String name) throws IOException {
+	public static void mitaScenarioNumber(String name) throws IOException {
 		try {
 //			logger.info("Executing - scenarioNumber method");
 //			reporterLog("Executing - scenarioNumber method");
@@ -1912,7 +1909,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void mita_executionType(String name) throws IOException {
+	public static void mitaExecutionType(String name) throws IOException {
 		try {
 //			 logger.info("Executing - "+Driver_Script.type);
 //			 reporterLog("Executing - "+Driver_Script.type);
@@ -1995,7 +1992,7 @@ public class ActionClass extends BaseClass {
 	// Starting--------------------------------------------------------------
 
 	// Enter text using Keys.ENTER function
-	public static void Machint_Mobile_EnterTextKey(String LocatorType, String LocatorValue, String value,
+	public static void mitaMobileEnterTextKey(String LocatorType, String LocatorValue, String value,
 			String WaitType) throws Exception {
 		try {
 			logger.info("Executing - EnterTextKey method");
@@ -2003,7 +2000,7 @@ public class ActionClass extends BaseClass {
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			// Machint_JSHighlight(element);
-			Machint_Mobile_Waits(WaitType);
+			mitaMobileWaits(WaitType);
 			element.click();
 			element.sendKeys(value);
 			Thread.sleep(1000);
@@ -2019,14 +2016,14 @@ public class ActionClass extends BaseClass {
 	}
 
 	// Enter text without Keys.ENTER function
-	public static void Machint_Mobile_EnterTextField(String LocatorType, String LocatorValue, String value,
+	public static void mitaMobileEnterTextField(String LocatorType, String LocatorValue, String value,
 			String WaitType) throws Exception {
 		try {
 			logger.info("Executing - EnterTextField method");
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			// Machint_JSHighlight(element);
-			Machint_Mobile_Waits(WaitType);
+			mitaMobileWaits(WaitType);
 			element.clear();
 			element.sendKeys(value);
 			// Thread.sleep(2000);
@@ -2039,12 +2036,12 @@ public class ActionClass extends BaseClass {
 	}
 
 	// Click function
-	public static void Machint_Mobile_Click(String LocatorType, String LocatorValue, String WaitType) throws Exception {
+	public static void mitaMobileClick(String LocatorType, String LocatorValue, String WaitType) throws Exception {
 		try {
 			logger.info("Executing - Click method");
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
-			Machint_Mobile_Waits(WaitType);
+			mitaMobileWaits(WaitType);
 			element.click();
 			mitaWebWrite();
 		} catch (Exception e) {
@@ -2056,13 +2053,13 @@ public class ActionClass extends BaseClass {
 	}
 
 	// Get the first value from mobile
-	public static void Machint_Mobile_GetTheFirstValue(String LocatorType, String LocatorValue, String WaitType)
+	public static void mitaMobileGetTheFirstValue(String LocatorType, String LocatorValue, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - GetTheFirstValue method");
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
-			Machint_Mobile_Waits(WaitType);
+			mitaMobileWaits(WaitType);
 			value1 = element.getText();
 			mitaWebWrite();
 		} catch (Exception e) {
@@ -2080,7 +2077,7 @@ public class ActionClass extends BaseClass {
 			logger.info("Executing - GetTheSecondValue method");
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
-			Machint_Mobile_Waits(WaitType);
+			mitaMobileWaits(WaitType);
 			value2 = element.getText();
 			mitaWebWrite();
 		} catch (Exception e) {
@@ -2100,7 +2097,7 @@ public class ActionClass extends BaseClass {
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			// Machint_JSHighlight(element);
-			Machint_Mobile_Waits(WaitType);
+			mitaMobileWaits(WaitType);
 			element.clear();
 			element.sendKeys(value1);
 			// Thread.sleep(2000);
@@ -2114,14 +2111,14 @@ public class ActionClass extends BaseClass {
 
 	// Set the first value from mobile
 
-	public static void Machint_Mobile_SetTheSecondValue(String LocatorType, String LocatorValue, String WaitType)
+	public static void mitaMobileSetTheSecondValue(String LocatorType, String LocatorValue, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - SetTheSecondValue method");
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			// Machint_JSHighlight(element);
-			Machint_Mobile_Waits(WaitType);
+			mitaMobileWaits(WaitType);
 			element.clear();
 			element.sendKeys(value2);
 			// Thread.sleep(2000);
@@ -2141,7 +2138,7 @@ public class ActionClass extends BaseClass {
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			Machint_JSHighlight(element);
-			Machint_Mobile_Waits(WaitType);
+			mitaMobileWaits(WaitType);
 			action = new Actions(mobiledriver);
 			action.contextClick(element).build().perform();
 			Thread.sleep(1000);
@@ -2161,7 +2158,7 @@ public class ActionClass extends BaseClass {
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			Machint_JSHighlight(element);
-			Machint_Mobile_Waits(WaitType);
+			mitaMobileWaits(WaitType);
 			action = new Actions(mobiledriver);
 			action.moveToElement(element).doubleClick().build().perform();
 			Thread.sleep(1000);
@@ -2205,7 +2202,7 @@ public class ActionClass extends BaseClass {
 			element = mobiledriver.findElement(locator);
 			action.clickAndHold(element).build().perform();
 			Machint_JSHighlight(element);
-			Machint_Mobile_Waits(WaitType);
+			mitaMobileWaits(WaitType);
 			element.click();
 			Thread.sleep(3000);
 			mitaMobileWrite();
@@ -2217,14 +2214,14 @@ public class ActionClass extends BaseClass {
 	}
 
 	// Select by Value function in drop-down
-	public static void Machint__Mobile_selectValue(String LocatorType, String LocatorValue, String text,
+	public static void mitaMobileSelectValue(String LocatorType, String LocatorValue, String text,
 			String WaitType) throws Exception {
 		try {
 			logger.info("Executing - selectValue method");
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			// Machint_JSHighlight(element);
-			Machint_Mobile_Waits(WaitType);
+			mitaMobileWaits(WaitType);
 			select = new Select(element);
 			select.selectByValue(text);
 			Thread.sleep(2000);
@@ -2237,14 +2234,14 @@ public class ActionClass extends BaseClass {
 	}
 
 	// Select by Index function in drop-down
-	public static void Machint_Mobile_selectIndex(String LocatorType, String LocatorValue, int value, String WaitType)
+	public static void mitaMobileSelectIndex(String LocatorType, String LocatorValue, int value, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - selectIndex method");
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			// Machint_JSHighlight(element);
-			Machint_Mobile_Waits(WaitType);
+			mitaMobileWaits(WaitType);
 			select = new Select(element);
 			select.selectByIndex(value);
 			Thread.sleep(2000);
@@ -2266,7 +2263,7 @@ public class ActionClass extends BaseClass {
 			element = mobiledriver.findElement(locator);
 			System.out.println(element);
 			// Machint_JSHighlight(element);
-			Machint_Mobile_Waits(WaitType);
+			mitaMobileWaits(WaitType);
 			select = new Select(element);
 			System.out.println(select);
 			select.selectByVisibleText(text);
@@ -2287,7 +2284,7 @@ public class ActionClass extends BaseClass {
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			// Machint_JSHighlight(element);
-			Machint_Mobile_Waits(WaitType);
+			mitaMobileWaits(WaitType);
 			select = new Select(element);
 			List<WebElement> dropdownOptions = select.getOptions();
 			System.out.println(dropdownOptions.size());
@@ -2308,7 +2305,7 @@ public class ActionClass extends BaseClass {
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			Machint_JSHighlight(element);
-			Machint_Mobile_Waits(WaitType);
+			mitaMobileWaits(WaitType);
 			select = new Select(element);
 			select.deselectAll();
 			Thread.sleep(1000);
@@ -2321,7 +2318,7 @@ public class ActionClass extends BaseClass {
 	}
 
 	// Different Explicit waits function
-	public static void Machint_Mobile_Waits(String WaitType) throws Exception {
+	public static void mitaMobileWaits(String WaitType) throws Exception {
 		switch (WaitType) {
 		case "visibilityOf":
 			Machint_Mobile_visibilityOf();
@@ -2465,7 +2462,7 @@ public class ActionClass extends BaseClass {
 	}
 
 	// Accept alert function
-	public static boolean Machint_Mobile_acceptAlert() throws IOException, InterruptedException {
+	public static boolean mitaMobileAcceptAlert() throws IOException, InterruptedException {
 		boolean boolFound = false;
 		try {
 			logger.info("Executing - acceptAlert method");
@@ -2509,7 +2506,7 @@ public class ActionClass extends BaseClass {
 	}
 
 	// Text of the alert box message function
-	public static boolean Machint_Mobile_getAlertText() throws IOException, InterruptedException {
+	public static boolean mitaMobileGetAlertText() throws IOException, InterruptedException {
 		boolean boolFound = false;
 		try {
 			logger.info("Executing - getAlertText method");
@@ -2704,7 +2701,7 @@ public class ActionClass extends BaseClass {
 			logger.info("Executing - FrameWebElement method");
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
-			Machint_Mobile_Waits(WaitType);
+			mitaMobileWaits(WaitType);
 			mobiledriver.switchTo().frame(element);
 			Thread.sleep(2000);
 			mitaMobileWrite();
@@ -2969,7 +2966,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void Machint_Mobile_Clock(String Locatortype, String Locatorvalue, String Locatorvalue1)
+	public static void mitaMobileClock(String Locatortype, String Locatorvalue, String Locatorvalue1)
 			throws IOException {
 		try {
 			logger.info("Executing - Clock method");
@@ -3240,7 +3237,7 @@ public class ActionClass extends BaseClass {
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			Machint_JSHighlight(element);
-			Machint_Mobile_Waits(WaitType);
+			mitaMobileWaits(WaitType);
 			element.click();
 			Thread.sleep(2000);
 			Runtime.getRuntime().exec(value);
@@ -3261,7 +3258,7 @@ public class ActionClass extends BaseClass {
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			Machint_JSHighlight(element);
-			Machint_Mobile_Waits(WaitType);
+			mitaMobileWaits(WaitType);
 			String Captcha = element.getText();
 			System.out.println(Captcha);
 			mitaMobileWrite();
@@ -3285,7 +3282,7 @@ public class ActionClass extends BaseClass {
 			element = mobiledriver.findElement(locator);
 			System.out.println(element);
 			// Machint_JSHighlight(element);
-			Machint_Mobile_Waits(WaitType);
+			mitaMobileWaits(WaitType);
 			action.moveToElement(element).build().perform();
 			Thread.sleep(2000);
 			// Get tooltip text
@@ -3302,7 +3299,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void Machint_Mobile_Scrollintoview(String LocatorType, String LocatorValue, String value)
+	public static void mitaMobileScrollIntoView(String LocatorType, String LocatorValue, String value)
 			throws IOException, InterruptedException {
 		try {
 			logger.info("Executing - Scrollintoview method");
@@ -3324,7 +3321,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void Machint_Mobile_SingleTap(String LocatorType, String LocatorValue, String WaitType)
+	public static void mitaMobileSingleTap(String LocatorType, String LocatorValue, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - SingleTap method");
@@ -3437,7 +3434,7 @@ public class ActionClass extends BaseClass {
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			// Machint_JSHighlight(element);
-			Machint_Mobile_Waits(WaitType);
+			mitaMobileWaits(WaitType);
 			Actions action = new Actions(mobiledriver);
 			action.moveToElement(element).build().perform();
 			Thread.sleep(2000);
@@ -3495,7 +3492,7 @@ public class ActionClass extends BaseClass {
 
 	}
 
-	public static void Machint_Mobile_sign(String LocatorType, String LocatorValue)
+	public static void mitaMobileSign(String LocatorType, String LocatorValue)
 			throws IOException, InterruptedException {
 
 		try {
@@ -3552,7 +3549,7 @@ public class ActionClass extends BaseClass {
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			AndroidElement Element = mobiledriver.findElement(locator);
 			// Machint_JSHighlight(element);
-			Machint_Mobile_Waits(WaitType);
+			mitaMobileWaits(WaitType);
 			TouchAction press = new TouchAction((PerformsTouchActions) mobiledriver).press(element(Element))
 					.waitAction(waitOptions(Duration.ofSeconds(1))).release();
 
@@ -3658,16 +3655,16 @@ public class ActionClass extends BaseClass {
 	}
 
 	// Generate the Random Aadhar number
-	public static void Machint_Mobile_generateRandomNumber(String LocatorType, String LocatorValue, String value,
+	public static void mitaMobileGenerateRandomNumber(String LocatorType, String LocatorValue, String value,
 			String WaitType) throws Exception {
 		try {
 			logger.info("Executing - generateRandomNumber method");
 			int number = Integer.parseInt(value);
-			String randomNumber = generateAadharNumber(number);
+			String randomNumber = mitaGenerateAadharNumber(number);
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			// Machint_JSHighlight(element);
-			Machint_Mobile_Waits(WaitType);
+			mitaMobileWaits(WaitType);
 			element.clear();
 			Thread.sleep(1000);
 			element.sendKeys(randomNumber);
@@ -3688,7 +3685,7 @@ public class ActionClass extends BaseClass {
 	 * formatter.format(ts); System.out.println("Veeru " + random); return random; }
 	 */
 
-	public static String generateAadharNumber(int length) {
+	public static String mitaGenerateAadharNumber(int length) {
 		String chars = "0123456789";
 		String str = new Random().ints(length, 0, chars.length()).mapToObj(i -> "" + chars.charAt(i))
 				.collect(Collectors.joining());
@@ -3696,7 +3693,7 @@ public class ActionClass extends BaseClass {
 		return str;
 	}
 
-	public static void Machint_Mobile_SeekBar(String LocatorType, String LocatorValue, String number)
+	public static void mitaMobileSeekBar(String LocatorType, String LocatorValue, String number)
 			throws IOException, InterruptedException {
 		try {
 			logger.info("Executing - Seekbar method");
@@ -3738,14 +3735,14 @@ public class ActionClass extends BaseClass {
 
 	}
 
-	public static void Machint_Mobile_Number_OTP(String LocatorType, String LocatorValue, String value, String WaitType)
+	public static void mitaMobileNumberOTP(String LocatorType, String LocatorValue, String value, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - Mobile number OTP method");
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			// Machint_JSHighlight(element);
-			Machint_Mobile_Waits(WaitType);
+			mitaMobileWaits(WaitType);
 			RestAssured.baseURI = BASE_URL;
 			RequestSpecification request = RestAssured.given();
 			request.header("Appian-API-Key",
@@ -3855,7 +3852,7 @@ public class ActionClass extends BaseClass {
 		return by;
 	}
 
-	public static void Machint_Mobile_scrollup(String Startnumber, String Endnumber)
+	public static void mitaMobileScrollUp(String Startnumber, String Endnumber)
 			throws IOException, InterruptedException {
 		try {
 			logger.info("Executing - Scrollup method");
@@ -3899,7 +3896,7 @@ public class ActionClass extends BaseClass {
 	 * logger.warn("Unable to execute the ScrollUp method \t" + e.getMessage()); } }
 	 */
 
-	public static void machint_Mobile_ProgressBar_wait(String locatorType, String locatorValue, String waitType)
+	public static void mitaMobileProgressBarWait(String locatorType, String locatorValue, String waitType)
 			throws Exception {
 		try {
 			logger.info("Executing - ProgressBar method");
@@ -3908,7 +3905,7 @@ public class ActionClass extends BaseClass {
 			element = mobiledriver.findElement(locator);
 			// Thread.sleep(20000);
 			System.out.println("element values" + element);
-			Machint_Mobile_Waits(waitType);
+			mitaMobileWaits(waitType);
 			System.out.println("waittype is" + waitType);
 			mitaMobileWrite();
 		} catch (Exception e) {
@@ -3978,11 +3975,11 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void scrollDown(String LocatorType, String LocatorValue) throws IOException, InterruptedException {
+	public static void mitaWebScrollDown(String LocatorType, String LocatorValue) throws IOException, InterruptedException {
 		try {
 			logger.info("Executing - EnterTextKey method");
 
-			locator = mita_locator(LocatorType, LocatorValue);
+			locator = mitaWebLocator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mitaWebJSHighlight(element);
 			JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -4002,7 +3999,7 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - GettheLeadId method");
-			locator = mita_locator(LocatorType, LocatorValue);
+			locator = mitaWebLocator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			leadID = element.getText();
 			leadID = leadID.substring(9, 13);
@@ -4021,13 +4018,13 @@ public class ActionClass extends BaseClass {
 		try {
 			logger.info("Executing - SettheLeadid method");
 
-			locator = mita_locator(LocatorType, LocatorValue);
+			locator = mitaWebLocator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mitaWebJSHighlight(element);
 			mitaWebWait(WaitType);
 			element.clear();
 			Thread.sleep(1000);
-			sendChar(element, leadID);
+			mitaSendChar(element, leadID);
 			// element.sendKeys(leadID);
 			// Thread.sleep(500);
 			mitaWebWrite();
@@ -4060,11 +4057,11 @@ public class ActionClass extends BaseClass {
 		try {
 			logger.info("Executing - SettheFirstValue method");
 			locator = mitaMobilelocator(locatorType, locatorValue);
-			Machint_Mobile_Waits(WaitType);
+			mitaMobileWaits(WaitType);
 			element = mobiledriver.findElement(locator);
 			element.clear();
 			Thread.sleep(1000);
-			sendChar(element, leadID);
+			mitaSendChar(element, leadID);
 			// element.sendKeys(leadID);
 			// Thread.sleep(500);
 			mitaMobileWrite();
@@ -4075,7 +4072,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void sendChar(WebElement element, String value) throws InterruptedException {
+	public static void mitaSendChar(WebElement element, String value) throws InterruptedException {
 		for (int i = 0; i < value.length(); i++) {
 			char c = value.charAt(i);
 			String s = new StringBuilder().append(c).toString();
@@ -4090,7 +4087,7 @@ public class ActionClass extends BaseClass {
 		try {
 			logger.info("Executing - GettheLeadId method");
 
-			locator = mita_locator(LocatorType, LocatorValue);
+			locator = mitaWebLocator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			leadID = element.getText();
 			StringBuilder myNumbers = new StringBuilder();
@@ -4138,12 +4135,12 @@ public class ActionClass extends BaseClass {
 		try {
 			logger.info("Executing - EnterCharacter method");
 
-			locator = mita_locator(LocatorType, LocatorValue);
+			locator = mitaWebLocator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mitaWebJSHighlight(element);
 			mitaWebWait(WaitType);
 			element.clear();
-			sendChar(element, value);
+			mitaSendChar(element, value);
 			// element.sendKeys(leadID);
 			// Thread.sleep(500);
 			mitaWebWrite();
@@ -4160,8 +4157,8 @@ public class ActionClass extends BaseClass {
 			logger.info("Executing - zeroStartsNumber method");
 
 			int number = Integer.parseInt(value);
-			String randomNumber = generateNumber(number);
-			locator = mita_locator(LocatorType, LocatorValue);
+			String randomNumber = mitaGenerateNumber(number);
+			locator = mitaWebLocator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			// Machint_JSHighlight(element);
 			mitaWebWait(WaitType);
@@ -4178,7 +4175,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static String generateNumber(int length) {
+	public static String mitaGenerateNumber(int length) {
 		String chars = "0123456789";
 		String str = new Random().ints(length, 0, chars.length()).mapToObj(i -> "" + chars.charAt(i))
 				.collect(Collectors.joining());
@@ -4192,7 +4189,7 @@ public class ActionClass extends BaseClass {
 	public static void mitaWebUploadSendkeys(String LocatorType, String LocatorValue, String value) throws Exception {
 		try {
 			logger.info("Executing - uploadSendKEys method");
-			locator = mita_locator(LocatorType, LocatorValue);
+			locator = mitaWebLocator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 //			mitaWebWait(WaitType);
 			Thread.sleep(1000);
@@ -4210,10 +4207,10 @@ public class ActionClass extends BaseClass {
 			throws Exception, IOException, InterruptedException {
 		try {
 			logger.info("Executing - FileUpload method");
-			locator = mita_locator(LocatorType, LocatorValue);
+			locator = mitaWebLocator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			Machint_JSHighlight(element);
-			Machint_Mobile_Waits(WaitType);
+			mitaMobileWaits(WaitType);
 			element.click();
 			Thread.sleep(2000);
 			Runtime.getRuntime().exec(value);
@@ -4232,11 +4229,11 @@ public class ActionClass extends BaseClass {
 		try {
 			logger.info("Executing - zeroStartsNumber method");
 			int number = Integer.parseInt(value);
-			String randomNumber = generateNumber(number);
+			String randomNumber = mitaGenerateNumber(number);
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			// Machint_JSHighlight(element);
-			Machint_Mobile_Waits(WaitType);
+			mitaMobileWaits(WaitType);
 			element.clear();
 			Thread.sleep(1000);
 			element.sendKeys(randomNumber);
@@ -4255,7 +4252,7 @@ public class ActionClass extends BaseClass {
 		try {
 			logger.info("Executing - SettheLeadid method");
 
-			locator = mita_locator(LocatorType, LocatorValue);
+			locator = mitaWebLocator(LocatorType, LocatorValue);
 			/*
 			 * element = driver.findElement(locator); mita_JSHighlight(element);
 			 * mitaWebWait(WaitType); element.clear();
@@ -4290,7 +4287,7 @@ public class ActionClass extends BaseClass {
 			throws Exception {
 		try {
 			logger.info("Executing - WebAddDates method");
-			locator = mita_locator(LocatorType, LocatorValue);
+			locator = mitaWebLocator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mitaWebJSHighlight(element);
 			mitaWebWait(WaitType);
@@ -4307,7 +4304,7 @@ public class ActionClass extends BaseClass {
 
 			element.clear();
 			// element.sendKeys(dateStr);
-			sendChar(element, dateStr);
+			mitaSendChar(element, dateStr);
 			mitaWebWrite();
 		} catch (Exception e) {
 			System.err.format("No Element Found to perform entering the values \t" + e);
@@ -4323,7 +4320,7 @@ public class ActionClass extends BaseClass {
 			logger.info("Executing - MobileAddDates method");
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
-			Machint_Mobile_Waits(WaitType);
+			mitaMobileWaits(WaitType);
 			Date returnDate = new Date();
 			Date date;
 			int number = Integer.parseInt(value);
@@ -4336,7 +4333,7 @@ public class ActionClass extends BaseClass {
 
 			element.clear();
 			// element.sendKeys(dateStr);
-			sendChar(element, dateStr);
+			mitaSendChar(element, dateStr);
 			mitaMobileWrite();
 		} catch (Exception e) {
 			mitaMobileWriteWhenLocatorIsNotValid();
@@ -4376,10 +4373,10 @@ public class ActionClass extends BaseClass {
 		try {
 			logger.info("Executing - WebDynamicString method");
 
-			locator = mita_locator(LocatorType, LocatorValue);
+			locator = mitaWebLocator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mitaWebWait(WaitType);
-			String random = dynamicString(Integer.parseInt(value));
+			String random = mitaDynamicString(Integer.parseInt(value));
 			System.out.println(random);
 			element.clear();
 			element.sendKeys(random);
@@ -4393,7 +4390,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static String dynamicString(int value) {
+	public static String mitaDynamicString(int value) {
 		randomString = RandomStringUtils.randomAlphabetic(value);
 		System.out.println(randomString);
 		return randomString;
@@ -4405,8 +4402,8 @@ public class ActionClass extends BaseClass {
 			logger.info("Executing - MobileDynamicString method");
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
-			Machint_Mobile_Waits(WaitType);
-			String random = dynamicString(Integer.parseInt(value));
+			mitaMobileWaits(WaitType);
+			String random = mitaDynamicString(Integer.parseInt(value));
 			System.out.println(random);
 			element.clear();
 			element.sendKeys(random);
@@ -4424,12 +4421,12 @@ public class ActionClass extends BaseClass {
 		try {
 			logger.info("Executing - WebAppendText method");
 
-			locator = mita_locator(LocatorType, LocatorValue);
+			locator = mitaWebLocator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mitaWebJSHighlight(element);
 			mitaWebWait(WaitType);
 			element.click();
-			value = dynamicString(5) + value;
+			value = mitaDynamicString(5) + value;
 			element.sendKeys(value);
 			Thread.sleep(500);
 			mitaWebWrite();
@@ -4449,9 +4446,9 @@ public class ActionClass extends BaseClass {
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			// Machint_JSHighlight(element);
-			Machint_Mobile_Waits(WaitType);
+			mitaMobileWaits(WaitType);
 			element.clear();
-			value = dynamicString(5) + value;
+			value = mitaDynamicString(5) + value;
 			element.sendKeys(value);
 			// Thread.sleep(2000);
 			mitaMobileWrite();
@@ -4472,7 +4469,7 @@ public class ActionClass extends BaseClass {
 
 			try {
 				if (element.isDisplayed())
-					locator = mita_locator(LocatorType, LocatorValue);
+					locator = mitaWebLocator(LocatorType, LocatorValue);
 				element = driver.findElement(locator);
 				mitaWebJSHighlight(element);
 				element.clear();
@@ -4495,16 +4492,14 @@ public class ActionClass extends BaseClass {
 	public static void mitaWebRefresh() {
 		try {
 			logger.info("Executing - Refresh method");
-
 			driver.navigate().refresh();
 			mitaWebWrite();
 		} catch (Exception e) {
 			logger.warn("Unable to refresh \t" + e.getMessage());
-
 		}
 	}
 
-	public static String getCurrentTime() {
+	public static String mitaGetCurrentTime() {
 		timeStamp = DateTime.now().toString("yyyy-MM-dd--hh-mm-ss");
 		return timeStamp;
 	}
@@ -4848,7 +4843,7 @@ public class ActionClass extends BaseClass {
 			for (String clicks : texts) {
 
 				driver.get(clicks);
-				locator = mita_locator(LocatorType, LocatorValue);
+				locator = mitaWebLocator(LocatorType, LocatorValue);
 				List<WebElement> allImg = driver.findElements(locator);
 
 				int imgsCount = allImg.size();
@@ -5048,7 +5043,7 @@ public class ActionClass extends BaseClass {
 	public static void mitaWebListBox(String LocatorType, String LocatorValue, String value,String WaitType) throws Exception {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue);
-			locator = mita_locator(LocatorType, LocatorValue);
+			locator = mitaWebLocator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
 			mitaWebWait(WaitType);
 			element.click();

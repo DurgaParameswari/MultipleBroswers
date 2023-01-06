@@ -107,7 +107,7 @@ public class ExcelData extends ExtentTestManager {
 		return celldata;
 	}
 
-	public static String mita_TestDataFromExcel(String ColumnName) throws Exception {
+	public static String mitaTestDataFromExcel(String ColumnName) throws Exception {
 		for (i = 1; i <= getRowCount(); i++) {
 			row = sheet.getRow(i);
 			cell = row.getCell(0);
@@ -131,7 +131,7 @@ public class ExcelData extends ExtentTestManager {
 		}
 	}
 
-	public static void mita_Enter_excelData() throws Exception {
+	public static void mitaEnterExcelData() throws Exception {
 		try {
 			logger.info(
 					"Executing - " + Driver_Script.Actionvalue + ": Reading locator value and test data from excel");
@@ -147,7 +147,7 @@ public class ExcelData extends ExtentTestManager {
 		}
 	}
 
-	public static void mita_Click_excelData() {
+	public static void mitaClickExcelData() {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue + ": Reading locator value from excel");
 			cell4 = row.getCell(1);
@@ -159,7 +159,7 @@ public class ExcelData extends ExtentTestManager {
 		}
 	}
 
-	public static void mita_Select_ExcelData() throws Exception {
+	public static void mitaSelectExcelData() throws Exception {
 		try {
 			logger.info(
 					"Executing - " + Driver_Script.Actionvalue + ": Reading locator value and test data from excel");
@@ -175,7 +175,7 @@ public class ExcelData extends ExtentTestManager {
 		}
 	}
 
-	public static void mita_Validate_ExcelData() throws Exception {
+	public static void mitaValidateExcelData() throws Exception {
 		try {
 			logger.info(
 					"Executing - " + Driver_Script.Actionvalue + ": Reading locator value and test data from excel");
@@ -191,7 +191,7 @@ public class ExcelData extends ExtentTestManager {
 		}
 	}
 
-	public static void mita_ValidateTitle() {
+	public static void mitaValidateTitle() {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue + ": Reading test data from excel");
 			cell9 = row.getCell(2);
@@ -203,7 +203,7 @@ public class ExcelData extends ExtentTestManager {
 		}
 	}
 
-	public static void mita_Frame() {
+	public static void mitaFrame() {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue + ": Reading locator value from excel");
 			cell10 = row.getCell(1);
@@ -215,7 +215,7 @@ public class ExcelData extends ExtentTestManager {
 		}
 	}
 
-	public static void mita_Wait() {
+	public static void mitaWait() {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue + ": Reading wait time from excel");
 			cell11 = row.getCell(2);
@@ -227,7 +227,7 @@ public class ExcelData extends ExtentTestManager {
 		}
 	}
 
-	public static void mita_stepName() {
+	public static void mitaStepName() {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue + ": Reading description from excel");
 			cell12 = row.getCell(0);
@@ -238,7 +238,7 @@ public class ExcelData extends ExtentTestManager {
 		}
 	}
 
-	public static void mita_response() {
+	public static void mitaResponse() {
 		try {
 			logger.info(
 					"Executing - " + Driver_Script.Actionvalue + ": Reading locator value and test data from excel");
@@ -254,7 +254,7 @@ public class ExcelData extends ExtentTestManager {
 		}
 	}
 	
-	public static void mita_headingTags() {
+	public static void mitaHeadingTags() {
 		try {
 			logger.info(
 					"Executing - " + Driver_Script.Actionvalue + ": Reading locator value and test data from excel");
@@ -270,7 +270,7 @@ public class ExcelData extends ExtentTestManager {
 		}
 	}
 	
-	public static void mita_metaTags() {
+	public static void mitaMetaTags() {
 		try {
 			logger.info(
 					"Executing - " + Driver_Script.Actionvalue + ": Reading locator value and test data from excel");
@@ -286,7 +286,7 @@ public class ExcelData extends ExtentTestManager {
 		}
 	}
 	
-	public static void mita_brokenLinks() {
+	public static void mitaBrokenLinks() {
 		try {
 			logger.info(
 					"Executing - " + Driver_Script.Actionvalue + ": Reading locator value and test data from excel");
@@ -302,7 +302,7 @@ public class ExcelData extends ExtentTestManager {
 		}	
 	}
 	
-	public static void mita_getCurrentUrl() {
+	public static void mitaGetCurrentUrl() {
 		try {
 			logger.info(
 					"Executing - " + Driver_Script.Actionvalue + ": Reading locator value and test data from excel");
@@ -315,7 +315,7 @@ public class ExcelData extends ExtentTestManager {
 		}
 }
 	
-	public static void Machint_web_listbox() throws Exception {
+	public static void mitaListBox() throws Exception {
 		try {
 			logger.info(
 					"Executing - " + Driver_Script.Actionvalue + ": Reading locator value and test data from excel");

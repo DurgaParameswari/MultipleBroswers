@@ -323,7 +323,7 @@ public class Driver_Script extends MobileActionClass {
 					mitaWebAutoSuggestionDropDown("xpath", LocatorId, Entervalue, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("index")) {
 					mitaSelectExcelData();
-					mitaSelectIndex("xpath", LocatorId, 1, "visibilityOf");
+					mitaWebSelectIndex("xpath", LocatorId, 1, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("scenario")) {
 					mitaStepName();
 					mitaScenarioNumber(Actionvalue);

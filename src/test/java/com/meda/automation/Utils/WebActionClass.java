@@ -1,6 +1,10 @@
 package com.meda.automation.Utils;
 
+import java.awt.AWTException;
 import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -79,9 +83,9 @@ public class WebActionClass extends BaseClass {
 	public static String Parent;
 	public static Robot robot;
 	public static int xOffset;
-	private Duration STEP_DURATION = Duration.ofMillis(20);
-	private Duration NO_TIME = Duration.ofMillis(0);
-	private Origin VIEW = Origin.viewport();
+	public Duration STEP_DURATION = Duration.ofMillis(20);
+	public Duration NO_TIME = Duration.ofMillis(0);
+	public Origin VIEW = Origin.viewport();
 	public static final String BASE_URL = "https://machintsolutions-test.appiancloud.com";
 	public static String OTP;
 	public static ResponseBody response;
@@ -683,7 +687,7 @@ public class WebActionClass extends BaseClass {
 		}
 	}
 
-	public static void mitaSelectIndex(String LocatorType, String LocatorValue, int value, String WaitType)
+	public static void mitaWebSelectIndex(String LocatorType, String LocatorValue, int value, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - selectIndex method");
@@ -698,6 +702,24 @@ public class WebActionClass extends BaseClass {
 		} catch (Exception e) {
 			mitaWebWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the selectIndex method \t" + e.getMessage());
+		}
+	}
+	
+	public static void mitaWebSelectValue(String LocatorType, String LocatorValue, String text, String WaitType)
+			throws Exception {
+		try {
+			logger.info("Executing - selectValue method");
+			locator = mitaWebLocator(LocatorType, LocatorValue);
+			element = driver.findElement(locator);
+			mitaWebJSHighlight(element);
+			mitaWebWait(WaitType);
+			select = new Select(element);
+			select.selectByValue(text);
+			// Thread.sleep(500);
+			mitaWebWrite();
+		} catch (Exception e) {
+			mitaWebWriteWhenLocatorIsNotValid();
+			logger.warn("Unable to execute the selectvalue method \t" + e.getMessage());
 		}
 	}
 
@@ -931,6 +953,46 @@ public class WebActionClass extends BaseClass {
 		}
 		return boolFound;
 	}
+	
+	public static boolean mitaWebDismissAlert() {
+		boolean boolFound = false;
+		try {
+			logger.info("Executing - dismissAlert method");
+			wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
+			wait.until(ExpectedConditions.alertIsPresent());
+			Alert alert = driver.switchTo().alert();
+			if (alert != null) {
+				alert.dismiss();
+				boolFound = true;
+			}
+		} catch (Exception e) {
+			boolFound = false;
+			e.printStackTrace();
+			logger.warn("Unable to execute the dismissAlert method \t" + e.getMessage());
+		}
+		return boolFound;
+	}
+	
+	public static boolean mitaWebGetAlertText() {
+		boolean boolFound = false;
+		try {
+			logger.info("Executing - getAlertText method");
+			wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
+			wait.until(ExpectedConditions.alertIsPresent());
+			Alert alert = driver.switchTo().alert();
+			String AlertMsg = driver.switchTo().alert().getText();
+			if (alert != null) {
+				alert.accept();
+				System.out.println(AlertMsg);
+				boolFound = true;
+			}
+		} catch (Exception e) {
+			boolFound = false;
+			e.printStackTrace();
+			logger.warn("Unable to execute the getAlertText method \t" + e.getMessage());
+		}
+		return boolFound;
+	}
 
 	public static void mitaWebGetTheValueFromApp(String LocatorType, String LocatorValue, String WaitType)
 			throws Exception {
@@ -1054,7 +1116,7 @@ public class WebActionClass extends BaseClass {
 					searchText2.setCellValue("PASS");
 					searchText2.setCellStyle(style);
 					Cell ActualValue = sheet.getRow(k).createCell(3);
-					ActualValue.setCellValue(ActionClass.actual);
+					ActualValue.setCellValue(WebActionClass.actual);
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
 					mitaWebScreenShot();
@@ -1070,7 +1132,7 @@ public class WebActionClass extends BaseClass {
 					searchText2.setCellValue("PASS");
 					searchText2.setCellStyle(style);
 					Cell ActualValue = sheet.getRow(k).createCell(3);
-					ActualValue.setCellValue(ActionClass.actual);
+					ActualValue.setCellValue(WebActionClass.actual);
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
 					mitaWebScreenShot();
@@ -1086,7 +1148,7 @@ public class WebActionClass extends BaseClass {
 					searchText2.setCellValue("PASS");
 					searchText2.setCellStyle(style);
 					Cell ActualValue = sheet.getRow(k).createCell(3);
-					ActualValue.setCellValue(ActionClass.actual);
+					ActualValue.setCellValue(WebActionClass.actual);
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
 					mitaWebScreenShot();
@@ -1120,7 +1182,7 @@ public class WebActionClass extends BaseClass {
 					searchText2.setCellValue("FAIL");
 					searchText2.setCellStyle(style);
 					Cell ActualValue = sheet.getRow(k).createCell(3);
-					ActualValue.setCellValue(ActionClass.actual);
+					ActualValue.setCellValue(WebActionClass.actual);
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
 					mitaWebScreenShot();
@@ -1138,7 +1200,7 @@ public class WebActionClass extends BaseClass {
 					searchText2.setCellValue("FAIL");
 					searchText2.setCellStyle(style);
 					Cell ActualValue = sheet.getRow(k).createCell(3);
-					ActualValue.setCellValue(ActionClass.actual);
+					ActualValue.setCellValue(WebActionClass.actual);
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
 					mitaWebScreenShot();
@@ -1154,7 +1216,7 @@ public class WebActionClass extends BaseClass {
 					searchText2.setCellValue("FAIL");
 					searchText2.setCellStyle(style);
 					Cell ActualValue = sheet.getRow(k).createCell(3);
-					ActualValue.setCellValue(ActionClass.actual);
+					ActualValue.setCellValue(WebActionClass.actual);
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
 					mitaWebScreenShot();
@@ -1213,6 +1275,22 @@ public class WebActionClass extends BaseClass {
 		} catch (Exception e) {
 			mitaWebWriteWhenLocatorIsNotValid();
 			logger.warn("Unable to execute the Asserttitle method \t" + e.getMessage());
+		}
+	}
+	
+	public static void mitaWebAssertEquals(String LocatorType, String LocatorValue, String expectedValue)
+			throws IOException {
+		try {
+			logger.info("Executing - AssertEquals method");
+			locator = mitaWebLocator(LocatorType, LocatorValue);
+			element = driver.findElement(locator);
+			mitaWebJSHighlightForValidation(element);
+			String actualValue = driver.findElement(locator).getText();
+			softAssert.assertEquals(actualValue, expectedValue);
+			mitaWebWritePass();
+		} catch (Exception e) {
+			mitaWebWriteFail();
+			logger.warn("Asserts are not equal \t" + e.getMessage());
 		}
 	}
 
@@ -1758,5 +1836,115 @@ public class WebActionClass extends BaseClass {
 				return mitaAddDays(baseCal, 1);
 			} else
 				return baseCal;
+		}
+		
+		public static void mitaWebNumberOTP(String LocatorType, String LocatorValue, String value,
+				String WaitType) throws Exception {
+			try {
+				logger.info("Executing - Mobile number OTP method");
+				locator = mitaWebLocator(LocatorType, LocatorValue);
+				element = driver.findElement(locator);
+				mitaWebJSHighlight(element);
+				mitaWebWait(WaitType);
+				RestAssured.baseURI = BASE_URL;
+				RequestSpecification request = RestAssured.given();
+				request.header("Appian-API-Key",
+						"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkMjE4YjUxNi0wYzA5LTRhMTMtYTZiYi00YjQ2ZjQ2YmYwYjkifQ.S26NBlhpMuqVeo5gFl6gd5AiHDfP90rzWIc2k0g9vrU");
+				request.header("Content-Type", "application/json");
+				response = request.body("{\"phNumber\" : \"" + value + "\", \"flag\" : \"newUser\"}")
+						.post("/suite/webapi/abank-generate-otp");
+				String responseBody = ((ResponseOptions<Response>) response).getBody().asString();
+				System.out.println("Response Body is:" + responseBody);
+				JSONObject jsonobject = new JSONObject(responseBody);
+				int OTP = jsonobject.getInt("OTP");
+				value = String.valueOf(OTP);
+				// status code validation
+				int statusCode = ((ResponseOptions<Response>) response).getStatusCode();
+				// Assert.assertEquals(statusCode, 201);
+				element.clear();
+				element.sendKeys(value);
+				mitaWebWrite();
+			} catch (Exception e) {
+				mitaWebWriteWhenLocatorIsNotValid();
+				logger.warn("Unable to execute handling otp method \t" + e.getMessage());
+			}
+		}
+		
+		public static void mitaWebRobotUploadFile(String LocatorType, String LocatorValue, String value, String WaitType)
+				throws AWTException, Exception {
+			try {
+				logger.info("Executing - Upload file method");
+				locator = mitaWebLocator(LocatorType, LocatorValue);
+				element = driver.findElement(locator);
+				mitaWebJSHighlight(element);
+				mitaWebWait(WaitType);
+				element.click();
+				robot = new Robot();
+				robot.setAutoDelay(1000);
+				StringSelection selection = new StringSelection(value);
+				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection, null);
+				robot.setAutoDelay(1000);
+				robot.keyPress(KeyEvent.VK_CONTROL);
+				robot.keyPress(KeyEvent.VK_V);
+				robot.keyRelease(KeyEvent.VK_CONTROL);
+				robot.keyRelease(KeyEvent.VK_V);
+				robot.setAutoDelay(1000);
+				robot.keyPress(KeyEvent.VK_ENTER);
+				robot.keyRelease(KeyEvent.VK_ENTER);
+				mitaWebWrite();
+			} catch (Exception e) {
+				mitaWebWriteWhenLocatorIsNotValid();
+				logger.warn("Unable to execute the Upload file method \t" + e.getMessage());
+			}
+		}
+		
+		public static void mitaWebGetTheLeadID1(String LocatorType, String LocatorValue, String WaitType)
+				throws Exception {
+			try {
+				logger.info("Executing - GettheLeadId method");
+				locator = mitaWebLocator(LocatorType, LocatorValue);
+				element = driver.findElement(locator);
+				leadID = element.getText();
+				leadID = leadID.substring(9, 13);
+				System.out.println(leadID);
+				mitaWebWrite();
+			} catch (Exception e) {
+				mitaWebWriteWhenLocatorIsNotValid();
+				logger.warn("Unable to get the value \t" + e.getMessage());
+			}
+		}
+		
+		/**
+		 * @description: Adding the days for current day
+		 * @param -data - To provide number of days
+		 * @return Pass or Fail
+		 */
+
+		public static void mitaWebAddDates(String LocatorType, String LocatorValue, String value, String WaitType)
+				throws Exception {
+			try {
+				logger.info("Executing - WebAddDates method");
+				locator = mitaWebLocator(LocatorType, LocatorValue);
+				element = driver.findElement(locator);
+				mitaWebJSHighlight(element);
+				mitaWebWait(WaitType);
+				Date returnDate = new Date();
+				Date date;
+				int number = Integer.parseInt(value);
+				date =  mitaAddDays(returnDate, number);
+				// date = offsetForWeekend(date);
+
+				SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+				String dateStr = sdf.format(date);
+				System.out.println("In Main method  : " + dateStr);
+				element.clear();
+				// element.sendKeys(dateStr);
+				mitaSendChar(element, dateStr);
+				mitaWebWrite();
+			} catch (Exception e) {
+				mitaWebWriteWhenLocatorIsNotValid();
+				logger.warn("Unable to execute the WebAddDates method \t" + e.getMessage());
+
+			}
 		}
 }

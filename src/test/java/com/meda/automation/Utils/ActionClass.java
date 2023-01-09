@@ -40,14 +40,10 @@ import java.util.stream.Collectors;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.RandomStringUtils;
 import org.apache.log4j.Logger;
-import org.apache.poi.common.usermodel.Hyperlink;
-import org.apache.poi.ss.usermodel.CreationHelper;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.IndexedColors;
 import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.xssf.usermodel.XSSFCreationHelper;
-import org.apache.poi.xssf.usermodel.XSSFHyperlink;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.joda.time.DateTime;
 import org.json.JSONObject;
@@ -87,7 +83,6 @@ import com.mavenpackage.Runner;
 import com.meda.automation.base.BaseClass;
 import com.meda.automation.managers.ExtentTestManager;
 
-import autoitx4java.AutoItX;
 import io.appium.java_client.FindsByAndroidUIAutomator;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.MultiTouchAction;
@@ -1048,7 +1043,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void mitaWebMobileNumberOTP(String LocatorType, String LocatorValue, String value,
+	public static void mitaWebNumberOTP(String LocatorType, String LocatorValue, String value,
 			String WaitType) throws Exception {
 		try {
 			logger.info("Executing - Mobile number OTP method");
@@ -1084,7 +1079,7 @@ public class ActionClass extends BaseClass {
 
 	}
 
-	public static void mita_Robot_uploadFile(String LocatorType, String LocatorValue, String value, String WaitType)
+	public static void mitaWebRobotUploadFile(String LocatorType, String LocatorValue, String value, String WaitType)
 			throws AWTException, Exception {
 		try {
 			logger.info("Executing - Upload file method");
@@ -1201,7 +1196,7 @@ public class ActionClass extends BaseClass {
 
 	}
 
-	public static void mita_selectValue(String LocatorType, String LocatorValue, String text, String WaitType)
+	public static void mitaWebSelectValue(String LocatorType, String LocatorValue, String text, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - selectValue method");
@@ -1222,7 +1217,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void mitaSelectIndex(String LocatorType, String LocatorValue, int value, String WaitType)
+	public static void mitaWebSelectIndex(String LocatorType, String LocatorValue, int value, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - selectIndex method");
@@ -1286,7 +1281,7 @@ public class ActionClass extends BaseClass {
 		return boolFound;
 	}
 
-	public static boolean mita_dismissAlert() {
+	public static boolean mitaWebDismissAlert() {
 		boolean boolFound = false;
 		try {
 			logger.info("Executing - dismissAlert method");
@@ -1307,7 +1302,7 @@ public class ActionClass extends BaseClass {
 		return boolFound;
 	}
 
-	public static boolean mita_getAlertText() {
+	public static boolean mitaWebGetAlertText() {
 		boolean boolFound = false;
 		try {
 			logger.info("Executing - getAlertText method");
@@ -2129,7 +2124,7 @@ public class ActionClass extends BaseClass {
 	}
 
 	// Right Click function
-	public static void Machint_Mobile_contextClick(String LocatorType, String LocatorValue, String WaitType)
+	public static void mitaMobileContextClick(String LocatorType, String LocatorValue, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - Context click method");
@@ -2149,7 +2144,7 @@ public class ActionClass extends BaseClass {
 	}
 
 	// Double Click function
-	public static void Machint_Mobile_doubleClick(String LocatorType, String LocatorValue, String WaitType)
+	public static void mitaMobileDoubleClick(String LocatorType, String LocatorValue, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - double click method");
@@ -2169,7 +2164,7 @@ public class ActionClass extends BaseClass {
 	}
 
 	// Drag and Drop by function
-	public static Boolean Machint_Mobile_DragandDropby(String LocatorType, String LocatorValue, int x, int y)
+	public static Boolean mitaMobileDragandDropby(String LocatorType, String LocatorValue, int x, int y)
 			throws Exception {
 		boolean flag = false;
 		try {
@@ -2191,7 +2186,7 @@ public class ActionClass extends BaseClass {
 	}
 
 	// Click and Hold function
-	public static void Machint_Mobile_ClickAndHold(String LocatorType, String LocatorValue, String WaitType)
+	public static void mitaMobileClickAndHold(String LocatorType, String LocatorValue, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - ClickAndHold method");
@@ -2252,7 +2247,7 @@ public class ActionClass extends BaseClass {
 	}
 
 	// Select by VisibleText function in drop-down
-	public static void Machint_Mobile_selectVisibleText(String LocatorType, String LocatorValue, String text,
+	public static void mitaMobileSelectVisibleText(String LocatorType, String LocatorValue, String text,
 			String WaitType) throws Exception {
 		try {
 			logger.info("Executing - selectVisibleText method");
@@ -2275,7 +2270,7 @@ public class ActionClass extends BaseClass {
 	}
 
 	// Get Drop-down function
-	public static void Machint_Mobile_getdropdownOptions(String LocatorType, String LocatorValue, String text,
+	public static void mitaMobileGetDropdownOptions(String LocatorType, String LocatorValue, String text,
 			String WaitType) throws Exception {
 		try {
 			logger.info("Executing - getdropdownOptions method");
@@ -2296,7 +2291,7 @@ public class ActionClass extends BaseClass {
 	}
 
 	// Deselect all function in drop-down
-	public static void Machint_Mobile_deselectAll(String LocatorType, String LocatorValue, String text, String WaitType)
+	public static void mitaMobileDeselectAll(String LocatorType, String LocatorValue, String text, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - deselectAll method");
@@ -2327,7 +2322,7 @@ public class ActionClass extends BaseClass {
 			break;
 
 		case "elementToBeClickable":
-			mitaMobileelementToBeClickable();
+			mitaMobileElementToBeClickable();
 			break;
 
 		case "elementToBeSelected":
@@ -2379,7 +2374,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void mitaMobileelementToBeClickable() throws IOException {
+	public static void mitaMobileElementToBeClickable() throws IOException {
 		try {
 			wait = new WebDriverWait(mobiledriver, Duration.ofSeconds(1000));
 			if (element != null) {
@@ -2490,7 +2485,7 @@ public class ActionClass extends BaseClass {
 	}
 
 	// Dismiss alert function
-	public static boolean Machint_Mobile_dismissAlert() throws IOException, InterruptedException {
+	public static boolean mitaMobileDismissAlert() throws IOException, InterruptedException {
 		boolean boolFound = false;
 		try {
 			logger.info("Executing - dismissAlert method");
@@ -2722,7 +2717,7 @@ public class ActionClass extends BaseClass {
 	public void mitaMobileSwitchToFrame(String ParentFrame, String ChildFrame) throws IOException {
 		try {
 			logger.info("Executing - switchToFrame method");
-			driver.switchTo().frame(ParentFrame).switchTo().frame(ChildFrame);
+			mobiledriver.switchTo().frame(ParentFrame).switchTo().frame(ChildFrame);
 			mitaWebWrite();
 		} catch (NoSuchFrameException e) {
 			mitaMobileWriteWhenLocatorIsNotValid();
@@ -3611,7 +3606,7 @@ public class ActionClass extends BaseClass {
 		return new Point(origin.x + x, origin.y + y);
 	}
 
-	private void mitaWebDrawCircle(Driver mobiledriver, Point origin, double radius, int steps) throws IOException {
+	public void mitaMobileDrawCircle( Point origin, double radius, int steps) throws IOException {
 		try {
 			logger.info("Executing - drawCircle method");
 			Point firstPoint = mitaMobileGetPointOnCircle(0, steps, origin, radius);
@@ -3627,7 +3622,7 @@ public class ActionClass extends BaseClass {
 			}
 
 			circle.addAction(finger.createPointerUp(MouseButton.LEFT.asArg()));
-			((RemoteWebDriver) driver).perform(Arrays.asList(circle));
+			((RemoteWebDriver) mobiledriver).perform(Arrays.asList(circle));
 		} catch (Exception e) {
 			System.out.println("not found");
 			mitaMobileWriteWhenLocatorIsNotValid();
@@ -4042,7 +4037,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void Machint_Mobile_GetTheLeadID1(String LocatorType, String LocatorValue, String WaitType)
+	public static void mitaMobileGetTheLeadID1(String LocatorType, String LocatorValue, String WaitType)
 			throws Exception {
 		try {
 			logger.info("Executing - GettheLeadId method");
@@ -4301,8 +4296,8 @@ public class ActionClass extends BaseClass {
 			Date returnDate = new Date();
 			Date date;
 			int number = Integer.parseInt(value);
-			date = addDays(returnDate, number);
-			// date = offsetForWeekend(date);
+			date = mitaAddDays(returnDate, number);
+			// date = mitaOffsetForWeekend(date);
 
 			SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
 			String dateStr = sdf.format(date);
@@ -4330,8 +4325,8 @@ public class ActionClass extends BaseClass {
 			Date returnDate = new Date();
 			Date date;
 			int number = Integer.parseInt(value);
-			date = addDays(returnDate, number);
-			// date = offsetForWeekend(date);
+			date = mitaAddDays(returnDate, number);
+			// date = mitaOffsetForWeekend(date);
 
 			SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
 			String dateStr = sdf.format(date);
@@ -4351,7 +4346,7 @@ public class ActionClass extends BaseClass {
 
 	// Dependent method for addDates().............
 
-	public static Date addDays(Date dateToAdd, int numberOfDay) {
+	public static Date mitaAddDays(Date dateToAdd, int numberOfDay) {
 		if (dateToAdd == null)
 			throw new IllegalArgumentException("Date can't be null!");
 		Calendar tempCal = Calendar.getInstance();
@@ -4362,14 +4357,14 @@ public class ActionClass extends BaseClass {
 
 	// Dependent method for addDates().............
 
-	public static Date offsetForWeekend(Date baseCal) {
+	public static Date mitaOffsetForWeekend(Date baseCal) {
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(baseCal);
 
 		if (cal.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY) {
-			return addDays(baseCal, 2);
+			return mitaAddDays(baseCal, 2);
 		} else if (cal.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY) {
-			return addDays(baseCal, 1);
+			return mitaAddDays(baseCal, 1);
 		} else
 			return baseCal;
 	}
@@ -4594,90 +4589,6 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void mitaWebResponse1(String LocatorValue, String value) throws Exception {
-		try {
-			logger.info("Executing - " + Driver_Script.Actionvalue + " method");
-			ExtentTestManager.getTest().log(Status.PASS, Driver_Script.Actionvalue);
-			// Get list of web-elements with tagName - a
-			List<WebElement> allLinks = driver.findElements(By.tagName(LocatorValue));
-			System.out.println("The number of links is " + allLinks.size());
-			ExtentTestManager.getTest().log(Status.PASS, "The number of links is " + allLinks.size());
-
-			int count = 0, count1 = 0;
-
-			// Traversing through the list and printing its text along with link address
-			for (WebElement link : allLinks) {
-
-				String links = link.getText() + " - " + link.getAttribute(value);
-				System.out.println(links);
-
-				String baseUrl = driver.getCurrentUrl();
-
-				// Specify the base URL to the RESTful web service
-				RestAssured.baseURI = baseUrl;
-				// Get the RequestSpecification of the request to be sent to the server
-				RequestSpecification httpRequest = RestAssured.given();
-
-				Response response = httpRequest.get("");
-
-				// Get the status code of the request.
-				// If request is successful, status code will be 200
-				int statusCode = response.getStatusCode();
-
-				System.out.println("status code " + statusCode);
-
-				inputFile = new FileInputStream(new File(Runner.filePath));
-				XSSFWorkbook workbook = new XSSFWorkbook(inputFile);
-				String sheetname = "Response";
-				try {
-
-					sheetname = sheetname.trim();
-
-					if (sheetname.isEmpty()) {
-						throw new Exception("Sheet name not specified..");
-					}
-
-					sheet = workbook.getSheet(sheetname);
-
-					if (sheet != null) {
-						throw new Exception("Sheet Already exist...");
-					}
-
-					sheet = workbook.createSheet(sheetname);
-
-					workbook.createSheet(sheetname);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-
-				Row row = sheet.createRow(count);
-				Cell searchText2 = row.createCell(0);
-				searchText2.setCellValue(links);
-
-				Cell searchText3 = row.createCell(1);
-				searchText3.setCellValue(statusCode);
-
-				outFile = new FileOutputStream(new File(Runner.filePath));
-				workbook.write(outFile);
-				inputFile.close();
-				outFile.close();
-
-				if (statusCode == 200) {
-					count = count + 1;
-				} else {
-					count1 = count1 + 1;
-				}
-			}
-			actual = "Status code 200 are: " + count + " and Incorrect status codes are: " + count1;
-			ExtentTestManager.getTest().log(Status.PASS,
-					"Status code 200 are: " + count + " and Incorrect status codes are: " + count1);
-			mitaWebWritePass();
-		} catch (Exception e) {
-//			System.err.format("No Element Found to perform entering the values \t" + e);
-			mitaWebWriteWhenLocatorIsNotValid();
-		}
-	}
-
 	public static void mitaWebHeadingTags(String LocatorValue, String value) throws Exception {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue + " method");
@@ -4771,60 +4682,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void mitaWebHeadingTags(String LocatorValue) throws Exception {
-		try {
-			logger.info("Executing - " + Driver_Script.Actionvalue + " method");
-			ExtentTestManager.getTest().log(Status.PASS, Driver_Script.Actionvalue + " " + LocatorValue);
-			String tags = null;
-			ArrayList<String> ar = new ArrayList<String>();
-			List<WebElement> allH1 = driver.findElements(By.tagName(LocatorValue));
-			int h1Count = allH1.size();
-			System.out.println("Total no of h1 count: " + h1Count);
-			ExtentTestManager.getTest().log(Status.PASS, "Total no of h1 count: " + h1Count);
-			for (WebElement h1Tag : allH1) {
-				tags = h1Tag.getText();
-				System.out.println(tags);
-				ar.add(tags);
-			}
-			actual = LocatorValue + " tags is  " + ar;
-			ExtentTestManager.getTest().log(Status.PASS, LocatorValue + " tags is  " + ar);
-			mitaWebWritePass();
-		} catch (Exception e) {
-//			System.err.format("No Element Found to perform entering the values \t" + e);
-			mitaWebWriteWhenLocatorIsNotValid();
-			logger.warn("Unable to execute the heading tags method \t" + e.getMessage());
-			ExtentTestManager.getTest().log(Status.ERROR,
-					"Unable to execute the heading tags method \t" + e.getMessage());
-		}
-	}
-
-//	public static void mita_metaTags(String LocatorType, String LocatorValue) throws Exception {
-//		try {
-//			logger.info("Executing - " + Driver_Script.Actionvalue + " method");
-//			ExtentTestManager.getTest().log(Status.PASS, Driver_Script.Actionvalue + " " + LocatorValue);
-//			locator = mitaMobilelocator(LocatorType, LocatorValue);
-//			List<WebElement> allImg = driver.findElements(locator);
-//
-//			int imgsCount = allImg.size();
-//			if (allImg.size() == 0) {
-//				System.out.println("This page og:image not avialable");
-//				actual = "This page og:image not avialable";
-//				ExtentTestManager.getTest().log(Status.ERROR, "This page og:image not avialable");
-//			} else {
-//
-//				System.out.println("Total no of og:image Available: " + imgsCount);
-//				actual = "Total no of og:image Available: " + imgsCount;
-//				ExtentTestManager.getTest().log(Status.PASS, "Total no of og:image Available: " + imgsCount);
-//			}
-//			mita_Web_writePass();
-//		} catch (Exception e) {
-////			System.err.format("No Element Found to perform entering the values \t" + e);
-//			mitaWebWriteWhenLocatorIsNotValid()
-//			logger.warn("Unable to execute the meta tags method \t" + e.getMessage());
-//			ExtentTestManager.getTest().log(Status.ERROR, "Unable to execute the meta tags method \t" + e.getMessage());
-//		}
-//	}
-
+	
 	public static void mitaWebMetaTags(String LocatorType, String LocatorValue, String value) throws Exception {
 		try {
 			logger.info("Executing - " + Driver_Script.Actionvalue + " method");

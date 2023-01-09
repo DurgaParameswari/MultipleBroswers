@@ -2,15 +2,19 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-01-04T09:13:46 IST" name="Command line suite" finished-at="2023-01-04T09:15:18 IST" duration-ms="91978">
+  <suite started-at="2023-01-09T17:06:53 IST" name="Command line suite" finished-at="2023-01-09T17:09:56 IST" duration-ms="183105">
     <groups>
     </groups>
-    <test started-at="2023-01-04T09:13:46 IST" name="Command line test" finished-at="2023-01-04T09:15:18 IST" duration-ms="91978">
+    <test started-at="2023-01-09T17:06:53 IST" name="Command line test" finished-at="2023-01-09T17:09:56 IST" duration-ms="183105">
       <class name="com.mavenpackage.Driver_Script">
-        <test-method signature="mydriverscript()[pri:0, instance:com.mavenpackage.Driver_Script@45efd90f]" started-at="2023-01-04T09:13:46 IST" name="mydriverscript" finished-at="2023-01-04T09:15:18 IST" duration-ms="91930" status="PASS">
+        <test-method signature="mydriverscript()[pri:0, instance:com.mavenpackage.Driver_Script@4149c063]" started-at="2023-01-09T17:06:53 IST" name="mydriverscript" finished-at="2023-01-09T17:09:56 IST" duration-ms="183065" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- mydriverscript -->
+        <test-method is-config="true" signature="Close()[pri:0, instance:com.mavenpackage.Driver_Script@4149c063]" started-at="2023-01-09T17:09:57 IST" name="Close" finished-at="2023-01-09T17:09:57 IST" duration-ms="67" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Close -->
       </class> <!-- com.mavenpackage.Driver_Script -->
     </test> <!-- Command line test -->
   </suite> <!-- Command line suite -->

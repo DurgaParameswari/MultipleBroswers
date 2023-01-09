@@ -233,7 +233,6 @@
 							<configuration>
 								<forkCount>3</forkCount>
 								<reuseForks>true</reuseForks>
-								<argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
 								<testFailureIgnore>true</testFailureIgnore>
 								<includes>
 									<includesFile>**/*Runner.java</includesFile>
@@ -254,8 +253,7 @@
 							<configuration>
 								<forkCount>3</forkCount>
 								<reuseForks>true</reuseForks>
-								<argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
-								<testFailureIgnore>true</testFailureIgnore>
+																<testFailureIgnore>true</testFailureIgnore>
 								<includes>
 									<includesFile>**/*Runner.java</includesFile>
 								</includes>

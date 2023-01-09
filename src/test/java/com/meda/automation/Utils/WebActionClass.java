@@ -294,6 +294,7 @@ public class WebActionClass extends BaseClass {
 					searchText2.setCellStyle(style);
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
+					mitaWebScreenShot();
 					inputFile.close();
 					outFile.close();
 				}
@@ -307,6 +308,7 @@ public class WebActionClass extends BaseClass {
 					searchText2.setCellStyle(style);
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
+					mitaWebScreenShot();
 					inputFile.close();
 					outFile.close();
 				}
@@ -320,6 +322,7 @@ public class WebActionClass extends BaseClass {
 					searchText2.setCellStyle(style);
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
+					mitaWebScreenShot();
 					inputFile.close();
 					outFile.close();
 				}

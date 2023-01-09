@@ -10,7 +10,6 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.sql.Driver;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Arrays;
@@ -18,6 +17,7 @@ import java.util.Date;
 import java.util.List;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.log4j.Logger;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.IndexedColors;
@@ -34,9 +34,9 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.interactions.PointerInput;
-import org.openqa.selenium.interactions.Sequence;
 import org.openqa.selenium.interactions.PointerInput.Kind;
 import org.openqa.selenium.interactions.PointerInput.MouseButton;
+import org.openqa.selenium.interactions.Sequence;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -60,6 +60,8 @@ import io.restassured.response.ResponseOptions;
 import io.restassured.specification.RequestSpecification;
 
 public class MobileActionClass extends WebActionClass {
+	
+	static Logger logger = Logger.getLogger(MobileActionClass.class);
 
 	public static void mitaMobileWrite() throws IOException {
 		try {
@@ -77,6 +79,7 @@ public class MobileActionClass extends WebActionClass {
 					searchText2.setCellStyle(style);
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
+					mitaMobileScreenShot();
 					inputFile.close();
 					outFile.close();
 				}
@@ -90,6 +93,7 @@ public class MobileActionClass extends WebActionClass {
 					searchText2.setCellStyle(style);
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
+					mitaMobileScreenShot();
 					inputFile.close();
 					outFile.close();
 				}
@@ -103,6 +107,7 @@ public class MobileActionClass extends WebActionClass {
 					searchText2.setCellStyle(style);
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
+					mitaMobileScreenShot();
 					inputFile.close();
 					outFile.close();
 				}
@@ -202,6 +207,7 @@ public class MobileActionClass extends WebActionClass {
 					ActualValue.setCellValue(MobileActionClass.actual);
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
+					mitaMobileScreenShot();
 					inputFile.close();
 					outFile.close();
 				}
@@ -217,6 +223,7 @@ public class MobileActionClass extends WebActionClass {
 					ActualValue.setCellValue(MobileActionClass.actual);
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
+					mitaMobileScreenShot();
 					inputFile.close();
 					outFile.close();
 				}
@@ -233,6 +240,7 @@ public class MobileActionClass extends WebActionClass {
 					ActualValue.setCellValue(MobileActionClass.actual);
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
+					mitaMobileScreenShot();
 					inputFile.close();
 					outFile.close();
 				}

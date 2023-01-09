@@ -1,4 +1,4 @@
-package com.meda.automation.Utils;
+package com.mita.automation.Utils;
 
 import static io.appium.java_client.touch.LongPressOptions.longPressOptions;
 import static io.appium.java_client.touch.TapOptions.tapOptions;

@@ -1,4 +1,4 @@
-package com.meda.automation.base;
+package com.mita.automation.base;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -21,8 +21,8 @@ import org.testng.annotations.AfterSuite;
 import com.aventstack.extentreports.Status;
 import com.mavenpackage.Driver_Script;
 import com.mavenpackage.Runner;
-import com.meda.automation.Utils.ExcelData;
-import com.meda.automation.managers.ExtentTestManager;
+import com.mita.automation.Utils.ExcelData;
+import com.mita.automation.managers.ExtentTestManager;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;

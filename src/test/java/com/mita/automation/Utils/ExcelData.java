@@ -1,4 +1,4 @@
-package com.meda.automation.Utils;
+package com.mita.automation.Utils;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -13,7 +13,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import com.mavenpackage.Driver_Script;
 import com.mavenpackage.Runner;
-import com.meda.automation.managers.ExtentTestManager;
+import com.mita.automation.managers.ExtentTestManager;
 
 public class ExcelData extends ExtentTestManager {
 

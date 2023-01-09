@@ -4,8 +4,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.NoSuchElementException;
 import org.testng.annotations.Test;
 
-import com.meda.automation.Utils.ActionClass;
-import com.meda.automation.Utils.MobileActionClass;
+import com.mita.automation.Utils.MobileActionClass;
 
 public class Driver_Script extends MobileActionClass {
 	public static String Actionvalue;

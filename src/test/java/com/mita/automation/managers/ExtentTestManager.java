@@ -1,4 +1,4 @@
-package com.meda.automation.managers;
+package com.mita.automation.managers;
 
 import java.util.HashMap;
 import java.util.Map;

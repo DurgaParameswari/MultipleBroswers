@@ -1,7 +1,7 @@
 package com.mavenpackage;
 
 import org.testng.TestNG;
-import com.meda.automation.managers.TestListener;
+import com.mita.automation.managers.TestListener;
 
 public class Runner {
 	static TestNG testNg;

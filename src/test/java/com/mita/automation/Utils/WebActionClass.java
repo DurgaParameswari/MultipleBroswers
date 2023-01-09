@@ -1,4 +1,4 @@
-package com.meda.automation.Utils;
+package com.mita.automation.Utils;
 
 import java.awt.AWTException;
 import java.awt.Robot;
@@ -56,8 +56,8 @@ import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.mavenpackage.Driver_Script;
 import com.mavenpackage.Runner;
-import com.meda.automation.base.BaseClass;
-import com.meda.automation.managers.ExtentTestManager;
+import com.mita.automation.base.BaseClass;
+import com.mita.automation.managers.ExtentTestManager;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;

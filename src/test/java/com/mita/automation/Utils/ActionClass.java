@@ -1,4 +1,4 @@
-package com.meda.automation.Utils;
+package com.mita.automation.Utils;
 
 import static io.appium.java_client.touch.LongPressOptions.longPressOptions;
 
@@ -80,8 +80,8 @@ import com.aventstack.extentreports.Status;
 import com.google.common.base.Function;
 import com.mavenpackage.Driver_Script;
 import com.mavenpackage.Runner;
-import com.meda.automation.base.BaseClass;
-import com.meda.automation.managers.ExtentTestManager;
+import com.mita.automation.base.BaseClass;
+import com.mita.automation.managers.ExtentTestManager;
 
 import io.appium.java_client.FindsByAndroidUIAutomator;
 import io.appium.java_client.MobileElement;

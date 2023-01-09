@@ -1,4 +1,4 @@
-package com.meda.automation.managers;
+package com.mita.automation.managers;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -12,7 +12,7 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 import com.aventstack.extentreports.Status;
-import com.meda.automation.base.BaseClass;
+import com.mita.automation.base.BaseClass;
 
 public class TestListener extends BaseClass implements ITestListener 
 {

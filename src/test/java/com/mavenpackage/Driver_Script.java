@@ -414,7 +414,7 @@ public class Driver_Script extends ActionClass {
 					mitaWebAssertTitle(expectedValue);
 				} else if (Actionvalue.toLowerCase().contains("frame")) {
 					mitaFrame();
-					mitaMobileFrameWebElement("xpath", LocatorId, "visibilityOf");
+					mitaWebFrameWebElement("xpath", LocatorId, "visibilityOf");
 				} else if (Actionvalue.toLowerCase().contains("scrolldown")) {
 					mitaClickExcelData();
 					mitaWebScrollDown("xpath", LocatorId);

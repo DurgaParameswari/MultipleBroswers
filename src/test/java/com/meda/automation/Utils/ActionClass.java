@@ -2761,7 +2761,7 @@ public class ActionClass extends BaseClass {
 				}
 			}
 		} catch (Exception e) {
-			mitaMobileWriteWhenLocatorIsNotValid();
+			mitaWebWriteWhenLocatorIsNotValid();
 			System.out.println("No frame unable Machint_defaultframe \t" + e.getStackTrace());
 			logger.warn("Unable to execute the moveToChildWindow method \t" + e.getMessage());
 		}

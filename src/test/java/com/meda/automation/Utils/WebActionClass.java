@@ -11,6 +11,7 @@ import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
@@ -223,7 +224,6 @@ public class WebActionClass extends BaseClass {
 					searchText2.setCellStyle(style);
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mitaWebScreenShot();
 					inputFile.close();
 					outFile.close();
 				}
@@ -237,7 +237,6 @@ public class WebActionClass extends BaseClass {
 					searchText2.setCellStyle(style);
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mitaWebScreenShot();
 					inputFile.close();
 					outFile.close();
 				}
@@ -251,7 +250,6 @@ public class WebActionClass extends BaseClass {
 					searchText2.setCellStyle(style);
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mitaWebScreenShot();
 					inputFile.close();
 					outFile.close();
 				}
@@ -312,6 +310,13 @@ public class WebActionClass extends BaseClass {
 		if (driver instanceof JavascriptExecutor) {
 			((JavascriptExecutor) driver).executeScript(
 					"arguments[0].setAttribute('style', 'background: skyblue; border: 2px solid yellow;');", ele);
+		}
+	}
+	
+	public static void mitaWebJSHighlightForValidation(WebElement ele) {
+		if (driver instanceof JavascriptExecutor) {
+			((JavascriptExecutor) driver).executeScript(
+					"arguments[0].setAttribute('style', 'background: skyblue; border: 2px solid red;');", ele);
 		}
 	}
 
@@ -413,7 +418,6 @@ public class WebActionClass extends BaseClass {
 					searchText2.setCellStyle(style);
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mitaWebScreenShot();
 					inputFile.close();
 					outFile.close();
 					k = lastRow + 1;
@@ -430,7 +434,6 @@ public class WebActionClass extends BaseClass {
 					searchText2.setCellStyle(style);
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mitaWebScreenShot();
 					inputFile.close();
 					outFile.close();
 					k = lastRow + 1;
@@ -447,7 +450,6 @@ public class WebActionClass extends BaseClass {
 					searchText2.setCellStyle(style);
 					outFile = new FileOutputStream(new File(Runner.filePath));
 					workbook.write(outFile);
-					mitaWebScreenShot();
 					inputFile.close();
 					outFile.close();
 					k = lastRow + 1;
@@ -456,11 +458,8 @@ public class WebActionClass extends BaseClass {
 				}
 			} catch (Exception e) {
 				logger.warn(e.getMessage());
-
 			}
-		}
-
-		catch (FileNotFoundException e) {
+		} catch (FileNotFoundException e) {
 			logger.warn(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -1672,4 +1671,26 @@ public class WebActionClass extends BaseClass {
 			logger.warn("Unable to execute the listbox method \t" + e.getMessage());
 		}
 	}
+	
+	// Dependent method for addDates().............
+		public static Date mitaAddDays(Date dateToAdd, int numberOfDay) {
+			if (dateToAdd == null)
+				throw new IllegalArgumentException("Date can't be null!");
+			Calendar tempCal = Calendar.getInstance();
+			tempCal.setTime(dateToAdd);
+			tempCal.add(Calendar.DATE, numberOfDay);
+			return tempCal.getTime();
+		}
+
+		// Dependent method for addDates().............
+		public static Date mitaOffsetForWeekend(Date baseCal) {
+			Calendar cal = Calendar.getInstance();
+			cal.setTime(baseCal);
+			if (cal.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY) {
+				return mitaAddDays(baseCal, 2);
+			} else if (cal.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY) {
+				return mitaAddDays(baseCal, 1);
+			} else
+				return baseCal;
+		}
 }

@@ -2022,7 +2022,7 @@ public class ActionClass extends BaseClass {
 			logger.info("Executing - EnterTextField method");
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
-			// Machint_JSHighlight(element);
+			mitaMobileJSHighlight(element);
 			mitaMobileWaits(WaitType);
 			element.clear();
 			element.sendKeys(value);
@@ -2089,7 +2089,6 @@ public class ActionClass extends BaseClass {
 	}
 
 	// Set the first value from mobile
-
 	public static void mitaMobileSetTheFirstValue(String LocatorType, String LocatorValue, String WaitType)
 			throws Exception {
 		try {
@@ -2110,7 +2109,6 @@ public class ActionClass extends BaseClass {
 	}
 
 	// Set the first value from mobile
-
 	public static void mitaMobileSetTheSecondValue(String LocatorType, String LocatorValue, String WaitType)
 			throws Exception {
 		try {
@@ -2137,7 +2135,7 @@ public class ActionClass extends BaseClass {
 			logger.info("Executing - Context click method");
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
-			Machint_JSHighlight(element);
+			mitaMobileJSHighlight(element);
 			mitaMobileWaits(WaitType);
 			action = new Actions(mobiledriver);
 			action.contextClick(element).build().perform();
@@ -2157,7 +2155,7 @@ public class ActionClass extends BaseClass {
 			logger.info("Executing - double click method");
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
-			Machint_JSHighlight(element);
+			mitaMobileJSHighlight(element);
 			mitaMobileWaits(WaitType);
 			action = new Actions(mobiledriver);
 			action.moveToElement(element).doubleClick().build().perform();
@@ -2201,7 +2199,7 @@ public class ActionClass extends BaseClass {
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			action.clickAndHold(element).build().perform();
-			Machint_JSHighlight(element);
+			mitaMobileJSHighlight(element);
 			mitaMobileWaits(WaitType);
 			element.click();
 			Thread.sleep(3000);
@@ -2304,7 +2302,7 @@ public class ActionClass extends BaseClass {
 			logger.info("Executing - deselectAll method");
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
-			Machint_JSHighlight(element);
+			mitaMobileJSHighlight(element);
 			mitaMobileWaits(WaitType);
 			select = new Select(element);
 			select.deselectAll();
@@ -2321,35 +2319,35 @@ public class ActionClass extends BaseClass {
 	public static void mitaMobileWaits(String WaitType) throws Exception {
 		switch (WaitType) {
 		case "visibilityOf":
-			Machint_Mobile_visibilityOf();
+			mitaMobileVisibilityOf();
 			break;
 
 		case "visibilityOfAllElements":
-			Machint_visibilityOfAllElements();
+			mitaMobileVisibilityOfAllElements();
 			break;
 
 		case "elementToBeClickable":
-			Machint_elementToBeClickable();
+			mitaMobileelementToBeClickable();
 			break;
 
 		case "elementToBeSelected":
-			Machint_elementToBeSelected();
+			mitaMobileElementToBeSelected();
 			break;
 
 		case "elementSelectionStateToBe":
-			Machint_elementSelectionStateToBe();
+			mitaMobileElementSelectionStateToBe();
 			break;
 
 		case "frameToBeAvailableAndSwitchToIt":
-			Machint_frameToBeAvailableAndSwitchToIt();
+			mitaMobileFrameToBeAvailableAndSwitchToIt();
 			break;
 
 		case "invisibilityOf":
-			Machint_invisibilityOf();
+			mitaMobileInVisibilityOf();
 			break;
 
 		case "invisibilityOfAllElements":
-			Machint_invisibilityOfAllElements();
+			mitaMobileInVisibilityOfAllElements();
 			break;
 
 		default:
@@ -2357,7 +2355,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void Machint_Mobile_visibilityOf() {
+	public static void mitaMobileVisibilityOf() {
 		try {
 			wait = new WebDriverWait(mobiledriver, Duration.ofSeconds(1000));
 			if (element != null) {
@@ -2369,7 +2367,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void Machint_visibilityOfAllElements() {
+	public static void mitaMobileVisibilityOfAllElements() {
 		try {
 			wait = new WebDriverWait(mobiledriver, Duration.ofSeconds(1000));
 			if (element != null) {
@@ -2381,7 +2379,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void Machint_elementToBeClickable() throws IOException {
+	public static void mitaMobileelementToBeClickable() throws IOException {
 		try {
 			wait = new WebDriverWait(mobiledriver, Duration.ofSeconds(1000));
 			if (element != null) {
@@ -2393,7 +2391,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void Machint_elementSelectionStateToBe() throws IOException {
+	public static void mitaMobileElementSelectionStateToBe() throws IOException {
 		try {
 			wait = new WebDriverWait(mobiledriver, Duration.ofSeconds(1000));
 			if (element != null) {
@@ -2405,7 +2403,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void Machint_elementToBeSelected() throws IOException {
+	public static void mitaMobileElementToBeSelected() throws IOException {
 		try {
 			wait = new WebDriverWait(mobiledriver, Duration.ofSeconds(1000));
 			if (element != null) {
@@ -2417,7 +2415,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void Machint_frameToBeAvailableAndSwitchToIt() {
+	public static void mitaMobileFrameToBeAvailableAndSwitchToIt() {
 		try {
 			wait = new WebDriverWait(mobiledriver, Duration.ofSeconds(1000));
 			if (element != null) {
@@ -2429,7 +2427,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void Machint_invisibilityOf() {
+	public static void mitaMobileInVisibilityOf() {
 		try {
 			wait = new WebDriverWait(mobiledriver, Duration.ofSeconds(1000));
 			if (by != null) {
@@ -2441,7 +2439,7 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public static void Machint_invisibilityOfAllElements() {
+	public static void mitaMobileInVisibilityOfAllElements() {
 		try {
 			wait = new WebDriverWait(mobiledriver, Duration.ofSeconds(1000));
 			if (element != null) {
@@ -2454,12 +2452,20 @@ public class ActionClass extends BaseClass {
 	}
 
 	// Highlight function
-	public static void Machint_JSHighlight(WebElement ele) {
+	public static void mitaMobileJSHighlight(WebElement ele) {
 		if (mobiledriver instanceof JavascriptExecutor) {
 			((JavascriptExecutor) mobiledriver).executeScript(
 					"arguments[0].setAttribute('style', 'background: skyblue; border: 2px solid yellow;');", ele);
 		}
 	}
+	
+	public static void mitaMobileJSHighlightForValidation(WebElement ele) {
+		if (mobiledriver instanceof JavascriptExecutor) {
+			((JavascriptExecutor) mobiledriver).executeScript(
+					"arguments[0].setAttribute('style', 'background: skyblue; border: 2px solid red;');", ele);
+		}
+	}
+
 
 	// Accept alert function
 	public static boolean mitaMobileAcceptAlert() throws IOException, InterruptedException {
@@ -2569,10 +2575,10 @@ public class ActionClass extends BaseClass {
 			actual = mobiledriver.findElement(locator).getText();
 			Assert.assertEquals(actual, expected);
 			if (actual.equalsIgnoreCase(expected)) {
-				Machint_JSHighlight(element);
+				mitaMobileJSHighlight(element);
 				mitaMobileWritePass();
 			} else {
-				mitaWebJSHighlightForValidation(element);
+				mitaMobileJSHighlightForValidation(element);
 				mitaMobileScreenShot();
 				mitaMobileWriteFail();
 			}
@@ -3236,7 +3242,7 @@ public class ActionClass extends BaseClass {
 			logger.info("Executing - FileUpload method");
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
-			Machint_JSHighlight(element);
+			mitaMobileJSHighlight(element);
 			mitaMobileWaits(WaitType);
 			element.click();
 			Thread.sleep(2000);
@@ -3257,7 +3263,7 @@ public class ActionClass extends BaseClass {
 			logger.info("Executing - Captcha method");
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
-			Machint_JSHighlight(element);
+			mitaMobileJSHighlight(element);
 			mitaMobileWaits(WaitType);
 			String Captcha = element.getText();
 			System.out.println(Captcha);
@@ -4209,7 +4215,7 @@ public class ActionClass extends BaseClass {
 			logger.info("Executing - FileUpload method");
 			locator = mitaWebLocator(LocatorType, LocatorValue);
 			element = driver.findElement(locator);
-			Machint_JSHighlight(element);
+			mitaMobileJSHighlight(element);
 			mitaMobileWaits(WaitType);
 			element.click();
 			Thread.sleep(2000);

@@ -164,6 +164,72 @@ public class WebActionClass extends BaseClass {
 			logger.warn("Unable to execute the CleanResults method \t" + e.getMessage());
 		}
 	}
+	
+	public static void mitaWebPleasedoSpellcheck() throws IOException {
+		try {
+			logger.info(Driver_Script.Actionvalue + ": Updating the result in excel");
+			inputFile = new FileInputStream(new File(Runner.filePath));
+			XSSFWorkbook workbook = new XSSFWorkbook(inputFile);
+			sheet = workbook.getSheet(sheetNames[j]);
+			CellStyle style = workbook.createCellStyle();
+			style.setFillForegroundColor(IndexedColors.LIGHT_ORANGE.getIndex());
+			style.setFillPattern(CellStyle.SOLID_FOREGROUND);
+			try {
+				if (bt[l].equalsIgnoreCase("Chrome")) {
+					Cell searchText2 = sheet.getRow(k).createCell(4);
+					searchText2.setCellValue("Please do spell check");
+					searchText2.setCellStyle(style);
+					outFile = new FileOutputStream(new File(Runner.filePath));
+					workbook.write(outFile);
+					inputFile.close();
+					outFile.close();
+					k = lastRow + 1;
+					i = lastRow + 1;
+					driver.quit();
+				}
+			} catch (Exception e) {
+				logger.warn(e.getMessage());
+			}
+			try {
+				if (bt[l].equalsIgnoreCase("Firefox")) {
+					Cell searchText2 = sheet.getRow(k).createCell(5);
+					searchText2.setCellValue("Please do spell check");
+					searchText2.setCellStyle(style);
+					outFile = new FileOutputStream(new File(Runner.filePath));
+					workbook.write(outFile);
+					inputFile.close();
+					outFile.close();
+					k = lastRow + 1;
+					i = lastRow + 1;
+					driver.quit();
+				}
+			} catch (Exception e) {
+				logger.warn(e.getMessage());
+			}
+			try {
+				if (bt[l].equalsIgnoreCase("Edge")) {
+					Cell searchText2 = sheet.getRow(k).createCell(6);
+					searchText2.setCellValue("Please do spell check");
+					searchText2.setCellStyle(style);
+					outFile = new FileOutputStream(new File(Runner.filePath));
+					workbook.write(outFile);
+					inputFile.close();
+					outFile.close();
+					k = lastRow + 1;
+					i = lastRow + 1;
+					driver.quit();
+				}
+			} catch (Exception e) {
+				logger.warn(e.getMessage());
+			}
+		} catch (FileNotFoundException e) {
+			logger.warn(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
+			e.printStackTrace();
+		} catch (IOException e) {
+			logger.warn(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
+			e.printStackTrace();
+		}
+	}
 
 	public static void mitaWebScreenShot() {
 		try {

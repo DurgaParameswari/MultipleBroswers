@@ -295,9 +295,139 @@ public class MobileActionClass extends WebActionClass {
 				}
 			} catch (Exception e) {
 				logger.warn(e.getMessage());
-
 			}
 		} catch (FileNotFoundException e) {
+			logger.warn(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
+			e.printStackTrace();
+		} catch (IOException e) {
+			logger.warn(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
+			e.printStackTrace();
+		}
+	}
+
+	public static void mitaExecutionType(String name) throws IOException {
+		try {
+			inputFile = new FileInputStream(new File(Runner.filePath));
+			XSSFWorkbook workbook = new XSSFWorkbook(inputFile);
+			sheet = workbook.getSheet(sheetNames[j]);
+			CellStyle style = workbook.createCellStyle();
+			style.setFillForegroundColor(IndexedColors.LIME.getIndex());
+			style.setFillPattern(CellStyle.SOLID_FOREGROUND);
+
+			try {
+				if (bt[l].equalsIgnoreCase("Chrome")) {
+					Cell searchText2 = sheet.getRow(i).createCell(4);
+					searchText2.setCellValue(name);
+					searchText2.setCellStyle(style);
+					outFile = new FileOutputStream(new File(Runner.filePath));
+					workbook.write(outFile);
+					inputFile.close();
+					outFile.close();
+				}
+			} catch (Exception e) {
+				logger.info(e.getMessage());
+			}
+			try {
+				if (bt[l].equalsIgnoreCase("Firefox")) {
+					Cell searchText2 = sheet.getRow(i).createCell(5);
+					searchText2.setCellValue(name);
+					searchText2.setCellStyle(style);
+					outFile = new FileOutputStream(new File(Runner.filePath));
+					workbook.write(outFile);
+					inputFile.close();
+					outFile.close();
+				}
+			} catch (Exception e) {
+				logger.info(e.getMessage());
+			}
+			try {
+				if (bt[l].equalsIgnoreCase("Edge")) {
+					Cell searchText2 = sheet.getRow(i).createCell(6);
+					searchText2.setCellValue(name);
+					searchText2.setCellStyle(style);
+					outFile = new FileOutputStream(new File(Runner.filePath));
+					workbook.write(outFile);
+					inputFile.close();
+					outFile.close();
+				}
+			} catch (Exception e) {
+				logger.info(e.getMessage());
+			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+			logger.warn("Unable to execute the " + Driver_Script.type + "script " + e.getMessage());
+
+		} catch (IOException e) {
+			e.printStackTrace();
+			logger.warn("Unable to execute the " + Driver_Script.type + "script " + e.getMessage());
+		}
+	}
+	
+	public static void mitaMobilePleaseDoSpellcheck() throws IOException {
+		try {
+			logger.info(Driver_Script.Actionvalue + ": Updating the result in excel");
+			inputFile = new FileInputStream(new File(Runner.filePath));
+			XSSFWorkbook workbook = new XSSFWorkbook(inputFile);
+			sheet = workbook.getSheet(sheetNames[j]);
+			CellStyle style = workbook.createCellStyle();
+			style.setFillForegroundColor(IndexedColors.LIGHT_ORANGE.getIndex());
+			style.setFillPattern(CellStyle.SOLID_FOREGROUND);
+
+			try {
+				if (bt[l].equalsIgnoreCase("Chrome")) {
+					Cell searchText2 = sheet.getRow(k).createCell(4);
+					searchText2.setCellValue("Please do spell check");
+					searchText2.setCellStyle(style);
+					outFile = new FileOutputStream(new File(Runner.filePath));
+					workbook.write(outFile);
+					mitaMobileScreenShot();
+					inputFile.close();
+					outFile.close();
+					k = lastRow + 1;
+					i = lastRow + 1;
+					mobiledriver.quit();
+				}
+
+			} catch (Exception e) {
+				logger.warn(e.getMessage());
+			}
+			try {
+				if (bt[l].equalsIgnoreCase("Firefox")) {
+					Cell searchText2 = sheet.getRow(k).createCell(5);
+					searchText2.setCellValue("Please do spell check");
+					searchText2.setCellStyle(style);
+					outFile = new FileOutputStream(new File(Runner.filePath));
+					workbook.write(outFile);
+					mitaMobileScreenShot();
+					inputFile.close();
+					outFile.close();
+					k = lastRow + 1;
+					i = lastRow + 1;
+					mobiledriver.quit();
+				}
+			} catch (Exception e) {
+				logger.warn(e.getMessage());
+			}
+			try {
+				if (bt[l].equalsIgnoreCase("Edge")) {
+					Cell searchText2 = sheet.getRow(k).createCell(6);
+					searchText2.setCellValue("Please do spell check");
+					searchText2.setCellStyle(style);
+					outFile = new FileOutputStream(new File(Runner.filePath));
+					workbook.write(outFile);
+					mitaMobileScreenShot();
+					inputFile.close();
+					outFile.close();
+					k = lastRow + 1;
+					i = lastRow + 1;
+					mobiledriver.quit();
+				}
+			} catch (Exception e) {
+				logger.warn(e.getMessage());
+			}
+		}
+
+		catch (FileNotFoundException e) {
 			logger.warn(Driver_Script.Actionvalue + ": Unable to update the result in excel" + e.getMessage());
 			e.printStackTrace();
 		} catch (IOException e) {

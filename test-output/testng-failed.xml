@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="3" name="Failed suite [TestSuite]" guice-stage="DEVELOPMENT">
-  <test thread-count="3" parallel="instances" name="testGuru(failed)">
+<suite name="Failed suite [Command line suite]">
+  <test thread-count="5" name="Command line test(failed)">
     <classes>
-      <class name="com.meda.automation.Utils.testng">
+      <class name="com.mavenpackage.Driver_Script">
         <methods>
-          <include name="executSessionTwo"/>
+          <include name="mydriverscript"/>
         </methods>
-      </class> <!-- com.meda.automation.Utils.testng -->
+      </class> <!-- com.mavenpackage.Driver_Script -->
     </classes>
-  </test> <!-- testGuru(failed) -->
-</suite> <!-- Failed suite [TestSuite] -->
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->

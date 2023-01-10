@@ -27,6 +27,7 @@ import com.mita.automation.managers.ExtentTestManager;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
+import io.appium.java_client.remote.MobilePlatform;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass extends ExcelData
@@ -115,7 +116,7 @@ public class BaseClass extends ExcelData
 				driver.manage().deleteAllCookies();
 				// Navigate URL method
 				driver.get(appURL);
-				ExtentTestManager.getTest().log(Status.PASS, Driver_Script.Actionvalue+" " + appURL);
+				ExtentTestManager.getTest().log(Status.PASS, Driver_Script.Actionvalue + " " + appURL);
 				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 				driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 			} else if (executionType.equalsIgnoreCase("Head")) {
@@ -127,7 +128,7 @@ public class BaseClass extends ExcelData
 				driver.manage().deleteAllCookies();
 				// Navigate URL method
 				driver.get(appURL);
-				ExtentTestManager.getTest().log(Status.PASS, Driver_Script.Actionvalue+" " + appURL);
+				ExtentTestManager.getTest().log(Status.PASS, Driver_Script.Actionvalue + " " + appURL);
 				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 				driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 			}
@@ -215,15 +216,15 @@ public class BaseClass extends ExcelData
 		}
 	}
 
-	@AfterSuite
-	public void Close() {
-		try {
-			logger.info("Closing the browser");
-			driver.quit();
-		} catch (Exception e) {
-			logger.error("Not able to Close the Browser --- " + e.getMessage());
-		}
-	}
+//	@AfterSuite
+//	public void Close() {
+//		try {
+//			logger.info("Closing the browser");
+//			driver.quit();
+//		} catch (Exception e) {
+//			logger.error("Not able to Close the Browser --- " + e.getMessage());
+//		}
+//	}
 
 	public static AndroidDriver<AndroidElement> setup(String device) throws MalformedURLException {
 		try {
@@ -237,17 +238,19 @@ public class BaseClass extends ExcelData
 				cap.setCapability(MobileCapabilityType.DEVICE_NAME, Runner.deviceName);
 			}
 			System.out.println("Hi 1");
-			cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Device");
-			cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
-			cap.setCapability(MobileCapabilityType.APP, f.getAbsolutePath());
+			cap.setCapability(MobileCapabilityType.PLATFORM_NAME,MobilePlatform.ANDROID);
+			cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
+			cap.setCapability("autoGrantPermissions", true);
+
 			cap.setCapability("appPackage", Runner.apkPackageName);
 			cap.setCapability("noReset", true);
 			cap.setCapability("noSign", true);
 			System.out.println("Hi 2");
-			mobiledriver = new AndroidDriver<AndroidElement>(new URL("http://0.0.0.0:4723/wd/hub"), cap);
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			cap.setCapability(MobileCapabilityType.APP, f.getAbsolutePath());
+			mobiledriver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"), cap);
+			mobiledriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			System.out.println("Hi 3");
-			// mita_acceptAlert();
+
 			mobiledriver.closeApp();
 		} catch (Exception e) {
 			logger.warn("Executing - " + Driver_Script.Actionvalue + ": Unable to launch the Andriod driver "

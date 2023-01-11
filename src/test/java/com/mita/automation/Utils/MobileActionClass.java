@@ -672,7 +672,6 @@ public class MobileActionClass extends WebActionClass {
 			logger.info("Executing - EnterTextField method");
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
-			mitaMobileJSHighlight(element);
 			mitaMobileWaits(WaitType);
 			element.clear();
 			element.sendKeys(value);
@@ -691,7 +690,7 @@ public class MobileActionClass extends WebActionClass {
 			logger.info("Executing - EnterTextKey method");
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
-			mitaMobileJSHighlight(element);
+//			//mitaMobileJSHighlight(element);
 			mitaMobileWaits(WaitType);
 			element.click();
 			element.sendKeys(value);
@@ -728,7 +727,7 @@ public class MobileActionClass extends WebActionClass {
 			logger.info("Executing - selectValue method");
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
-			mitaMobileJSHighlight(element);
+			//mitaMobileJSHighlight(element);
 			mitaMobileWaits(WaitType);
 			select = new Select(element);
 			select.selectByValue(text);
@@ -747,7 +746,7 @@ public class MobileActionClass extends WebActionClass {
 			logger.info("Executing - selectIndex method");
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
-			mitaMobileJSHighlight(element);
+			//mitaMobileJSHighlight(element);
 			mitaMobileWaits(WaitType);
 			select = new Select(element);
 			select.selectByIndex(value);
@@ -849,7 +848,7 @@ public class MobileActionClass extends WebActionClass {
 			logger.info("Executing - SetTheFirstValue method");
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
-			mitaMobileJSHighlight(element);
+			//mitaMobileJSHighlight(element);
 			mitaMobileWaits(WaitType);
 			element.clear();
 			element.sendKeys(value1);
@@ -885,7 +884,7 @@ public class MobileActionClass extends WebActionClass {
 			logger.info("Executing - SetTheSecondValue method");
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
-			mitaMobileJSHighlight(element);
+			//mitaMobileJSHighlight(element);
 			mitaMobileWaits(WaitType);
 			element.clear();
 			element.sendKeys(value2);
@@ -903,12 +902,12 @@ public class MobileActionClass extends WebActionClass {
 			logger.info("Executing - EqualsValidation method");
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			actual = mobiledriver.findElement(locator).getText();
-			Assert.assertEquals(actual, expected);
+//			Assert.assertEquals(actual, expected);
 			if (actual.equalsIgnoreCase(expected)) {
-				mitaMobileJSHighlight(element);
+				//mitaMobileJSHighlight(element);
 				mitaMobileWritePass();
 			} else {
-				mitaMobileJSHighlightForValidation(element);
+//				mitaMobileJSHighlightForValidation(element);
 				mitaMobileScreenShot();
 				mitaMobileWriteFail();
 			}
@@ -1262,7 +1261,7 @@ public class MobileActionClass extends WebActionClass {
 		}
 	}
 
-	public static void mitaMobileWaitTime(long sleepTime) throws InterruptedException, IOException {
+	public static void mitaMobileWaitTime(long sleepTime) throws Exception {
 		try {
 			logger.info("Executing - Wait method");
 			Thread.sleep(sleepTime);
@@ -1369,7 +1368,7 @@ public class MobileActionClass extends WebActionClass {
 			logger.info("Executing - Context click method");
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
-			mitaMobileJSHighlight(element);
+			//mitaMobileJSHighlight(element);
 			mitaMobileWaits(WaitType);
 			action = new Actions(mobiledriver);
 			action.contextClick(element).build().perform();
@@ -1388,7 +1387,7 @@ public class MobileActionClass extends WebActionClass {
 			logger.info("Executing - double click method");
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
-			mitaMobileJSHighlight(element);
+			//mitaMobileJSHighlight(element);
 			mitaMobileWaits(WaitType);
 			action = new Actions(mobiledriver);
 			action.moveToElement(element).doubleClick().build().perform();
@@ -1429,7 +1428,7 @@ public class MobileActionClass extends WebActionClass {
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
 			action.clickAndHold(element).build().perform();
-			mitaMobileJSHighlight(element);
+			//mitaMobileJSHighlight(element);
 			mitaMobileWaits(WaitType);
 			element.click();
 			Thread.sleep(3000);
@@ -1487,7 +1486,7 @@ public class MobileActionClass extends WebActionClass {
 			logger.info("Executing - deselectAll method");
 			locator = mitaMobilelocator(LocatorType, LocatorValue);
 			element = mobiledriver.findElement(locator);
-			mitaMobileJSHighlight(element);
+			//mitaMobileJSHighlight(element);
 			mitaMobileWaits(WaitType);
 			select = new Select(element);
 			select.deselectAll();

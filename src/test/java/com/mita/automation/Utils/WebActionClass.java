@@ -465,7 +465,7 @@ public class WebActionClass extends BaseClass {
 
 	public static void mitaWebInvisibilityOf() throws Exception {
 		try {
-			wait = new WebDriverWait(mobiledriver, Duration.ofSeconds(1000));
+			wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
 			if (by != null) {
 				wait.until(ExpectedConditions.invisibilityOf(element));
 			}

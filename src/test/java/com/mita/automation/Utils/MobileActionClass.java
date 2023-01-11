@@ -460,8 +460,13 @@ public class MobileActionClass extends WebActionClass {
 			File src = screenshot.getScreenshotAs(OutputType.FILE);
 			String timestamp = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
 			System.out.println("Step Name is : " + Driver_Script.Actionvalue);
-			FileUtils.copyFile(src, new File(Runner.mobileScreenshotPath + "\\ScreenShots\\" + Driver_Script.sheetName
-					+ "_" + timestamp + "_" + Driver_Script.Actionvalue + ".png"));
+//			FileUtils.copyFile(src, new File(Runner.mobileScreenshotPath + "\\ScreenShots\\Mobile\\" + Driver_Script.sheetName
+//					+ "_" + timestamp + "_" + Driver_Script.Actionvalue + ".png"));
+//			
+			FileUtils.copyFile(src,
+					new File(Runner.webScreenshotPath + "\\ScreenShots\\Mobile\\"+ timeStamp + "\\"
+							+ Driver_Script.sheetName + "_" + timestamp + "_" + Driver_Script.Actionvalue
+							+ ".png"));
 		} catch (Exception e) {
 			logger.warn("Unable to take the Mobile Screenshot \t");
 		}

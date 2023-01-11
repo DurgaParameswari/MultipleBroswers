@@ -16,7 +16,6 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.annotations.AfterSuite;
 
 import com.aventstack.extentreports.Status;
 import com.mavenpackage.Driver_Script;
@@ -27,7 +26,7 @@ import com.mita.automation.managers.ExtentTestManager;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
-import io.appium.java_client.remote.MobilePlatform;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass extends ExcelData
@@ -35,6 +34,7 @@ public class BaseClass extends ExcelData
 {
 	public static WebDriver driver;
 	public static AndroidDriver<AndroidElement> mobiledriver;
+	public static AppiumDriverLocalService service;
 	static Logger logger = Logger.getLogger(BaseClass.class);
 
 	public static String[] bt;
@@ -238,21 +238,34 @@ public class BaseClass extends ExcelData
 				cap.setCapability(MobileCapabilityType.DEVICE_NAME, Runner.deviceName);
 			}
 			System.out.println("Hi 1");
-			cap.setCapability(MobileCapabilityType.PLATFORM_NAME,MobilePlatform.ANDROID);
+			cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android Device");
 			cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
-			cap.setCapability("autoGrantPermissions", true);
+			cap.setCapability(MobileCapabilityType.APP, f.getAbsolutePath());
+
+//			cap.setCapability("autoGrantPermissions", true);
 
 			cap.setCapability("appPackage", Runner.apkPackageName);
+//			cap.setCapability("appActivity", ".splash.view.SplashScreenActivity");
 			cap.setCapability("noReset", true);
 			cap.setCapability("noSign", true);
+			
 			System.out.println("Hi 2");
-			cap.setCapability(MobileCapabilityType.APP, f.getAbsolutePath());
-			mobiledriver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"), cap);
+//			  service = AppiumDriverLocalService.buildDefaultService();
+//		        service.start();
+//		        String service_url = service.getUrl().toString();
+//		        System.out.println(service_url);
+
+			try {
+
+				mobiledriver = new AndroidDriver<AndroidElement>(new URL("http://0.0.0.0:4723/wd/hub"), cap);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
 			mobiledriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			System.out.println("Hi 3");
-
 			mobiledriver.closeApp();
-		} catch (Exception e) {
+		} catch (NullPointerException e) {
 			logger.warn("Executing - " + Driver_Script.Actionvalue + ": Unable to launch the Andriod driver "
 					+ e.getMessage());
 		}

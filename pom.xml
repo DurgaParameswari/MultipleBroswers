@@ -21,8 +21,21 @@
 		<dependency>
 			<groupId>io.appium</groupId>
 			<artifactId>java-client</artifactId>
-			<version>7.3.0</version>
+			<version>8.3.0</version>
 		</dependency>
+		
+			<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-api</artifactId>
+			<version>4.7.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-remote-driver</artifactId>
+			<version>4.7.2</version>
+		</dependency>
+		
 		<!-- https://mvnrepository.com/artifact/junit/junit -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -253,7 +266,7 @@
 							<configuration>
 								<forkCount>3</forkCount>
 								<reuseForks>true</reuseForks>
-																<testFailureIgnore>true</testFailureIgnore>
+								<testFailureIgnore>true</testFailureIgnore>
 								<includes>
 									<includesFile>**/*Runner.java</includesFile>
 								</includes>
